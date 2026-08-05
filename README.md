@@ -34,25 +34,15 @@ git clone --depth 1 https://github.com/Lone3m-tech/smkt-article-visual.git \
 
 Remove `--global` for a project installation. For Claude Code, replace `--agent codex` with `--agent claude-code` and use `~/.claude/skills/smkt-article-visual` as the clone destination.
 
-## Start in 30 seconds
+## Three working modes
 
-Give it a local Markdown source and choose a delivery mode:
+| Mode | What the Skill does | What it does not do yet |
+| --- | --- | --- |
+| `plan` | Finds the audience obstacle, selects one visual grammar, names the required source details, placement, and what must not be drawn. | Generate artwork or alter the source. |
+| `generate` | Creates the accepted cover, figures, or frames; records the actual prompt and every revision; places article figures at their approved anchors. | Rewrite the source prose. |
+| `qa` | Checks meaning, grammar topology, type hierarchy, Logo reserve, disclosure, file placement, and manifest acceptance. | Call a generated image finished merely because it exists. |
 
-```yaml
-source_path: ./article.md
-delivery_mode: article_package
-mode: plan
-```
-
-Use `article_package` to place a cover and explanatory figures back into an article. Use `presentation_frames` when a speech, report, proposal, or workshop outline needs independent visual frames:
-
-```yaml
-source_path: ./talk.md
-delivery_mode: presentation_frames
-mode: plan
-```
-
-Review the visual plan first, then use `mode: generate`. When direct generation is already intended, say so in the request.
+The normal sequence is `plan → generate → qa`. A direct-generation request may skip plan acceptance, but it still creates a plan before producing assets.
 
 ## From text to a visual people can follow
 
@@ -130,6 +120,8 @@ assets/image/
 
 `manifest.json` appends every generation attempt; `accepted_attempt` identifies the current accepted version. The Skill never rewrites source prose.
 
+![Article package and presentation-frame delivery modes](examples/readme-visuals/delivery-modes.png)
+
 ## Visual grammar library
 
 Choose one primary grammar for each figure. Start with the relationship an audience needs to understand, then select the structure; a shared visual style must not flatten different questions into one layout.
@@ -156,9 +148,19 @@ The demo article, “Open-source illustration Skill: images are part of the expl
 
 [Open the demo article](examples/demo-article/article.md)
 
-## Default visual direction and boundaries
+## Default visual style
 
-The default is the SimpleMkt editorial style: a pure-white canvas, clear type hierarchy, fine relations, restrained material, and a consistent Logo. Generated images are never presented as authentic screenshots or factual evidence; non-factual examples carry an explicit note.
+This release uses one editorial visual system across every cover, figure, and presentation frame. It keeps a series coherent without forcing every relationship into the same layout.
+
+![Typography hierarchy](examples/readme-visuals/typography-hierarchy.png)
+
+- **Cover and body figures have different jobs.** The cover is a quiet PPT cover: the article H1 is preserved character-for-character, supported by one dominant visual metaphor. A body figure is an explanation: centered core judgment, one short subtitle, then one dominant relationship.
+- **Type has a reading order.** Body titles stay smaller than cover titles, are centered in one fixed upper band, and never compete with the top-right Logo reserve. Chinese uses one editorial serif family; English identifiers use a restrained companion face; handwritten semantic text is rejected.
+- **Elements carry meaning before labels do.** Source and claim use an excerpt sheet, stages and outputs use narrow paper strips, decisions and boundaries use cut-paper fields, and positions or changes use direct ink, hatch, or anchors. Empty paper cards with a label are not enough.
+- **Sketching must explain.** An engraving or pencil-sketch subject is allowed only when it comes from the article's actual relation or source detail, then receives direct labels and hairline leaders. It never defaults to plants, generic objects, icons, or decorative metaphors.
+- **The finish stays editorial, not UI-like.** Pure white canvas, fine low-contrast lines, one faint paper elevation, restrained forest-green emphasis, and no dashboard cards, heavy arrows, decorative grids, crop marks, or floating ornament.
+- **The Logo is deterministic.** The packaged wordmark is placed after generation in a protected white reserve. No model-rendered Logo, title, label, or connector may enter that area.
+- **The style protects meaning and trust.** No heading automatically earns a figure; one figure answers one primary question with one primary grammar. Article prose stays intact and every accepted image path appears once at its approved anchor. Non-factual examples carry the lower-left disclosure `图中示例仅为解释用途，并非事实`; generated work is never presented as a real screenshot, source, or fact.
 
 ## License
 

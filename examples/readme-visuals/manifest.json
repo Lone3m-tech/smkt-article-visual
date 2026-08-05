@@ -198,13 +198,92 @@
       "placement": {
         "kind": "style_reference"
       },
-      "accepted_attempt": 1,
+      "accepted_attempt": 2,
       "attempts": [
         {
           "id": 1,
           "prompt": "Create a final native 16:9 Chinese editorial reference figure at exactly 1200×675 that demonstrates the fixed body-figure typography hierarchy. It is a design-system sample, not a factual article, data visualization, product UI, or source image. Use one full pure #FFFFFF background with no outer frame, tint, texture, gradient, ivory, or beige. Reserve the exact top-right rectangle x=1056–1200, y=0–60 as completely empty pure white for deterministic Logo placement; do not render a wordmark or any graphic in it. Use one consistent printed Chinese Songti-like editorial-serif family, no sans, script, handwriting, or mixed Chinese fonts. Make the typography itself the dominant visual structure. Center exact brand-green #1A6B3A semibold title at 52px-equivalent: ‘字体有层级，判断才有重心’. Directly under it center exact gray #6B6B6B regular subtitle at 28px-equivalent: ‘正文图固定使用五档文字层级’. Under the subtitle, show a compact hierarchy specimen—not a card grid. First show one exact 32px-equivalent medium #141414 structural heading: ‘结构标题 · 32px’. Then use two identical white, subtly fibrous straight- or cut-edge editorial paper slips, horizontally aligned and both at exactly 28px-equivalent regular #141414, labelled ‘内容标签 · 28px’ and ‘关系标签 · 28px’. Add only a very fine pale-green relation line linking those two paper slips. At the lower-left safe area, show one exact #8C8C8C italic note at 16px-equivalent: ‘备注文本 · 16px / 斜体’. Every paper slip must have the same straight/cut paper construction with no rounded corners, cards, panels, stickers, or UI-container appearance. Give each independent paper slip the same deliberately faint floating effect: about 4–6px-equivalent lift with one diffuse neutral 12–16px-equivalent shadow at 4–6% opacity; no dark, hard, or unequal shadows. Keep all linework hairline and low contrast. Material detail is limited to purposeful paper fiber, subtle hatch, and shallow paper edge. Do not add people, landscape, dashboard, flat SVG/wireframe, generic report, 3D, neon, watermark, QR code, decorative crosses, registration marks, crop marks, floating strokes, ornamental arrows, isolated color blocks, extra prose, or extra labels.",
+          "status": "rejected",
+          "adjustment_reason": "The earlier sample stated five levels but did not visibly demonstrate the green core judgment, gray subtitle, or fixed centered title band.",
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        },
+        {
+          "id": 2,
+          "prompt": "Create a final native 16:9 Chinese editorial reference figure at exactly 1200×675 for the smkt-article-visual README. This is a genuine design-system reference, not a factual data chart or product UI. Pure solid #FFFFFF canvas, absolutely no background tint, ivory, cream, texture, gradient, outer frame, or vignette. Keep the exact top-right rectangle x=1056–1200, y=0–60 completely blank pure white for a deterministic Logo finalizer: render no logo, wordmark, text, connector, or graphic there. Use one consistent printed Chinese Songti-like editorial-serif family only; no sans, handwriting, script, or mixed Chinese fonts. Apply a clear fixed body-figure hierarchy: centered exact forest-green #1A6B3A semibold core judgment ‘判断有重心，信息才有层级’ at 52px-equivalent, then one centered secondary-gray #6B6B6B subtitle ‘正文图固定使用五档文字层级’ at 28px-equivalent. Both must share horizontal center x=600 within y=76–176. Begin the explanatory structure below y=200. Use one dominant annotated hierarchy structure, not a card grid. Directly below, show printed structural heading ‘结构标题 · 32px’ in #141414 at 32px-equivalent. Under it, use two matching, subtly fibrous, straight/cut-edge white paper slips at equal faint elevation, linked by one hairline pale-green line. Their exact labels are ‘内容标签 · 28px’ and ‘关系标签 · 28px’, in #141414 regular 28px-equivalent. In the lower-left safe area add exact small #8C8C8C italic note ‘备注文本 · 16px / 斜体’. Make the five levels visibly legible as: green core judgment 52, gray subtitle 28, structural heading 32, paper-node labels 28, note 16. Include a very light, purposeful alignment guide only if it clarifies the centered title band; do not add decorative marks. Every paper primitive has the same deliberately faint 4–6px-equivalent lift and diffuse neutral shadow at 4–6% opacity; do not shadow direct labels, leaders, or guides. Use fine 1–1.5px-equivalent low-contrast green/gray linework. Material texture is clipped to paper elements only. The image must feel like a precise editorial engraving/pencil-sketch reference, not an SVG, wireframe, dashboard, product UI, report slide, generic document, poster, or a set of rounded cards. Do not include people, plants, scenery, generic objects, icons, machines, containers, 3D, neon, data, decorative arrows, registration marks, crop marks, floating strokes, isolated color blocks, watermark, QR, author credit, or extra text.",
           "status": "accepted",
-          "adjustment_reason": null,
+          "adjustment_reason": "Added the missing core-judgment and subtitle levels and made the centered body-figure title band visible.",
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "delivery-modes",
+      "output_path": "examples/readme-visuals/delivery-modes.png",
+      "placement": {
+        "kind": "after_section",
+        "anchor": "交付模式"
+      },
+      "accepted_attempt": 2,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create a final native 16:9 Chinese editorial explainer illustration at exactly 1200×675 for the smkt-article-visual README. It explains two delivery modes, not factual data, not a product UI, and not a generic feature grid. Use one full pure #FFFFFF canvas with no tint, paper texture, ivory, frame, gradient, or vignette. Reserve the exact top-right rectangle x=1056–1200, y=0–60 as completely empty pure white for deterministic Logo placement; do not render a logo, wordmark, label, line, connector, or diagram element there. Center the exact forest-green #1A6B3A Songti-like semibold core judgment ‘同一套判断，两种交付方式’ at 52px-equivalent, with exact gray #6B6B6B one-line subtitle ‘文章图落在阅读锚点，讲述图按叙事顺序展开’ at 28px-equivalent. Both share horizontal center x=600 and must sit within y=76–176. Begin the diagram at y=200 or below. Use one dominant branching-flow grammar with a small central source excerpt sheet labelled exactly ‘关键判断’. It branches into two clearly different but equal reading paths, labelled direct printed headings ‘文章包’ and ‘讲述图’ at 32px-equivalent. Left, ‘文章包’: show a realistic article excerpt sheet with a small H1 area, then one cover sheet, then a short excerpt paragraph with one explanatory image narrow paper strip attached immediately after its relevant paragraph. Use exact small direct labels ‘文章 H1’, ‘封面’, ‘段落锚点’, ‘正文图’. The visual must make placement after a paragraph obvious. Right, ‘讲述图’: show a short speech/proposal script excerpt sheet leading through three narrow paper-strip pairs in an ordered sequence: exact labels ‘判断 1’ → ‘讲述图 1’, ‘判断 2’ → ‘讲述图 2’, ‘判断 3’ → ‘讲述图 3’. The visual must make standalone frame order obvious and must not show images inserted into the script. Every Chinese string uses one consistent printed Songti-like editorial-serif family; no handwritten semantic text. Use only the fixed editorial vocabulary: excerpt sheets for source/script/article, straight-edged narrow paper strips for frames and stages, direct ink/hatch/circular anchors for sequence and relation. Every element visibly depicts its role: article sheet shows selected lines, frames show a simple grammar-specific sketch, script sheet shows selected lines. Use direct labels with thin leaders and small circular anchors where needed. Keep paper primitives white, subtly fibrous, straight/cut-edge, with the same faint 4–6px elevation and diffuse neutral 12–16px shadow at 4–6% opacity. Use fine 1–1.5px low-contrast forest-green or light-gray connectors; no heavy arrows or frames. This must feel vivid and editorial through meaningful paper detail and a restrained engraved/pencil-sketch relation, not through a plant, person, generic object, icon, machine, container, card, dashboard, or UI. No rounded cards, no panels, no stickers, no UI/dashboard, no flat SVG/wireframe, no landscape/scenery/people, no 3D/neon, no factual numbers, no decorative grids, crop marks, registration crosses, floating strokes, isolated color blocks, ornamental arrows, watermark, QR, author credit, model-rendered Logo, or extra words. Keep all visual material inside semantic elements; background stays perfectly white.",
+          "status": "rejected",
+          "adjustment_reason": "The candidate used generic object icons and tool sketches instead of directly depicting article placement and standalone narrative-frame order.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 2,
+          "prompt": "Regenerate the 1200×675 Chinese editorial explainer for smkt-article-visual README. This is attempt 2 after rejecting a candidate that used generic target, mountain, bridge, scale, compass, and other object icons. Do not render any recognizable object, icon, machine, instrument, landmark, scene, or metaphor whatsoever. Use only meaningful editorial paper primitives, printed source lines, explicit labels, fine leaders, anchor points, hatch, and simple relation topology. Pure solid #FFFFFF background only: no tint, texture, frame, gradient, vignette, UI, dashboard, rounded cards, or decorative marks. Keep top-right x=1056–1200, y=0–60 completely blank white for the deterministic Logo finalizer. Centered exact #1A6B3A Songti-like semibold 52px core judgment: ‘同一套判断，两种交付方式’. Centered exact #6B6B6B 28px subtitle: ‘文章图落在阅读锚点，讲述图按叙事顺序展开’. Both centered at x=600 within y=76–176. Everything meaningful begins at y=200. Build one precise branching-flow structure from a central excerpt sheet labelled ‘关键判断’. It divides into two semantic paper-only paths. LEFT path, heading ‘文章包’ at 32px: a vertical article excerpt sheet with a printed H1 area labelled exactly ‘文章 H1’, then directly below a small cover sheet labelled ‘封面’, then a visible article paragraph where one dotted rectangle sits immediately after the relevant selected paragraph and is labelled ‘段落锚点’; from that anchor a connected explanatory paper figure labelled ‘正文图’. Show the exact reading/placement relationship through thin leaders and actual printed lines/highlight, never through a generic visual symbol. The article page, cover sheet, anchored figure, and their relation must be visibly distinct. RIGHT path, heading ‘讲述图’ at 32px: a script excerpt sheet with selected printed lines and no inserted images. To its right, three ordered pairs of narrow paper strips, reading from top to bottom: exact labels ‘判断 1’ → ‘讲述图 1’, ‘判断 2’ → ‘讲述图 2’, ‘判断 3’ → ‘讲述图 3’. Each ‘讲述图’ strip contains a tiny different abstract-but-semantic relation topology made only of excerpt fragments, linked paper strips, cut-paper fields, direct ink hatching, and circular anchors; no pictures or objects. Make their sequential order and standalone-frame status immediately evident. All Chinese uses one printed Songti-like editorial-serif. Use the only allowed content vocabulary: excerpt sheet for article/script/source; straight-edged narrow paper strip for stage/judgment/output/frame; cut-paper field for a contained reading anchor; direct ink/hatch/circular anchor for a relation. Make each paper primitive white, subtly fibrous, straight/cut edge, same faint 4–6px lift plus diffuse neutral 12–16px 4–6% shadow. Hairline 1–1.5px low-contrast green/light-gray connectors only. No shadows on direct labels or lines. No model-rendered Logo, no extra text, no factual data, no lower-left example note because all labels state the actual delivery contract. The result should feel like a detailed editorial explanation chain, not a generic flowchart, SVG/wireframe, cards, or a poster.",
+          "status": "accepted",
+          "adjustment_reason": "Removed generic objects and made the article anchor and ordered standalone-frame paths the only visible explanation.",
           "candidate_file": null,
           "logo": {
             "status": "applied",
