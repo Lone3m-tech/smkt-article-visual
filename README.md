@@ -10,6 +10,8 @@
 
 Turn a structured narrative—an article, talk, report, proposal, or workshop outline—into either an **article package** or a sequence of **presentation frames**. It decides what needs to be shown, selects the right visual grammar, and delivers a traceable image package in the SimpleMkt editorial style.
 
+Built for Codex and image-generation capable Agents.
+
 [SimpleMkt](https://simplemkt.cc) · [X](https://x.com/AlchemistZhou) · [Xiaohongshu](https://www.xiaohongshu.com/user/profile/65a0ecb4000000002201219c) · [Douyin](https://www.douyin.com/user/MS4wLjABAAAArV0uXvsSYl6pD-p5nr-5OFlZED5cEUnb7r2K6j9u4tA)
 
 [View the complete demo](examples/demo-article/article.md) · [Read the runtime contract](SKILL.md)
@@ -41,6 +43,13 @@ git clone --depth 1 https://github.com/Lone3m-tech/smkt-article-visual.git \
 ```
 
 Remove `--global` for a project installation. For Claude Code, replace `--agent codex` with `--agent claude-code` and use `~/.claude/skills/smkt-article-visual` as the clone destination.
+
+## Runtime compatibility
+
+- **Primary validated host:** Codex with the host `image_gen` capability.
+- **Required capability:** An Agent that can invoke image generation and read and write local files.
+- **Image model:** Selected by the host runtime. This Skill does not pin a specific image model.
+- **Other Agents:** Installation can succeed, but complete generation still requires an equivalent image-generation capability.
 
 ## Shared workflow
 

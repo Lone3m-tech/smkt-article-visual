@@ -10,6 +10,8 @@
 
 把文章、演讲稿、报告、提案或工作坊提纲这类结构化叙事，变成**文章包**或一组连续的**演示画面**。它判断什么值得画，选择合适图法，并以 SimpleMkt 编辑图风格交付可追溯的图片包。
 
+为 Codex 与具备生图能力的 Agent 而设计。
+
 [SimpleMkt](https://simplemkt.cc) · [X](https://x.com/AlchemistZhou) · [小红书](https://www.xiaohongshu.com/user/profile/65a0ecb4000000002201219c) · [抖音](https://www.douyin.com/user/MS4wLjABAAAArV0uXvsSYl6pD-p5nr-5OFlZED5cEUnb7r2K6j9u4tA)
 
 [查看完整 Demo](examples/demo-article/article.md) · [查看 Skill 运行契约](SKILL.md)
@@ -41,6 +43,13 @@ git clone --depth 1 https://github.com/Lone3m-tech/smkt-article-visual.git \
 ```
 
 项目内安装时去掉 `--global`；安装到 Claude Code 时把 `--agent codex` 改为 `--agent claude-code`，并将克隆目录改为 `~/.claude/skills/smkt-article-visual`。
+
+## 运行环境与兼容性
+
+- **主要验证宿主：**具备 `image_gen` 能力的 Codex。
+- **必要能力：**Agent 能调用图像生成，并能读写本地文件。
+- **图像模型：**由宿主运行环境选择；本 Skill 不固定某个图像模型。
+- **其他 Agent：**安装可以成功，但完整生图仍需要等效的图像生成能力。
 
 ## 共同工作流程
 
