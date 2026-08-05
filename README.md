@@ -45,19 +45,19 @@ Choose one primary grammar for each body figure. Start with the relationship a r
 
 | Grammar | Example |
 | --- | --- |
-| Architecture | [View](examples/visual-grammar/architecture.png) |
-| Flow | [View](examples/visual-grammar/flow.png) |
-| Loop | [View](examples/visual-grammar/loop.png) |
-| Decision tree | [View](examples/visual-grammar/decision-tree.png) |
-| Comparison | [View](examples/visual-grammar/comparison.png) |
-| Matrix | [View](examples/visual-grammar/matrix.png) |
-| Overlap map | [View](examples/visual-grammar/overlap-map.png) |
-| Boundary map | [View](examples/visual-grammar/boundary-map.png) |
-| Argument map | [View](examples/visual-grammar/argument-map.png) |
-| Timeline | [View](examples/visual-grammar/timeline.png) |
-| Continuum | [View](examples/visual-grammar/continuum.png) |
-| Layer stack | [View](examples/visual-grammar/layer-stack.png) |
-| Annotated source | [View](examples/visual-grammar/annotated-source.png) |
+| Architecture | <img src="examples/visual-grammar/architecture.png" alt="Architecture visual grammar example" width="280"> |
+| Flow | <img src="examples/visual-grammar/flow.png" alt="Flow visual grammar example" width="280"> |
+| Loop | <img src="examples/visual-grammar/loop.png" alt="Loop visual grammar example" width="280"> |
+| Decision tree | <img src="examples/visual-grammar/decision-tree.png" alt="Decision tree visual grammar example" width="280"> |
+| Comparison | <img src="examples/visual-grammar/comparison.png" alt="Comparison visual grammar example" width="280"> |
+| Matrix | <img src="examples/visual-grammar/matrix.png" alt="Matrix visual grammar example" width="280"> |
+| Overlap map | <img src="examples/visual-grammar/overlap-map.png" alt="Overlap map visual grammar example" width="280"> |
+| Boundary map | <img src="examples/visual-grammar/boundary-map.png" alt="Boundary map visual grammar example" width="280"> |
+| Argument map | <img src="examples/visual-grammar/argument-map.png" alt="Argument map visual grammar example" width="280"> |
+| Timeline | <img src="examples/visual-grammar/timeline.png" alt="Timeline visual grammar example" width="280"> |
+| Continuum | <img src="examples/visual-grammar/continuum.png" alt="Continuum visual grammar example" width="280"> |
+| Layer stack | <img src="examples/visual-grammar/layer-stack.png" alt="Layer stack visual grammar example" width="280"> |
+| Annotated source | <img src="examples/visual-grammar/annotated-source.png" alt="Annotated source visual grammar example" width="280"> |
 
 ## Core capabilities
 

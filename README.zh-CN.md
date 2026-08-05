@@ -41,23 +41,23 @@
 
 ## 图法库
 
-一张正文图只选一个主图法：先看读者需要理解哪一种关系，再选结构，不让统一风格把不同问题画成同一种版式。每种图法都有对应的可查看示例。
+一张正文图只选一个主图法：先看读者需要理解哪一种关系，再选结构，不让统一风格把不同问题画成同一种版式。每种图法直接展示对应示例。
 
 | 图法 | 示例 |
 | --- | --- |
-| Architecture（架构） | [查看](examples/visual-grammar/architecture.png) |
-| Flow（流程） | [查看](examples/visual-grammar/flow.png) |
-| Loop（循环） | [查看](examples/visual-grammar/loop.png) |
-| Decision tree（决策树） | [查看](examples/visual-grammar/decision-tree.png) |
-| Comparison（对比） | [查看](examples/visual-grammar/comparison.png) |
-| Matrix（矩阵） | [查看](examples/visual-grammar/matrix.png) |
-| Overlap map（交集） | [查看](examples/visual-grammar/overlap-map.png) |
-| Boundary map（边界） | [查看](examples/visual-grammar/boundary-map.png) |
-| Argument map（论证） | [查看](examples/visual-grammar/argument-map.png) |
-| Timeline（时间线） | [查看](examples/visual-grammar/timeline.png) |
-| Continuum（连续谱） | [查看](examples/visual-grammar/continuum.png) |
-| Layer stack（层级） | [查看](examples/visual-grammar/layer-stack.png) |
-| Annotated source（来源标注） | [查看](examples/visual-grammar/annotated-source.png) |
+| Architecture（架构） | <img src="examples/visual-grammar/architecture.png" alt="Architecture 图法示例" width="280"> |
+| Flow（流程） | <img src="examples/visual-grammar/flow.png" alt="Flow 图法示例" width="280"> |
+| Loop（循环） | <img src="examples/visual-grammar/loop.png" alt="Loop 图法示例" width="280"> |
+| Decision tree（决策树） | <img src="examples/visual-grammar/decision-tree.png" alt="Decision tree 图法示例" width="280"> |
+| Comparison（对比） | <img src="examples/visual-grammar/comparison.png" alt="Comparison 图法示例" width="280"> |
+| Matrix（矩阵） | <img src="examples/visual-grammar/matrix.png" alt="Matrix 图法示例" width="280"> |
+| Overlap map（交集） | <img src="examples/visual-grammar/overlap-map.png" alt="Overlap map 图法示例" width="280"> |
+| Boundary map（边界） | <img src="examples/visual-grammar/boundary-map.png" alt="Boundary map 图法示例" width="280"> |
+| Argument map（论证） | <img src="examples/visual-grammar/argument-map.png" alt="Argument map 图法示例" width="280"> |
+| Timeline（时间线） | <img src="examples/visual-grammar/timeline.png" alt="Timeline 图法示例" width="280"> |
+| Continuum（连续谱） | <img src="examples/visual-grammar/continuum.png" alt="Continuum 图法示例" width="280"> |
+| Layer stack（层级） | <img src="examples/visual-grammar/layer-stack.png" alt="Layer stack 图法示例" width="280"> |
+| Annotated source（来源标注） | <img src="examples/visual-grammar/annotated-source.png" alt="Annotated source 图法示例" width="280"> |
 
 ## 核心能力
 
