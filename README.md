@@ -1,14 +1,22 @@
+<p align="center">
+  <img src="examples/readme-visuals/hero-banner.png" alt="smkt-article-visual opening banner" width="100%">
+</p>
+
+<div align="center">
+
 # smkt-article-visual
 
-> Turn every key judgment into a visual people can understand.
-
-[中文](README.zh-CN.md)
+**Turn every key judgment into a visual people can understand.**
 
 Turn a structured narrative—an article, talk, report, proposal, or workshop outline—into either an **article package** or a sequence of **presentation frames**. It decides what needs to be shown, selects the right visual grammar, and delivers a traceable image package in the SimpleMkt editorial style.
 
-![smkt-article-visual opening banner](examples/readme-visuals/hero-banner.png)
+[SimpleMkt](https://simplemkt.cc) · [X](https://x.com/AlchemistZhou) · [Xiaohongshu](https://www.xiaohongshu.com/user/profile/65a0ecb4000000002201219c) · [Douyin](https://www.douyin.com/user/MS4wLjABAAAArV0uXvsSYl6pD-p5nr-5OFlZED5cEUnb7r2K6j9u4tA)
 
 [View the complete demo](examples/demo-article/article.md) · [Read the runtime contract](SKILL.md)
+
+**English | [简体中文](README.zh-CN.md)**
+
+</div>
 
 ## Install
 

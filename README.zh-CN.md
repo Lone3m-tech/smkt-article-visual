@@ -1,14 +1,22 @@
+<p align="center">
+  <img src="examples/readme-visuals/hero-banner.png" alt="smkt-article-visual 开场 Banner" width="100%">
+</p>
+
+<div align="center">
+
 # smkt-article-visual
 
-> 把每个关键判断，讲成一张看得懂的图。
-
-[English](README.md)
+**把每个关键判断，讲成一张看得懂的图。**
 
 把文章、演讲稿、报告、提案或工作坊提纲这类结构化叙事，变成**文章包**或一组连续的**演示画面**。它判断什么值得画，选择合适图法，并以 SimpleMkt 编辑图风格交付可追溯的图片包。
 
-![smkt-article-visual 开场 Banner](examples/readme-visuals/hero-banner.png)
+[SimpleMkt](https://simplemkt.cc) · [X](https://x.com/AlchemistZhou) · [小红书](https://www.xiaohongshu.com/user/profile/65a0ecb4000000002201219c) · [抖音](https://www.douyin.com/user/MS4wLjABAAAArV0uXvsSYl6pD-p5nr-5OFlZED5cEUnb7r2K6j9u4tA)
 
 [查看完整 Demo](examples/demo-article/article.md) · [查看 Skill 运行契约](SKILL.md)
+
+**[English](README.md) | 简体中文**
+
+</div>
 
 ## 安装
 
