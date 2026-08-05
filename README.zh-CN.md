@@ -6,7 +6,7 @@
 
 把文章、演讲稿、报告、提案或工作坊提纲这类结构化叙事，变成一组统一、可解释的图片。它判断什么值得画，选择合适图法，并以 SimpleMkt 编辑图风格交付可追溯的图片包。
 
-![《开源配图Skill：配图不是装饰，而是解释的一部分》封面](examples/demo-article/assets/image/cover.png)
+![smkt-article-visual 开场 Banner](examples/readme-visuals/hero-banner.png)
 
 [查看完整 Demo](examples/demo-article/article.md) · [查看 Skill 运行契约](SKILL.md)
 
@@ -64,7 +64,7 @@ mode: plan
 | 内部对齐 | 战略 memo 或项目复盘 | 共同理解决策、边界、系统与交接关系的图。 |
 | 工作坊或课程 | 教学提纲或课程脚本 | 把抽象概念变成可讲、可记的教学图。 |
 
-![SMKT Article Visual 的四类使用场景](examples/readme-visuals/usage-scenarios.png)
+![SMKT Article Visual 的五类使用场景](examples/readme-visuals/usage-scenarios.png)
 
 ## 它解释什么
 

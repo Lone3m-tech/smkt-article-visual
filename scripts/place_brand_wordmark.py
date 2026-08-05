@@ -35,8 +35,10 @@ def open_image(path: Path) -> Image.Image:
         raise SystemExit(f"cannot read image: {path}") from error
 
 
-def load_contract() -> dict[str, object]:
-    contract = LOGO_CONTRACT
+def load_contract(canvas: tuple[int, int] | None = None) -> dict[str, object]:
+    contract = {**LOGO_CONTRACT}
+    if canvas is not None:
+        contract["canvas"] = canvas
 
     canvas_width, canvas_height = contract["canvas"]
     wordmark_x, wordmark_y = contract["wordmark_top_left"]
@@ -115,7 +117,25 @@ def parse_arguments(arguments: list[str]) -> argparse.Namespace:
     parser.add_argument("--article-manifest", type=Path, required=True)
     parser.add_argument("--image-id", required=True)
     parser.add_argument("--attempt-id", type=int, required=True)
+    parser.add_argument(
+        "--canvas",
+        metavar="WIDTHxHEIGHT",
+        help="optional output canvas; preserves the fixed Logo box and top-right reserve",
+    )
     return parser.parse_args(arguments)
+
+
+def parse_canvas(value: str | None) -> tuple[int, int] | None:
+    if value is None:
+        return None
+    try:
+        width_text, height_text = value.lower().split("x", maxsplit=1)
+        width, height = int(width_text), int(height_text)
+    except ValueError as error:
+        raise SystemExit("--canvas must use WIDTHxHEIGHT, for example 1200x512") from error
+    if width <= 0 or height <= 0:
+        raise SystemExit("--canvas width and height must be positive")
+    return width, height
 
 
 def main(arguments: list[str]) -> int:
@@ -128,7 +148,7 @@ def main(arguments: list[str]) -> int:
     source_path = Path(parsed.underlying_image)
     wordmark_path = Path(parsed.wordmark_png)
     output_path = Path(parsed.output_png)
-    contract = load_contract()
+    contract = load_contract(parse_canvas(parsed.canvas))
     if wordmark_path.name != contract["asset"]:
         raise SystemExit(f"wordmark asset must match fixed contract: {contract['asset']}")
 

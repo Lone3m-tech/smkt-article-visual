@@ -6,7 +6,7 @@
 
 Turn a structured narrative—an article, talk, report, proposal, or workshop outline—into coherent explanatory images. It decides what needs to be shown, selects the right visual grammar, and delivers a traceable image package in the SimpleMkt editorial style.
 
-![Cover for “Open-source illustration Skill: images are part of the explanation”](examples/demo-article/assets/image/cover.png)
+![smkt-article-visual opening banner](examples/readme-visuals/hero-banner.png)
 
 [View the complete demo](examples/demo-article/article.md) · [Read the runtime contract](SKILL.md)
 
@@ -64,7 +64,7 @@ An attractive image is not enough when the audience needs to understand a proces
 | Internal alignment | A strategy memo or retrospective | Shared pictures of decisions, boundaries, systems, and handoffs. |
 | Workshop or course | A teaching outline or lesson script | Memorable teaching visuals that turn abstract concepts into a visible relationship. |
 
-![Four common use cases](examples/readme-visuals/usage-scenarios.png)
+![Five narrative use cases](examples/readme-visuals/usage-scenarios.png)
 
 ## What it explains
 
