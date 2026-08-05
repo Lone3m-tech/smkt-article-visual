@@ -12,6 +12,10 @@
 
 ## 安装
 
+把任一命令直接发给 Agent，或在终端运行。优先使用 `npx`；没有 `npx` 时使用 `git clone`。
+
+### npx（推荐）
+
 ```bash
 npx skills add Lone3m-tech/smkt-article-visual \
   --skill smkt-article-visual \
@@ -20,15 +24,15 @@ npx skills add Lone3m-tech/smkt-article-visual \
   --copy
 ```
 
-手动安装：
+### git clone
 
 ```bash
-git clone --depth 1 https://github.com/Lone3m-tech/smkt-article-visual.git
 mkdir -p ~/.codex/skills
-cp -R smkt-article-visual ~/.codex/skills/smkt-article-visual
+git clone --depth 1 https://github.com/Lone3m-tech/smkt-article-visual.git \
+  ~/.codex/skills/smkt-article-visual
 ```
 
-项目内安装时去掉 `--global`；安装到 Claude Code 时把 `--agent codex` 改为 `--agent claude-code`。
+项目内安装时去掉 `--global`；安装到 Claude Code 时把 `--agent codex` 改为 `--agent claude-code`，并将克隆目录改为 `~/.claude/skills/smkt-article-visual`。
 
 ## 30 秒开始使用
 

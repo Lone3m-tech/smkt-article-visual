@@ -12,6 +12,10 @@ Turn a structured narrative—an article, talk, report, proposal, or workshop ou
 
 ## Install
 
+Copy either command to your Agent or run it in a terminal. Prefer `npx`; use `git clone` when `npx` is unavailable.
+
+### npx (recommended)
+
 ```bash
 npx skills add Lone3m-tech/smkt-article-visual \
   --skill smkt-article-visual \
@@ -20,15 +24,15 @@ npx skills add Lone3m-tech/smkt-article-visual \
   --copy
 ```
 
-Manual installation:
+### git clone
 
 ```bash
-git clone --depth 1 https://github.com/Lone3m-tech/smkt-article-visual.git
 mkdir -p ~/.codex/skills
-cp -R smkt-article-visual ~/.codex/skills/smkt-article-visual
+git clone --depth 1 https://github.com/Lone3m-tech/smkt-article-visual.git \
+  ~/.codex/skills/smkt-article-visual
 ```
 
-Remove `--global` for a project installation. For Claude Code, replace `--agent codex` with `--agent claude-code`.
+Remove `--global` for a project installation. For Claude Code, replace `--agent codex` with `--agent claude-code` and use `~/.claude/skills/smkt-article-visual` as the clone destination.
 
 ## Start in 30 seconds
 
