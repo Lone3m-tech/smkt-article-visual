@@ -11,7 +11,7 @@
         "kind": "after_paragraph",
         "anchor": "文章结构、图法和编辑图母版分别回答不同的问题，不能由其中一层替代另一层。"
       },
-      "accepted_attempt": 5,
+      "accepted_attempt": 6,
       "attempts": [
         {
           "id": 1,
@@ -75,6 +75,35 @@
         {
           "id": 5,
           "prompt": "16:9 final Chinese editorial body figure, layer-stack grammar. Pure #FFFFFF. Keep Logo reserve x=1056–1200,y=0–60 fully empty; no wordmark. Fix exact centered title/subtitle at x=600 within y=76–176: 52px green `内容、图法、风格，各管一层`; 28px gray `文章决定关系，母版统一表达`. Diagram below y=200. One vertical three-layer stack with fine downward leaders: `文章结构` excerpt sheet with selected lines, `解释任务`, `位置`; `图法` field with actual mini relation sketches `流程` `对比` `层级`; `编辑图母版` specimen sheet showing `颜色` `字体` `材质`; side bracket `不能替代`. Every layer depicts its own role, not label-only slips. MANDATORY exact lower-left 16px italic gray disclosure `图中示例仅为解释用途，并非事实`. Use Songti-like Chinese editorial serif, white fibrous straight/cut paper, equal faint lift, pale 1–1.5px lines. No people, botanical/animal/generic-object metaphors, icons, UI/dashboard, 3D, rounded cards, badges, grids/crosses, handwriting, fake Logo, data or extra text.",
+          "status": "rejected",
+          "adjustment_reason": "Canvas background was visibly off-white and textured outside semantic paper elements; replaced with a flat #FFFFFF canvas.",
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        },
+        {
+          "id": 6,
+          "prompt": "Regenerate this Chinese SimpleMkt editorial body figure while preserving its three-layer vertical stack: article structure excerpt sheet, visual grammar relation sketches, and editorial master typography/material samples; retain centered green title “内容、图法、风格，各管一层”, centered gray subtitle, thin pale green/gray leaders, and the side bracket “不能替代”. Critical correction: make the whole 1200×675 canvas background an absolutely flat solid pure #FFFFFF edge to edge. No off-white, cream, gray haze, paper grain, texture, noise, vignette, gradient, border, or background shadow anywhere. White fibrous/paper texture is allowed only inside the three discrete semantic content layers, never in the surrounding canvas. Diagram begins below the title band. Keep top-right Logo reserve x=1056–1200 y=0–60 completely blank pure white, no rendered logo; deterministic logo will be applied later. Retain lower-left italic disclosure. No UI/dashboard, generic cards, icons, people, plants, decoration, crop marks, crosses, floating strokes, decorative grids, or extra text. It must read as a clean white editorial page, with only the semantic paper layers having a very faint uniform floating depth.",
           "status": "accepted",
           "adjustment_reason": null,
           "candidate_file": null,
@@ -144,7 +173,7 @@
         {
           "id": 2,
           "prompt": "16:9 PPT editorial cover, pure #FFFFFF canvas and empty white Logo reserve x=1056–1200,y=0–60; do not render logo. Render only the exact title `开源配图Skill：配图不是装饰，而是解释的一部分` in large calm brand-green Songti-like Chinese, with deliberate line breaks only. Maintain a continuous quiet left-to-centre title-safe zone. One dominant metaphor: restrained white article paper layers unfold from a dense unreadable text edge into one clearly connected, fine ink explanation path; no labels, no diagram stations, no subtitle or evidence note. Material depth is only subtle paper overlap and restrained hatch. No frame, photography, people, UI, dashboard, 3D, icons, random decoration, handwriting, watermark, QR, or extra text.",
-          "status": "generated",
+          "status": "accepted",
           "adjustment_reason": null,
           "candidate_file": null,
           "logo": {
@@ -261,7 +290,7 @@
         "kind": "after_paragraph",
         "anchor": "它先把文章中的解释任务拆成一份可确认的 visual plan，明确封面、每张正文图、位置和不该画的部分。"
       },
-      "accepted_attempt": 5,
+      "accepted_attempt": 6,
       "attempts": [
         {
           "id": 1,
@@ -325,6 +354,35 @@
         {
           "id": 5,
           "prompt": "16:9 final Chinese editorial body figure, decision-tree grammar. Pure #FFFFFF. Keep Logo reserve x=1056–1200,y=0–60 fully empty; no wordmark. Fix exact centered title/subtitle together at x=600 within y=76–176: 52px green title `先把卡点说清楚，再开始画图`; 28px gray subtitle `读者障碍决定图的必要性、图法与落位`. Begin diagram below y=200. One detailed path: a compact excerpt sheet `文章段落` with short illustrative selected lines enters cut-paper decision `读者卡点`; branches `需要解释` to a populated `visual plan` sheet `封面` `正文图` `精确锚点` `不该画`, then `确认后生成`; `文字已足够清楚` to `保留文字`. Do not add any prose beyond these short labels. MANDATORY: render exact lower-left small gray italic text `图中示例仅为解释用途，并非事实`; it must be visible and not centered. Every element depicts its role, no empty nodes. Songti-like Chinese editorial serif, white fibrous straight/cut paper, equal faint lift, pale 1–1.5px green/gray leaders. No people, plants/animals, generic objects, icons, UI/dashboard, 3D, rounded cards, badges, decorative grids/crosses, handwriting, fake Logo, data, or extra text.",
+          "status": "rejected",
+          "adjustment_reason": "Canvas background was visibly off-white and textured outside semantic paper elements; replaced with a flat #FFFFFF canvas.",
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        },
+        {
+          "id": 6,
+          "prompt": "Regenerate this Chinese SimpleMkt editorial body figure while preserving its decision-path content, title hierarchy, labels, thin green leaders, white paper plan sheet, and restrained engraving-like style. Critical correction: the entire 1200×675 canvas background must be a mathematically flat, pure solid #FFFFFF from edge to edge—no off-white, cream, gray tint, paper grain, texture, noise, vignette, gradient, border, or background shadow anywhere. Paper fiber / torn paper texture is permitted only inside the discrete content elements (the excerpt sheet, decision node, plan sheet, narrow label strips), never in surrounding negative space. Preserve the existing simplemkt composition: centered green title “先把卡点说清楚，再开始画图”, gray subtitle, diagram begins low; reserve the top-right Logo zone x=1056–1200 y=0–60 as perfectly blank white, do not render a logo. Keep the lower-left italic disclosure. No UI/dashboard, icons, people, plants, ornaments, crop marks, crosses, floating strokes, decorative grids, or extra text. The image must look like a clean white editorial page with only the semantic paper elements floating very faintly.",
           "status": "accepted",
           "adjustment_reason": null,
           "candidate_file": null,
