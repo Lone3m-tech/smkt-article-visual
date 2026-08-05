@@ -1,6 +1,6 @@
 # Visual Grammar
 
-Choose the diagram grammar from the relationship the article needs a reader to understand. The fixed editorial-diagram style may change only presentation; it must not invent or change relationships.
+Choose the diagram grammar from the relationship the narrative needs a reader or audience to understand. The fixed editorial-diagram style may change only presentation; it must not invent or change relationships.
 
 | Grammar | Use for | Do not use for |
 | --- | --- | --- |
