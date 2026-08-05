@@ -1,4 +1,4 @@
-# SMKT Article Visual
+# smkt-article-visual
 
 > Make every article image explain, not decorate.
 
@@ -45,19 +45,19 @@ Choose one primary grammar for each body figure. Start with the relationship a r
 
 | Grammar | Example |
 | --- | --- |
-| Architecture | <img src="examples/visual-grammar/architecture.png" alt="Architecture visual grammar example" width="280"> |
-| Flow | <img src="examples/visual-grammar/flow.png" alt="Flow visual grammar example" width="280"> |
-| Loop | <img src="examples/visual-grammar/loop.png" alt="Loop visual grammar example" width="280"> |
-| Decision tree | <img src="examples/visual-grammar/decision-tree.png" alt="Decision tree visual grammar example" width="280"> |
-| Comparison | <img src="examples/visual-grammar/comparison.png" alt="Comparison visual grammar example" width="280"> |
-| Matrix | <img src="examples/visual-grammar/matrix.png" alt="Matrix visual grammar example" width="280"> |
-| Overlap map | <img src="examples/visual-grammar/overlap-map.png" alt="Overlap map visual grammar example" width="280"> |
-| Boundary map | <img src="examples/visual-grammar/boundary-map.png" alt="Boundary map visual grammar example" width="280"> |
-| Argument map | <img src="examples/visual-grammar/argument-map.png" alt="Argument map visual grammar example" width="280"> |
-| Timeline | <img src="examples/visual-grammar/timeline.png" alt="Timeline visual grammar example" width="280"> |
-| Continuum | <img src="examples/visual-grammar/continuum.png" alt="Continuum visual grammar example" width="280"> |
-| Layer stack | <img src="examples/visual-grammar/layer-stack.png" alt="Layer stack visual grammar example" width="280"> |
-| Annotated source | <img src="examples/visual-grammar/annotated-source.png" alt="Annotated source visual grammar example" width="280"> |
+| Architecture | <img src="examples/visual-grammar/architecture.png" alt="Architecture visual grammar example" width="520"> |
+| Flow | <img src="examples/visual-grammar/flow.png" alt="Flow visual grammar example" width="520"> |
+| Loop | <img src="examples/visual-grammar/loop.png" alt="Loop visual grammar example" width="520"> |
+| Decision tree | <img src="examples/visual-grammar/decision-tree.png" alt="Decision tree visual grammar example" width="520"> |
+| Comparison | <img src="examples/visual-grammar/comparison.png" alt="Comparison visual grammar example" width="520"> |
+| Matrix | <img src="examples/visual-grammar/matrix.png" alt="Matrix visual grammar example" width="520"> |
+| Overlap map | <img src="examples/visual-grammar/overlap-map.png" alt="Overlap map visual grammar example" width="520"> |
+| Boundary map | <img src="examples/visual-grammar/boundary-map.png" alt="Boundary map visual grammar example" width="520"> |
+| Argument map | <img src="examples/visual-grammar/argument-map.png" alt="Argument map visual grammar example" width="520"> |
+| Timeline | <img src="examples/visual-grammar/timeline.png" alt="Timeline visual grammar example" width="520"> |
+| Continuum | <img src="examples/visual-grammar/continuum.png" alt="Continuum visual grammar example" width="520"> |
+| Layer stack | <img src="examples/visual-grammar/layer-stack.png" alt="Layer stack visual grammar example" width="520"> |
+| Annotated source | <img src="examples/visual-grammar/annotated-source.png" alt="Annotated source visual grammar example" width="520"> |
 
 ## Core capabilities
 
@@ -79,11 +79,9 @@ Each figure is placed after its corresponding paragraph. A manifest records ever
 
 ![Traceable illustration delivery](examples/demo-article/assets/image/traceable-delivery.png)
 
-## Installation
+## Install
 
-This package is published at `Lone3m-tech/smkt-article-visual` and supports two equivalent installation paths.
-
-### Option 1: one-shot npx installation (recommended)
+Recommended:
 
 ```bash
 npx skills add Lone3m-tech/smkt-article-visual \
@@ -93,11 +91,7 @@ npx skills add Lone3m-tech/smkt-article-visual \
   --copy
 ```
 
-This does not install the Skill as a Node runtime dependency in `node_modules`. `npx` downloads and runs the `skills` installer only for this command; the installer then retrieves the full GitHub Skill package—`SKILL.md`, `assets/`, `references/`, `scripts/`, and examples—and copies it into Codex’s global Skill directory.
-
-This avoids finding host directories by hand, does not require a globally installed installer, and lets the user choose the target host. Remove `--global` for a project installation. For Claude Code, replace `--agent codex` with `--agent claude-code`.
-
-### Option 2: git clone and place manually
+Manual installation:
 
 ```bash
 git clone --depth 1 https://github.com/Lone3m-tech/smkt-article-visual.git
@@ -105,7 +99,7 @@ mkdir -p ~/.codex/skills
 cp -R smkt-article-visual ~/.codex/skills/smkt-article-visual
 ```
 
-This downloads a complete Git working copy. Use it when you want to review every file first, do not have Node/npx, or need a specific release tag. For a pinned release, run `git checkout <release-tag>` inside the clone before copying. Updates remain explicit: pull or re-clone, then replace the installed folder.
+Remove `--global` for a project installation. For Claude Code, replace `--agent codex` with `--agent claude-code`.
 
 ## Get started
 

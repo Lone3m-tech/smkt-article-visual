@@ -1,4 +1,4 @@
-# SMKT Article Visual
+# smkt-article-visual
 
 > 让文章里的每一张图，都在解释，而不是装饰。
 
@@ -45,19 +45,19 @@
 
 | 图法 | 示例 |
 | --- | --- |
-| Architecture（架构） | <img src="examples/visual-grammar/architecture.png" alt="Architecture 图法示例" width="280"> |
-| Flow（流程） | <img src="examples/visual-grammar/flow.png" alt="Flow 图法示例" width="280"> |
-| Loop（循环） | <img src="examples/visual-grammar/loop.png" alt="Loop 图法示例" width="280"> |
-| Decision tree（决策树） | <img src="examples/visual-grammar/decision-tree.png" alt="Decision tree 图法示例" width="280"> |
-| Comparison（对比） | <img src="examples/visual-grammar/comparison.png" alt="Comparison 图法示例" width="280"> |
-| Matrix（矩阵） | <img src="examples/visual-grammar/matrix.png" alt="Matrix 图法示例" width="280"> |
-| Overlap map（交集） | <img src="examples/visual-grammar/overlap-map.png" alt="Overlap map 图法示例" width="280"> |
-| Boundary map（边界） | <img src="examples/visual-grammar/boundary-map.png" alt="Boundary map 图法示例" width="280"> |
-| Argument map（论证） | <img src="examples/visual-grammar/argument-map.png" alt="Argument map 图法示例" width="280"> |
-| Timeline（时间线） | <img src="examples/visual-grammar/timeline.png" alt="Timeline 图法示例" width="280"> |
-| Continuum（连续谱） | <img src="examples/visual-grammar/continuum.png" alt="Continuum 图法示例" width="280"> |
-| Layer stack（层级） | <img src="examples/visual-grammar/layer-stack.png" alt="Layer stack 图法示例" width="280"> |
-| Annotated source（来源标注） | <img src="examples/visual-grammar/annotated-source.png" alt="Annotated source 图法示例" width="280"> |
+| Architecture（架构） | <img src="examples/visual-grammar/architecture.png" alt="Architecture 图法示例" width="520"> |
+| Flow（流程） | <img src="examples/visual-grammar/flow.png" alt="Flow 图法示例" width="520"> |
+| Loop（循环） | <img src="examples/visual-grammar/loop.png" alt="Loop 图法示例" width="520"> |
+| Decision tree（决策树） | <img src="examples/visual-grammar/decision-tree.png" alt="Decision tree 图法示例" width="520"> |
+| Comparison（对比） | <img src="examples/visual-grammar/comparison.png" alt="Comparison 图法示例" width="520"> |
+| Matrix（矩阵） | <img src="examples/visual-grammar/matrix.png" alt="Matrix 图法示例" width="520"> |
+| Overlap map（交集） | <img src="examples/visual-grammar/overlap-map.png" alt="Overlap map 图法示例" width="520"> |
+| Boundary map（边界） | <img src="examples/visual-grammar/boundary-map.png" alt="Boundary map 图法示例" width="520"> |
+| Argument map（论证） | <img src="examples/visual-grammar/argument-map.png" alt="Argument map 图法示例" width="520"> |
+| Timeline（时间线） | <img src="examples/visual-grammar/timeline.png" alt="Timeline 图法示例" width="520"> |
+| Continuum（连续谱） | <img src="examples/visual-grammar/continuum.png" alt="Continuum 图法示例" width="520"> |
+| Layer stack（层级） | <img src="examples/visual-grammar/layer-stack.png" alt="Layer stack 图法示例" width="520"> |
+| Annotated source（来源标注） | <img src="examples/visual-grammar/annotated-source.png" alt="Annotated source 图法示例" width="520"> |
 
 ## 核心能力
 
@@ -81,9 +81,7 @@
 
 ## 安装
 
-本包已发布至 `Lone3m-tech/smkt-article-visual`，提供两种等价的安装方式。
-
-### 方式一：npx 一次性安装（推荐）
+推荐安装：
 
 ```bash
 npx skills add Lone3m-tech/smkt-article-visual \
@@ -93,11 +91,7 @@ npx skills add Lone3m-tech/smkt-article-visual \
   --copy
 ```
 
-这条命令不会把本 Skill 当作 Node 运行时依赖安装到 `node_modules`。`npx` 只在本次执行时下载并运行 `skills` 安装器；安装器再从 GitHub 取得完整 Skill 包（`SKILL.md`、`assets/`、`references/`、`scripts/` 与示例），并以副本形式放入 Codex 的全局 Skill 目录。
-
-优点是无需手动找目录、无需全局安装安装器，并能明确选择目标宿主。项目内安装时去掉 `--global`；安装到 Claude Code 时把 `--agent codex` 改为 `--agent claude-code`。
-
-### 方式二：git clone 后手动放置
+手动安装：
 
 ```bash
 git clone --depth 1 https://github.com/Lone3m-tech/smkt-article-visual.git
@@ -105,7 +99,7 @@ mkdir -p ~/.codex/skills
 cp -R smkt-article-visual ~/.codex/skills/smkt-article-visual
 ```
 
-这条路径下载的是仓库的完整 Git 工作副本。它适合希望先逐文件审查内容、没有 Node/npx 环境，或需要先切换到指定 release tag 的用户。使用正式版本时，先在克隆目录执行 `git checkout <release-tag>`，再复制；更新也由用户明确拉取和替换，不会隐式升级。
+项目内安装时去掉 `--global`；安装到 Claude Code 时把 `--agent codex` 改为 `--agent claude-code`。
 
 ## 开始使用
 
