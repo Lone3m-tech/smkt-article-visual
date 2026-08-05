@@ -1,0 +1,657 @@
+{
+  "schema_version": 1,
+  "article_path": "article.md",
+  "history_note": "Migrated from legacy per-image prompt and Logo-receipt sidecars; no rejected candidate images were retained.",
+  "images": [
+    {
+      "id": "content-grammar-style",
+      "role": "body_figure",
+      "output_path": "assets/image/content-grammar-style.png",
+      "placement": {
+        "kind": "after_paragraph",
+        "anchor": "文章结构、图法和编辑图母版分别回答不同的问题，不能由其中一层替代另一层。"
+      },
+      "accepted_attempt": 5,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Final native 16:9 Chinese editorial body figure, layer_stack grammar. Pure #FFFFFF canvas; no outer frame, tint, texture, landscape, people, UI, dashboard, 3D, watermark, QR or extra text. All Chinese in one consistent printed Songti-like editorial-serif family; no handwriting or sans. Keep final top-right Logo reserve x=1056–1200, y=0–60 completely empty pure white with no wordmark.\n\nCentered exact #1A6B3A title: “内容、图法、风格，各管一层”. Centered exact #6B6B6B subtitle: “文章决定关系，母版统一表达”.\n\nOne vertical stack of three clearly separated paper layers with fine downward constraint lines: top “文章结构” and a small label “解释任务与位置”; middle “图法” with “流程、对比、层级、边界”; bottom “编辑图母版” with “颜色、字体、材质、留白”. Show a small side bracket pointing from all layers to the exact phrase “不能替代”. The ordering must make clear: article structure decides what needs explaining, visual grammar preserves the relation, editorial master controls appearance only. Short labels only; no factual examples, no data. Use thin pale green/light gray hairlines, layered paper and restrained hatch only where they clarify the layers and the downward constraint. Absolutely no registration marks, corner crosses, crop marks, floating strokes, isolated decorative color blocks, ornamental arrows, or any mark without a semantic label, relation, or structural role.",
+          "status": "rejected",
+          "adjustment_reason": "Replaced by the fixed centered title-band and role-specific content-element contract.",
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        },
+        {
+          "id": 2,
+          "prompt": "16:9 Chinese editorial body figure, layer_stack grammar. Pure #FFFFFF canvas; empty white Logo reserve x=1056–1200,y=0–60; no rendered logo. Exact title `结构、图法与风格，各自负责不同问题` in #1A6B3A and subtitle `文章决定任务，图法保存关系，母版统一表达` in #6B6B6B. One strict vertical stack of white fibrous cut-paper layers: `文章结构` → `visual grammar` → `编辑图母版`, with fine downward constraint leaders and direct labels `任务与位置`, `关系结构`, `颜色、字体、材质、留白`. Single Songti-like Chinese family, thin quiet green/gray hairlines, identical faint paper lift. No generic objects, icons, UI, cards, grids, handwriting, model wordmark or extra text.",
+          "status": "rejected",
+          "adjustment_reason": "Interrupted after the generic paper-node result exposed that labels were carrying all semantic meaning; superseded by the role-specific content-element contract.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 3,
+          "prompt": "16:9 final Chinese editorial body figure, layer-stack grammar. Pure #FFFFFF; reserve x=1056–1200,y=0–60 empty white for final Logo. Exact green title `内容、图法、风格，各管一层`; exact gray subtitle `文章决定关系，母版统一表达`. Compose one vertical three-layer editorial stack joined by delicate downward constraint leaders. Top excerpt sheet `文章结构`: selected paragraph lines plus `解释任务` and `位置`. Middle cut-paper field `图法`: three distinct mini relation diagrams labelled `流程` `对比` `层级`, showing that it preserves topology. Bottom master sheet `编辑图母版`: three visibly different material/typography/line samples labelled `颜色` `字体` `材质`. A quiet side bracket points to `不能替代`. Each layer must visibly depict its own role, not blank slips. One Songti-like family; fixed 52px #1A6B3A title, 28px #6B6B6B subtitle, 32px headings, 28px labels; thin pale forest-green/light-gray 1–1.5px hairlines; white fibrous straight/cut paper and one unified faint lift. No people, plants, animals, icons, UI, dashboards, 3D, rounded cards, generic objects, decorative grids/crosses, handwriting, fake Logo, data, or extra text.",
+          "status": "rejected",
+          "adjustment_reason": "No reviewable candidate was received before the fixed centered title-band contract superseded this attempt.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 4,
+          "prompt": "16:9 final Chinese editorial body figure, layer-stack grammar. Pure #FFFFFF. Keep Logo reserve x=1056–1200,y=0–60 fully empty; no wordmark. Fix exact centered title/subtitle together at x=600 within y=76–176: 52px green title `内容、图法、风格，各管一层`; 28px gray subtitle `文章决定关系，母版统一表达`. Begin diagram below y=200. Build one vertical three-layer editorial stack with fine downward constraint leaders. `文章结构` is an excerpt sheet showing selected lines plus `解释任务` and `位置`; `图法` is one field holding three actual miniature relation sketches `流程` `对比` `层级`; `编辑图母版` is one specimen sheet with visually distinct `颜色` `字体` `材质` samples. A subtle side bracket says `不能替代`. Each layer must depict its own role, not label-only slips. Songti-like Chinese editorial serif, white fibrous straight/cut paper, matching faint lift, pale 1–1.5px lines. No people, botanical/animal/generic-object metaphors, icons, UI/dashboard, 3D, rounded cards, badges, grids/crosses, handwriting, fake Logo, data or extra text.",
+          "status": "rejected",
+          "adjustment_reason": "Candidate used illustrative paragraph positions without the required lower-left disclosure.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 5,
+          "prompt": "16:9 final Chinese editorial body figure, layer-stack grammar. Pure #FFFFFF. Keep Logo reserve x=1056–1200,y=0–60 fully empty; no wordmark. Fix exact centered title/subtitle at x=600 within y=76–176: 52px green `内容、图法、风格，各管一层`; 28px gray `文章决定关系，母版统一表达`. Diagram below y=200. One vertical three-layer stack with fine downward leaders: `文章结构` excerpt sheet with selected lines, `解释任务`, `位置`; `图法` field with actual mini relation sketches `流程` `对比` `层级`; `编辑图母版` specimen sheet showing `颜色` `字体` `材质`; side bracket `不能替代`. Every layer depicts its own role, not label-only slips. MANDATORY exact lower-left 16px italic gray disclosure `图中示例仅为解释用途，并非事实`. Use Songti-like Chinese editorial serif, white fibrous straight/cut paper, equal faint lift, pale 1–1.5px lines. No people, botanical/animal/generic-object metaphors, icons, UI/dashboard, 3D, rounded cards, badges, grids/crosses, handwriting, fake Logo, data or extra text.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cover",
+      "role": "cover",
+      "output_path": "assets/image/cover.png",
+      "placement": {
+        "kind": "after_h1"
+      },
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Final native 16:9 Chinese PPT cover for an article. Pure solid #FFFFFF canvas, no outer frame, tint, texture, gradient, landscape photo, people, UI, dashboard, 3D, watermark, QR code, or extra text. Render the exact Chinese article H1 only: “开源配图Skill：配图不是装饰，而是解释的一部分”. Use one consistent printed Songti-like editorial-serif Chinese family, exact brand-green #1A6B3A, large but calm and phone-readable, with deliberate two-line breaking only if needed for readability. Keep a continuous quiet title-safe zone on the left and center.\n\nOne dominant metaphor only: a white article sheet unfolds into a fine, clearly connected reading path made of restrained paper layers and thin low-contrast green ink, suggesting that an article judgment becomes a visual explanation. Do not use labels, relation words, evidence notes, title-to-diagram layout, or a model-rendered SimpleMkt wordmark. Material detail is limited to purposeful paper overlap, a shallow paper edge, and restrained hatching inside the metaphor. Absolutely no registration marks, corner crosses, crop marks, floating strokes, isolated decorative color blocks, ornamental arrows, or any visible mark without a semantic or metaphorical role. Keep the top-right rectangle x=1056–1200, y=0–60 on the final 1200×675 composition completely empty pure white for deterministic Logo placement.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        },
+        {
+          "id": 2,
+          "prompt": "16:9 PPT editorial cover, pure #FFFFFF canvas and empty white Logo reserve x=1056–1200,y=0–60; do not render logo. Render only the exact title `开源配图Skill：配图不是装饰，而是解释的一部分` in large calm brand-green Songti-like Chinese, with deliberate line breaks only. Maintain a continuous quiet left-to-centre title-safe zone. One dominant metaphor: restrained white article paper layers unfold from a dense unreadable text edge into one clearly connected, fine ink explanation path; no labels, no diagram stations, no subtitle or evidence note. Material depth is only subtle paper overlap and restrained hatch. No frame, photography, people, UI, dashboard, 3D, icons, random decoration, handwriting, watermark, QR, or extra text.",
+          "status": "generated",
+          "adjustment_reason": null,
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "id": "decoration-vs-explanation",
+      "role": "body_figure",
+      "output_path": "assets/image/decoration-vs-explanation.png",
+      "placement": {
+        "kind": "after_paragraph",
+        "anchor": "一篇文章写到最后，最容易出现一个让人泄气的场景：正文已经打磨好了，只差“配几张图”。于是有人临时打开生图工具，写几句提示词；有人在图库里翻半天；还有人干脆把文章发出去。结果常见的麻烦是图和文章各说各话——标题很漂亮，读者却还是没看懂流程；配图很精致，放进正文却像一张无关的海报。"
+      },
+      "accepted_attempt": 5,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Final native 16:9 Chinese editorial body figure as a comparison grammar. Pure solid #FFFFFF canvas. No outer frame, tint, gradient, background texture, landscape, people, UI, dashboard, 3D, watermark, QR code, or extra text. Every Chinese string uses one consistent printed Songti-like editorial-serif family; no sans, script, calligraphy, or handwritten semantic text. Keep final top-right Logo reserve x=1056–1200, y=0–60 fully empty pure white with no model wordmark.\n\nCentered exact #1A6B3A title: “好看，不等于解释”. Centered exact #6B6B6B subtitle: “图要接住读者刚读到的关系”.\n\nOne dominant comparison below. Left “装饰图”: a beautiful isolated cut-paper botanical image sheet, visually disconnected, with only the short printed label “各说各话”. Right “解释图”: one connected detailed chain of four linked paper elements labeled exactly “正文判断” → “关键关系” → “解释图” → “读者理解”. Use only these short conceptual labels; no long paragraph, no business scenario, no numerical, date, source-like, factual, or example claims. The “正文判断” element must look like neutral abstract lines, not readable prose. Thin low-contrast green/light-gray hairlines only; paper-cut overlap and restrained hatch only where they clarify the visual distinction. Absolutely no registration marks, corner crosses, crop marks, floating strokes, isolated decorative color blocks, ornamental arrows, or any visible mark without a label, relation, or structural role. No invented data.",
+          "status": "rejected",
+          "adjustment_reason": "Replaced by the role-specific content-element and illustrative-text disclosure contract.",
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        },
+        {
+          "id": 2,
+          "prompt": "16:9 Chinese editorial body figure, comparison grammar. Pure #FFFFFF canvas; empty white Logo reserve x=1056–1200,y=0–60; no logo. Exact title `装饰图不能替代解释`; subtitle `一边只提供氛围，另一边建立理解路径`. Below, one neutral two-side comparison: left direct label `装饰图` next to a visually isolated white paper fragment and no relation; right direct label `解释图` as a detailed connected paper reading chain `文章正文` → `关键关系` → `解释图` → `读者理解`. Use only neutral printed rules in source sheet, not prose. One Songti-like family; 52px green title, 28px gray subtitle, thin low-contrast green/gray connectors, consistent faint white fibrous paper lift. No botanical, people, icons, machine, UI, panels, scores, data, handwriting, decorative marks or extra text.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected because generic paper nodes were carrying the meaning through labels instead of visible role-specific content.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 3,
+          "prompt": "Create a final 16:9 Chinese editorial article body figure with comparison grammar. Pure #FFFFFF canvas and empty top-right Logo reserve x=1056–1200,y=0–60. Exact title `装饰图不能替代解释`; subtitle `一边只提供氛围，另一边建立理解路径`. Contrast a rich but isolated unannotated decorative paper specimen on the left with a role-specific explanatory reading chain on the right: selected highlighted source lines, visible nodes and links, a framed annotated mini-diagram, and a resolved reader takeaway. Every core element must depict its own semantic role, never appear as an empty or interchangeable paper shape. Use white fibrous straight/cut paper, consistent faint lift, Songti-like typography, quiet hairline green/gray leaders; no botanical default, people, icon, machine, generic object, UI, dashboard, handwrite, model logo, data or extra text.",
+          "status": "rejected",
+          "adjustment_reason": "Role-specific detail improved, but the source sheet invented a long paragraph instead of presenting only the article's supplied meaning.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 4,
+          "prompt": "Create a final 16:9 Chinese editorial comparison figure. Pure #FFFFFF, empty Logo reserve x=1056–1200,y=0–60. Exact title `装饰图不能替代解释`; subtitle `一边只提供氛围，另一边建立理解路径`. Right-side core elements visibly depict source, selected relation, framed explanation, and resolved reader takeaway, but the source uses only supplied article phrases `标题很漂亮` and `仍没看懂流程`; never invent a paragraph, factual claim, number or extra prose. Retain the unified white fibrous paper, Songti-like type, hairline green/gray lines and faint lift contract.",
+          "status": "rejected",
+          "adjustment_reason": "Generation was interrupted before a reviewable candidate was received.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 5,
+          "prompt": "Create a final 16:9 Chinese editorial body figure with comparison grammar. Pure #FFFFFF canvas. Keep x=1056–1200, y=0–60 completely empty pure white for a separately applied Logo; do not render any wordmark there. Exact centered title in brand green: `装饰图不能替代解释`. Exact centered subtitle in gray: `一边只提供氛围，另一边建立理解路径`. Under it, build one left-to-right comparison with explicit structural headings `装饰图` and `解释图`. The left is a rich but isolated white fibrous cut-paper visual specimen: carefully engraved contours, restrained hatch and purposeful paper layers, visually appealing yet unconnected to any reading relation; label only `各说各话`. The right is a single detailed reading chain, not four empty cards: (1) an excerpt sheet labelled `文章正文`, with readable fictional explanatory microcopy on several printed lines and two green selected lines; use exactly these lines: `这段正文把一个判断讲清楚，` `但图没有接住其中的关系，` `读者仍要自己补全理解路径。` (2) actual three linked ink nodes labelled `正文` `关系` `理解`, under heading `关键关系`; (3) a framed annotated mini-diagram labelled `解释图`, visually converting selected text into the linked relation using fine leaders and circular anchor points; (4) a small resolved conclusion sheet labelled `读者理解`, with one green conclusion line and two short printed lines. Make each component visibly depict its role: source has selected lines, relation has named nodes and links, explainer has a framed annotated relation, takeaway has a resolved reading outcome. No empty paper shapes, repeated blank strips, generic icons, plants, animals, people, machines, containers, dashboards, UI, 3D, abstract patterns, rounded cards, outer frame, decorative grids, corner crosses, crop marks, handwriting, fake logo, watermark, QR, data, dates, percentages, or extra text. One Chinese Songti-like editorial serif for all Chinese. Body typography must be: 52px semibold #1A6B3A title, 28px #6B6B6B subtitle, 32px #141414 structural headings, 28px #141414 labels, and exact lower-left 16px italic #8C8C8C disclosure: `图中示例仅为解释用途，并非事实`. Use only thin, pale forest-green/light-gray 1–1.5px hairlines and matching white fibrous paper primitives, with one very faint uniform 4–6px lift and diffuse neutral shadow. The right side should feel like an editorial engraving/pencil-sketch explanation, specific and lively, never a flat SVG or wireframe.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "plan-before-generation",
+      "role": "body_figure",
+      "output_path": "assets/image/plan-before-generation.png",
+      "placement": {
+        "kind": "after_paragraph",
+        "anchor": "它先把文章中的解释任务拆成一份可确认的 visual plan，明确封面、每张正文图、位置和不该画的部分。"
+      },
+      "accepted_attempt": 5,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Final native 16:9 Chinese editorial body figure, ordered flow grammar. Pure #FFFFFF canvas; no outer frame, tint, background texture, landscape, people, UI, dashboard, 3D, watermark, QR or extra text. One consistent printed Songti-like editorial-serif family for all Chinese, no handwriting or sans. Keep final top-right Logo reserve x=1056–1200, y=0–60 entirely empty pure white and do not render any wordmark.\n\nCentered exact #1A6B3A title: “先把卡点说清楚，再开始画图”. Centered exact #6B6B6B subtitle: “可视化计划把“画什么”和“不画什么”写下来”.\n\nOne left-to-right detailed reading path below: “文章段落” → “读者卡点” → “可视化计划” → “确认” → “生成与落位”. At “可视化计划”, show one paper plan sheet holding exactly four small printed slips: “封面”, “正文图”, “精确锚点”, “不该画的部分”. The “确认” station is a visible gate, before generation. All labels are short conceptual labels only: no long prose, no business, data, dates, or factual claims. Use thin pale-green/light-gray 1–1.5px connectors, paper-cut overlap and restrained hatching only when they clarify the flow or gate. Absolutely no registration marks, corner crosses, crop marks, floating strokes, isolated decorative color blocks, ornamental arrows, or any mark without a semantic label, relation, or structural role. No loop, no heavy arrow, no generic card grid.",
+          "status": "rejected",
+          "adjustment_reason": "Replaced by the fixed centered title-band and role-specific content-element contract.",
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        },
+        {
+          "id": 2,
+          "prompt": "16:9 Chinese editorial body figure, decision_tree grammar. Pure #FFFFFF canvas; empty white Logo reserve x=1056–1200,y=0–60; no rendered logo. Exact title `先判断读者会不会卡住，再决定要不要画`; subtitle `读者障碍决定图的必要性、图法与落位`. One central white cut-paper decision field `读者障碍`; two fine conditional branches labelled `需要解释` and `文字已足够清楚`. The first ends in a narrow paper strip `visual plan` with three small attached strips `图法`, `位置`, `不该画`; the second ends in a matching strip `保留文字`. All Chinese Songti-like; green 52px title, gray 28px subtitle, thin quiet hairlines and identical faint fibrous-paper lift. No process line, no loop, no people, icons, UI/cards, random patterns, handwriting, data or extra text.",
+          "status": "rejected",
+          "adjustment_reason": "Superseded by the role-specific content-element and illustrative-text disclosure contract.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 3,
+          "prompt": "16:9 final Chinese editorial body figure, decision-tree grammar. Pure #FFFFFF; reserve x=1056–1200,y=0–60 empty white for final Logo. Exact green title `先把卡点说清楚，再开始画图`; exact gray subtitle `读者障碍决定图的必要性、图法与落位`. Build one reading path from an excerpt sheet labelled `文章段落`, showing a few selected printed lines, into a central cut-paper decision field `读者卡点`. Two thin labelled branches: `需要解释` leads to a detailed `visual plan` sheet containing `封面` `正文图` `精确锚点` `不该画`; `文字已足够清楚` leads to a narrow strip `保留文字`. From the plan sheet a final fine leader reaches `确认后生成`. Make the decision, branches and plan content visibly specific—no empty paper nodes. One Songti-like family; 52px #1A6B3A title, 28px #6B6B6B subtitle, 32px headings, 28px labels, pale 1–1.5px green/gray hairlines, white fibrous paper with equal faint lift. No people, botanical or generic-object metaphors, icons, UI, dashboard, 3D, rounded cards, decorative marks, fake Logo, data, long prose, or extra text.",
+          "status": "rejected",
+          "adjustment_reason": "No reviewable candidate was received before the fixed centered title-band contract superseded this attempt.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 4,
+          "prompt": "16:9 final Chinese editorial body figure, decision-tree grammar. Pure #FFFFFF. Keep Logo reserve x=1056–1200,y=0–60 fully empty; no wordmark. Fix exact centered title/subtitle together at x=600 within y=76–176: 52px green title `先把卡点说清楚，再开始画图`; 28px gray subtitle `读者障碍决定图的必要性、图法与落位`. Begin the diagram below y=200. Use one detailed decision path: an excerpt sheet `文章段落` with selected printed lines enters a cut-paper field `读者卡点`; two thin branches `需要解释` and `文字已足够清楚`; the first reaches a visibly populated `visual plan` sheet with `封面` `正文图` `精确锚点` `不该画`, then a narrow `确认后生成` strip; the second reaches `保留文字`. Every element depicts its role, no empty nodes. Songti-like Chinese editorial serif, white fibrous straight/cut paper, equal faint lift, pale 1–1.5px green/gray leaders. No people, plants/animals, generic objects, icons, UI/dashboard, 3D, rounded cards, badges, decorative grids/crosses, handwriting, fake Logo, data, long prose or extra text.",
+          "status": "rejected",
+          "adjustment_reason": "Candidate created readable illustrative text but omitted the required lower-left disclosure.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 5,
+          "prompt": "16:9 final Chinese editorial body figure, decision-tree grammar. Pure #FFFFFF. Keep Logo reserve x=1056–1200,y=0–60 fully empty; no wordmark. Fix exact centered title/subtitle together at x=600 within y=76–176: 52px green title `先把卡点说清楚，再开始画图`; 28px gray subtitle `读者障碍决定图的必要性、图法与落位`. Begin diagram below y=200. One detailed path: a compact excerpt sheet `文章段落` with short illustrative selected lines enters cut-paper decision `读者卡点`; branches `需要解释` to a populated `visual plan` sheet `封面` `正文图` `精确锚点` `不该画`, then `确认后生成`; `文字已足够清楚` to `保留文字`. Do not add any prose beyond these short labels. MANDATORY: render exact lower-left small gray italic text `图中示例仅为解释用途，并非事实`; it must be visible and not centered. Every element depicts its role, no empty nodes. Songti-like Chinese editorial serif, white fibrous straight/cut paper, equal faint lift, pale 1–1.5px green/gray leaders. No people, plants/animals, generic objects, icons, UI/dashboard, 3D, rounded cards, badges, decorative grids/crosses, handwriting, fake Logo, data, or extra text.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "simplemkt-visual-style",
+      "role": "body_figure",
+      "output_path": "assets/image/simplemkt-visual-style.png",
+      "placement": {
+        "kind": "after_paragraph",
+        "anchor": "这意味着它有不少刻意的限制：不靠人物吸引注意力，不把正文图做成仪表盘或产品 UI，不用霓虹、泛滥的 3D 效果、二维码或水印填满画面，也不把生成图伪装成真实截图或外部证据。限制不是为了让所有图长得一样，而是避免视觉噪声抢走文章的判断。"
+      },
+      "accepted_attempt": 5,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Final native 16:9 Chinese editorial body figure, boundary-map grammar. Pure solid #FFFFFF canvas; no outer frame, tint, background texture, landscape, people, UI, dashboard, 3D, watermark, QR code, or extra text. All Chinese text uses one consistent printed Songti-like editorial-serif family; no handwriting, calligraphy, or sans. Keep the final top-right Logo reserve x=1056–1200, y=0–60 entirely empty pure white and render no model wordmark.\n\nCentered exact #1A6B3A title: “克制，是为了让判断更清楚”. Centered exact #6B6B6B subtitle: “留下必要信息，排除视觉噪声”.\n\nBelow, create one single central editorial paper field labeled only “编辑图”, placed between two compact labeled columns. Left column heading “保留”, with exactly four rows: “白底”, “细线”, “必要标签”, “纸面材质”. Right column heading “排除”, with exactly five rows: “人物”, “仪表盘”, “产品界面”, “霓虹3D”, “二维码、水印”. The central paper field contains only three deliberately connected abstract diagram elements: a small rectangle, a thin connector, and a small circle. Each left-row has one thin horizontal connector into the central field; each right-row has one thin horizontal connector from the central field. The connectors themselves are the only lines: no dashed divider, no dots, no X symbol, no asterisk, no arrowhead, no quotation, no caption strip, no additional sentence, no unplanned labels. The central field is explicitly an abstract editorial specimen, never a map, place, region, location, route, or geographic boundary. No business scenario, data, dates, percentages, source-like claim, factual example, or unplanned label.\n\nUse only purposeful layered/cut-paper overlap and light restrained hatch within the paper field. Absolutely no registration marks, corner crosses, crop marks, floating strokes, isolated decorative color blocks, ornamental arrows, or any visible mark without a semantic label, relation, or structural role. No generic cards, no heavy arrows.",
+          "status": "rejected",
+          "adjustment_reason": "Replaced by the fixed centered title-band and role-specific content-element contract.",
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        },
+        {
+          "id": 2,
+          "prompt": "16:9 Chinese editorial body figure, boundary_map grammar. Pure #FFFFFF canvas; empty white Logo reserve x=1056–1200,y=0–60; no logo. Exact title `统一风格，是为了保护文章判断`; subtitle `保留能帮助理解的元素，排除夺走注意力的噪声`. One central white fibrous cut-paper scope labelled `编辑图母版`; inside direct labels `白底`, `宋体标题`, `细线关系`, `必要标签`, `固定 Logo`; outside direct labels `人物`, `产品 UI`, `霓虹`, `3D`, `二维码`, `水印`, all connected only by hairline leaders and tiny anchors. One Songti-like Chinese family; 52px green title, 28px gray subtitle; no arrows, X marks, frames, UI layout, icons, dashboards, thick lines, handwriting, factual data or extra text. Paper has identical faint lift only; leaders have no shadows.",
+          "status": "rejected",
+          "adjustment_reason": "Superseded by the role-specific content-element and illustrative-text disclosure contract.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 3,
+          "prompt": "16:9 final Chinese editorial body figure, boundary-map grammar. Pure #FFFFFF; reserve x=1056–1200,y=0–60 empty white for final Logo. Exact green title `克制，是为了让判断更清楚`; exact gray subtitle `留下必要信息，排除视觉噪声`. Centre one bounded editorial explanatory field `编辑图`: a small paper excerpt with selected lines leads through thin annotated relation lines to one resolved reading state. On its left, a compact `保留` column: `白底` `细线` `必要标签` `纸面材质`, each directly connected to the field. On the right, an `排除` column: `人物` `仪表盘` `产品界面` `霓虹3D` `二维码、水印`, each positioned as a clearly excluded boundary outside the field, not as decorative icons. Show actual relation, paper material and line-weight samples in the centre; no empty sheet. One Songti-like family; 52px #1A6B3A title, 28px #6B6B6B subtitle, 32px headings, 28px labels, pale 1–1.5px green/gray lines and white fibrous papers with identical faint lift. No people, botanical/generic-object metaphors, icons, UI, dashboard, 3D, rounded cards, decorative grids/crosses, handwrite, fake Logo, data, or extra text.",
+          "status": "rejected",
+          "adjustment_reason": "No reviewable candidate was received before the fixed centered title-band contract superseded this attempt.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 4,
+          "prompt": "16:9 final Chinese editorial body figure, boundary-map grammar. Pure #FFFFFF. Keep Logo reserve x=1056–1200,y=0–60 fully empty; no wordmark. Fix exact centered title/subtitle together at x=600 within y=76–176: 52px green title `克制，是为了让判断更清楚`; 28px gray subtitle `留下必要信息，排除视觉噪声`. Begin diagram below y=200. Centre one bounded editorial explanatory field `编辑图`: a small excerpt with selected lines resolves through annotated hairline relation into one clear reading state. On the left, `保留`: `白底` `细线` `必要标签` `纸面材质`, with fine leaders directly entering the field. On the right, `排除`: `人物` `仪表盘` `产品界面` `霓虹3D` `二维码、水印`, placed as textual outside-boundary conditions, not icons. Show actual paper material, line weight and relation inside the centre; no empty sheet. Songti-like Chinese editorial serif, white fibrous straight/cut paper, equal faint lift and pale 1–1.5px lines. No people, plant/animal/generic-object metaphors, icons, UI/dashboard, 3D, rounded cards, badges, grids/crosses, handwriting, fake Logo, data or extra text.",
+          "status": "rejected",
+          "adjustment_reason": "Candidate introduced readable illustrative prose without the required lower-left disclosure.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 5,
+          "prompt": "16:9 final Chinese editorial body figure, boundary-map grammar. Pure #FFFFFF. Keep Logo reserve x=1056–1200,y=0–60 fully empty; no wordmark. Fix exact centered title/subtitle together at x=600 within y=76–176: 52px green `克制，是为了让判断更清楚`; 28px gray `留下必要信息，排除视觉噪声`. Begin diagram below y=200. One central paper explanatory field `编辑图`, with selected lines and a few hairline leaders to `观点句` `核心句` `结论句`. Left text column `保留`: `白底` `细线` `必要标签` `纸面材质`, each connected into the field. Right text column `排除`: `人物` `仪表盘` `产品界面` `霓虹3D` `二维码、水印`, positioned outside the field as boundary conditions, never icons. MANDATORY exact lower-left 16px italic gray note `图中示例仅为解释用途，并非事实`. Every element depicts its role; no empty panels. Songti-like Chinese editorial serif, white fibrous straight/cut paper, equal faint lift, pale 1–1.5px lines. No people, plants/animals/generic objects, icons, UI/dashboard, 3D, rounded cards, badges, grids/crosses, handwriting, fake Logo, data or extra text.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "traceable-delivery",
+      "role": "body_figure",
+      "output_path": "assets/image/traceable-delivery.png",
+      "placement": {
+        "kind": "after_paragraph",
+        "anchor": "生成图片不是结束。SMKT Article Visual 会为封面和每张正文图保留对应的 prompt 旁车文件；封面与正文图共用固定编辑图母版，封面放在文章开头，正文图按约定紧跟段落锚点。"
+      },
+      "accepted_attempt": 6,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Final native 16:9 Chinese editorial body figure, ordered flow grammar. Pure solid #FFFFFF canvas; no outer frame, tint, background texture, landscape, people, UI, dashboard, 3D, watermark, QR code, or extra text. All Chinese text uses one consistent printed Songti-like editorial-serif family; no handwriting, calligraphy, or sans. Keep final top-right Logo reserve x=1056–1200, y=0–60 entirely empty pure white and render no model wordmark.\n\nCentered exact #1A6B3A title: “一张图的交付，包含它的来路”. Centered exact #6B6B6B subtitle: “图片、提示词、位置与检查一起留下来”.\n\nBelow, create one dominant left-to-right traceability flow: “生成底图” → “Logo叠加” → “图片资产” → “提示词旁车” → “段落锚点” → “质检”. Make the flow visibly convergent: the generated image, its prompt sidecar, the fixed Logo receipt, and its article paragraph anchor remain linked through the final quality check. Use only the listed short conceptual labels, plus the short label “Logo回执” attached to the Logo step. No long prose, business scenario, data, dates, percentages, source-like chart, factual claim, or example. Use thin pale-green/light-gray 1–1.5px connectors, purposeful layered/cut-paper details, restrained hatching, and shallow paper edges only when they clarify assets and links. Absolutely no registration marks, corner crosses, crop marks, floating strokes, isolated decorative color blocks, ornamental arrows, or any visible mark without a semantic label, relation, or structural role. No generic cards, no dashboard, and no heavy arrows.",
+          "status": "rejected",
+          "adjustment_reason": "Replaced by the fixed centered title-band and role-specific content-element contract.",
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        },
+        {
+          "id": 2,
+          "prompt": "16:9 Chinese editorial body figure, architecture grammar. Pure #FFFFFF canvas; empty white Logo reserve x=1056–1200,y=0–60; no logo. Exact title `交付不是一张图，而是一条可检查的记录`; subtitle `图像、落位、Logo 与 QA 由同一 manifest 关联`. Central cut-paper field `manifest`; four linked components: small excerpt sheet `封面`, matching narrow-strip group `正文图`, a straight paper strip `精确锚点`, and a cut-paper field `Logo 与 QA`. Show the manifest as the relation holder, with thin leaders and tiny anchors but not a left-to-right process. One Songti-like family; 52px green title, 28px gray subtitle, consistent white fibrous paper and faint lift. No prompt sidecar files, no invented data, no icons, UI, cards, people, objects, handwriting or decorative marks.",
+          "status": "rejected",
+          "adjustment_reason": "Superseded by the role-specific content-element and illustrative-text disclosure contract.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 3,
+          "prompt": "16:9 final Chinese editorial body figure, traceable flow grammar. Pure #FFFFFF; reserve x=1056–1200,y=0–60 empty white for final Logo. Exact green title `生成图片不是结束`; exact gray subtitle `从计划到落位，每一步都可复查`. Build one left-to-right delivery chain with role-specific elements: `visual plan` as a paper sheet with `图法` `位置` `不该画`; `生成 prompt` as an excerpt sheet with selected instruction lines; `图像` as a framed annotated miniature explanatory relation; `Logo` as a protected blank reserve plus a small fixed placement marker; `文章落位与 QA` as a final paper checklist containing `锚点` `尺寸` `品牌` `关系`. Use thin connected leader lines and anchors; show each stage’s actual content rather than blank cards. One Songti-like family; 52px #1A6B3A title, 28px #6B6B6B subtitle, 32px headings, 28px labels, white fibrous straight/cut paper with one consistent faint lift, pale 1–1.5px green/gray hairlines. No people, plants, animals, icons, UI, dashboard, 3D, rounded cards, generic objects, decorative grids/crosses, handwriting, fake Logo, data, or extra text.",
+          "status": "rejected",
+          "adjustment_reason": "No reviewable candidate was received before the fixed centered title-band contract superseded this attempt.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 4,
+          "prompt": "16:9 final Chinese editorial body figure, traceable flow grammar. Pure #FFFFFF. Keep Logo reserve x=1056–1200,y=0–60 fully empty; no wordmark. Fix exact centered title/subtitle together at x=600 within y=76–176: 52px green title `生成图片不是结束`; 28px gray subtitle `从计划到落位，每一步都可复查`. Begin diagram below y=200. Build one connected delivery chain: `visual plan` sheet visibly holds `图法` `位置` `不该画`; `生成 prompt` excerpt sheet shows selected instruction lines; `图像` is a framed annotated miniature relation; `Logo` is a protected blank reserve with one fixed placement marker; `文章落位与 QA` is a final sheet showing `锚点` `尺寸` `品牌` `关系`. Use actual content inside every stage with hairline leaders and anchors, never blank/rounded cards or checkmark badges. Songti-like Chinese editorial serif, white fibrous straight/cut paper, same faint lift, pale 1–1.5px lines. No people, plant/animal/generic-object metaphors, icons, UI/dashboard, 3D, SVG/wireframe, grids/crosses, handwriting, fake Logo, data, long prose, or extra text.",
+          "status": "rejected",
+          "adjustment_reason": "Candidate rendered a visible Logo reserve and illustrative prose without disclosure; the protected Logo region must remain empty.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 5,
+          "prompt": "16:9 final Chinese editorial body figure, traceable flow grammar. Pure #FFFFFF. The full top-right x=1056–1200,y=0–60 region must be completely empty pure white: no box, line, label, text, guide or Logo. Fix exact centered title/subtitle together at x=600 within y=76–176: 52px green `生成图片不是结束`; 28px gray `从计划到落位，每一步都可复查`. Diagram begins below y=200. One connected five-stage delivery chain: `visual plan` sheet holds `图法` `位置` `不该画`; `生成 prompt` excerpt sheet shows short selected instruction lines; `图像` is a framed annotated relation; `品牌叠加` is a narrow paper strip labelled only `固定位置` `后置完成`, with no drawn Logo or reserve; `文章落位与 QA` final sheet shows `锚点` `尺寸` `品牌` `关系`. All stages have actual role-specific content and hairline leaders, never empty/rounded cards or checkmark badges. MANDATORY exact lower-left 16px italic gray note `图中示例仅为解释用途，并非事实`. One Songti-like Chinese editorial serif, white fibrous straight/cut paper, same faint lift, pale 1–1.5px green/gray lines. No people, plant/animal/generic-object metaphors, icons, UI/dashboard, 3D, SVG/wireframe, grids/crosses, handwriting, fake Logo, data, long prose, or extra text.",
+          "status": "rejected",
+          "adjustment_reason": "Candidate substituted a landscape photograph for the required paper-based explanatory relation.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 6,
+          "prompt": "16:9 final Chinese editorial body figure, traceable flow grammar. Pure #FFFFFF. The full top-right x=1056–1200,y=0–60 region must be completely empty pure white: no box, line, label, text, guide or Logo. Fix title/subtitle at x=600 within y=76–176: 52px green `生成图片不是结束`; 28px gray `从计划到落位，每一步都可复查`. Diagram starts below y=200. One connected five-stage chain, all white fibrous paper primitives: `visual plan` sheet holds `图法` `位置` `不该画`; `生成 prompt` excerpt sheet has short selected instruction lines; `图像` is a small WHITE PAPER annotated relation with only text lines, three green anchor dots, and thin leaders—absolutely no photograph, landscape, mountain, water, sky, scene, object illustration or scenic subject; `品牌叠加` is a narrow strip `固定位置` `后置完成`, with no drawn Logo or reserve; `文章落位与 QA` has `锚点` `尺寸` `品牌` `关系`. Actual role-specific content with hairline leaders, no empty/rounded cards/badges. MANDATORY lower-left exact 16px italic gray note `图中示例仅为解释用途，并非事实`. One Songti-like Chinese editorial serif, equal faint lift, pale 1–1.5px green/gray lines. No people, plants, animals, generic objects, icons, UI/dashboard, 3D, SVG/wireframe, photography, landscape, grids/crosses, handwriting, fake Logo, data, long prose, or extra text.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "unfolded-workflow",
+      "role": "body_figure",
+      "output_path": "assets/image/unfolded-workflow.png",
+      "placement": {
+        "kind": "after_paragraph",
+        "anchor": "SMKT Article Visual 的设计刻意没有把文章、图法和生成动作混成一个黑箱。它由四个连续但职责不同的环节组成：先读取 Markdown 正文；再提出 visual plan；随后选择合适的 visual grammar；最后按固定编辑图母版生成、落位并 QA。"
+      },
+      "accepted_attempt": 4,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Final native 16:9 Chinese editorial body figure, architecture grammar. Pure #FFFFFF canvas only; no outer frame, tint, texture, photo, people, UI, dashboard, 3D, watermark, QR or extra text. All Chinese in one consistent printed Songti-like editorial-serif family; no handwritten or sans text. Keep final top-right Logo reserve x=1056–1200, y=0–60 completely empty pure white and render no wordmark.\n\nCentered exact #1A6B3A title: “配图不是黑箱，是一条解释链”. Centered exact #6B6B6B subtitle: “每个环节只负责一个判断”.\n\nUnder header, one unfolded architecture: an “文章正文” source sheet feeds four clearly distinct, connected paper modules: “可视化计划”, “图法选择”, “编辑图母版”, “生成与检查”. Use a non-linear but legible dependency layout: the article source is upstream; plan decides which reader obstacle and anchor matter; grammar selects relation structure; editorial master controls only color, typography and material; final delivery holds a generated image, prompt sidecar and QA check. Use exactly these short labels plus “决定”, “约束”, “交付” as connector words. No code blocks, no generic cards. Thin pale-green/light-gray hairlines, restrained hatching and paper-cut overlap only when they clarify modules and links. Absolutely no registration marks, corner crosses, crop marks, floating strokes, isolated decorative color blocks, ornamental arrows, or any mark without a semantic label, relation, or structural role. The viewer should understand article logic constrains visual delivery without treating the system as one black box.",
+          "status": "rejected",
+          "adjustment_reason": "Replaced by the fixed centered title-band and role-specific content-element contract.",
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        },
+        {
+          "id": 2,
+          "prompt": "16:9 Chinese editorial body figure, flow grammar. Pure #FFFFFF canvas; empty white Logo reserve x=1056–1200,y=0–60; no rendered logo. Exact title `配图不是黑箱，是一条解释链`; subtitle `正文判断依次经过计划、图法与生成检查`. One single left-to-right reading path: white excerpt sheet `Markdown 正文` → narrow strip `visual plan` → narrow strip `visual grammar` → cut-paper field `编辑图母版` → narrow strip `生成、落位与 QA`. Use only this ordered path, thin quiet forest-green leaders and small anchors. Each paper primitive has the same white fibrous material and faint lift; typography is one Songti-like family, title 52px green, subtitle 28px gray. No branching, loop, cards, UI, dashboards, icons, machinery, generic objects, handwriting, decorative grid, data or extra text.",
+          "status": "rejected",
+          "adjustment_reason": "Superseded by the role-specific content-element and illustrative-text disclosure contract.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 3,
+          "prompt": "16:9 final Chinese editorial body figure, flow grammar. Pure #FFFFFF; reserve x=1056–1200,y=0–60 empty white for final Logo. Exact green title `配图不是黑箱，是一条解释链`; exact gray subtitle `每个环节只负责一个判断`. Build one left-to-right, visibly detailed reading chain: `Markdown 正文` as an excerpt sheet with selected source lines; `visual plan` as a cut-paper planning field with `封面` `正文图` `精确锚点` `不该画`; `图法选择` as a white sheet showing three tiny distinct relation sketches labelled `流程` `对比` `层级`; `编辑图母版` as a paper field with `颜色` `字体` `材质`; `生成与检查` as a final sheet with `落位` `Logo` `QA`. Show actual thin linking lines, grouped relation sketches and selected items—never empty cards. One Songti-like family; 52px #1A6B3A title, 28px #6B6B6B subtitle, 32px headings, 28px labels. White fibrous straight/cut papers, identical faint shallow lift, pale 1–1.5px green/gray hairlines. No people, plant/animal default, icons, UI, dashboard, 3D, rounded cards, grid, arrows with no meaning, crop marks, handwrite, fake Logo, data, or extra text. Put exact lower-left 16px italic gray note `图中示例仅为解释用途，并非事实`.",
+          "status": "rejected",
+          "adjustment_reason": "The candidate put the body title at top-left and used strong rounded card panels; it violates the fixed centered title band and paper-primitive contract.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 4,
+          "prompt": "16:9 final Chinese editorial body figure, flow grammar. Pure #FFFFFF. Keep Logo reserve x=1056–1200,y=0–60 fully empty; do not render a wordmark. Fix the title/subtitle together at horizontal center x=600 within y=76–176; never top-left align. Exact 52px green title `配图不是黑箱，是一条解释链`; exact 28px gray subtitle `每个环节只负责一个判断`. Keep every diagram element below y=200. One detailed left-to-right reading chain, with no large outer card frames: `Markdown 正文` is one fibrous excerpt sheet with a few selected printed lines; `visual plan` is one cut-paper field visibly holding `封面` `正文图` `精确锚点` `不该画`; `图法选择` is a single framed miniature field with three actual tiny relation sketches `流程` `对比` `层级`; `编辑图母版` is one material specimen sheet showing `颜色` `字体` `材质`; `生成与检查` is one final check sheet showing `落位` `Logo` `QA`. These five stages connect through quiet hairline leaders; every stage depicts its own role, never an empty or rounded card, a badge, an icon, or a checkmark. Use one Songti-like Chinese editorial serif, white fibrous straight/cut paper, identical barely perceptible lift, pale forest-green/light-gray 1–1.5px lines. No people, plants/animals, generic objects, UI/dashboard, 3D, SVG/wireframe, dotted grids, corner marks, shadows on lines, fake Logo, data, long prose, or extra text. Exact lower-left 16px italic gray disclosure: `图中示例仅为解释用途，并非事实`.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    }
+  ]
+}

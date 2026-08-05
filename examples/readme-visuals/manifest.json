@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "document_path": "README.md",
+  "images": [
+    {
+      "id": "audience-fit",
+      "output_path": "examples/readme-visuals/audience-fit.png",
+      "placement": {
+        "kind": "after_sections",
+        "anchors": [
+          "适合谁",
+          "不适合谁"
+        ]
+      },
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create a final native 16:9 Chinese editorial explainer illustration for the SimpleMkt Article Visual README. It is a conceptual product-boundary illustration, not evidence, no real product screenshot, no data, no people. Pure solid #FFFFFF 1200×675 canvas, no frame, no tint, no texture or gradient in the background. Reserve top-right rectangle x=1056–1200, y=0–60 as completely empty pure white; do not render any logo, title, subtitle, label, line, or diagram element there. Centered exact dark forest-green #1A6B3A Songti-like serif title: “适合解决文章里的理解问题”. One secondary-gray #6B6B6B Songti-like serif subtitle: “不是所有“想要一张图”的需求都该交给它”. Under it make one dominant, lively but restrained comparison grammar: on the left, heading “适合”, a finished article sheet unfolds into a connected explanatory path of three paper elements labelled exactly “复杂判断”, “流程、对比、层级”, “已完成文章”; show fine green links, paper overlap, restrained hatch and shallow paper edges. On the right, heading “不适合”, three clearly separate lightweight elements labelled exactly “独立海报”, “写作、发布”, “真实证据”; their visual separation must show that these are outside the product boundary, without using X marks or error icons. The composition must make the reader see the product’s fit boundary first, not a generic feature grid. Every Chinese character uses one consistent printed Songti-like editorial-serif family. Use hairline low-contrast pale-green or light-gray connectors, no thick arrows, no cards, no UI/dashboard, no generic SVG/wireframe treatment, no handwriting, no ornamental arrows, no registration marks, no corner crosses, no floating strokes, no isolated decorative color blocks, no QR code, watermark, signature, or extra words. Material detail may only clarify the connected paper structures. Do not use landscape, scenery, figures, stock photography, neon, 3D, or fabricated claims.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "usage-scenarios",
+      "output_path": "examples/readme-visuals/usage-scenarios.png",
+      "placement": {
+        "kind": "after_section",
+        "anchor": "用在哪些场景"
+      },
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create a final native 16:9 Chinese editorial explainer illustration for the SimpleMkt Article Visual README. It is a conceptual usage-scenarios illustration, not evidence, no real product screenshot, no data, no people. Pure solid #FFFFFF 1200×675 canvas, no frame, no tint, no texture or gradient in the background. Reserve top-right rectangle x=1056–1200, y=0–60 as completely empty pure white; do not render any logo, title, subtitle, label, line, or diagram element there. Centered exact dark forest-green #1A6B3A Songti-like serif title: “不同难点，要用不同图法”. One secondary-gray #6B6B6B Songti-like serif subtitle: “让图紧跟它要解释的段落”. Below it create one unified four-part editorial map, not a generic card grid. From one small neutral article sheet at the center, four fine pale-green routes lead to four distinct paper-based visual grammars arranged around it. Each grammar has exactly one short title: “流程太绕”, “差异难比”, “关系抽象”, “图文脱节”. The first is a visible ordered sequence; the second is two parallel comparable paths; the third is a nested boundary/layer structure; the fourth is a paragraph sheet with one image anchored immediately after the relevant paragraph. Use a few tiny structural marks only, no extra text and no numerical examples. The reader must see that the same article can need different explanatory structures, each serving a specific reading obstacle. Every Chinese character uses one consistent printed Songti-like editorial-serif family. Use hairline low-contrast pale-green or light-gray connectors, no thick arrows, no cards, no UI/dashboard, no generic SVG/wireframe treatment, no handwriting, no ornamental arrows, no registration marks, no corner crosses, no floating strokes, no isolated decorative color blocks, no QR code, watermark, signature, or extra words. Use paper-cut overlap, restrained hatch, and shallow paper edges only where they clarify the four relationships. Do not use landscape, scenery, figures, stock photography, neon, 3D, or fabricated claims.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "typography-hierarchy",
+      "output_path": "examples/readme-visuals/typography-hierarchy.png",
+      "placement": {
+        "kind": "style_reference"
+      },
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create a final native 16:9 Chinese editorial reference figure at exactly 1200×675 that demonstrates the fixed body-figure typography hierarchy. It is a design-system sample, not a factual article, data visualization, product UI, or source image. Use one full pure #FFFFFF background with no outer frame, tint, texture, gradient, ivory, or beige. Reserve the exact top-right rectangle x=1056–1200, y=0–60 as completely empty pure white for deterministic Logo placement; do not render a wordmark or any graphic in it. Use one consistent printed Chinese Songti-like editorial-serif family, no sans, script, handwriting, or mixed Chinese fonts. Make the typography itself the dominant visual structure. Center exact brand-green #1A6B3A semibold title at 52px-equivalent: ‘字体有层级，判断才有重心’. Directly under it center exact gray #6B6B6B regular subtitle at 28px-equivalent: ‘正文图固定使用五档文字层级’. Under the subtitle, show a compact hierarchy specimen—not a card grid. First show one exact 32px-equivalent medium #141414 structural heading: ‘结构标题 · 32px’. Then use two identical white, subtly fibrous straight- or cut-edge editorial paper slips, horizontally aligned and both at exactly 28px-equivalent regular #141414, labelled ‘内容标签 · 28px’ and ‘关系标签 · 28px’. Add only a very fine pale-green relation line linking those two paper slips. At the lower-left safe area, show one exact #8C8C8C italic note at 16px-equivalent: ‘备注文本 · 16px / 斜体’. Every paper slip must have the same straight/cut paper construction with no rounded corners, cards, panels, stickers, or UI-container appearance. Give each independent paper slip the same deliberately faint floating effect: about 4–6px-equivalent lift with one diffuse neutral 12–16px-equivalent shadow at 4–6% opacity; no dark, hard, or unequal shadows. Keep all linework hairline and low contrast. Material detail is limited to purposeful paper fiber, subtle hatch, and shallow paper edge. Do not add people, landscape, dashboard, flat SVG/wireframe, generic report, 3D, neon, watermark, QR code, decorative crosses, registration marks, crop marks, floating strokes, ornamental arrows, isolated color blocks, extra prose, or extra labels.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    }
+  ]
+}
