@@ -265,9 +265,9 @@
       "output_path": "examples/readme-visuals/delivery-modes.png",
       "placement": {
         "kind": "after_section",
-        "anchor": "交付模式"
+        "anchor": "选择交付方式"
       },
-      "accepted_attempt": 2,
+      "accepted_attempt": 3,
       "attempts": [
         {
           "id": 1,
@@ -282,8 +282,8 @@
         {
           "id": 2,
           "prompt": "Regenerate the 1200×675 Chinese editorial explainer for smkt-article-visual README. This is attempt 2 after rejecting a candidate that used generic target, mountain, bridge, scale, compass, and other object icons. Do not render any recognizable object, icon, machine, instrument, landmark, scene, or metaphor whatsoever. Use only meaningful editorial paper primitives, printed source lines, explicit labels, fine leaders, anchor points, hatch, and simple relation topology. Pure solid #FFFFFF background only: no tint, texture, frame, gradient, vignette, UI, dashboard, rounded cards, or decorative marks. Keep top-right x=1056–1200, y=0–60 completely blank white for the deterministic Logo finalizer. Centered exact #1A6B3A Songti-like semibold 52px core judgment: ‘同一套判断，两种交付方式’. Centered exact #6B6B6B 28px subtitle: ‘文章图落在阅读锚点，讲述图按叙事顺序展开’. Both centered at x=600 within y=76–176. Everything meaningful begins at y=200. Build one precise branching-flow structure from a central excerpt sheet labelled ‘关键判断’. It divides into two semantic paper-only paths. LEFT path, heading ‘文章包’ at 32px: a vertical article excerpt sheet with a printed H1 area labelled exactly ‘文章 H1’, then directly below a small cover sheet labelled ‘封面’, then a visible article paragraph where one dotted rectangle sits immediately after the relevant selected paragraph and is labelled ‘段落锚点’; from that anchor a connected explanatory paper figure labelled ‘正文图’. Show the exact reading/placement relationship through thin leaders and actual printed lines/highlight, never through a generic visual symbol. The article page, cover sheet, anchored figure, and their relation must be visibly distinct. RIGHT path, heading ‘讲述图’ at 32px: a script excerpt sheet with selected printed lines and no inserted images. To its right, three ordered pairs of narrow paper strips, reading from top to bottom: exact labels ‘判断 1’ → ‘讲述图 1’, ‘判断 2’ → ‘讲述图 2’, ‘判断 3’ → ‘讲述图 3’. Each ‘讲述图’ strip contains a tiny different abstract-but-semantic relation topology made only of excerpt fragments, linked paper strips, cut-paper fields, direct ink hatching, and circular anchors; no pictures or objects. Make their sequential order and standalone-frame status immediately evident. All Chinese uses one printed Songti-like editorial-serif. Use the only allowed content vocabulary: excerpt sheet for article/script/source; straight-edged narrow paper strip for stage/judgment/output/frame; cut-paper field for a contained reading anchor; direct ink/hatch/circular anchor for a relation. Make each paper primitive white, subtly fibrous, straight/cut edge, same faint 4–6px lift plus diffuse neutral 12–16px 4–6% shadow. Hairline 1–1.5px low-contrast green/light-gray connectors only. No shadows on direct labels or lines. No model-rendered Logo, no extra text, no factual data, no lower-left example note because all labels state the actual delivery contract. The result should feel like a detailed editorial explanation chain, not a generic flowchart, SVG/wireframe, cards, or a poster.",
-          "status": "accepted",
-          "adjustment_reason": "Removed generic objects and made the article anchor and ordered standalone-frame paths the only visible explanation.",
+          "status": "rejected",
+          "adjustment_reason": "The paths were present but too dense to make the reader-led article experience and presenter-led frame sequence immediately distinguishable in the README.",
           "candidate_file": null,
           "logo": {
             "status": "applied",
@@ -306,6 +306,45 @@
               "coordinate_origin": "top-left"
             },
             "asset": "simplemkt-logo-demo.png"
+          }
+        },
+        {
+          "id": 3,
+          "prompt": "Create one final native 1200×675 Chinese editorial explainer illustration for the smkt-article-visual README. Truth boundary: concept; it explains the documented delivery contract, not a product UI, data chart, or real screenshot. Core judgment: the same visual judgment has two different delivery forms because readers self-navigate an article while a presenter guides an audience through a sequence. Pure solid #FFFFFF canvas with no outer frame, tint, background texture, ivory, gradient, or vignette. Keep top-right rectangle x=1056–1200, y=0–60 completely empty pure white for a deterministic Logo finalizer: render no wordmark, title, label, connector, or diagram element there. Use one printed Chinese Songti-like editorial-serif family for every Chinese character; no sans, script, handwriting, or mixed fonts. Fixed title band centered at x=600 within y=76–176: exact #1A6B3A semibold 52px-equivalent title ‘同一套判断，两种交付方式’; exact #6B6B6B regular 28px-equivalent subtitle ‘读文章，看锚点；听讲述，看顺序’. Start all diagram content below y=200. Use one clear side-by-side comparison grammar, not a grid of cards. Split the lower area into two large equal reading paths with one thin, pale vertical divider. LEFT heading exact ‘文章包’ at 32px #141414, with small direct descriptor ‘读者自己读’. Show a tall meaningful article excerpt sheet labelled exactly ‘article.md’: it visibly contains an H1 area, selected paragraph lines, a cover sheet directly after the H1 labelled ‘封面’, and one explanatory figure attached immediately after a selected paragraph via a thin leader and circular anchor labelled ‘段落锚点’. The difference must be unmistakable: cover plus body figure lives inside an article's reading path. RIGHT heading exact ‘演示画面’ at 32px #141414, with small direct descriptor ‘讲述者带着看’. Show one short source sheet labelled ‘talk.md’ with selected speech lines, then three equal, standalone landscape explanation frames in a clear left-to-right sequence labelled exactly ‘Frame 01’, ‘Frame 02’, ‘Frame 03’. Each frame visibly contains a different tiny semantic editorial relation made from source fragments, narrow strips, direct ink hatching, hairline leaders, and circular anchors. The three frames must be outside the source sheet, visually independent, and connected only by subtle sequential hairlines. Make the difference unmistakable: frames are consumed in a presenter-led sequence and are never inserted into talk.md. Use only the editorial vocabulary: excerpt sheets for article/source, straight-edged narrow paper strips for stages or outputs, cut-paper fields for anchor scope, direct ink/hatch/circular anchor for relation and sequence. Every paper element white, subtly fibrous, straight or cut edge, same extremely faint 4–6px lift and diffuse neutral shadow at 4–6% opacity. Use 1–1.5px low-contrast pale forest-green or light-gray hairlines; no thick arrows, heavy frames, UI panels, rounded cards, decorative grid, crop marks, corner crosses, floating strokes, isolated color blocks, generic icons, plants, people, scenery, machines, containers, abstract patterns, dashboard, SVG/wireframe, 3D, watermark, QR, author credit, model-rendered logo, or extra words. Keep all material texture clipped to paper elements; the background must stay pure white. The result must feel detailed and vivid because each element depicts its delivery role, not because it uses decoration.",
+          "status": "accepted",
+          "adjustment_reason": "Moved the mode distinction ahead of scenarios and made the reader-led article path versus presenter-led frame sequence explicit.",
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        },
+        {
+          "id": 4,
+          "prompt": "Regenerate the same 1200×675 Chinese editorial delivery comparison. Preserve the exact title ‘同一套判断，两种交付方式’, subtitle ‘读文章，看锚点；听讲述，看顺序’, left article_package path with article.md, cover, paragraph anchor and explanatory figure, and right presentation_frames path with talk.md then Frame 01, Frame 02, Frame 03 in ordered standalone sequence. Keep the top-right Logo reserve x=1056–1200, y=0–60 empty. Critical correction: every background pixel outside semantic paper elements must be literal solid RGB #FFFFFF / 255,255,255; no near-white, gray, cream, ivory, noise, texture, gradient, vignette, or shadow reaches the canvas edge. Use the same pure-white SimpleMkt editorial paper vocabulary, one printed Songti-like Chinese serif, thin pale-green/gray lines, only faint unified paper elevation, no UI/cards/icons/people/plants/scenery/objects/decorative marks/Logo or extra text.",
+          "status": "rejected",
+          "adjustment_reason": "The retry introduced generic landscape imagery inside the cover and frames, weakening the semantic editorial contract.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
           }
         }
       ]

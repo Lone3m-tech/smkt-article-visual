@@ -4,7 +4,7 @@
 
 [中文](README.zh-CN.md)
 
-Turn a structured narrative—an article, talk, report, proposal, or workshop outline—into coherent explanatory images. It decides what needs to be shown, selects the right visual grammar, and delivers a traceable image package in the SimpleMkt editorial style.
+Turn a structured narrative—an article, talk, report, proposal, or workshop outline—into either an **article package** or a sequence of **presentation frames**. It decides what needs to be shown, selects the right visual grammar, and delivers a traceable image package in the SimpleMkt editorial style.
 
 ![smkt-article-visual opening banner](examples/readme-visuals/hero-banner.png)
 
@@ -34,7 +34,9 @@ git clone --depth 1 https://github.com/Lone3m-tech/smkt-article-visual.git \
 
 Remove `--global` for a project installation. For Claude Code, replace `--agent codex` with `--agent claude-code` and use `~/.claude/skills/smkt-article-visual` as the clone destination.
 
-## Three working modes
+## Shared workflow
+
+Every delivery follows these three stages. They are workflow stages, not the two output choices below.
 
 | Mode | What the Skill does | What it does not do yet |
 | --- | --- | --- |
@@ -44,19 +46,32 @@ Remove `--global` for a project installation. For Claude Code, replace `--agent 
 
 The normal sequence is `plan → generate → qa`. A direct-generation request may skip plan acceptance, but it still creates a plan before producing assets.
 
+## Choose your delivery
+
+Use `article_package` when readers will follow the content independently. Use `presentation_frames` when a presenter leads the audience through the same judgments in sequence.
+
+| Question | `article_package` | `presentation_frames` |
+| --- | --- | --- |
+| How the audience receives it | Reads an article or report, with a figure at the relevant passage. | Follows a speaker, proposal, workshop, or lesson in narrative order. |
+| Image unit | One cover, then explanatory body figures. | Frame 01, Frame 02, Frame 03 … each carrying one accepted judgment. |
+| Delivery is complete when | The cover and figures resolve once at their exact reading anchors in the Markdown source. | Every approved frame resolves once in the agreed sequence; the source prose remains untouched. |
+| Best input | Finished Markdown article or report. | Speech script, proposal outline, workshop, or teaching script. |
+
+![Article package and presentation-frame delivery modes](examples/readme-visuals/delivery-modes.png)
+
 ## From text to a visual people can follow
 
 An attractive image is not enough when the audience needs to understand a process, comparison, hierarchy, boundary, or key judgment. The Skill starts from the narrative: it identifies the point that needs explaining, chooses a grammar, generates the image, and records the prompt, revisions, and QA in one manifest.
 
 ## Where it helps
 
-| Scenario | Input | What it delivers |
-| --- | --- | --- |
-| Article or report | A finished Markdown article or research report | A cover and explanatory figures placed at their exact reading anchors. |
-| Talk or keynote | A speech script or presentation outline | One standalone explanation frame for each key judgment worth showing. |
-| Consulting proposal | A strategy narrative or proposal | Clear frames that make a mechanism, option, or recommendation easier to present. |
-| Internal alignment | A strategy memo or retrospective | Shared pictures of decisions, boundaries, systems, and handoffs. |
-| Workshop or course | A teaching outline or lesson script | Memorable teaching visuals that turn abstract concepts into a visible relationship. |
+| Scenario | Input | Delivery | What it delivers |
+| --- | --- | --- | --- |
+| Article or report | A finished Markdown article or research report | `article_package` | A cover and explanatory figures placed at their exact reading anchors. |
+| Talk or keynote | A speech script or presentation outline | `presentation_frames` | One standalone explanation frame for each key judgment worth showing. |
+| Consulting proposal | A strategy narrative or proposal | `presentation_frames` | Clear frames that make a mechanism, option, or recommendation easier to present. |
+| Internal alignment | A strategy memo or retrospective | Either, based on whether people read or are led through it | Shared pictures of decisions, boundaries, systems, and handoffs. |
+| Workshop or course | A teaching outline or lesson script | `presentation_frames` | Memorable teaching visuals that turn abstract concepts into a visible relationship. |
 
 ![Five narrative use cases](examples/readme-visuals/usage-scenarios.png)
 
@@ -103,25 +118,6 @@ For articles, each figure is placed after its corresponding paragraph. For talks
 
 ![Traceable illustration delivery](examples/demo-article/assets/image/traceable-delivery.png)
 
-## Output modes
-
-| Mode | Best for | What you get |
-| --- | --- | --- |
-| `article_package` | Articles and reports | `cover.png`, explanatory body figures, Markdown placement, and one manifest. |
-| `presentation_frames` | Talks, proposals, workshops, and teaching scripts | One ordered standalone frame per accepted key judgment, plus one manifest. The source prose remains unchanged. |
-
-```text
-source.md
-assets/image/
-├── cover.png                       # article_package only
-├── <figure-or-frame-id>.png
-└── manifest.json
-```
-
-`manifest.json` appends every generation attempt; `accepted_attempt` identifies the current accepted version. The Skill never rewrites source prose.
-
-![Article package and presentation-frame delivery modes](examples/readme-visuals/delivery-modes.png)
-
 ## Visual grammar library
 
 Choose one primary grammar for each figure. Start with the relationship an audience needs to understand, then select the structure; a shared visual style must not flatten different questions into one layout.
@@ -144,7 +140,7 @@ Choose one primary grammar for each figure. Start with the relationship an audie
 
 ## Complete demo
 
-The demo article, “Open-source illustration Skill: images are part of the explanation,” includes one cover and six explanatory body figures.
+The bundled demo shows `article_package`: “Open-source illustration Skill: images are part of the explanation,” with one cover and six explanatory body figures.
 
 [Open the demo article](examples/demo-article/article.md)
 

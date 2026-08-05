@@ -4,7 +4,7 @@
 
 [English](README.md)
 
-把文章、演讲稿、报告、提案或工作坊提纲这类结构化叙事，变成一组统一、可解释的图片。它判断什么值得画，选择合适图法，并以 SimpleMkt 编辑图风格交付可追溯的图片包。
+把文章、演讲稿、报告、提案或工作坊提纲这类结构化叙事，变成**文章包**或一组连续的**演示画面**。它判断什么值得画，选择合适图法，并以 SimpleMkt 编辑图风格交付可追溯的图片包。
 
 ![smkt-article-visual 开场 Banner](examples/readme-visuals/hero-banner.png)
 
@@ -34,7 +34,9 @@ git clone --depth 1 https://github.com/Lone3m-tech/smkt-article-visual.git \
 
 项目内安装时去掉 `--global`；安装到 Claude Code 时把 `--agent codex` 改为 `--agent claude-code`，并将克隆目录改为 `~/.claude/skills/smkt-article-visual`。
 
-## 三种工作模式
+## 共同工作流程
+
+无论选择哪种交付方式，都会经过这三个阶段；它们是工作流程，不是下方两种交付方式。
 
 | 模式 | Skill 会做什么 | 此时不会做什么 |
 | --- | --- | --- |
@@ -44,19 +46,32 @@ git clone --depth 1 https://github.com/Lone3m-tech/smkt-article-visual.git \
 
 正常顺序是 `plan → generate → qa`。如果用户明确要求直接生成，可以跳过方案确认，但仍会先形成一份配图判断再开始出图。
 
+## 选择交付方式
+
+读者会自行阅读内容时，选择 `article_package`；由你在现场、会议或课堂中带着听众讲述时，选择 `presentation_frames`。
+
+| 判断问题 | `article_package` | `presentation_frames` |
+| --- | --- | --- |
+| 受众如何接收内容 | 边读文章或报告，边在对应段落查看图片。 | 跟随演讲、提案、工作坊或课程的叙事顺序观看。 |
+| 图片单位 | 一张封面，再加多张正文解释图。 | Frame 01、Frame 02、Frame 03……每张承载一个已确认判断。 |
+| 何时算交付完成 | 封面与正文图各自在 Markdown 的准确阅读锚点出现且只出现一次。 | 每张已确认画面按既定顺序存在一次；源文件正文不被修改。 |
+| 最适合的输入 | 完成的 Markdown 文章或报告。 | 演讲稿、提案提纲、工作坊或教学脚本。 |
+
+![文章包与演示画面的两种交付方式](examples/readme-visuals/delivery-modes.png)
+
 ## 从文字判断到看得懂的图
 
 当读者或听众需要理解一个流程、比较、层级、边界或关键判断时，一张好看的图还不够。Skill 从叙事本身出发：找出需要被解释的点，选择图法，生成图片，并把 Prompt、调整记录与 QA 收在同一份 manifest 中。
 
 ## 用在哪些场景
 
-| 场景 | 输入 | 它会交付什么 |
-| --- | --- | --- |
-| 文章或报告 | 完成的 Markdown 文章或研究报告 | 在准确阅读锚点落位的封面与正文解释图。 |
-| 演讲或分享 | 演讲稿或分享提纲 | 每个值得展示的关键判断，对应一张独立讲述图。 |
-| 咨询提案 | 策略叙事或提案 | 让机制、选项或建议更容易被讲清楚的解释页。 |
-| 内部对齐 | 战略 memo 或项目复盘 | 共同理解决策、边界、系统与交接关系的图。 |
-| 工作坊或课程 | 教学提纲或课程脚本 | 把抽象概念变成可讲、可记的教学图。 |
+| 场景 | 输入 | 交付方式 | 它会交付什么 |
+| --- | --- | --- | --- |
+| 文章或报告 | 完成的 Markdown 文章或研究报告 | `article_package` | 在准确阅读锚点落位的封面与正文解释图。 |
+| 演讲或分享 | 演讲稿或分享提纲 | `presentation_frames` | 每个值得展示的关键判断，对应一张独立讲述图。 |
+| 咨询提案 | 策略叙事或提案 | `presentation_frames` | 让机制、选项或建议更容易被讲清楚的解释页。 |
+| 内部对齐 | 战略 memo 或项目复盘 | 取决于大家自行阅读，还是由人带着讲述 | 共同理解决策、边界、系统与交接关系的图。 |
+| 工作坊或课程 | 教学提纲或课程脚本 | `presentation_frames` | 把抽象概念变成可讲、可记的教学图。 |
 
 ![SMKT Article Visual 的五类使用场景](examples/readme-visuals/usage-scenarios.png)
 
@@ -103,25 +118,6 @@ git clone --depth 1 https://github.com/Lone3m-tech/smkt-article-visual.git \
 
 ![可追溯的配图交付](examples/demo-article/assets/image/traceable-delivery.png)
 
-## 交付模式
-
-| 模式 | 最适合 | 你会得到什么 |
-| --- | --- | --- |
-| `article_package` | 文章与报告 | `cover.png`、正文解释图、文章内落位与一份 manifest。 |
-| `presentation_frames` | 演讲、提案、工作坊与教学脚本 | 每个已确认关键判断对应一张按叙事顺序命名的独立讲述图，加一份 manifest；不改写源文件。 |
-
-```text
-source.md
-assets/image/
-├── cover.png                       # 仅 article_package
-├── <figure-or-frame-id>.png
-└── manifest.json
-```
-
-`manifest.json` 为每张图追加生成尝试；`accepted_attempt` 指向当前采用版本。Skill 不改写源文件正文。
-
-![文章包与讲述图的两种交付方式](examples/readme-visuals/delivery-modes.png)
-
 ## 图法库
 
 一张图只选一个主图法：先看读者或听众需要理解哪一种关系，再选结构，不让统一风格把不同问题画成同一种版式。
@@ -144,7 +140,7 @@ assets/image/
 
 ## 完整 Demo
 
-Demo 使用《开源配图Skill：配图不是装饰，而是解释的一部分》这篇文章，包含一张封面与六张正文解释图。
+包内 Demo 展示的是 `article_package`：使用《开源配图Skill：配图不是装饰，而是解释的一部分》这篇文章，包含一张封面与六张正文解释图。
 
 [打开 Demo 文章](examples/demo-article/article.md)
 
