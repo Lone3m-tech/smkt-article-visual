@@ -112,7 +112,8 @@ Before entering `generate`, validate the selected plan against this template. Re
 - Finalize every asset at the fixed Logo-contract canvas dimensions reported by that script.
 - Inject the exact reserve bounds into every prompt and verify every image-manifest Logo record against them.
 - Block generation when the style file, Logo PNG, or contract output is missing or unusable.
-- Before the first image, create the delivery-root `assets/image/manifest.json` with `schema_version: 2`, the Markdown-relative `source_path`, `delivery_mode`, and an `images` array. For `presentation_frames`, resolve source paths relative to `presentation_root`.
+- Before the first image, create the delivery-root `assets/image/manifest.json` with `schema_version: 3`, a `provenance` object, the Markdown-relative `source_path`, `delivery_mode`, and an `images` array. For `presentation_frames`, resolve source paths relative to `presentation_root`.
+- Set provenance `skill_id` and `canonical_repository` to the exact fixed values below. Resolve `release_version` and `release_commit` only from installed release metadata or the current Git checkout; otherwise use `null`. Give every run a new non-secret `run_id`. Never infer unavailable release data or reuse a run ID.
 
 #### 2.2 Compile each prompt
 
@@ -126,12 +127,19 @@ Before entering `generate`, validate the selected plan against this template. Re
 
 #### 2.3 Record and finalize each attempt
 
-- Maintain one delivery-root `assets/image/manifest.json`; never create per-image Prompt or Logo-receipt sidecars. It is the sole delivery record for asset paths, selected delivery mode, exact placement or narrative order, every generation attempt, actual Prompt, adjustment reason, deterministic Logo result, QA outcome, and the accepted attempt.
+- Maintain one delivery-root `assets/image/manifest.json`; never create per-image Prompt or Logo-receipt sidecars. It is the sole delivery record for provenance, asset paths, selected delivery mode, exact placement or narrative order, every generation attempt, actual Prompt, adjustment reason, deterministic Logo result, QA outcome, and the accepted attempt.
 - Use this compact manifest shape and append attempts instead of replacing them:
 
   ```json
   {
-    "schema_version": 2,
+    "schema_version": 3,
+    "provenance": {
+      "skill_id": "smkt-article-visual",
+      "canonical_repository": "https://github.com/Lone3m-tech/smkt-article-visual",
+      "release_version": "vX.Y.Z | null",
+      "release_commit": "full commit SHA | null",
+      "run_id": "unique non-secret run identifier"
+    },
     "source_path": "source.md",
     "delivery_mode": "article_package | presentation_frames",
     "images": [{
@@ -185,7 +193,7 @@ Before entering `generate`, validate the selected plan against this template. Re
 - In `article_package`, verify the cover exists once at the document opening and every content image exists once after its planned anchor; article prose is unchanged. In `presentation_frames`, verify the cover resolves once at sequence `0`, there is one resolving content-image file for every approved sequence item, the sequence forms the approved narrative, the source prose is unchanged, and no image Markdown was inserted.
 - In `article_package`, verify each content image resolves its declared local reader obstacle, visibly offloads its declared nearby prose, and does not merely restate that paragraph. In `presentation_frames`, verify each content image establishes its declared beat after the previous handoff, can pass its standalone test, and makes the planned next bridge credible.
 - In `presentation_frames`, verify the cover's `core_promise` is introduced by the first content image, no adjacent content images repeat the same core judgment or grammar without an explicit reason, and the final `user_takeaway` resolves the cover promise.
-- Verify the one image manifest has one record per planned cover or content image, records the selected delivery mode, a complete Prompt and outcome for every attempt, one accepted attempt per image, and a Logo record matching the fixed contract.
+- Verify the one image manifest uses schema version 3; records the fixed Skill identity, canonical repository, a unique non-secret run ID, and only known release metadata; has one record per planned cover or content image; records the selected delivery mode, a complete Prompt and outcome for every attempt, one accepted attempt per image, and a Logo record matching the fixed contract.
 - Verify every rejected or reworked attempt has an adjustment reason. Rejected candidates must have no image file unless explicitly retained for comparison.
 
 #### Meaning, structure, and typography

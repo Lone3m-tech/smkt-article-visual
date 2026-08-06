@@ -14,6 +14,8 @@
 
 [SimpleMkt](https://simplemkt.cc) · [X](https://x.com/AlchemistZhou) · [小红书](https://www.xiaohongshu.com/user/profile/65a0ecb4000000002201219c) · [抖音](https://www.douyin.com/user/MS4wLjABAAAArV0uXvsSYl6pD-p5nr-5OFlZED5cEUnb7r2K6j9u4tA)
 
+[官方仓库](https://github.com/Lone3m-tech/smkt-article-visual) · [版本发布](https://github.com/Lone3m-tech/smkt-article-visual/releases)
+
 [查看完整 Demo](examples/demo-article/article.md) · [查看 Skill 运行契约](SKILL.md)
 
 **[English](README.md) | 简体中文**

@@ -14,6 +14,8 @@ Built for Codex and image-generation capable Agents.
 
 [SimpleMkt](https://simplemkt.cc) · [X](https://x.com/AlchemistZhou) · [Xiaohongshu](https://www.xiaohongshu.com/user/profile/65a0ecb4000000002201219c) · [Douyin](https://www.douyin.com/user/MS4wLjABAAAArV0uXvsSYl6pD-p5nr-5OFlZED5cEUnb7r2K6j9u4tA)
 
+[Official repository](https://github.com/Lone3m-tech/smkt-article-visual) · [Releases](https://github.com/Lone3m-tech/smkt-article-visual/releases)
+
 [View the complete demo](examples/demo-article/article.md) · [Read the runtime contract](SKILL.md)
 
 **English | [简体中文](README.zh-CN.md)**
