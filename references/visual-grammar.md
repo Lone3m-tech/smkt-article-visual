@@ -33,7 +33,7 @@ Choose the diagram grammar from the relationship the narrative needs a reader or
 - Use `annotated_source` only with a supplied real asset. Label it as an editorial annotation; do not fabricate a screenshot or source.
 - Do not convert every concept into circles and arrows, add decorative causality, or force distinct concepts into one layout template.
 
-## Required image-spec fields
+## Required grammar-selection fields
 
 ```yaml
 visual_grammar: flow
@@ -41,9 +41,6 @@ why_this_grammar: The passage describes an ordered transformation.
 rejected_grammars: []
 must_preserve:
   - input-to-output order
-forbidden_transformations:
-  - Do not imply feedback that the article does not claim.
-deterministic_layout_required: false
 ```
 
-Set `deterministic_layout_required: true` when exact text, code, tabular data, or precise geometry is necessary. Keep the requirement visible in the image specification; this Skill must not introduce a local HTML, SVG, Python, or second-renderer fallback because the original result contract generates final artwork through `image_gen`.
+Use only the canonical grammar-selection fields defined in `SKILL.md`. Express topology protection positively in `must_preserve` and record the nearest plausible alternative in `rejected_grammars`. When exact text, code, tabular data, or precise geometry is necessary, skip image generation and retain the deterministic source format.

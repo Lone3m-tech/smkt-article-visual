@@ -377,6 +377,49 @@
           }
         }
       ]
+    },
+    {
+      "id": "core-advantages",
+      "output_path": "examples/readme-visuals/core-advantages.png",
+      "placement": {
+        "kind": "after_section",
+        "anchors": [
+          "Why this Skill",
+          "为什么是这个 Skill"
+        ]
+      },
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create one final native 16:9 Chinese editorial capability illustration for the smkt-article-visual README. Conceptual product explanation only; pure solid #FFFFFF 1200×675 canvas and an empty top-right Logo reserve x=1056–1200, y=0–60. Use the exact centered title ‘把信息讲清楚，图片才有价值’ and subtitle ‘四个能力，服务同一个理解目标’. Build one coherent editorial map, not a feature-card grid: central source excerpt ‘关键信息’ flows through four meaningful paper structures labelled exactly ‘先判断，再出图’, ‘一套图片系统，两种交付’, ‘图片参与解释’, and ‘可用，也可复盘’. Depict respectively a source-to-decision reading path, one shared image splitting into reading-anchor and speaking-order paths, source detail becoming a directly annotated explanatory relationship, and an accepted image plus compact manifest record. Use printed Songti-like Chinese type, white fibrous straight/cut paper, fine pale-green/light-gray leaders, direct labels, restrained hatch, and one faint consistent paper elevation. No extra prose, model-rendered Logo, people, plants, scenery, UI, rounded cards, generic icons, wireframe, 3D, dark shadows, decorative marks, data, watermark, QR, or author credit.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
     }
   ]
 }
