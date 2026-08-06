@@ -8,7 +8,13 @@
 
 **Turn a narrative's key judgments into images people can understand at a glance—and keep presenting from.**
 
-Turn a structured narrative—an article, talk, report, proposal, or workshop outline—into a shared system of cover and content images. Rather than starting from an isolated visual prompt, it compiles the source's meaning into a visual plan, selects the right visual grammar, and delivers a traceable image package in the SimpleMkt editorial style. `article_package` places content images where a reader needs them; `presentation_frames` orders the same image system into a spoken narrative.
+</div>
+
+<p align="justify">
+Turn a structured narrative—an article, talk, report, proposal, or workshop outline—into a shared system of cover and content images. Rather than starting from an isolated visual prompt, it compiles the source's meaning into a visual plan, selects the right visual grammar, and delivers a traceable image package in the SimpleMkt editorial style. <code>article_package</code> places content images where a reader needs them; <code>presentation_frames</code> orders the same image system into a spoken narrative.
+</p>
+
+<div align="center">
 
 Built for Codex and image-generation capable Agents.
 
