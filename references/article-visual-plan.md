@@ -30,7 +30,7 @@ Use this reference only during [Workflow → Plan the visual framework](../SKILL
 
 ## Select the cover
 
-- Identify the one promise the title and visual metaphor must make together.
+- Identify the one promise the title and concise visual direction must make together. That direction may be a vivid metaphor or a restrained abstract composition; it must not become a complex scene.
 - In `article_package`, make the cover identify the document and invite reading.
 - In `presentation_frames`, make the cover establish the premise the following sequence will unfold.
 - Leave title handling, layout, Logo, and delivery fields to the contracts in `SKILL.md`.

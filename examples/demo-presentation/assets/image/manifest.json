@@ -1,0 +1,358 @@
+{
+  "schema_version": 3,
+  "provenance": {
+    "skill_id": "smkt-article-visual",
+    "canonical_repository": "https://github.com/Lone3m-tech/smkt-article-visual",
+    "release_version": null,
+    "release_commit": null,
+    "run_id": "2026-08-06-demo-presentation-frames-01"
+  },
+  "source_path": "../demo-article/article.md",
+  "delivery_mode": "presentation_frames",
+  "logo": {
+    "requested": true,
+    "status": "applied"
+  },
+  "qa": {
+    "requested": false,
+    "status": "skipped"
+  },
+  "images": [
+    {
+      "id": "cover",
+      "role": "cover",
+      "output_path": "assets/image/cover.png",
+      "placement": {
+        "kind": "narrative_order",
+        "anchor": null,
+        "sequence": 0
+      },
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create one finished 16:9 1200×675 Chinese PPT cover on an opaque pure-white #FFFFFF canvas. Render exactly one text string: 开源配图Skill：配图不是装饰，而是解释的一部分. Preserve it exactly, allowing only a deliberate line break; render no subtitle, labels, notes, data, or other text. Put the prominent forest-green Songti-like serif title in a calm centered title zone. Keep all essential content clear of x=1056–1200, y=0–60; do not paint a reserve block and do not render a Logo or wordmark. Use one restrained editorial metaphor: an open manuscript page with non-readable paragraph lines, one circle mark, a bracketed marginal annotation, a bookmark tab, a folded corner, and fine green anchors and connectors resolving into one lucid relationship structure. The image conveys text being edited into understanding without becoming a literal workflow diagram. Use thin pencil and ink contours, restrained engraving hatching, local paper grain only on the manuscript, generous white space, and no visible shadow. Do not depict natural scenery, plants, animals, people, generic icons, UI/dashboard cards, paper stacks, heavy arrows, decorative grids, crop marks, or handwriting.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": "assets/image/cover.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "decoration-does-not-explain",
+      "role": "content_image",
+      "output_path": "assets/image/decoration-does-not-explain.png",
+      "placement": {
+        "kind": "narrative_order",
+        "anchor": "开场：图文各说各话",
+        "sequence": 1
+      },
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial presentation frame on an opaque pure-white #FFFFFF canvas. Exact centered forest-green Songti-like title: 好看的图，不等于读者看懂了. Exact centered quiet-gray subtitle: 差别在于它是否回应阅读中的关系卡点. Keep title/subtitle in the upper centered band. Keep all semantic content inside x=54–1146 and y=190–560 and clear of x=1056–1200, y=0–60; no reserve block and no model Logo. Use one comparison grammar: left shows a decorative but semantically disconnected ornamental line fragment placed beside unreadable article lines; right shows the same article relationship made visible through a compact clear connection, position change, and reader anchor. The contrast must be direct and sparse, with no real-world scene and no explanatory prose panel. Use thin low-contrast green-gray lines, direct ink, airy engraving contours, restrained hatching, generous whitespace, and no visible shadow. Avoid nature, people, products, data, dashboard cards, heavy arrows, grids, crop marks, handwriting, and model wordmarks.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": "assets/image/decoration-does-not-explain.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "image-as-explanation-layer",
+      "role": "content_image",
+      "output_path": "assets/image/image-as-explanation-layer.png",
+      "placement": {
+        "kind": "narrative_order",
+        "anchor": "重构：图像作为解释层",
+        "sequence": 2
+      },
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial presentation frame on an opaque pure-white #FFFFFF canvas. Exact centered forest-green Songti-like title: 图像负责让读者看见文章关系. Exact centered quiet-gray subtitle: 不替代观点，不改写事实，只承担解释. Keep title/subtitle in the upper centered band. Keep all semantic content inside x=54–1146 and y=190–560 and clear of x=1056–1200, y=0–60; no reserve block and no model Logo. Use one architecture grammar: a source article page holds the author’s judgment, a compact reader-obstacle point identifies what prose alone cannot show, and one explanatory relation structure makes that relationship visible while the article remains intact. Show distinct roles through form and connection, not long text. Use light editorial sketch treatment: thin green-gray lines, direct ink, airy pencil contours, restrained hatching, small anchors, generous whitespace, no visible shadow. Use paper only for the article because it is semantically necessary. Avoid nature, people, invented prose, data, dashboard cards, grids, crop marks, handwriting, and model wordmarks.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": "assets/image/image-as-explanation-layer.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "plan-before-generation",
+      "role": "content_image",
+      "output_path": "assets/image/plan-before-generation.png",
+      "placement": {
+        "kind": "narrative_order",
+        "anchor": "机制：先规划后生成",
+        "sequence": 3
+      },
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial presentation frame on an opaque pure-white #FFFFFF canvas. Exact centered forest-green Songti-like title: 先确认卡点，再进入生成. Exact centered quiet-gray subtitle: 卡点、图法与位置先被确认. Keep title/subtitle in the upper centered band. Keep all semantic content inside x=54–1146 and y=190–560 and clear of x=1056–1200, y=0–60; no reserve block and no model Logo. Use one compact flow grammar: article relationship leads to reader obstacle, then to a small visual-plan structure containing only 卡点、图法、位置, then to generation. A side route shows text already clear and therefore no image. Use objects, position, and connectors rather than prose panels. Render thin low-contrast green-gray lines, direct ink, airy engraving contours, restrained hatching, small anchors, generous whitespace, and no visible shadow. Use paper only for the article source. Avoid real-world examples, nature, people, data, dashboard cards, heavy arrows, grids, crop marks, handwriting, and model wordmarks.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": "assets/image/plan-before-generation.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "grammar-and-anchor",
+      "role": "content_image",
+      "output_path": "assets/image/grammar-and-anchor.png",
+      "placement": {
+        "kind": "narrative_order",
+        "anchor": "机制：关系、图法与锚点",
+        "sequence": 4
+      },
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial presentation frame on an opaque pure-white #FFFFFF canvas. Exact centered forest-green Songti-like title: 段落关系决定图法，图法决定落位. Exact centered quiet-gray subtitle: 图片必须紧跟它服务的那段文字. Keep title/subtitle in the upper centered band. Keep all semantic content inside x=54–1146 and y=190–560 and clear of x=1056–1200, y=0–60; no reserve block and no model Logo. Use one architecture grammar: a paragraph relationship connects to one selected grammar shown by a compact flow, comparison, and hierarchy choice, then reaches an article reading line with a circular exact anchor and an attached explanatory figure. Make dependency, not chronology, the primary message. Use light editorial sketch treatment with thin green-gray lines, direct ink, airy engraving contours, restrained hatching, small anchors, generous whitespace, and no visible shadow. Avoid invented prose, real-world scenes, people, nature, data, UI/dashboard cards, heavy arrows, grids, crop marks, handwriting, and model wordmarks.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": "assets/image/grammar-and-anchor.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "three-layers-of-visual-system",
+      "role": "content_image",
+      "output_path": "assets/image/three-layers-of-visual-system.png",
+      "placement": {
+        "kind": "narrative_order",
+        "anchor": "系统：内容、图法、母版",
+        "sequence": 5
+      },
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial presentation frame on an opaque pure-white #FFFFFF canvas. Exact centered forest-green Songti-like title: 内容、图法、母版，各管一层. Exact centered quiet-gray subtitle: 结构决定关系，母版统一表达. Keep title/subtitle in the upper centered band. Keep all semantic content inside x=54–1146 and y=190–560 and clear of x=1056–1200, y=0–60; no reserve block and no model Logo. Use one layer-stack grammar with three direct near-flat horizontal layers: 文章结构 decides explanation task and location; 图法 preserves a relationship through compact flow, comparison, and hierarchy forms; 编辑图母版 unifies type hierarchy, restrained green emphasis, linework, hatching, and whitespace. Fine vertical guides show coordination without replacement. Use thin green-gray lines, direct ink, airy engraving contours, restrained hatching, generous whitespace, and no visible shadow. Avoid long text, invented prose, numbers, data, nature, people, UI/dashboard cards, heavy arrows, grids, crop marks, handwriting, and model wordmarks.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": "assets/image/three-layers-of-visual-system.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "editorial-style-boundary",
+      "role": "content_image",
+      "output_path": "assets/image/editorial-style-boundary.png",
+      "placement": {
+        "kind": "narrative_order",
+        "anchor": "边界：风格保护解释",
+        "sequence": 6
+      },
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial presentation frame on an opaque pure-white #FFFFFF canvas. Exact centered forest-green Songti-like title: 风格服务解释，也需要明确边界. Exact centered quiet-gray subtitle: 限制视觉噪声，保护文章判断. Keep title/subtitle in the upper centered band. Keep all semantic content inside x=54–1146 and y=190–560 and clear of x=1056–1200, y=0–60; no reserve block and no model Logo. Use one boundary-map grammar. Inside one calm thin editorial boundary, show concise title hierarchy, fine relationship lines, necessary labels, restrained forest-green emphasis, and whitespace. Outside it but within the stage, show only three small crossed-out labels: 仪表盘 UI, 霓虹 3D, 伪造截图. Make clear the boundary protects readability. Use thin green-gray lines, direct ink, airy engraving contours, restrained hatching, generous whitespace, and no visible shadow. Avoid example screens, data charts, nature, people, paper stacks, decorative subjects, heavy arrows, grids, crop marks, handwriting, and model wordmarks.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": "assets/image/editorial-style-boundary.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+  {
+    "id": "delivery-is-more-than-generation",
+      "role": "content_image",
+      "output_path": "assets/image/delivery-is-more-than-generation.png",
+      "placement": {
+        "kind": "narrative_order",
+        "anchor": "收束：落位与记录完成交付",
+        "sequence": 7
+      },
+    "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial presentation frame on an opaque pure-white #FFFFFF canvas. Exact centered forest-green Songti-like title: 生成不是结束，落位与记录才是交付. Exact centered quiet-gray subtitle: 图像、位置与过程记录一起完成. Keep title/subtitle in the upper centered band. Keep all semantic content inside x=54–1146 and y=190–560 and clear of x=1056–1200, y=0–60; no reserve block and no model Logo. Use one compact left-to-right flow: explanatory figure, deterministic Logo overlay, compact optional QA report, exact article anchor, then one manifest record. Let each stage show its role with an object or relationship, not prose panels. Use thin green-gray lines, direct ink, airy engraving contours, restrained hatching, small anchors, generous whitespace, and no visible shadow. Use paper only for the article and manifest because they are document subjects. Avoid invented scenarios, data, dashboard cards, grid layouts, decorative scenes, nature, people, heavy arrows, crop marks, handwriting, and model wordmarks.",
+      "status": "accepted",
+          "adjustment_reason": null,
+      "candidate_file": "assets/image/delivery-is-more-than-generation.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    }
+  ]
+}

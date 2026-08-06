@@ -134,8 +134,6 @@ def main(arguments: list[str]) -> int:
 
     source = open_image(source_path).resize(contract["canvas"], Image.Resampling.LANCZOS)
     wordmark = open_image(wordmark_path).resize(contract["wordmark_box"], Image.Resampling.LANCZOS)
-    reserve = Image.new("RGBA", contract["reserve_size"], "#FFFFFF")
-    source.alpha_composite(reserve, dest=contract["reserve_top_left"])
     source.alpha_composite(wordmark, dest=contract["wordmark_top_left"])
 
     output_path.parent.mkdir(parents=True, exist_ok=True)

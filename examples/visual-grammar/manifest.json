@@ -1,8 +1,589 @@
 {
-  "schema_version": 1,
+  "schema_version": 3,
   "kind": "visual_grammar_gallery",
   "description": "One lively, style-consistent explanatory example for each supported visual grammar.",
+  "provenance": {
+    "skill_id": "smkt-article-visual",
+    "canonical_repository": "https://github.com/Lone3m-tech/smkt-article-visual",
+    "release_version": null,
+    "release_commit": null,
+    "run_id": "2026-08-06-current-editorial-grammar-gallery"
+  },
+  "source_path": "../../references/visual-grammar.md",
+  "delivery_mode": "reference_library",
+  "logo": {
+    "requested": true,
+    "status": "applied"
+  },
+  "qa": {
+    "requested": false,
+    "status": "skipped"
+  },
   "images": [
+    {
+      "id": "architecture",
+      "role": "content_image",
+      "output_path": "architecture.png",
+      "placement": {
+        "kind": "grammar_example",
+        "sequence": 1
+      },
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial diagram on a pure-white #FFFFFF canvas. Exact centered forest-green Songti-like title: 依赖关系，需要看见分支与汇合. Exact quiet-gray subtitle: Architecture / 架构：组件依赖、分支与汇合. Keep title/subtitle upper centered; keep all semantics inside x=54–1146 y=190–560 and clear of Logo zone x=1056–1200 y=0–60; no white reserve block or model wordmark. Use one architecture grammar: a research question feeds one core judgment, branches to 内容校验 and 表达校验, then visibly reunites into one 清晰解释. Depict the branch and merge with concrete editorial marks, not anonymous boxes. Fine green-gray ink, airy engraving contours, restrained hatching, low-contrast 1–1.5px lines, no shadow; paper only where a document is semantically necessary. Avoid UI cards, generic flow steps, grids, nature, people, decorative objects, handwriting, crop marks, or extra prose.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": "architecture.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "flow",
+      "role": "content_image",
+      "output_path": "flow.png",
+      "placement": {
+        "kind": "grammar_example",
+        "sequence": 2
+      },
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial diagram on pure-white #FFFFFF. Exact centered forest-green Songti-like title: 步骤必须有先后. Exact quiet-gray subtitle: Flow / 流程：输入、处理与交接. Upper centered title band; semantics inside x=54–1146 y=190–560; keep clear of Logo zone x=1056–1200 y=0–60; no white reserve block or model wordmark. Use one left-to-right flow grammar: 原始材料 enters, then 识别关系, 选择图法, 生成并落位. Each stage shows a compact concrete editorial action, with thin connectors and small anchors; make order and handoff visibly necessary. Fine green-gray ink, pencil contours, restrained hatching, 1–1.5px low-contrast lines, no shadow, no default paper cards. Avoid branches, loopbacks, UI cards, grids, nature, people, heavy arrows, handwriting, crop marks, or long prose.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": "flow.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "loop",
+      "role": "content_image",
+      "output_path": "loop.png",
+      "placement": {
+        "kind": "grammar_example",
+        "sequence": 3
+      },
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial diagram on pure-white #FFFFFF. Exact centered forest-green Songti-like title: 反馈让方案继续变好. Exact quiet-gray subtitle: Loop / 循环：生成、检视、修订、再生成. Upper centered title band; semantics inside x=54–1146 y=190–560; clear of Logo zone x=1056–1200 y=0–60; no reserve block or model wordmark. Use one circular loop grammar: a draft explanatory figure is checked against a reader question, revised through a marked relation, and returns as a clearer figure. Show repeated feedback, not one-way sequence, through circular thin leaders and concrete editorial marks. Fine green-gray ink, airy pencil/engraving contour, restrained hatch, no shadow; paper only for the draft figure. Avoid linear timelines, generic nodes, UI cards, nature, people, heavy arrows, grids, handwriting, crop marks, or excess prose.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": "loop.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision-tree",
+      "role": "content_image",
+      "output_path": "decision-tree.png",
+      "placement": {
+        "kind": "grammar_example",
+        "sequence": 4
+      },
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial diagram on pure-white #FFFFFF. Exact centered forest-green Songti-like title: 条件不同，路径不同. Exact quiet-gray subtitle: Decision tree / 决策树：先判断，再选择. Upper centered title band; semantics inside x=54–1146 y=190–560; clear of Logo zone x=1056–1200 y=0–60; no reserve block or model wordmark. Use one decision-tree grammar: start with 是否存在明确条件？; yes leads to 条件分支 and then 决策图, no leads to 关系依赖 and then 架构图. Make the if/then split visually explicit with one decision point and two materially distinct paths, not a generic hierarchy. Fine green-gray ink, pencil contours, restrained hatching, no shadow and no default paper cards. Avoid flow-only layout, UI cards, grids, nature, people, heavy arrows, handwriting, crop marks, or extra prose.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": "decision-tree.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "comparison",
+      "role": "content_image",
+      "output_path": "comparison.png",
+      "placement": {
+        "kind": "grammar_example",
+        "sequence": 5
+      },
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial diagram on pure-white #FFFFFF. Exact centered forest-green Songti-like title: 同一份内容，两种交付方式. Exact quiet-gray subtitle: Comparison / 对比：阅读与讲述的差异. Upper centered title band; semantics inside x=54–1146 y=190–560; clear of Logo zone x=1056–1200 y=0–60; no reserve block or model wordmark. Use one comparison grammar: left is 文章包, where reader follows paragraph anchors; right is 演示画面, where audience follows a speaker-led frame sequence. Depict their different reading paths, input scope, and completed outputs with paired concrete editorial forms; do not make a flow or matrix. Fine green-gray ink, airy engraving, restrained hatching, no shadow. Avoid dashboards, generic paper stacks, grids, nature, people, heavy arrows, handwriting, crop marks, or long prose.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": "comparison.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "matrix",
+      "role": "content_image",
+      "output_path": "matrix.png",
+      "placement": {
+        "kind": "grammar_example",
+        "sequence": 6
+      },
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial diagram on pure-white #FFFFFF. Exact centered forest-green Songti-like title: 两个维度，才能准确定位. Exact quiet-gray subtitle: Matrix / 矩阵：关系复杂度 × 讲述场景. Upper centered title band; semantics inside x=54–1146 y=190–560; clear of Logo zone x=1056–1200 y=0–60; no reserve block or model wordmark. Use one matrix grammar with two explicit axes: 横轴 关系复杂度 from 单一 to 复合, 纵轴 使用场景 from 自主阅读 to 现场讲述. Place four small concrete figure choices in the cells—flow, comparison, architecture, narrative frame—showing classification rather than time or choice. Fine green-gray ink, light hatch, no shadow. Avoid lists of anonymous blocks, UI cards, nature, people, heavy arrows, handwriting, crop marks, or long prose.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": "matrix.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "overlap-map",
+      "role": "content_image",
+      "output_path": "overlap-map.png",
+      "placement": {
+        "kind": "grammar_example",
+        "sequence": 7
+      },
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial diagram on pure-white #FFFFFF. Exact centered forest-green Songti-like title: 共享部分，不能被忽略. Exact quiet-gray subtitle: Overlap map / 交集：共性、差异与重叠. Upper centered title band; semantics inside x=54–1146 y=190–560; clear of Logo zone x=1056–1200 y=0–60; no reserve block or model wordmark. Use one overlap-map grammar: two softly outlined editorial regions 文章阅读 and 演示讲述 overlap at 解释关系. Show distinct outside roles—段落锚点 on the left and 叙事顺序 on the right—and one shared center. Make intersection visibly meaningful with thin lines and restrained hatch, not a comparison table. Fine green-gray ink, no shadow. Avoid grids, dashboards, nature, people, heavy arrows, handwriting, crop marks, or excess prose.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": "overlap-map.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "boundary-map",
+      "role": "content_image",
+      "output_path": "boundary-map.png",
+      "placement": {
+        "kind": "grammar_example",
+        "sequence": 8
+      },
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial diagram on pure-white #FFFFFF. Exact centered forest-green Songti-like title: 明确边界，才能保护理解. Exact quiet-gray subtitle: Boundary map / 边界：解释内容与视觉噪声. Upper centered title band; semantics inside x=54–1146 y=190–560; clear of Logo zone x=1056–1200 y=0–60; no reserve block or model wordmark. Use one boundary-map grammar: inside a thin calm boundary show 原文关系, 主图法, 必要标签 and 留白 working together; outside show three restrained crossed-out intrusions: 装饰堆叠, 仪表盘 UI, 伪造截图. Make the boundary itself the primary explanation. Fine green-gray ink, airy engraving, light hatch, no shadow. Avoid scenes, people, nature, actual fake screens, heavy arrows, grids, handwriting, crop marks, or long prose.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": "boundary-map.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "argument-map",
+      "role": "content_image",
+      "output_path": "argument-map.png",
+      "placement": {
+        "kind": "grammar_example",
+        "sequence": 9
+      },
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial diagram on pure-white #FFFFFF. Exact centered forest-green Songti-like title: 判断需要依据，也需要限定. Exact quiet-gray subtitle: Argument map / 论证：主张、依据、限制与结论. Upper centered title band; semantics inside x=54–1146 y=190–560; clear of Logo zone x=1056–1200 y=0–60; no reserve block or model wordmark. Use one argument-map grammar built only from supplied conceptual statements: claim 图像应解释关系; basis 阅读中的理解卡点; caveat 不是每段都要配图; conclusion 选择最小充分图法. Show support and caveat as visibly different relations converging on the conclusion. Fine green-gray ink, restrained hatch, no shadow, no fake evidence. Avoid causal flow, data charts, nature, people, UI cards, heavy arrows, grids, handwriting, crop marks, or long prose.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": "argument-map.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "timeline",
+      "role": "content_image",
+      "output_path": "timeline.png",
+      "placement": {
+        "kind": "grammar_example",
+        "sequence": 10
+      },
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial diagram on pure-white #FFFFFF. Exact centered forest-green Songti-like title: 阶段推进，需要看见时间. Exact quiet-gray subtitle: Timeline / 时间线：从原文到完成交付. Upper centered title band; semantics inside x=54–1146 y=190–560; clear of Logo zone x=1056–1200 y=0–60; no reserve block or model wordmark. Use one timeline grammar: 原文完成, 配图判断, 图像生成, 准确落位, 交付记录 in genuine temporal order along a calm horizontal line. Each milestone shows a concrete editorial action; do not turn it into a generic pipeline or loop. Fine green-gray ink, airy pencil detail, restrained hatch, no shadow. Avoid charts, UI cards, nature, people, heavy arrows, grids, handwriting, crop marks, or excess prose.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": "timeline.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "continuum",
+      "role": "content_image",
+      "output_path": "continuum.png",
+      "placement": {
+        "kind": "grammar_example",
+        "sequence": 11
+      },
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial diagram on pure-white #FFFFFF. Exact centered forest-green Songti-like title: 关系清晰度，是连续变化. Exact quiet-gray subtitle: Continuum / 连续谱：从文字可懂到需要解释. Upper centered title band; semantics inside x=54–1146 y=190–560; clear of Logo zone x=1056–1200 y=0–60; no reserve block or model wordmark. Use one continuum grammar: a single horizontal spectrum moves from 文字即可理解 through 建议补充图示 to 必须可视化关系. Place concrete relationship examples along it—simple statement, two-way comparison, multi-part dependency—without implying time. Fine green-gray ink, restrained hatch, small anchors, no shadow. Avoid timeline markers, decision branches, UI cards, nature, people, heavy arrows, grids, handwriting, crop marks, or long prose.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": "continuum.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "layer-stack",
+      "role": "content_image",
+      "output_path": "layer-stack.png",
+      "placement": {
+        "kind": "grammar_example",
+        "sequence": 12
+      },
+      "accepted_attempt": 1,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial diagram on pure-white #FFFFFF. Exact centered forest-green Songti-like title: 每一层，只负责一个问题. Exact quiet-gray subtitle: Layer stack / 层级：内容、图法与母版. Upper centered title band; semantics inside x=54–1146 y=190–560; clear of Logo zone x=1056–1200 y=0–60; no reserve block or model wordmark. Use one layer-stack grammar with three near-flat horizontal layers: 文章结构 decides what needs explaining and where; 图法 preserves the relationship; 编辑图母版 unifies type, line, hatch and whitespace. Fine vertical guides show coordination without causal arrows or dense dependencies. Fine green-gray ink, airy engraving, restrained hatching, no shadow, paper only if semantically necessary. Avoid UI cards, grids, nature, people, decorative paper stacks, handwriting, crop marks, or extra prose.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": "layer-stack.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "annotated-source",
+      "role": "content_image",
+      "output_path": "annotated-source.png",
+      "placement": {
+        "kind": "grammar_example",
+        "sequence": 13
+      },
+      "accepted_attempt": 2,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Annotate the supplied authentic source image without fabricating a screenshot or changing its topology. Create one finished 16:9 1200×675 Chinese editorial diagram on pure-white #FFFFFF. Exact centered forest-green Songti-like title: 来源图保持原貌，标注只服务理解. Exact quiet-gray subtitle: Annotated source / 来源标注：看清已有关系. Upper centered title band; semantics inside x=54–1146 y=190–560; clear of Logo zone x=1056–1200 y=0–60; no reserve block or model wordmark. Use one annotated-source grammar: place the supplied source image as the actual central evidence and add only three fine direct-ink annotations with circular anchors—场景、关系、阅读路径—pointing to existing parts. Do not add new claims, objects, data, or invented content. Fine green-gray lines, restrained hatching only in the annotation marks, no shadow. Avoid redraw, UI cards, grids, people, nature, heavy arrows, handwriting, crop marks, or extra prose.",
+          "status": "rejected",
+          "adjustment_reason": "The model rendered a duplicate SimpleMkt wordmark in the Logo overlay zone before deterministic Logo placement.",
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        },
+        {
+          "id": 2,
+          "prompt": "Annotate the supplied authentic source image without changing its topology or generating a screenshot. Create one finished 16:9 1200×675 Chinese editorial diagram on a pure-white #FFFFFF canvas. Exact centered forest-green Songti-like title: 来源图保持原貌，标注只服务理解. Exact quiet-gray subtitle: Annotated source / 来源标注：看清已有关系. Keep title/subtitle in the upper centered band. Keep all semantic content inside x=54–1146 and y=190–560. The top-right Logo overlay zone x=1056–1200 y=0–60 must remain naturally empty white canvas with absolutely no text, lettering, wordmark, symbol, line, mark, or object; do not render any Logo anywhere. Place the supplied source image as the unchanged central evidence. Add only three fine direct-ink annotations with circular anchors—场景、关系、阅读路径—pointing to existing parts. Do not add claims, objects, data, invented content, or title-external text. Use thin green-gray lines, restrained annotation hatching, and no shadow. Avoid redraw, UI cards, grids, people, nature, heavy arrows, handwriting, crop marks, and decorative elements.",
+          "status": "accepted",
+          "adjustment_reason": "Replaced a candidate containing a model-rendered duplicate wordmark.",
+          "candidate_file": "annotated-source.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    }
+  ],
+  "legacy_images": [
     {
       "id": "architecture",
       "visual_grammar": "architecture",

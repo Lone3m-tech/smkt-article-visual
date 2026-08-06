@@ -1,0 +1,864 @@
+{
+  "schema_version": 3,
+  "provenance": {
+    "skill_id": "smkt-article-visual",
+    "canonical_repository": "https://github.com/Lone3m-tech/smkt-article-visual",
+    "release_version": null,
+    "release_commit": null,
+    "run_id": "2026-08-06-demo-article-package-01"
+  },
+  "source_path": "article.md",
+  "delivery_mode": "article_package",
+  "logo": {
+    "requested": true,
+    "status": "applied"
+  },
+  "qa": {
+    "requested": false,
+    "status": "skipped"
+  },
+  "images": [
+    {
+      "id": "cover",
+      "role": "cover",
+      "output_path": "assets/image/cover.png",
+      "placement": {
+        "kind": "after_h1",
+        "anchor": null,
+        "sequence": null
+      },
+      "accepted_attempt": 4,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create a 16:9 1200×675 Chinese editorial explanatory illustration on a pure solid white #FFFFFF canvas. Use a high-contrast Songti-like editorial serif for every Chinese string; forest green #1A6B3A for the main judgment, quiet gray subtitle, thin low-contrast leaders, subtle paper fibers and one extremely faint consistent paper elevation. Keep the top-right rectangle x=1056–1200, y=0–60 completely blank pure white for a Logo added later. No model-rendered logo or wordmark. No UI/dashboard cards, no heavy arrows, no decorative grids, no crop marks, no handwritten semantic text. This is a conventional quiet PPT cover, not a diagram. Render exactly one text string and no other text: “开源配图Skill：配图不是装饰，而是解释的一部分”. Preserve those characters exactly, allowing only a deliberate line break for readability. Place it prominently in the centered upper title-safe zone and leave the Logo reserve untouched. Use one dominant visual metaphor: a refined white editorial article sheet with a few real paragraph-like lines transforms along one fine green thread into one clear engraved explanatory relation, showing text becoming understanding. The metaphor stays calm, sparse, tactile and editorial; no labels, subtitles, notes, data, or extra words.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected: the first prompt and finalizer forced a visible white Logo reserve and a paper-led cover metaphor.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 2,
+          "prompt": "Create a 16:9 1200×675 Chinese editorial illustration on a pure solid white #FFFFFF canvas. Use a high-contrast Songti-like editorial serif for Chinese text, forest green #1A6B3A for the main judgment, quiet gray subtitle, thin low-contrast leaders, generous white space, and a light pencil-and-engraving treatment with sparse controlled contours and low-density cross-hatching only where it clarifies meaning. Keep every element nearly flat and grounded: no paper fibers, torn edges, stacked sheets, card treatment, or visible drop shadows. Use a plain near-flat excerpt rectangle only when source text must be shown. Keep all titles, labels, connectors, and essential diagram semantics clear of the top-right Logo overlay zone x=1056–1200, y=0–60; do not paint a special white block there, let the ordinary white canvas continue beneath the later Logo. Do not render a logo or wordmark. No UI/dashboard, heavy arrows, decorative grids, crop marks, or handwritten semantic text. This is a conventional quiet PPT cover, not a diagram. Render exactly one text string and no other text: “开源配图Skill：配图不是装饰，而是解释的一部分”. Preserve those characters exactly, allowing only a deliberate line break for readability. Place the title prominently in the centered upper title-safe zone. Use one vivid, concrete metaphor: a recognizable editorial magnifying lens moves across an elegant but meaningless ornamental ink flourish; inside and immediately beyond the lens, the flourish resolves into one crisp, legible relationship drawing made of fine green contours and anchors. The lens visibly transforms decoration into understanding. Keep it airy and flat, with no paper sheets, labels, subtitles, notes, data, or extra words.",
+          "status": "pending",
+          "adjustment_reason": "Reworked to use direct Logo overlay, light sketch treatment, and near-flat elements.",
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        },
+        {
+          "id": 3,
+          "prompt": "Create one finished 16:9 1200×675 Chinese PPT cover on an opaque pure-white #FFFFFF canvas. Render exactly one text string: 开源配图Skill：配图不是装饰，而是解释的一部分. Preserve it exactly, allowing only a deliberate line break; render no subtitle, label, note, data, or other text. Put the prominent forest-green Songti-like serif title in a calm centered title zone. Keep all essential content clear of the top-right overlay coordinates x=1056–1200, y=0–60, but do not paint a reserve block and do not render a Logo or wordmark. Use one vivid, restrained metaphor: a single open editorial article page whose faint paragraph lines pass through one fine green editorial thread and resolve into one lucid hand-drawn relationship structure; it should communicate text becoming understanding, not a literal workflow diagram. Use direct thin ink, airy engraving contours, sparse cross-hatching only where it clarifies form, generous white space, and nearly flat grounded forms with no visible shadow. Avoid extra objects, paper stacks, UI/dashboard treatment, heavy arrows, decorative grids, crop marks, and handwriting.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected: the cover used generic natural and human imagery instead of the selected editorial-element vocabulary.",
+          "candidate_file": "assets/image/cover.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        },
+        {
+          "id": 4,
+          "prompt": "Create one finished 16:9 1200×675 Chinese PPT cover on an opaque pure-white #FFFFFF canvas. Render exactly one text string: 开源配图Skill：配图不是装饰，而是解释的一部分. Preserve it exactly, allowing only a deliberate line break; render no subtitle, label, note, data, or other text. Put the prominent forest-green Songti-like serif title in a calm centered title zone. Keep all essential content clear of x=1056–1200, y=0–60, but do not paint a reserve block and do not render a Logo or wordmark. Use one restrained editorial metaphor: a single open manuscript page with non-readable paragraph lines, a calm highlighted passage, one circle mark, one bracketed marginal annotation, a bookmark tab, a folded corner, and a few fine green anchor-and-connector lines that resolve into one small lucid relationship structure. These marks must show that text is being edited into understanding, not become a literal workflow diagram. Render with thin pencil and ink contours, restrained engraving hatching, local paper grain only on the manuscript, generous white space, and nearly flat grounded forms with no visible shadow. Do not depict natural scenery, plants, animals, people, mountains, sky, water, clouds, generic icons, UI/dashboard cards, paper stacks, heavy arrows, decorative grids, crop marks, or handwriting.",
+          "status": "accepted",
+          "adjustment_reason": "Reworked to prioritize content-being-edited elements from the updated cover vocabulary.",
+          "candidate_file": "assets/image/cover.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "plan-before-pixels",
+      "role": "content_image",
+      "output_path": "assets/image/plan-before-pixels.png",
+      "placement": {
+        "kind": "after_paragraph",
+        "anchor": "只有 plan 被确认，或你明确要求立即生成，才进入下一步。",
+        "sequence": null
+      },
+      "accepted_attempt": 11,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create a 16:9 1200×675 Chinese editorial explanatory illustration on a pure solid white #FFFFFF canvas. Use a high-contrast Songti-like editorial serif for every Chinese string; forest green #1A6B3A for the main judgment, quiet gray subtitle, thin low-contrast leaders, subtle paper fibers and one extremely faint consistent paper elevation. Keep the top-right rectangle x=1056–1200, y=0–60 completely blank pure white for a Logo added later. No model-rendered logo or wordmark. No UI/dashboard cards, no heavy arrows, no decorative grids, no crop marks, no handwritten semantic text. This is a content image. Center the exact core judgment “不是每段都要配图，先找到读者卡点” in the fixed upper title band, with the subtitle “先判断，再决定是否让图片进入正文”. Begin the diagram below the title band. Show one decision-tree structure: an excerpt sheet named “这一段有理解卡点吗？” splits into “否｜保留文字” and “是｜visual plan”; the yes branch then leads to “卡点、图法、位置” and “进入生成”. Make the decision visually vivid with a small annotated editorial pencil-sketch magnifying lens over one highlighted source sentence, direct printed labels and hairline leaders. Preserve the clear yes/no branching; use narrow paper strips for stages and cut-paper fields for the decision.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected: the first prompt was superseded by the lighter sketch direction; no delivery candidate was accepted.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 2,
+          "prompt": "Create a 16:9 1200×675 Chinese editorial illustration on a pure solid white #FFFFFF canvas. Use a high-contrast Songti-like editorial serif for Chinese text, forest green #1A6B3A for the main judgment, quiet gray subtitle, thin low-contrast leaders, generous white space, and a light pencil-and-engraving treatment with sparse controlled contours and low-density cross-hatching only where it clarifies meaning. Keep every element nearly flat and grounded: no paper fibers, torn edges, stacked sheets, card treatment, or visible drop shadows. Use a plain near-flat excerpt rectangle only when source text must be shown. Keep all titles, labels, connectors, and essential diagram semantics clear of the top-right Logo overlay zone x=1056–1200, y=0–60; do not paint a special white block there, let the ordinary white canvas continue beneath the later Logo. Do not render a logo or wordmark. No UI/dashboard, heavy arrows, decorative grids, crop marks, or handwritten semantic text. This is a content image. Center the exact core judgment “不是每段都要配图，先找到读者卡点” in the fixed upper title band, with the subtitle “先判断，再决定是否让图片进入正文”. Begin the diagram below the title band. Show one light decision-tree structure: one plain outlined excerpt rectangle “这一段有理解卡点吗？” splits through hairline leaders into “否｜保留文字” and “是｜visual plan”; the yes branch leads to “卡点、图法、位置” and “进入生成”. Make the relation vivid with a small lightly sketched magnifying lens over one highlighted source sentence. Preserve clear yes/no branching. Use fine contours and direct printed labels, not paper cards.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected: the prompt added an unnecessary illustrative subject and more visual elements than the selected grammar needed.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 3,
+          "prompt": "Create a 16:9 1200×675 Chinese editorial explanatory diagram on a pure solid white #FFFFFF canvas. Use one Songti-like editorial serif for Chinese text, forest green #1A6B3A for the centered core judgment, a quiet gray subtitle, thin low-contrast green or gray lines, and generous white space. Use light pencil-like contours and restrained low-density hatching only inside the selected grammar structure. Keep all elements nearly flat: no paper fibers, torn edges, stacked sheets, cards, visible drop shadows, decorative objects, icons, narrative scenes, or model-rendered Logo. Keep title, labels, connectors, and all essential diagram semantics clear of the top-right Logo overlay zone x=1056–1200, y=0–60, but do not paint a white block there. Use only the smallest legible relationship, with two to four meaningful nodes or labels. Every object, if any, must directly clarify the stated relationship and follow ordinary physical, causal, and semantic expectations. No UI/dashboard, heavy arrows, decorative grids, crop marks, handwriting, extra prose, or extra labels. Center the exact core judgment “不是每段都要配图，先找到读者卡点” in the fixed upper title band, with the subtitle “先判断，再决定是否让图片进入正文”. Begin below the title. Use one decision tree only: “这一段有理解卡点吗？” branches to “保留文字” and “形成 visual plan”; the plan branch contains the compact words “卡点｜图法｜位置”. Use plain outlined nodes and hairline branch lines. No illustrative subject or metaphor.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected: the grammar-only retry compressed the article meaning into sparse abstract nodes and lost the required source-specific semantic detail.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 4,
+          "prompt": "Generate one finished 16:9 1200×675 Chinese article-body explanatory figure. This is a conceptual workflow diagram, not evidence, a screenshot, a product UI, or a poster. Use a full pure-white #FFFFFF canvas. Keep the title and subtitle centered in the fixed upper band; keep all semantic content out of the top-right Logo overlay zone x=1056–1200, y=0–60, without drawing a special white block or any wordmark. Use one Songti-like editorial-serif family: exact forest-green title ‘不是每段都要配图，先找到读者卡点’; exact quiet-gray subtitle ‘先判断，再决定是否让图片进入正文’. Begin the diagram below y=200. Use one decision-tree grammar with three source-specific semantic groups, rendered in a light editorial paper-sketch language: fine ink, airy pencil contours, restrained cross-hatching, thin printed labels, small anchors, and subtle white-paper grain only on paper surfaces. Left: a meaningful article manuscript sheet labelled ‘文章段落’, with several grouped printed paragraph lines and one selected paragraph marked by a quiet green hatch. Center: a cut-edge decision field headed ‘这一段有理解卡点吗？’, containing two short reading checks ‘关系只靠文字难理解’ and ‘图片能降低认知负担’. From it, draw two fine hairline branches: ‘否’ leads to a compact text-flow sheet labelled ‘保留文字’; ‘是’ leads to a compact visual-plan sheet labelled ‘visual plan’, whose interior visibly organizes ‘卡点｜图法｜位置’, then continues to a small strip ‘进入生成’. The pages, decision field, and plan must visibly carry their distinct roles; labels must not be the only meaning. Preserve generous whitespace, 1–1.5px low-contrast green/gray lines, and near-flat grounding with no shadow by default. No separate metaphor, decorative object, generic icon, rounded UI card, dashboard, heavy arrow, crop mark, handwritten text, extra prose, fake data, or model-rendered Logo.",
+          "status": "rejected",
+          "adjustment_reason": "Superseded by the compact source-faithful workflow under the revised QA boundary; the new version checks article comprehension before generation rather than treating content-element taste as a QA failure.",
+          "candidate_file": "assets/image/plan-before-pixels.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        },
+        {
+          "id": 5,
+          "prompt": "Create one finished 16:9 Chinese editorial body figure on a pure solid white #FFFFFF canvas, composed for 1200×675. Exact centered forest-green Songti-like serif title: ‘先确认卡点，再进入生成’. Exact centered quiet-gray subtitle: ‘图像服务文章，而不是反过来带偏文章’. Keep title and subtitle in the upper centered band; render no Logo or wordmark and keep essential content outside the future top-right Logo overlay zone x=1056–1200, y=0–60. Use one compact decision-flow grammar wholly inside x=54–1146 and y=190–560. Start with one small article excerpt sheet at left, because the paragraph is the source. A fine leader brings its highlighted relation to a central reading lens labeled ‘读者卡点？’. From that lens, branch once: the lower quiet route is ‘文字已足够清楚’ and remains a text-only reading path; the right route is ‘关系待解释’, leading to one compact visual-plan field that visibly contains a tiny sequence, comparison, and hierarchy as possible structures, then to one small explanatory figure attached immediately after a paragraph anchor. Make the reader understand the decision: not every paragraph gets an image; only a real comprehension obstacle becomes a planned explanatory figure. Use short printed labels only. Use direct thin ink, airy pencil/engraving contours, restrained cross-hatching where it clarifies form, small circular anchors, low-contrast green-gray leaders, and nearly flat grounded elements. Paper is used only for the source excerpt and visual-plan field. Do not use dashboards, fake data, decorative scenes, or visible shadows.",
+          "status": "rejected",
+          "adjustment_reason": "QA source-fidelity failure: the candidate substituted an unrelated ecology example for this article's paragraph-to-reader-obstacle-to-visual-plan relationship.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 6,
+          "prompt": "Create one finished 16:9 Chinese editorial body figure on a pure solid white #FFFFFF canvas, composed for 1200×675. Exact centered forest-green Songti-like serif title: ‘先确认卡点，再进入生成’. Exact centered quiet-gray subtitle: ‘图像服务文章，而不是反过来带偏文章’. Keep title and subtitle in the upper centered band; render no Logo or wordmark and keep essential content outside the future top-right Logo overlay zone x=1056–1200, y=0–60. Use one compact decision-flow grammar wholly inside x=54–1146 and y=190–560. This figure explains only the article-visualization process: a source paragraph yields a reader comprehension obstacle, which yields a visual plan, which yields an explanatory figure at the paragraph anchor. Use no unrelated real-world topic, scenario, industry, animals, plants, product workflow, science example, or invented source paragraph. At left, show a small abstract Markdown article excerpt with one green-highlighted relationship and the label ‘文章段落’. A fine leader reaches a central reading lens labeled ‘读者卡点？’. Its lower route, ‘文字已足够清楚’, ends at a small open-book reading symbol; its right route, ‘关系待解释’, reaches one compact visual-plan field. The plan field visibly contains three mini structural options labeled only ‘流程’, ‘对比’, ‘层级’; it then leads to a small explanatory relation diagram visibly inserted immediately after a paragraph anchor, labeled ‘准确落位’. Make the logic immediately legible: not every paragraph gets an image; only a real comprehension obstacle becomes a planned explanatory figure. Use direct thin ink, airy pencil/engraving contours, restrained cross-hatching where it clarifies form, small circular anchors, low-contrast green-gray leaders, and nearly flat grounded elements. Paper is used only for the Markdown excerpt and visual-plan field. Do not add fake data, decorative scenes, or visible shadows.",
+          "status": "rejected",
+          "adjustment_reason": "Generation-time source-text correction: the candidate kept the correct article-visualization relationship but invented a generic mock paragraph rather than using the supplied source lines.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 7,
+          "prompt": "Create one finished 16:9 Chinese editorial body figure on a pure solid white #FFFFFF canvas, composed for 1200×675. Exact centered forest-green Songti-like serif title: ‘先确认卡点，再进入生成’. Exact centered quiet-gray subtitle: ‘图像服务文章，而不是反过来带偏文章’. Keep title and subtitle in the upper centered band; render no Logo or wordmark and keep essential content outside the future top-right Logo overlay zone x=1056–1200, y=0–60. Use the same compact decision-flow grammar wholly inside x=54–1146 and y=190–560. This figure explains only the article-visualization process: a source paragraph yields a reader comprehension obstacle, which yields a visual plan, which yields an explanatory figure at the paragraph anchor. At left, use one small Markdown article excerpt labeled ‘文章段落’ with only these supplied source questions, printed legibly: ‘读者在哪一段会卡住？’ ‘这张图该解释什么？’ ‘应该紧跟哪段文字？’ Highlight the relationship between these three questions in green. Do not invent any other paragraph, example, A/B variables, statistics, industry, or real-world scenario. A fine leader reaches a central reading lens labeled ‘读者卡点？’. Its lower route, ‘文字已足够清楚’, ends at a small open-book reading symbol; its right route, ‘关系待解释’, reaches one compact visual-plan field. The plan field visibly contains three mini structural options labeled only ‘流程’, ‘对比’, ‘层级’; it then leads to a small explanatory relation diagram visibly inserted immediately after a paragraph anchor, labeled ‘准确落位’. Make the logic immediately legible: not every paragraph gets an image; only a real comprehension obstacle becomes a planned explanatory figure. Use direct thin ink, airy pencil/engraving contours, restrained cross-hatching where it clarifies form, small circular anchors, low-contrast green-gray leaders, and nearly flat grounded elements. Paper is used only for the Markdown excerpt and visual-plan field. Do not add decorative scenes or visible shadows.",
+          "status": "rejected",
+          "adjustment_reason": "Superseded before generation because the Prompt compiler was updated to make source, grammar, density, disclosure, and visual-contract requirements explicit.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 8,
+          "prompt": "Create one finished 16:9 Chinese editorial body figure on a pure solid white #FFFFFF canvas, composed for 1200×675. Exact centered forest-green Songti-like serif title: ‘先确认卡点，再进入生成’. Exact centered quiet-gray subtitle: ‘图像服务文章，而不是反过来带偏文章’. Keep title and subtitle in the upper centered band; render no Logo or wordmark and keep essential content outside the future top-right Logo overlay zone x=1056–1200, y=0–60. This source-locked figure explains only this article's relationship: the questions ‘读者在哪一段会卡住？’ ‘这张图该解释什么？’ and ‘应该紧跟哪段文字？’ form a visual plan before any image is generated. Use one compact decision-flow grammar wholly inside x=54–1146 and y=190–560. At left, show one small Markdown article excerpt labeled ‘文章段落’ containing exactly those three source questions; highlight their connection with one quiet green relation mark. A fine leader reaches a central reading lens labeled ‘读者卡点？’. From the lens, the lower route ‘文字已足够清楚’ ends at one small open-book reading symbol; the right route ‘关系待解释’ reaches one compact visual-plan field. The plan field contains three small directly drawn structural options labeled only ‘流程’, ‘对比’, ‘层级’; it leads to one small explanatory relation diagram visibly attached immediately after a paragraph anchor, labeled ‘准确落位’. Make the logic immediate: not every paragraph gets an image; only a real comprehension obstacle becomes a planned explanatory figure. Use direct thin ink, airy pencil/engraving contours, restrained cross-hatching where it clarifies form, small circular anchors, low-contrast green-gray leaders, printed Chinese labels, and nearly flat grounded elements. Paper is used only for the source excerpt and visual-plan field. Do not invent any other paragraph, example, A/B variables, factual claim, number, date, industry, environmental narrative, person, animal, plant, product workflow, or decorative scene. Do not use visible shadows. No illustrative disclosure is needed because every visible sentence comes from the source or is a structural label.",
+          "status": "accepted",
+          "adjustment_reason": "Accepted with visual QA skipped at the user's request; source-locked generation, fixed Logo finalization, and article placement were completed.",
+          "candidate_file": "assets/image/plan-before-pixels.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        },
+        {
+          "id": 9,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial body figure on an opaque pure-white #FFFFFF canvas. Exact centered forest-green Songti-like title: 先确认卡点，再进入生成. Exact centered quiet-gray subtitle: 图像服务文章，而不是反过来带偏文章. Keep title/subtitle in the upper centered band. Keep every semantic element inside x=54–1146 and y=190–560; keep essential content clear of x=1056–1200, y=0–60 without a white reserve or model Logo. Use one compact flow grammar. At left, show a source paragraph as a small Markdown excerpt with one highlighted relation; it leads to a clear reading-obstacle lens marked 读者卡点. From that point, one route remains 文字已足够清楚 and returns to reading; the other route is 关系待解释 and enters a compact visual-plan sheet that visibly decides 卡点、图法、位置 before one small explanatory figure is inserted at its paragraph anchor. Depict the source-to-decision relationship directly; labels cannot replace the forms. Use thin low-contrast green-gray lines, direct ink, airy pencil or engraving contours, restrained hatching, small anchors, generous whitespace, and no visible shadow. Use paper only for the source excerpt and plan because they are document subjects. Avoid generic cards, dashboards, decorative scenes, fake data, unrelated examples, heavy arrows, grids, crop marks, handwriting, and model wordmarks.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected: the model invented an unrelated urban-heat-island example because the source questions were not rendered explicitly.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 10,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial body figure on an opaque pure-white #FFFFFF canvas. Exact centered forest-green Songti-like title: 先确认卡点，再进入生成. Exact centered quiet-gray subtitle: 图像服务文章，而不是反过来带偏文章. Keep title/subtitle in the upper centered band. Keep every semantic element inside x=54–1146 and y=190–560, and clear of x=1056–1200, y=0–60; no reserve block and no model Logo. This figure explains only these exact source questions: 读者在哪一段会卡住？这张图该解释什么？应该紧跟哪段文字？ Use one compact flow: a small abstract Markdown article excerpt containing only those three questions, then a reading-obstacle lens labelled 读者卡点, then a compact visual-plan field that visibly organizes 卡点、图法、位置, then one small explanatory relation diagram attached immediately after its paragraph anchor. A quiet side route 文字已足够清楚 ends in reading with no image. The picture must make clear that a visual plan is made before generation; do not depict any real-world example or fictional paragraph. Use thin low-contrast green-gray lines, direct ink, airy pencil or engraving contours, restrained hatching, small anchors, generous whitespace, and no visible shadow. Paper is used only for the source excerpt and plan because they are document subjects. Do not depict cities, buildings, urban heat, weather, ecology, landscape, plants, animals, people, industry, products, numbers, data, charts, dashboards, generic cards, decorative scenes, heavy arrows, grids, crop marks, handwriting, or model wordmarks.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected: source fidelity held, but multi-line prose expanded into the primary visual area instead of remaining local support.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 11,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial body figure on an opaque pure-white #FFFFFF canvas. Exact centered forest-green Songti-like title: 先确认卡点，再进入生成. Exact centered quiet-gray subtitle: 图像服务文章，而不是反过来带偏文章. Keep title/subtitle in the upper centered band. Keep every semantic element inside x=54–1146 and y=190–560, and clear of x=1056–1200, y=0–60; no reserve block and no model Logo. Use one compact flow. Left: an abstract article paragraph represented by a few non-readable lines and exactly three small green editorial marks labelled only 卡点、解释、位置; these are the source questions compressed, not prose. Center: one magnifying lens labelled 读者卡点. Right: one compact visual-plan relation structure with only three short labels 卡点、图法、位置, then one small explanatory figure visibly attached at the paragraph anchor. A quiet side route 文字已够清楚 ends at a small reading line with no image. Let objects, positions, and thin connectors carry the meaning; do not create prose panels, multi-line captions, table cells, bullet lists, or explanatory sentences in the content area. Use thin low-contrast green-gray lines, direct ink, airy pencil or engraving contours, restrained hatching, small anchors, generous whitespace, and no visible shadow. Paper is allowed only for the compact source excerpt. Do not depict any real-world scenario, city, nature, people, products, data, dashboard, cards, heavy arrows, grids, crop marks, handwriting, or model wordmarks.",
+          "status": "accepted",
+          "adjustment_reason": "Recompiled with source questions compressed into short editorial marks so text supports rather than dominates the relationship.",
+          "candidate_file": "assets/image/plan-before-pixels.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-grammar-anchor",
+      "role": "content_image",
+      "output_path": "assets/image/paragraph-grammar-anchor.png",
+      "placement": {
+        "kind": "after_paragraph",
+        "anchor": "真正的差别不在画风，在于它把正文里的关系、图法和落位一起当成交付的一部分。",
+        "sequence": null
+      },
+      "accepted_attempt": 7,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create a 16:9 1200×675 Chinese editorial explanatory illustration on a pure solid white #FFFFFF canvas. Use a high-contrast Songti-like editorial serif for every Chinese string; forest green #1A6B3A for the main judgment, quiet gray subtitle, thin low-contrast leaders, subtle paper fibers and one extremely faint consistent paper elevation. Keep the top-right rectangle x=1056–1200, y=0–60 completely blank pure white for a Logo added later. No model-rendered logo or wordmark. No UI/dashboard cards, no heavy arrows, no decorative grids, no crop marks, no handwritten semantic text. This is a content image. Center the exact core judgment “配图交付的是段落关系，不是一句提示词” in the fixed upper title band, with the subtitle “关系、图法与锚点必须连在一起”. Begin the diagram below the title band. Show one architecture relation: a source excerpt sheet “文章段落” exposes a highlighted relationship, then connects to a compact field “关键关系” with visible choices “流程｜对比｜层级｜边界”, then to a field “visual grammar”, then to an article reading line with one circular anchor named “准确锚点”. Use direct thin connections to show dependency, not a time process. Add an editorial engraving subject of a thread passing through these concrete stages, clearly annotated rather than decorative.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected: the first prompt was superseded by the lighter sketch direction; no delivery candidate was accepted.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 2,
+          "prompt": "Create a 16:9 1200×675 Chinese editorial illustration on a pure solid white #FFFFFF canvas. Use a high-contrast Songti-like editorial serif for Chinese text, forest green #1A6B3A for the main judgment, quiet gray subtitle, thin low-contrast leaders, generous white space, and a light pencil-and-engraving treatment with sparse controlled contours and low-density cross-hatching only where it clarifies meaning. Keep every element nearly flat and grounded: no paper fibers, torn edges, stacked sheets, card treatment, or visible drop shadows. Use a plain near-flat excerpt rectangle only when source text must be shown. Keep all titles, labels, connectors, and essential diagram semantics clear of the top-right Logo overlay zone x=1056–1200, y=0–60; do not paint a special white block there, let the ordinary white canvas continue beneath the later Logo. Do not render a logo or wordmark. No UI/dashboard, heavy arrows, decorative grids, crop marks, or handwritten semantic text. This is a content image. Center the exact core judgment “配图交付的是段落关系，不是一句提示词” in the fixed upper title band, with the subtitle “关系、图法与锚点必须连在一起”. Begin the diagram below the title band. Show one architecture relation: a plain outlined excerpt rectangle “文章段落” exposes a highlighted relationship, linked to “关键关系” with visible choices “流程｜对比｜层级｜边界”, then “visual grammar”, then to an article reading line with one circular anchor named “准确锚点”. Use direct thin connections to show dependency, not a time process. Add one small engraving-style thread passing through the relation as an annotated explanatory subject; no paper sheets or cards.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected: the prompt added an unnecessary illustrative subject and more visual elements than the selected grammar needed.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 3,
+          "prompt": "Create a 16:9 1200×675 Chinese editorial explanatory diagram on a pure solid white #FFFFFF canvas. Use one Songti-like editorial serif for Chinese text, forest green #1A6B3A for the centered core judgment, a quiet gray subtitle, thin low-contrast green or gray lines, and generous white space. Use light pencil-like contours and restrained low-density hatching only inside the selected grammar structure. Keep all elements nearly flat: no paper fibers, torn edges, stacked sheets, cards, visible drop shadows, decorative objects, icons, narrative scenes, or model-rendered Logo. Keep title, labels, connectors, and all essential diagram semantics clear of the top-right Logo overlay zone x=1056–1200, y=0–60, but do not paint a white block there. Use only the smallest legible relationship, with two to four meaningful nodes or labels. Every object, if any, must directly clarify the stated relationship and follow ordinary physical, causal, and semantic expectations. No UI/dashboard, heavy arrows, decorative grids, crop marks, handwriting, extra prose, or extra labels. Center the exact core judgment “配图交付的是段落关系，不是一句提示词” in the fixed upper title band, with the subtitle “关系、图法与锚点必须连在一起”. Begin below the title. Use one dependency architecture only, with four small outlined nodes linked by thin leaders: “文章段落” → “关键关系” → “选定图法” → “准确锚点”. Let the connection topology—not extra examples, objects, or scenes—explain the point.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected: the grammar-only retry reduced the paragraph-to-grammar-to-anchor dependency into four generic outlined nodes.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 4,
+          "prompt": "Generate one finished 16:9 1200×675 Chinese article-body explanatory figure. Conceptual method diagram, not evidence, a screenshot, a UI, or a poster. Use a pure-white #FFFFFF canvas and no model-rendered Logo; keep essential content out of the top-right Logo overlay zone x=1056–1200, y=0–60 without a special white block. Use one Songti-like editorial-serif family: exact forest-green title ‘配图交付的是段落关系，不是一句提示词’; exact gray subtitle ‘关系、图法与锚点必须连在一起’. Begin below y=200. Use one architecture grammar, not a time sequence, in a light editorial paper-sketch language with thin ink, airy pencil contours, restrained hatch, small anchors, and subtle white-paper grain only on semantic paper surfaces. Show three primary semantic groups connected by fine dependency leaders: left, an ‘文章段落’ manuscript sheet with grouped reading lines and one highlighted relationship; center, a ‘关键关系’ analysis field whose interior makes the choice tangible through three compact source-derived mini structures for ‘流程’, ‘对比’, and ‘层级’; right, a ‘准确锚点’ article-reading sheet where the selected grammar is visibly attached immediately after its relevant paragraph with a circular anchor. The relation must make clear that a paragraph yields a specific relationship, which selects a grammar, which determines its placement. Include only short direct labels; labels must not replace the internal visual detail. Keep everything nearly flat, no shadow by default. No metaphor object, generic icon, rounded card, dashboard, heavy arrow, decorative grid, handwriting, fake data, or extra prose.",
+          "status": "rejected",
+          "adjustment_reason": "Superseded before acceptance: the revised contract makes paper optional and bounds all semantics to the fixed content stage.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 5,
+          "prompt": "Generate one finished 16:9 1200×675 Chinese article-body explanatory figure: a conceptual architecture diagram, not evidence, a screenshot, UI, or poster. Pure #FFFFFF canvas; no model-rendered Logo and no white Logo reserve. Keep essential content clear of x=1056–1200, y=0–60 for a later overlay. Use one Songti-like editorial-serif family: exact forest-green title ‘配图交付的是段落关系，不是一句提示词’; exact gray subtitle ‘关系、图法与锚点必须连在一起’. Keep title/subtitle centered in the upper band; place every semantic object, label, leader, anchor, and material detail wholly inside the invisible content stage x=54–1146, y=190–560. Do not draw that stage. Use direct ink, airy pencil or engraving contours, restrained hatch, thin low-contrast green-gray lines, and no shadow. First select semantic forms, then apply the light editorial sketch treatment; paper is allowed only for the left source paragraph because the paragraph itself is part of the explanation. Show three dependency groups: left, one compact excerpt of ‘文章段落’ with a highlighted relational sentence; center, a non-paper relation analysis with three distinct miniature structures visibly showing ‘流程’, ‘对比’, and ‘层级’ as possible grammar choices; right, an open article-reading line with a circular ‘准确锚点’ immediately after its relevant paragraph, visibly receiving the selected grammar. Fine leaders show paragraph → relation → selected grammar → placement. Use short labels only. No cards, repeated paper panels, generic icons, metaphor object, dashboard, heavy arrows, decorative grid, handwriting, fake data, or extra prose.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected: the candidate introduced unrelated fictional paragraph content and did not carry the required illustrative disclosure.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 6,
+          "prompt": "Generate one finished 16:9 1200×675 Chinese article-body explanatory figure: a compact conceptual architecture diagram, not evidence, a screenshot, UI, or poster. Pure #FFFFFF canvas; no model-rendered Logo and no white Logo reserve. Keep essential content clear of x=1056–1200, y=0–60. Use one Songti-like editorial-serif family: exact forest-green title ‘配图交付的是段落关系，不是一句提示词’; exact gray subtitle ‘关系、图法与锚点必须连在一起’. Use a modest 52px-equivalent body-figure title, never a cover-sized headline. Place every semantic object, label, leader, anchor, and material detail in one compact horizontal composition wholly within x=60–1140, y=200–540; leave all surrounding space blank and do not draw this stage. Use direct ink, airy pencil or engraving contours, restrained hatch, thin low-contrast green-gray lines, no shadow. Show: left, an unframed article paragraph represented by thin unreadable text lines with one green highlighted relation; center, three directly drawn mini relationship forms labelled only ‘流程’, ‘对比’, ‘层级’; right, a thin article-reading line with a circular ‘准确锚点’ after the relevant paragraph. Fine dependency leaders make paragraph → relation → selected grammar → placement immediately clear. Do not use readable fictional paragraphs, numbers, data, document sheets, repeated cards, generic icons, metaphor objects, dashboard, heavy arrows, decorative grid, handwriting, or extra prose.",
+          "status": "accepted",
+          "adjustment_reason": "Accepted: compact source-derived relation forms explain paragraph, grammar choice, and placement without fictional microcopy.",
+          "candidate_file": "assets/image/paragraph-grammar-anchor.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        },
+        {
+          "id": 7,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial body figure on an opaque pure-white #FFFFFF canvas. Exact centered forest-green Songti-like title: 配图交付的是段落关系，不是一句提示词. Exact centered quiet-gray subtitle: 关系、图法与锚点必须连在一起. Keep title/subtitle in the upper centered band. Keep every semantic element inside x=54–1146 and y=190–560, and clear of the top-right overlay coordinates x=1056–1200, y=0–60; no reserve block and no model Logo. Use one architecture grammar, not a timeline. Show three connected semantic groups: a source paragraph with one highlighted relationship; its relationship made visible as a compact choice among flow, comparison, and hierarchy; and an open article reading line where the selected explanatory figure is attached immediately after the correct paragraph with a circular anchor. Make the dependency visible: paragraph relationship determines grammar, grammar determines placement. Use the light editorial sketch treatment—thin low-contrast green-gray lines, direct ink, airy engraving contours, restrained hatching, small anchors, generous whitespace, and no visible shadow. Use paper only for the source paragraph. Avoid generic nodes, repeated cards, illustrative scenes, invented prose, fake data, dashboard/UI styling, heavy arrows, grids, crop marks, handwriting, and model wordmarks.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": "assets/image/paragraph-grammar-anchor.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "content-grammar-master",
+      "role": "content_image",
+      "output_path": "assets/image/content-grammar-master.png",
+      "placement": {
+        "kind": "after_paragraph",
+        "anchor": "在这个 Skill 里，文章结构决定视觉任务和位置；visual grammar 决定用流程、对比、层级、循环或边界图来保存原有关系；固定编辑图母版则统一颜色、字体感、材质、留白和禁用项。",
+        "sequence": null
+      },
+      "accepted_attempt": 9,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create a 16:9 1200×675 Chinese editorial explanatory illustration on a pure solid white #FFFFFF canvas. Use a high-contrast Songti-like editorial serif for every Chinese string; forest green #1A6B3A for the main judgment, quiet gray subtitle, thin low-contrast leaders, subtle paper fibers and one extremely faint consistent paper elevation. Keep the top-right rectangle x=1056–1200, y=0–60 completely blank pure white for a Logo added later. No model-rendered logo or wordmark. No UI/dashboard cards, no heavy arrows, no decorative grids, no crop marks, no handwritten semantic text. This is a content image. Center the exact core judgment “内容、图法、母版，各管一层” in the fixed upper title band, with the subtitle “结构决定关系，母版统一表达”. Begin the diagram below the title band. Show one layer-stack with three clearly separated editorial paper layers: “文章结构｜决定视觉任务与位置”, “visual grammar｜保存流程、对比、层级、循环或边界”, and “编辑图母版｜统一颜色、字体、材质与留白”. Thin vertical alignment guides show that the layers cooperate but cannot replace one another. Use cut-paper fields and direct labels, with one engraved structural cross-section detail that exposes the stack rather than acting as decoration.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected: the first prompt was superseded by the lighter sketch direction; no delivery candidate was accepted.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 2,
+          "prompt": "Create a 16:9 1200×675 Chinese editorial illustration on a pure solid white #FFFFFF canvas. Use a high-contrast Songti-like editorial serif for Chinese text, forest green #1A6B3A for the main judgment, quiet gray subtitle, thin low-contrast leaders, generous white space, and a light pencil-and-engraving treatment with sparse controlled contours and low-density cross-hatching only where it clarifies meaning. Keep every element nearly flat and grounded: no paper fibers, torn edges, stacked sheets, card treatment, or visible drop shadows. Use a plain near-flat excerpt rectangle only when source text must be shown. Keep all titles, labels, connectors, and essential diagram semantics clear of the top-right Logo overlay zone x=1056–1200, y=0–60; do not paint a special white block there, let the ordinary white canvas continue beneath the later Logo. Do not render a logo or wordmark. No UI/dashboard, heavy arrows, decorative grids, crop marks, or handwritten semantic text. This is a content image. Center the exact core judgment “内容、图法、母版，各管一层” in the fixed upper title band, with the subtitle “结构决定关系，母版统一表达”. Begin the diagram below the title band. Show one light layer-stack made of three near-flat outlined planes with direct labels: “文章结构｜决定视觉任务与位置”, “visual grammar｜保存流程、对比、层级、循环或边界”, and “编辑图母版｜统一颜色、字体、材质与留白”. Thin vertical alignment guides show cooperation without substitution. Use a small sparse engraved structural cross-section tied directly to the layers; no paper stacks, torn edges, or shadows.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected: the prompt added an unnecessary illustrative subject and more visual elements than the selected grammar needed.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 3,
+          "prompt": "Create a 16:9 1200×675 Chinese editorial explanatory diagram on a pure solid white #FFFFFF canvas. Use one Songti-like editorial serif for Chinese text, forest green #1A6B3A for the centered core judgment, a quiet gray subtitle, thin low-contrast green or gray lines, and generous white space. Use light pencil-like contours and restrained low-density hatching only inside the selected grammar structure. Keep all elements nearly flat: no paper fibers, torn edges, stacked sheets, cards, visible drop shadows, decorative objects, icons, narrative scenes, or model-rendered Logo. Keep title, labels, connectors, and all essential diagram semantics clear of the top-right Logo overlay zone x=1056–1200, y=0–60, but do not paint a white block there. Use only the smallest legible relationship, with two to four meaningful nodes or labels. Every object, if any, must directly clarify the stated relationship and follow ordinary physical, causal, and semantic expectations. No UI/dashboard, heavy arrows, decorative grids, crop marks, handwriting, extra prose, or extra labels. Center the exact core judgment “内容、图法、母版，各管一层” in the fixed upper title band, with the subtitle “结构决定关系，母版统一表达”. Begin below the title. Use one three-layer stack only, made of three flat outlined bands with direct labels: “文章结构｜任务与位置”, “visual grammar｜保存关系”, “编辑图母版｜统一表达”. Use only thin vertical alignment lines to show that the layers cooperate but cannot replace one another. No illustrative subject.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected: the three flat bands stated the layer labels but did not show what each layer actually contributes.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 4,
+          "prompt": "Generate one finished 16:9 1200×675 Chinese article-body explanatory figure. Conceptual method diagram, not evidence, a screenshot, a UI, or a poster. Use a pure-white #FFFFFF canvas and no model-rendered Logo; keep essential content out of the top-right Logo overlay zone x=1056–1200, y=0–60 without a special white block. Use one Songti-like editorial-serif family: exact forest-green title ‘内容、图法、母版，各管一层’; exact gray subtitle ‘结构决定关系，母版统一表达’. Begin below y=200. Use one layer-stack grammar in a light editorial paper-sketch language: direct ink, airy pencil contours, restrained hatch, fine printed labels, and subtle paper grain only inside semantic layers. Build three clearly separated, near-flat horizontal semantic layers with thin vertical guides showing dependence without substitution. Top layer ‘文章结构’ contains a compact article outline with a heading, grouped paragraphs, and one marked image position, showing it decides visual task and placement. Middle layer ‘visual grammar’ contains three tiny distinct relationship structures—a flow, a comparison, and a hierarchy—showing it preserves the original relation rather than style. Bottom layer ‘编辑图母版’ contains a compact sample of forest-green emphasis, title/body type hierarchy, thin linework, material hatch, and whitespace, showing it unifies expression. Each layer must visibly depict its own responsibility; labels cannot stand alone. Keep generous whitespace and no shadow by default. No extra metaphor, generic icon, rounded card, dashboard, heavy arrow, decorative grid, handwriting, fake data, or extra prose.",
+          "status": "rejected",
+          "adjustment_reason": "Superseded before acceptance: the revised contract makes paper optional and bounds all semantics to the fixed content stage.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 5,
+          "prompt": "Generate one finished 16:9 1200×675 Chinese article-body explanatory figure: a conceptual layer-stack diagram, not evidence, a screenshot, UI, or poster. Pure #FFFFFF canvas; no model-rendered Logo and no white Logo reserve. Keep essential content clear of x=1056–1200, y=0–60 for a later overlay. Use one Songti-like editorial-serif family: exact forest-green title ‘内容、图法、母版，各管一层’; exact gray subtitle ‘结构决定关系，母版统一表达’. Keep title/subtitle centered in the upper band; place every semantic object, label, guide, and material detail wholly inside the invisible content stage x=54–1146, y=190–560. Do not draw that stage. Use direct ink, airy pencil or engraving contours, restrained hatch, thin low-contrast green-gray lines, and no shadow. Build three flat, clearly separated horizontal semantic layers with thin alignment guides, not paper sheets or cards. Top ‘文章结构’: a compact article outline with paragraph groups and one marked image position. Middle ‘visual grammar’: three distinct miniature relation forms—a short flow, a comparison, and a hierarchy—showing that grammar preserves the relation. Bottom ‘编辑图母版’: a precise small type hierarchy, forest-green emphasis, thin line sample, modest hatch, and whitespace guide, showing it unifies expression. The three layers must visibly cooperate without replacing one another. No metaphor object, generic icon, dashboard, heavy arrow, decorative grid, handwriting, fake data, or extra prose.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected after QA: the otherwise suitable layer stack contains illustrative numeric type samples without the required disclosure.",
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        },
+        {
+          "id": 6,
+          "prompt": "Generate one finished 16:9 1200×675 Chinese article-body explanatory figure: a compact layer-stack diagram, not evidence, a screenshot, UI, or poster. Pure #FFFFFF canvas; no model-rendered Logo and no white Logo reserve. Keep essential content clear of x=1056–1200, y=0–60. Use one Songti-like editorial-serif family: exact forest-green title ‘内容、图法、母版，各管一层’; exact gray subtitle ‘结构决定关系，母版统一表达’. Use a modest 52px-equivalent body-figure title, never a cover-sized headline. Place every semantic object, label, guide, and material detail in one compact horizontal composition wholly within x=60–1140, y=200–540; leave all surrounding space blank and do not draw this stage. Use direct ink, airy pencil or engraving contours, restrained hatch, thin low-contrast green-gray lines, no shadow. Build exactly three flat horizontal layers, not paper sheets or cards. Top ‘文章结构’: abstract article lines plus one marked image position. Middle ‘visual grammar’: a compact flow, comparison, and hierarchy in direct line form. Bottom ‘编辑图母版’: only visual samples of a large heading line, a smaller body line, forest-green emphasis, a thin line, restrained hatch, and whitespace; show no numbers, dates, percentages, technical identifiers, fictional prose, or source-like claims. The three layers visibly cooperate without replacing one another. No metaphor object, generic icon, dashboard, heavy arrow, decorative grid, handwriting, fake data, or extra prose.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected after QA: the content is suitable but the title and subtitle are left-aligned instead of centered in the fixed header band.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 7,
+          "prompt": "Generate one finished 16:9 1200×675 Chinese article-body explanatory figure: a compact layer-stack diagram, not evidence, a screenshot, UI, or poster. Pure #FFFFFF canvas; no model-rendered Logo and no white Logo reserve. Keep essential content clear of x=1056–1200, y=0–60. The exact forest-green title ‘内容、图法、母版，各管一层’ and exact gray subtitle ‘结构决定关系，母版统一表达’ must be horizontally centered at x=600 in the upper header band; no text may appear in the top-left corner. Use a modest 52px-equivalent body-figure title, never a cover-sized headline. Place every semantic object, label, guide, and material detail in one compact horizontal composition wholly within x=60–1140, y=200–540; leave all surrounding space blank and do not draw this stage. Use one Songti-like editorial-serif family, direct ink, airy pencil or engraving contours, restrained hatch, thin low-contrast green-gray lines, no shadow. Build exactly three flat horizontal layers, not paper sheets or cards. Top ‘文章结构’: abstract article lines plus one marked image position. Middle ‘图法体系’: a compact flow, comparison, and hierarchy in direct line form. Bottom ‘编辑图母版’: only visual samples of a large heading line, a smaller body line, forest-green emphasis, a thin line, restrained hatch, and whitespace; show no numbers, dates, percentages, technical identifiers, fictional prose, or source-like claims. The three layers visibly cooperate without replacing one another. No metaphor object, generic icon, dashboard, heavy arrow, decorative grid, handwriting, fake data, or extra prose.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected after finish QA: the four canvas corners are near-white rather than the required pure #FFFFFF.",
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        },
+        {
+          "id": 8,
+          "prompt": "Generate one finished 16:9 1200×675 Chinese article-body explanatory figure: a compact layer-stack diagram, not evidence, a screenshot, UI, or poster. The entire edge-to-edge canvas, including all four corners, must be one flat opaque pure #FFFFFF white with no ivory cast, paper tint, grain, gradient, vignette, or shadow outside the diagram. No model-rendered Logo and no white Logo reserve; keep essential content clear of x=1056–1200, y=0–60. The exact forest-green title ‘内容、图法、母版，各管一层’ and exact gray subtitle ‘结构决定关系，母版统一表达’ must be horizontally centered at x=600 in the upper header band; no text may appear in the top-left corner. Use a modest 52px-equivalent body-figure title, never a cover-sized headline. Place every semantic object, label, guide, and material detail in one compact horizontal composition wholly within x=60–1140, y=200–540; leave all surrounding space blank and do not draw this stage. Use one Songti-like editorial-serif family, direct thin ink, airy pencil or engraving contours, restrained hatch only within semantic elements, low-contrast green-gray lines, no shadow. Build exactly three flat horizontal layers, not paper sheets or cards. Top ‘文章结构’: abstract article lines plus one marked image position. Middle ‘图法体系’: a compact flow, comparison, and hierarchy in direct line form. Bottom ‘编辑图母版’: only visual samples of a large heading line, a smaller body line, forest-green emphasis, a thin line, restrained hatch, and whitespace; show no numbers, dates, percentages, technical identifiers, fictional prose, or source-like claims. The three layers visibly cooperate without replacing one another. No metaphor object, generic icon, dashboard, heavy arrow, decorative grid, handwriting, fake data, or extra prose.",
+          "status": "accepted",
+          "adjustment_reason": "Accepted: centered non-numeric layer stack on a visually pure-white canvas, with only generation-level near-white edge variation remaining.",
+          "candidate_file": "assets/image/content-grammar-master.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        },
+        {
+          "id": 9,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial body figure on an opaque pure-white #FFFFFF canvas. Exact centered forest-green Songti-like title: 内容、图法、母版，各管一层. Exact centered quiet-gray subtitle: 结构决定关系，母版统一表达. Keep title/subtitle in the upper centered band. Keep every semantic element inside x=54–1146 and y=190–560, and clear of x=1056–1200, y=0–60; no reserve block and no model Logo. Use one layer-stack grammar. Depict three direct, nearly flat horizontal layers—not paper cards: top 文章结构, with article lines and one marked figure position, visibly deciding the explanation task and location; middle 图法, with distinct compact flow, comparison, and hierarchy structures that decide how the relationship is shown; bottom 编辑图母版, with type hierarchy, restrained green emphasis, thin linework, subtle hatch, and whitespace samples that unify expression. Fine vertical guides show cooperation across layers, while the separation shows they cannot replace each other. Use thin low-contrast green-gray lines, direct ink, airy engraving contours, restrained hatching, generous whitespace, and no visible shadow. Avoid generic UI panels, numbers, data, invented prose, decorative subjects, heavy arrows, grids, crop marks, handwriting, and model wordmarks.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": "assets/image/content-grammar-master.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "editorial-style-boundary",
+      "role": "content_image",
+      "output_path": "assets/image/editorial-style-boundary.png",
+      "placement": {
+        "kind": "after_paragraph",
+        "anchor": "限制不是为了让所有图长得一样，而是避免视觉噪声抢走文章的判断。",
+        "sequence": null
+      },
+      "accepted_attempt": 8,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create a 16:9 1200×675 Chinese editorial explanatory illustration on a pure solid white #FFFFFF canvas. Use a high-contrast Songti-like editorial serif for every Chinese string; forest green #1A6B3A for the main judgment, quiet gray subtitle, thin low-contrast leaders, subtle paper fibers and one extremely faint consistent paper elevation. Keep the top-right rectangle x=1056–1200, y=0–60 completely blank pure white for a Logo added later. No model-rendered logo or wordmark. No UI/dashboard cards, no heavy arrows, no decorative grids, no crop marks, no handwritten semantic text. This is a content image. Center the exact core judgment “编辑感不是科技感模板” in the fixed upper title band, with the subtitle “风格服务判断，不制造视觉噪声”. Begin the diagram below the title band. Show one boundary-map: inside a clean editorial field, label “纯白画布、森林绿、细线、留白、必要标签”; outside the boundary, place restrained crossed-out textual tokens “Dashboard、产品 UI、霓虹、泛滥 3D、伪造截图”. Include a small fixed blank top-right Logo reserve indicator without a wordmark. Use fine printed boundary lines, direct labels and one small engraved editing tool or page-margin subject tied directly to the boundary; no icons or decoration.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected: the first prompt was superseded by the lighter sketch direction; no delivery candidate was accepted.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 2,
+          "prompt": "Create a 16:9 1200×675 Chinese editorial illustration on a pure solid white #FFFFFF canvas. Use a high-contrast Songti-like editorial serif for Chinese text, forest green #1A6B3A for the main judgment, quiet gray subtitle, thin low-contrast leaders, generous white space, and a light pencil-and-engraving treatment with sparse controlled contours and low-density cross-hatching only where it clarifies meaning. Keep every element nearly flat and grounded: no paper fibers, torn edges, stacked sheets, card treatment, or visible drop shadows. Use a plain near-flat excerpt rectangle only when source text must be shown. Keep all titles, labels, connectors, and essential diagram semantics clear of the top-right Logo overlay zone x=1056–1200, y=0–60; do not paint a special white block there, let the ordinary white canvas continue beneath the later Logo. Do not render a logo or wordmark. No UI/dashboard, heavy arrows, decorative grids, crop marks, or handwritten semantic text. This is a content image. Center the exact core judgment “编辑感不是科技感模板” in the fixed upper title band, with the subtitle “风格服务判断，不制造视觉噪声”. Begin the diagram below the title band. Show one light boundary-map: inside one thin editorial contour, label “纯白画布、森林绿、细线、留白、必要标签”; outside it place restrained crossed-out tokens “Dashboard、产品 UI、霓虹、泛滥 3D、伪造截图”. Include a small overlay-zone indicator in the top right but no wordmark or white block. Use one small, lightly sketched editor’s margin ruler tied directly to the boundary. Keep it airy and nearly flat, with no icons, paper cards, or decoration.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected: the prompt added an unnecessary illustrative subject and more visual elements than the selected grammar needed.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 3,
+          "prompt": "Create a 16:9 1200×675 Chinese editorial explanatory diagram on a pure solid white #FFFFFF canvas. Use one Songti-like editorial serif for Chinese text, forest green #1A6B3A for the centered core judgment, a quiet gray subtitle, thin low-contrast green or gray lines, and generous white space. Use light pencil-like contours and restrained low-density hatching only inside the selected grammar structure. Keep all elements nearly flat: no paper fibers, torn edges, stacked sheets, cards, visible drop shadows, decorative objects, icons, narrative scenes, or model-rendered Logo. Keep title, labels, connectors, and all essential diagram semantics clear of the top-right Logo overlay zone x=1056–1200, y=0–60, but do not paint a white block there. Use only the smallest legible relationship, with two to four meaningful nodes or labels. Every object, if any, must directly clarify the stated relationship and follow ordinary physical, causal, and semantic expectations. No UI/dashboard, heavy arrows, decorative grids, crop marks, handwriting, extra prose, or extra labels. Center the exact core judgment “编辑感不是科技感模板” in the fixed upper title band, with the subtitle “风格服务判断，不制造视觉噪声”. Begin below the title. Use one boundary map only: inside one thin contour, show “白底｜细线｜留白”; outside it, show “UI｜霓虹｜伪造证据” with a restrained crossing line. Make the inside/outside boundary obvious with direct labels and one continuous outline. No objects, ruler, icon, scene, or decorative motif.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected: the boundary retry became a sparse list and no longer showed how the editorial system protects the judgment.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 4,
+          "prompt": "Generate one finished 16:9 1200×675 Chinese article-body explanatory figure. Conceptual style-boundary diagram, not evidence, a screenshot, a UI, or a poster. Use a pure-white #FFFFFF canvas and no model-rendered Logo; keep essential content out of the top-right Logo overlay zone x=1056–1200, y=0–60 without a special white block. Use one Songti-like editorial-serif family: exact forest-green title ‘编辑感不是科技感模板’; exact gray subtitle ‘风格服务判断，不制造视觉噪声’. Begin below y=200. Use one boundary-map grammar in a light editorial paper-sketch language with fine ink, airy pencil contours, restrained hatch, direct labels, and near-flat paper surfaces. Draw one calm editorial boundary that contains a meaningful miniature article figure: a short title hierarchy, one clear relationship drawing, thin low-contrast leaders, selective forest-green emphasis, and generous breathing room. Outside the boundary, show only three restrained crossed-out anti-pattern tokens: ‘仪表盘 UI’, ‘霓虹 3D’, and ‘伪造截图’; their visual treatment should make the rejection obvious without adding decoration. The inside must look like an explanatory image system, not a list of style words. Keep no shadow by default. No person, plant, generic object, icon, rounded card, dashboard, heavy arrow, crop mark, handwriting, fake data, or extra prose.",
+          "status": "rejected",
+          "adjustment_reason": "Superseded before acceptance: the revised contract makes paper optional and bounds all semantics to the fixed content stage.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 5,
+          "prompt": "Generate one finished 16:9 1200×675 Chinese article-body explanatory figure: a conceptual boundary-map diagram, not evidence, a screenshot, UI, or poster. Pure #FFFFFF canvas; no model-rendered Logo and no white Logo reserve. Keep essential content clear of x=1056–1200, y=0–60 for a later overlay. Use one Songti-like editorial-serif family: exact forest-green title ‘编辑感不是科技感模板’; exact gray subtitle ‘风格服务判断，不制造视觉噪声’. Keep title/subtitle centered in the upper band; place every semantic object, label, leader, and material detail wholly inside the invisible content stage x=54–1146, y=190–560. Do not draw a container around that stage. Use direct ink, airy pencil or engraving contours, restrained hatch, thin low-contrast green-gray lines, and no shadow. Use one calm boundary map: inside the boundary, depict a small usable editorial explanation with title hierarchy, one clear relationship, a few direct labels, thin leaders, selective forest-green emphasis, and real breathing room. Outside it, show only three small restrained crossed-out visual anti-pattern specimens: ‘仪表盘 UI’, ‘霓虹 3D’, and ‘伪造截图’. The inner system and outer exclusions must make the boundary understandable without a list of style words. No paper pages unless semantically required; no generic icon, person, plant, rounded card, heavy arrow, decorative grid, crop mark, handwriting, fake data, or extra prose.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected: the boundary expanded beyond the compact content stage and relied on illustrative anti-pattern scenes.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 6,
+          "prompt": "Generate one finished 16:9 1200×675 Chinese article-body explanatory figure: a compact conceptual boundary-map diagram, not evidence, a screenshot, UI, or poster. Pure #FFFFFF canvas; no model-rendered Logo and no white Logo reserve. Keep essential content clear of x=1056–1200, y=0–60. Use one Songti-like editorial-serif family: exact forest-green title ‘编辑感不是科技感模板’; exact gray subtitle ‘风格服务判断，不制造视觉噪声’. Use a modest 52px-equivalent body-figure title, never a cover-sized headline. Place every semantic object, label, leader, and material detail in one compact horizontal composition wholly within x=60–1140, y=200–540; leave all surrounding space blank and do not draw this stage. Use direct ink, airy pencil or engraving contours, restrained hatch, thin low-contrast green-gray lines, no shadow. In the center, use one thin calm boundary enclosing a small readable editorial explanation: short title hierarchy, one source-derived relationship diagram, direct labels, fine leaders, selective forest-green emphasis, and clear whitespace. Around but still inside the composition, show only three short crossed-out text labels—‘仪表盘 UI’, ‘霓虹 3D’, ‘伪造截图’—with no example screens, objects, or scenic illustrations. The difference between the contained editorial system and its exclusions must be visible at a glance. No paper pages, generic icon, person, plant, rounded card, heavy arrow, decorative grid, crop mark, handwriting, fake data, or extra prose.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected: the candidate added an invented source label and allowed exclusions to escape the compact content stage.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 7,
+          "prompt": "Generate one finished 16:9 1200×675 Chinese article-body explanatory figure: a compact boundary-map diagram, not evidence, a screenshot, UI, or poster. Pure #FFFFFF canvas; no model-rendered Logo and no white Logo reserve. Keep essential content clear of x=1056–1200, y=0–60. Use one Songti-like editorial-serif family: exact forest-green title ‘编辑感不是科技感模板’; exact gray subtitle ‘风格服务判断，不制造视觉噪声’. Use a modest 52px-equivalent body-figure title, never a cover-sized headline. Place every semantic object, label, line, and boundary wholly within one compact horizontal composition x=120–1080, y=220–520; leave all surrounding space blank and do not draw this stage. Use direct thin ink, airy pencil or engraving contours, restrained hatch, low-contrast green-gray lines, no shadow. Draw only one calm thin rectangular editorial boundary, not a wavy blob or panel. Inside it, show exactly one small explanatory relation: abstract article lines labelled ‘正文判断’ lead by a fine line to a clear reader-understanding marker labelled ‘读者理解’; add one tiny title/body hierarchy and one restrained forest-green emphasis line. Immediately below the boundary, still within the composition, place exactly three small crossed-out text labels: ‘仪表盘 UI’, ‘霓虹 3D’, ‘伪造截图’. No other text except the required title, subtitle, these five labels, and short structural labels. Never render words such as ‘来源’, ‘参考’, ‘方法论’, long prose, charts, example screens, paper pages, icons, people, plants, rounded cards, heavy arrows, decorative grid, crop marks, handwriting, fake data, or extra prose.",
+          "status": "accepted",
+          "adjustment_reason": "Accepted: one compact boundary directly distinguishes the editorial explanation system from excluded visual noise.",
+          "candidate_file": "assets/image/editorial-style-boundary.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        },
+        {
+          "id": 8,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial body figure on an opaque pure-white #FFFFFF canvas. Exact centered forest-green Songti-like title: 风格服务解释，也需要明确边界. Exact centered quiet-gray subtitle: 限制视觉噪声，保护文章判断. Keep title/subtitle in the upper centered band. Keep every semantic element inside x=54–1146 and y=190–560, and clear of x=1056–1200, y=0–60; no reserve block and no model Logo. Use one boundary-map grammar. Inside one calm thin editorial boundary, directly depict the allowed explanation system: a concise title hierarchy, fine relationship lines, one source-specific relation, necessary labels, restrained forest-green emphasis, and quiet whitespace. Outside its boundary but within the same compact stage, use three small crossed-out labels only: 仪表盘 UI, 霓虹 3D, 伪造截图. The composition must make clear that exclusions protect readability rather than create a new visual style. Use thin low-contrast green-gray lines, direct ink, airy engraving contours, restrained hatching only where meaningful, generous whitespace, and no visible shadow. Avoid example screens, dashboard cards, fake factual charts, paper stacks, decorative objects, people, plants, heavy arrows, grids, crop marks, handwriting, and model wordmarks.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": "assets/image/editorial-style-boundary.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "traceable-delivery",
+      "role": "content_image",
+      "output_path": "assets/image/traceable-delivery.png",
+      "placement": {
+        "kind": "after_paragraph",
+        "anchor": "最后 QA 会检查正文是否被改写、图片是否遗漏、图法是否正确、路径和尺寸是否合规，也会检查 Logo、标题和保留区是否各自在约定位置。",
+        "sequence": null
+      },
+      "accepted_attempt": 7,
+      "attempts": [
+        {
+          "id": 1,
+          "prompt": "Create a 16:9 1200×675 Chinese editorial explanatory illustration on a pure solid white #FFFFFF canvas. Use a high-contrast Songti-like editorial serif for every Chinese string; forest green #1A6B3A for the main judgment, quiet gray subtitle, thin low-contrast leaders, subtle paper fibers and one extremely faint consistent paper elevation. Keep the top-right rectangle x=1056–1200, y=0–60 completely blank pure white for a Logo added later. No model-rendered logo or wordmark. No UI/dashboard cards, no heavy arrows, no decorative grids, no crop marks, no handwritten semantic text. This is a content image. Center the exact core judgment “有图不等于完成” in the fixed upper title band, with the subtitle “生成、检查、落位共同构成交付”. Begin the diagram below the title band. Show one clear flow from left to right using narrow editorial paper strips: “生成候选” → “固定 Logo” → “QA：正文、图片、图法、路径、尺寸” → “准确文章锚点” → “可追溯交付”. Beneath the QA strip, use tiny check marks and direct labels for “正文未改写、图片无遗漏、标题避让”. Include a small engraved editorial inspection lens linked to the QA stage. This must read as one delivery path, not a software interface or dashboard.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected: the first prompt was superseded by the lighter sketch direction; no delivery candidate was accepted.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 2,
+          "prompt": "Create a 16:9 1200×675 Chinese editorial illustration on a pure solid white #FFFFFF canvas. Use a high-contrast Songti-like editorial serif for Chinese text, forest green #1A6B3A for the main judgment, quiet gray subtitle, thin low-contrast leaders, generous white space, and a light pencil-and-engraving treatment with sparse controlled contours and low-density cross-hatching only where it clarifies meaning. Keep every element nearly flat and grounded: no paper fibers, torn edges, stacked sheets, card treatment, or visible drop shadows. Use a plain near-flat excerpt rectangle only when source text must be shown. Keep all titles, labels, connectors, and essential diagram semantics clear of the top-right Logo overlay zone x=1056–1200, y=0–60; do not paint a special white block there, let the ordinary white canvas continue beneath the later Logo. Do not render a logo or wordmark. No UI/dashboard, heavy arrows, decorative grids, crop marks, or handwritten semantic text. This is a content image. Center the exact core judgment “有图不等于完成” in the fixed upper title band, with the subtitle “生成、检查、落位共同构成交付”. Begin the diagram below the title band. Show one clear, airy flow from left to right through thin outlined stages: “生成候选” → “固定 Logo” → “QA：正文、图片、图法、路径、尺寸” → “准确文章锚点” → “可追溯交付”. Beneath QA, use tiny direct checks for “正文未改写、图片无遗漏、标题避让”. Add a small light engraving inspection lens linked to QA. This must read as one delivery path, not a software interface, paper workflow, or dashboard.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected: the prompt added an unnecessary illustrative subject and more visual elements than the selected grammar needed.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 3,
+          "prompt": "Create a 16:9 1200×675 Chinese editorial explanatory diagram on a pure solid white #FFFFFF canvas. Use one Songti-like editorial serif for Chinese text, forest green #1A6B3A for the centered core judgment, a quiet gray subtitle, thin low-contrast green or gray lines, and generous white space. Use light pencil-like contours and restrained low-density hatching only inside the selected grammar structure. Keep all elements nearly flat: no paper fibers, torn edges, stacked sheets, cards, visible drop shadows, decorative objects, icons, narrative scenes, or model-rendered Logo. Keep title, labels, connectors, and all essential diagram semantics clear of the top-right Logo overlay zone x=1056–1200, y=0–60, but do not paint a white block there. Use only the smallest legible relationship, with two to four meaningful nodes or labels. Every object, if any, must directly clarify the stated relationship and follow ordinary physical, causal, and semantic expectations. No UI/dashboard, heavy arrows, decorative grids, crop marks, handwriting, extra prose, or extra labels. Center the exact core judgment “有图不等于完成” in the fixed upper title band, with the subtitle “生成、检查、落位共同构成交付”. Begin below the title. Use one simple left-to-right flow only with four flat outlined stages: “生成” → “Logo 与 QA” → “准确锚点” → “可追溯交付”. Under the QA stage, use only three compact checks: “正文未改写｜图片无遗漏｜标题避让”. No inspection lens, objects, paper workflow, dashboard, or narrative scene.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected: the simplified flow omitted the concrete production, QA, placement, and traceability work that makes delivery complete.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 4,
+          "prompt": "Generate one finished 16:9 1200×675 Chinese article-body explanatory figure. Conceptual delivery workflow, not evidence, a screenshot, a UI, or a poster. Use a pure-white #FFFFFF canvas and no model-rendered Logo; keep essential content out of the top-right Logo overlay zone x=1056–1200, y=0–60 without a special white block. Use one Songti-like editorial-serif family: exact forest-green title ‘有图不等于完成’; exact gray subtitle ‘生成、检查、落位共同构成交付’. Begin below y=200. Use one left-to-right flow grammar in a light editorial paper-sketch language: fine ink, airy pencil contours, restrained hatch, small anchors, and subtle paper grain only on semantic paper surfaces. Show four meaningful process groups linked by thin directional leaders: ‘生成候选’ is a miniature explanatory figure sheet with title, relation, and content; ‘固定 Logo’ is the same figure with a small top-right placement guide, not a white reserve; ‘QA’ is a checklist sheet with three visible checks ‘正文未改写’, ‘图法正确’, ‘路径与尺寸’; ‘准确锚点’ is an article manuscript with a circular point immediately after its related paragraph, leading to a compact delivery record ‘可追溯交付’. Every stage must visibly show what it does; labels do not replace the internal detail. Keep generous whitespace and no shadow by default. No metaphor object, generic icon, rounded card, dashboard, heavy arrow, decorative grid, handwriting, fake data, or extra prose.",
+          "status": "rejected",
+          "adjustment_reason": "Superseded before acceptance: the revised contract makes paper optional and bounds all semantics to the fixed content stage.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 5,
+          "prompt": "Generate one finished 16:9 1200×675 Chinese article-body explanatory figure: a conceptual left-to-right delivery flow, not evidence, a screenshot, UI, or poster. Pure #FFFFFF canvas; no model-rendered Logo and no white Logo reserve. Keep essential content clear of x=1056–1200, y=0–60 for a later overlay. Use one Songti-like editorial-serif family: exact forest-green title ‘有图不等于完成’; exact gray subtitle ‘生成、检查、落位共同构成交付’. Keep title/subtitle centered in the upper band; place every semantic object, label, leader, anchor, and material detail wholly inside the invisible content stage x=54–1146, y=190–560. Do not draw that stage. Use direct ink, airy pencil or engraving contours, restrained hatch, thin low-contrast green-gray leaders, small circular anchors, and no shadow. Show four connected flow groups with internal semantic detail: ‘生成候选’ is a small explanatory figure with title, relation, and content; ‘固定 Logo’ is the same figure with a precise top-right overlay guide, not a white reserve; ‘QA’ is a compact verification grid showing ‘正文未改写’, ‘图法正确’, and ‘路径与尺寸’; ‘准确锚点’ is an article paragraph with a circular point immediately after the related text, leading to ‘可追溯交付’. Use paper only for that final article paragraph because it is a document subject; all other groups are direct sketch forms. No repeated paper panels, metaphor object, generic icon, dashboard, rounded card, heavy arrow, decorative grid, handwriting, fake data, or extra prose.",
+          "status": "rejected",
+          "adjustment_reason": "Rejected: the candidate fabricated chart data and a business claim instead of depicting the delivery workflow.",
+          "candidate_file": null,
+          "logo": {
+            "status": "pending"
+          }
+        },
+        {
+          "id": 6,
+          "prompt": "Generate one finished 16:9 1200×675 Chinese article-body explanatory figure: a compact left-to-right delivery flow, not evidence, a screenshot, UI, poster, chart, financial figure, date, percentage, or data graphic. Pure #FFFFFF canvas; no model-rendered Logo and no white Logo reserve. Keep essential content clear of x=1056–1200, y=0–60. Use one Songti-like editorial-serif family: exact forest-green title ‘有图不等于完成’; exact gray subtitle ‘生成、检查、落位共同构成交付’. Use a modest 52px-equivalent body-figure title, never a cover-sized headline. Place every semantic object, label, leader, anchor, and material detail in one compact horizontal composition wholly within x=60–1140, y=200–540; leave all surrounding space blank and do not draw this stage. Use direct ink, airy pencil or engraving contours, restrained hatch, thin low-contrast green-gray leaders, small circular anchors, no shadow. Show four compact semantic forms: ‘生成候选’ is an abstract explanatory figure made only from short title and relation lines; ‘固定 Logo’ shows that same figure with a precise small top-right overlay guide; ‘QA’ is a compact three-row verification mark with ‘正文未改写’, ‘图法正确’, ‘路径与尺寸’; ‘准确锚点’ is only a few abstract article lines with one circular point immediately after the related line, leading to ‘可追溯交付’. No readable fictional paragraph, paper stack, repeated cards, generic icon, dashboard, rounded card, heavy arrow, decorative grid, handwriting, fake data, or extra prose.",
+          "status": "accepted",
+          "adjustment_reason": "Accepted: compact semantic forms preserve generation, Logo, QA, placement, and traceability without fabricated data or prose.",
+          "candidate_file": "assets/image/traceable-delivery.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        },
+        {
+          "id": 7,
+          "prompt": "Create one finished 16:9 1200×675 Chinese editorial body figure on an opaque pure-white #FFFFFF canvas. Exact centered forest-green Songti-like title: 生成不是结束，落位与记录才是交付. Exact centered quiet-gray subtitle: 图像、位置与过程记录一起完成. Keep title/subtitle in the upper centered band. Keep every semantic element inside x=54–1146 and y=190–560, and clear of x=1056–1200, y=0–60; no reserve block and no model Logo. Use one compact left-to-right flow grammar. Show four source-specific delivery stages with direct internal meaning: generated explanatory figure; deterministic top-right Logo overlay; one compact optional QA report checking source relationship, layout, brand handling, and delivery; then an article paragraph where the image is attached at its exact anchor, ending in one manifest record of prompt, attempt, adjustment, and accepted version. Make clear that the record and placement complete delivery. Use thin low-contrast green-gray lines, direct ink, airy engraving contours, restrained hatching, small anchors, generous whitespace, and no visible shadow. Use paper only for the article paragraph and manifest because they are document subjects. Avoid generic dashboards, extra checklists, invented claims or data, card grids, decorative scenes, heavy arrows, crop marks, handwriting, and model wordmarks.",
+          "status": "accepted",
+          "adjustment_reason": null,
+          "candidate_file": "assets/image/traceable-delivery.png",
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
+          }
+        }
+      ]
+    }
+  ]
+}
