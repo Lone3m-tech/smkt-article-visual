@@ -70,8 +70,8 @@ Use `article_package` when readers will follow the content independently. Use `p
 | Question | `article_package` | `presentation_frames` |
 | --- | --- | --- |
 | How the audience receives it | Reads an article or report, with a figure at the relevant passage. | Follows a speaker, proposal, workshop, or lesson in narrative order. |
-| Image unit | One cover, then explanatory body figures. | Frame 01, Frame 02, Frame 03 … each carrying one accepted judgment. |
-| Delivery is complete when | The cover and figures resolve once at their exact reading anchors in the Markdown source. | Every approved frame resolves once in the agreed sequence; the source prose remains untouched. |
+| Image unit | One cover, then explanatory body figures. | One presentation cover, then Frame 01, Frame 02, Frame 03 … that carry one unfolding argument. |
+| Delivery is complete when | The cover and figures resolve once at their exact reading anchors in the Markdown source. | The cover resolves first, then every approved frame resolves once in the agreed narrative sequence recorded in the manifest; the source prose remains untouched. |
 | Best input | Finished Markdown article or report. | Speech script, proposal outline, workshop, or teaching script. |
 
 ![Article package and presentation-frame delivery modes](examples/readme-visuals/delivery-modes.png)
@@ -85,10 +85,10 @@ An attractive image is not enough when the audience needs to understand a proces
 | Scenario | Input | Delivery | What it delivers |
 | --- | --- | --- | --- |
 | Article or report | A finished Markdown article or research report | `article_package` | A cover and explanatory figures placed at their exact reading anchors. |
-| Talk or keynote | A speech script or presentation outline | `presentation_frames` | One standalone explanation frame for each key judgment worth showing. |
-| Consulting proposal | A strategy narrative or proposal | `presentation_frames` | Clear frames that make a mechanism, option, or recommendation easier to present. |
+| Talk or keynote | A speech script or presentation outline | `presentation_frames` | A presentation cover and an ordered explanation sequence for the key judgments worth showing. |
+| Consulting proposal | A strategy narrative or proposal | `presentation_frames` | A cover-led narrative sequence that makes a mechanism, option, or recommendation easier to present. |
 | Internal alignment | A strategy memo or retrospective | Either, based on whether people read or are led through it | Shared pictures of decisions, boundaries, systems, and handoffs. |
-| Workshop or course | A teaching outline or lesson script | `presentation_frames` | Memorable teaching visuals that turn abstract concepts into a visible relationship. |
+| Workshop or course | A teaching outline or lesson script | `presentation_frames` | A cover and memorable teaching sequence that turn abstract concepts into a visible relationship. |
 
 ![Five narrative use cases](examples/readme-visuals/usage-scenarios.png)
 
@@ -99,7 +99,7 @@ An attractive image is not enough when the audience needs to understand a proces
 | A process is hard to follow | Preserves steps, order, and handoffs with a flow figure. |
 | Two approaches are hard to compare | Places the difference in one reading path. |
 | A system relation is abstract | Preserves structure with a hierarchy, boundary, or relation figure. |
-| Text and images have drifted apart | Places the figure at its exact article anchor or delivers it as a self-contained presentation frame. |
+| Text and images have drifted apart | Places the figure at its exact article anchor or turns the narrative into a cover-led, self-contained presentation sequence. |
 
 ## Who it is for
 
@@ -131,7 +131,7 @@ Narrative structure decides what needs explaining. Visual grammar makes flow, co
 
 ### Deliver image, placement, and record together
 
-For articles, each figure is placed after its corresponding paragraph. For talks and proposals, each frame is delivered as a standalone asset in narrative order. A manifest records every attempt, adjustment reason, Logo result, and accepted version. Generation is not complete until the selected delivery mode and QA pass.
+For articles, each figure is placed after its corresponding paragraph. For talks and proposals, a presentation cover leads an ordered sequence of standalone frames with explicit narrative handoffs. The manifest records every attempt, adjustment reason, Logo result, accepted version, and the stable cover/frame sequence; this is an image-sequence delivery, not a PPTX file. Generation is not complete until the selected delivery mode and QA pass.
 
 ![Traceable illustration delivery](examples/demo-article/assets/image/traceable-delivery.png)
 

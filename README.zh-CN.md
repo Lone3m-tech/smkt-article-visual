@@ -70,8 +70,8 @@ git clone --depth 1 https://github.com/Lone3m-tech/smkt-article-visual.git \
 | 判断问题 | `article_package` | `presentation_frames` |
 | --- | --- | --- |
 | 受众如何接收内容 | 边读文章或报告，边在对应段落查看图片。 | 跟随演讲、提案、工作坊或课程的叙事顺序观看。 |
-| 图片单位 | 一张封面，再加多张正文解释图。 | Frame 01、Frame 02、Frame 03……每张承载一个已确认判断。 |
-| 何时算交付完成 | 封面与正文图各自在 Markdown 的准确阅读锚点出现且只出现一次。 | 每张已确认画面按既定顺序存在一次；源文件正文不被修改。 |
+| 图片单位 | 一张封面，再加多张正文解释图。 | 一张演示封面，再加 Frame 01、Frame 02、Frame 03……共同讲完一条叙事。 |
+| 何时算交付完成 | 封面与正文图各自在 Markdown 的准确阅读锚点出现且只出现一次。 | 封面先出现一次，每张已确认画面再按 manifest 中的既定叙事顺序出现一次；源文件正文不被修改。 |
 | 最适合的输入 | 完成的 Markdown 文章或报告。 | 演讲稿、提案提纲、工作坊或教学脚本。 |
 
 ![文章包与演示画面的两种交付方式](examples/readme-visuals/delivery-modes.png)
@@ -85,10 +85,10 @@ git clone --depth 1 https://github.com/Lone3m-tech/smkt-article-visual.git \
 | 场景 | 输入 | 交付方式 | 它会交付什么 |
 | --- | --- | --- | --- |
 | 文章或报告 | 完成的 Markdown 文章或研究报告 | `article_package` | 在准确阅读锚点落位的封面与正文解释图。 |
-| 演讲或分享 | 演讲稿或分享提纲 | `presentation_frames` | 每个值得展示的关键判断，对应一张独立讲述图。 |
-| 咨询提案 | 策略叙事或提案 | `presentation_frames` | 让机制、选项或建议更容易被讲清楚的解释页。 |
+| 演讲或分享 | 演讲稿或分享提纲 | `presentation_frames` | 一张演示封面，加上一组按顺序讲清关键判断的讲述图。 |
+| 咨询提案 | 策略叙事或提案 | `presentation_frames` | 由封面带领的叙事画面序列，让机制、选项或建议更容易被讲清楚。 |
 | 内部对齐 | 战略 memo 或项目复盘 | 取决于大家自行阅读，还是由人带着讲述 | 共同理解决策、边界、系统与交接关系的图。 |
-| 工作坊或课程 | 教学提纲或课程脚本 | `presentation_frames` | 把抽象概念变成可讲、可记的教学图。 |
+| 工作坊或课程 | 教学提纲或课程脚本 | `presentation_frames` | 一张封面加一组可讲、可记的教学图，把抽象概念讲成完整关系。 |
 
 ![SMKT Article Visual 的五类使用场景](examples/readme-visuals/usage-scenarios.png)
 
@@ -99,7 +99,7 @@ git clone --depth 1 https://github.com/Lone3m-tech/smkt-article-visual.git \
 | 一个流程读起来太绕 | 用流程图保留步骤、先后与交接关系。 |
 | 两种做法不容易比较 | 用对比图把差异放到同一阅读路径里。 |
 | 系统关系太抽象 | 用层级、边界或关系图保留结构。 |
-| 图文或讲述脱节 | 让图片落在准确文章锚点，或交付为自洽的独立讲述图。 |
+| 图文或讲述脱节 | 让图片落在准确文章锚点，或把叙事交付成由封面带领、自洽完整的演示序列。 |
 
 ## 适合谁
 
@@ -131,7 +131,7 @@ git clone --depth 1 https://github.com/Lone3m-tech/smkt-article-visual.git \
 
 ### 图像、落位与记录一起交付
 
-文章模式会把每张图落在对应段落后；演讲和提案模式会按叙事顺序交付独立图片。一份 manifest 记录每次生成、调整原因、Logo 结果与最终采用版本。生成完成不等于交付完成，所选交付模式与 QA 通过才算结束。
+文章模式会把每张图落在对应段落后；演讲和提案模式会先交付一张封面，再交付带明确叙事承接关系的独立画面序列。一份 manifest 记录每次生成、调整原因、Logo 结果、最终采用版本与稳定的封面/画面顺序；交付的是图片序列，不是 PPTX 文件。生成完成不等于交付完成，所选交付模式与 QA 通过才算结束。
 
 ![可追溯的配图交付](examples/demo-article/assets/image/traceable-delivery.png)
 

@@ -267,7 +267,7 @@
         "kind": "after_section",
         "anchor": "选择交付方式"
       },
-      "accepted_attempt": 3,
+      "accepted_attempt": 5,
       "attempts": [
         {
           "id": 1,
@@ -311,8 +311,8 @@
         {
           "id": 3,
           "prompt": "Create one final native 1200×675 Chinese editorial explainer illustration for the smkt-article-visual README. Truth boundary: concept; it explains the documented delivery contract, not a product UI, data chart, or real screenshot. Core judgment: the same visual judgment has two different delivery forms because readers self-navigate an article while a presenter guides an audience through a sequence. Pure solid #FFFFFF canvas with no outer frame, tint, background texture, ivory, gradient, or vignette. Keep top-right rectangle x=1056–1200, y=0–60 completely empty pure white for a deterministic Logo finalizer: render no wordmark, title, label, connector, or diagram element there. Use one printed Chinese Songti-like editorial-serif family for every Chinese character; no sans, script, handwriting, or mixed fonts. Fixed title band centered at x=600 within y=76–176: exact #1A6B3A semibold 52px-equivalent title ‘同一套判断，两种交付方式’; exact #6B6B6B regular 28px-equivalent subtitle ‘读文章，看锚点；听讲述，看顺序’. Start all diagram content below y=200. Use one clear side-by-side comparison grammar, not a grid of cards. Split the lower area into two large equal reading paths with one thin, pale vertical divider. LEFT heading exact ‘文章包’ at 32px #141414, with small direct descriptor ‘读者自己读’. Show a tall meaningful article excerpt sheet labelled exactly ‘article.md’: it visibly contains an H1 area, selected paragraph lines, a cover sheet directly after the H1 labelled ‘封面’, and one explanatory figure attached immediately after a selected paragraph via a thin leader and circular anchor labelled ‘段落锚点’. The difference must be unmistakable: cover plus body figure lives inside an article's reading path. RIGHT heading exact ‘演示画面’ at 32px #141414, with small direct descriptor ‘讲述者带着看’. Show one short source sheet labelled ‘talk.md’ with selected speech lines, then three equal, standalone landscape explanation frames in a clear left-to-right sequence labelled exactly ‘Frame 01’, ‘Frame 02’, ‘Frame 03’. Each frame visibly contains a different tiny semantic editorial relation made from source fragments, narrow strips, direct ink hatching, hairline leaders, and circular anchors. The three frames must be outside the source sheet, visually independent, and connected only by subtle sequential hairlines. Make the difference unmistakable: frames are consumed in a presenter-led sequence and are never inserted into talk.md. Use only the editorial vocabulary: excerpt sheets for article/source, straight-edged narrow paper strips for stages or outputs, cut-paper fields for anchor scope, direct ink/hatch/circular anchor for relation and sequence. Every paper element white, subtly fibrous, straight or cut edge, same extremely faint 4–6px lift and diffuse neutral shadow at 4–6% opacity. Use 1–1.5px low-contrast pale forest-green or light-gray hairlines; no thick arrows, heavy frames, UI panels, rounded cards, decorative grid, crop marks, corner crosses, floating strokes, isolated color blocks, generic icons, plants, people, scenery, machines, containers, abstract patterns, dashboard, SVG/wireframe, 3D, watermark, QR, author credit, model-rendered logo, or extra words. Keep all material texture clipped to paper elements; the background must stay pure white. The result must feel detailed and vivid because each element depicts its delivery role, not because it uses decoration.",
-          "status": "accepted",
-          "adjustment_reason": "Moved the mode distinction ahead of scenarios and made the reader-led article path versus presenter-led frame sequence explicit.",
+          "status": "rejected",
+          "adjustment_reason": "Superseded by the cover-led presentation contract: it depicts the frame sequence without the required presentation cover.",
           "candidate_file": null,
           "logo": {
             "status": "applied",
@@ -345,6 +345,35 @@
           "candidate_file": null,
           "logo": {
             "status": "pending"
+          }
+        },
+        {
+          "id": 5,
+          "prompt": "Regenerate the exact 1200×675 Chinese SimpleMkt editorial delivery comparison in the same white paper-and-fine-ink visual system. Pure #FFFFFF canvas and an empty top-right Logo reserve x=1056–1200,y=0–60. Keep the centered title ‘同一套判断，两种交付方式’ and subtitle ‘读文章，看锚点；听讲述，看顺序’. Keep the left article-package path: 文章包 / 读者自己读, article.md with an H1, a cover after the H1, a selected paragraph anchor, and one explanatory body figure after it. Correct the right presentation path: 演示画面 / 讲述者带着看, one talk.md script sheet leading first to a distinct PPT cover sheet labelled 封面 with a calm title area, then to Frame 01 提出判断, Frame 02 展开关系, and Frame 03 收束结论 in clear order. The cover must visibly begin the narrative before Frame 01. Use only white fibrous straight/cut paper, printed Songti-like type, thin pale-green/light-gray connectors, direct labels, excerpt lines, anchors, restrained hatch, and faint unified paper elevation. No rendered Logo, scenery, people, UI, generic icons, rounded cards, decorative marks, factual data, or extra words.",
+          "status": "accepted",
+          "adjustment_reason": "Add the required presentation cover and make the frame sequence read as one cover-led narrative rather than a set of independent slides.",
+          "candidate_file": null,
+          "logo": {
+            "status": "applied",
+            "canvas": {
+              "width": 1200,
+              "height": 675
+            },
+            "wordmark": {
+              "x": 1062,
+              "y": 27,
+              "width": 96,
+              "height": 32,
+              "coordinate_origin": "top-left"
+            },
+            "reserve": {
+              "x": 1056,
+              "y": 0,
+              "width": 144,
+              "height": 60,
+              "coordinate_origin": "top-left"
+            },
+            "asset": "simplemkt-logo-demo.png"
           }
         }
       ]

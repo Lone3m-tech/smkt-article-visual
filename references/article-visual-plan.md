@@ -9,7 +9,7 @@ Use this reference to decide whether a passage needs an image and what the image
 3. Mark reader or audience obstacles: abstract mechanisms, terminology, boundaries, and counterintuitive judgments.
 4. Mark supplied screenshots, paper figures, data charts, or framework diagrams.
 5. In `article_package`, mark existing images and their current Markdown locations.
-6. In `article_package`, plan one cover and only the body figures that improve reader understanding. In `presentation_frames`, plan only the standalone frames that improve audience understanding.
+6. In `article_package`, plan one cover and only the body figures that improve reader understanding. In `presentation_frames`, plan one cover followed by the standalone frames that improve audience understanding and together form a spoken narrative.
 
 ## Must consider a figure
 
@@ -30,29 +30,9 @@ Use this reference to decide whether a passage needs an image and what the image
 
 ## Outputs for article_package
 
-Generate exactly one `cover` immediately after the H1, plus only the `body_figures` that clarify a reader obstacle. A body figure's paragraph anchor, reader problem, and visual grammar determine its purpose and placement; do not create a second output category for opening maps, summaries, comparisons, or source restyles.
+Use the canonical `article_package` `visual_plan` structure in [SKILL.md](../SKILL.md#required-framework-first). Generate exactly one `cover` immediately after the H1, plus only the `body_figures` that clarify a reader obstacle. A body figure's paragraph anchor, reader problem, and visual grammar determine its purpose and placement; do not create a second output category for opening maps, summaries, comparisons, or source restyles.
 
-```yaml
-cover:
-  article_judgment:
-  visual_metaphor:
-  title: exact_article_h1
-  presentation: ppt_cover
-  title_breaks: deliberate_for_readability
-  title_safe_zone:
-  output_path: assets/image/cover.png
-  placement: after_h1
-body_figures:
-  - id:
-    paragraph_anchor:
-    reader_problem:
-    visual_grammar:
-    why_this_grammar:
-    rejected_grammars: []
-    must_have: true
-    reason:
-    skip_if:
-```
+While filling that canonical structure, use this reference only to decide whether a figure belongs in the plan and to provide its `reader_problem`, `visual_grammar`, `why_this_grammar`, `rejected_grammars`, `why_needed`, and `must_preserve`. Do not add `must_have`, `reason`, or `skip_if`: every selected item is already required, and a skipped item does not belong in the final plan.
 
 `visual_explanation_contract.visible_title` is the figure's core judgment: it must be able to stand alone as the reader's first conclusion, not merely restate a section name.
 
@@ -60,20 +40,8 @@ When a figure needs detailed explanatory content, record the concrete chain in `
 
 ## Outputs for presentation_frames
 
-Do not generate a cover by default and do not modify the source Markdown. Use one ordered standalone frame only for a key judgment that helps an audience follow the narrative:
+Use the canonical `presentation_frames` `visual_plan` structure in [SKILL.md](../SKILL.md#required-framework-first). Use the source H1 verbatim for the cover title; if the source has no H1, require an explicit `presentation_title`. Generate one presentation cover at sequence `0`, then use one ordered standalone frame only for a key judgment that helps an audience follow the narrative. Do not modify the source Markdown.
 
-```yaml
-frames:
-  - id:
-    source_anchor:
-    audience_problem:
-    key_judgment:
-    visual_grammar:
-    why_this_grammar:
-    rejected_grammars: []
-    must_have: true
-    sequence:
-    output_path:
-```
+While filling that canonical structure, use this reference only to decide the cover's `narrative_promise` and `visual_metaphor`, and each frame's `source_anchor`, `audience_problem`, `key_judgment`, `narrative_beat`, `transition_from_previous`, `visual_grammar`, `why_this_grammar`, `rejected_grammars`, and `must_preserve`. Do not add `must_have`: every selected frame is already required.
 
-Each frame must be self-contained enough to show while speaking: it carries one core judgment, the relationship that explains it, and the planned audience takeaway. Keep the same source-detail and non-factual-example rules as article figures.
+Each frame must be self-contained enough to show while speaking: it carries one core judgment, the relationship that explains it, and the planned audience takeaway. The ordered sequence must make a complete presentation argument, not merely a gallery of explanatory images: the first frame must receive the cover promise, adjacent frames must not repeat a judgment or grammar without reason, and the final frame must resolve the promise. Record the cover and every frame's sequence explicitly in the manifest; never infer their order from filenames. Keep the same source-detail and non-factual-example rules as article figures.
