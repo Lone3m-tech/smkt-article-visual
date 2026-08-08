@@ -20,7 +20,7 @@ Designed for Codex and Agents with image-generation capability.
 
 [SimpleMkt](https://simplemkt.cc) · [X](https://x.com/AlchemistZhou) · [Xiaohongshu](https://www.xiaohongshu.com/user/profile/65a0ecb4000000002201219c) · [Douyin](https://www.douyin.com/user/MS4wLjABAAAArV0uXvsSYl6pD-p5nr-5OFlZED5cEUnb7r2K6j9u4tA)
 
-[Official repository](https://github.com/Lone3m-tech/smkt-article-visual) · [Current published identity v0.6.0 (installation verification pending)](https://github.com/Lone3m-tech/smkt-article-visual/releases/tag/v0.6.0)
+[Official repository](https://github.com/Lone3m-tech/smkt-article-visual) · [Current published identity v0.7.0 (installation verification pending)](https://github.com/Lone3m-tech/smkt-article-visual/releases/tag/v0.7.0)
 
 [View the 13 visual-grammar demos](#visual-grammar-reference) · [View the Skill runtime contract](SKILL.md)
 
@@ -41,7 +41,7 @@ The shared purpose is simple: reduce cognitive load for readers or audiences, so
 
 ## Install
 
-These are public candidate installation paths. The isolated installation receipt covers `npx skills add --copy` and direct Git cloning at v0.5.0; do not describe v0.6.0 as an installation-verified release until that isolated check has been rerun.
+These are public candidate installation paths. The isolated installation receipt covers `npx skills add --copy` and direct Git cloning at v0.5.0; do not describe v0.7.0 as an installation-verified release until that isolated check has been rerun.
 
 ```bash
 npx skills add Lone3m-tech/smkt-article-visual \

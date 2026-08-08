@@ -20,7 +20,7 @@
 
 [SimpleMkt](https://simplemkt.cc) · [X](https://x.com/AlchemistZhou) · [小红书](https://www.xiaohongshu.com/user/profile/65a0ecb4000000002201219c) · [抖音](https://www.douyin.com/user/MS4wLjABAAAArV0uXvsSYl6pD-p5nr-5OFlZED5cEUnb7r2K6j9u4tA)
 
-[官方仓库](https://github.com/Lone3m-tech/smkt-article-visual) · [当前发布身份 v0.6.0（安装待复验）](https://github.com/Lone3m-tech/smkt-article-visual/releases/tag/v0.6.0)
+[官方仓库](https://github.com/Lone3m-tech/smkt-article-visual) · [当前发布身份 v0.7.0（安装待复验）](https://github.com/Lone3m-tech/smkt-article-visual/releases/tag/v0.7.0)
 
 [查看 13 种图法 Demo](#图法参考) · [查看 Skill 运行契约](SKILL.md)
 
@@ -41,7 +41,7 @@
 
 ## 安装
 
-以下是公开安装候选路径。隔离安装记录验证过 `npx skills add --copy` 与直接 Git 克隆，但记录对应 v0.5.0；当前 v0.6.0 在重新完成隔离安装验证前，不应被表述为已验证的安装版本。
+以下是公开安装候选路径。隔离安装记录验证过 `npx skills add --copy` 与直接 Git 克隆，但记录对应 v0.5.0；当前 v0.7.0 在重新完成隔离安装验证前，不应被表述为已验证的安装版本。
 
 ```bash
 npx skills add Lone3m-tech/smkt-article-visual \
