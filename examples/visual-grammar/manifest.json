@@ -1,1157 +1,426 @@
 {
-  "schema_version": 3,
-  "kind": "visual_grammar_gallery",
-  "description": "One lively, style-consistent explanatory example for each supported visual grammar.",
-  "provenance": {
-    "skill_id": "smkt-article-visual",
-    "canonical_repository": "https://github.com/Lone3m-tech/smkt-article-visual",
-    "release_version": null,
-    "release_commit": null,
-    "run_id": "2026-08-06-current-editorial-grammar-gallery"
+  "schema_version": 5,
+  "source_path": "references/visual-grammar.md",
+  "delivery_mode": "article_package",
+  "scope": "Visual grammar reference figures only; no cover or source placement requested.",
+  "stage": "logo",
+  "plan": {
+    "status": "ready",
+    "body_figures": [
+      {
+        "id": "architecture",
+        "reader_question": "组件如何连接、分支与汇合？",
+        "core_judgment": "架构图法呈现组件关系",
+        "subtitle": "依赖、分支与汇合",
+        "grammar": "architecture",
+        "must_show": [
+          "上游组件",
+          "核心组件",
+          "两个下游分支",
+          "一个汇合点"
+        ]
+      },
+      {
+        "id": "hierarchy",
+        "reader_question": "整体如何分成类别与子类？",
+        "core_judgment": "层级图法呈现父子关系",
+        "subtitle": "从整体到子类",
+        "grammar": "hierarchy",
+        "must_show": [
+          "一个根节点",
+          "两类子节点",
+          "末级成员"
+        ]
+      },
+      {
+        "id": "flow",
+        "reader_question": "输入如何经过步骤成为输出？",
+        "core_judgment": "流程图法呈现先后步骤",
+        "subtitle": "从输入到输出",
+        "grammar": "flow",
+        "must_show": [
+          "输入",
+          "三个顺序步骤",
+          "输出"
+        ]
+      },
+      {
+        "id": "loop",
+        "reader_question": "行动如何回到下一轮改进？",
+        "core_judgment": "循环图法呈现反馈迭代",
+        "subtitle": "结果回到下一轮",
+        "grammar": "loop",
+        "must_show": [
+          "观察",
+          "行动",
+          "反馈",
+          "回到观察"
+        ]
+      },
+      {
+        "id": "decision-tree",
+        "reader_question": "条件如何导向不同路径？",
+        "core_judgment": "决策树呈现条件选择",
+        "subtitle": "条件决定下一步",
+        "grammar": "decision_tree",
+        "must_show": [
+          "一个条件问题",
+          "是与否分叉",
+          "两个不同结果"
+        ]
+      },
+      {
+        "id": "comparison",
+        "reader_question": "两个方案的差别如何一眼可见？",
+        "core_judgment": "对比图法呈现可见差异",
+        "subtitle": "左右结构必须不同",
+        "grammar": "comparison",
+        "comparison_basis": [
+          "左侧为线性单一路径",
+          "右侧为并行分组路径"
+        ],
+        "must_show": [
+          "方案A线性路径",
+          "方案B并行分组",
+          "可见结构差异"
+        ]
+      },
+      {
+        "id": "matrix",
+        "reader_question": "对象如何按两个独立维度定位？",
+        "core_judgment": "矩阵图法呈现双维定位",
+        "subtitle": "两个维度共同分类",
+        "grammar": "matrix",
+        "must_show": [
+          "横轴",
+          "纵轴",
+          "四个不同位置"
+        ]
+      },
+      {
+        "id": "overlap-map",
+        "reader_question": "两部分的共同与独有内容是什么？",
+        "core_judgment": "交集图法呈现共存关系",
+        "subtitle": "交集与差异同时可见",
+        "grammar": "overlap_map",
+        "must_show": [
+          "左侧独有部分",
+          "右侧独有部分",
+          "中间交集"
+        ]
+      },
+      {
+        "id": "boundary-map",
+        "reader_question": "什么在范围内，什么在范围外？",
+        "core_judgment": "边界图法呈现所属范围",
+        "subtitle": "包含与排除清晰分开",
+        "grammar": "boundary_map",
+        "must_show": [
+          "一个范围边界",
+          "范围内对象",
+          "范围外对象"
+        ]
+      },
+      {
+        "id": "argument-map",
+        "reader_question": "结论由哪些依据支持，又受何种限制？",
+        "core_judgment": "论证图法呈现主张结构",
+        "subtitle": "依据、限制与结论",
+        "grammar": "argument_map",
+        "must_show": [
+          "一个主张",
+          "两个依据",
+          "一个限制",
+          "一个结论"
+        ]
+      },
+      {
+        "id": "timeline",
+        "reader_question": "真实时间推进中发生了哪些阶段？",
+        "core_judgment": "时间线呈现阶段推进",
+        "subtitle": "按时间顺序阅读",
+        "grammar": "timeline",
+        "must_show": [
+          "起点年份",
+          "中间阶段",
+          "终点年份"
+        ]
+      },
+      {
+        "id": "continuum",
+        "reader_question": "对象处在非时间的渐进位置哪里？",
+        "core_judgment": "连续谱呈现渐进位置",
+        "subtitle": "不是时间进程",
+        "grammar": "continuum",
+        "must_show": [
+          "低端",
+          "中间位置",
+          "高端"
+        ]
+      },
+      {
+        "id": "layer-stack",
+        "reader_question": "不同抽象层如何叠放与包含？",
+        "core_judgment": "层叠图法呈现系统层次",
+        "subtitle": "上层建立在下层之上",
+        "grammar": "layer_stack",
+        "must_show": [
+          "基础层",
+          "能力层",
+          "体验层"
+        ]
+      }
+    ]
   },
-  "source_path": "../../references/visual-grammar.md",
-  "delivery_mode": "reference_library",
+  "style": {
+    "status": "compiled",
+    "source": "assets/simplemkt-editorial-style.json",
+    "prompts": [
+      {
+        "id": "architecture",
+        "prompt": "Approved architecture grammar reference."
+      },
+      {
+        "id": "hierarchy",
+        "prompt": "Approved hierarchy grammar reference."
+      },
+      {
+        "id": "flow",
+        "prompt": "Approved flow grammar reference."
+      },
+      {
+        "id": "loop",
+        "prompt": "Approved loop grammar reference."
+      },
+      {
+        "id": "decision-tree",
+        "prompt": "Approved decision tree grammar reference."
+      },
+      {
+        "id": "comparison",
+        "prompt": "Approved comparison grammar reference."
+      },
+      {
+        "id": "matrix",
+        "prompt": "Approved matrix grammar reference."
+      },
+      {
+        "id": "overlap-map",
+        "prompt": "Approved overlap map grammar reference."
+      },
+      {
+        "id": "boundary-map",
+        "prompt": "Approved boundary map grammar reference."
+      },
+      {
+        "id": "argument-map",
+        "prompt": "Approved argument map grammar reference."
+      },
+      {
+        "id": "timeline",
+        "prompt": "Approved timeline grammar reference."
+      },
+      {
+        "id": "continuum",
+        "prompt": "Approved continuum grammar reference."
+      },
+      {
+        "id": "layer-stack",
+        "prompt": "Approved layer stack grammar reference."
+      }
+    ]
+  },
+  "generate": {
+    "status": "completed",
+    "assets": [
+      {
+        "id": "architecture",
+        "output_path": "examples/visual-grammar/architecture.png",
+        "status": "generated"
+      },
+      {
+        "id": "hierarchy",
+        "output_path": "examples/visual-grammar/hierarchy.png",
+        "status": "generated"
+      },
+      {
+        "id": "flow",
+        "output_path": "examples/visual-grammar/flow.png",
+        "status": "generated"
+      },
+      {
+        "id": "loop",
+        "output_path": "examples/visual-grammar/loop.png",
+        "status": "generated"
+      },
+      {
+        "id": "decision-tree",
+        "output_path": "examples/visual-grammar/decision_tree.png",
+        "status": "generated"
+      },
+      {
+        "id": "comparison",
+        "output_path": "examples/visual-grammar/comparison.png",
+        "status": "generated"
+      },
+      {
+        "id": "matrix",
+        "output_path": "examples/visual-grammar/matrix.png",
+        "status": "generated"
+      },
+      {
+        "id": "overlap-map",
+        "output_path": "examples/visual-grammar/overlap_map.png",
+        "status": "generated"
+      },
+      {
+        "id": "boundary-map",
+        "output_path": "examples/visual-grammar/boundary_map.png",
+        "status": "generated"
+      },
+      {
+        "id": "argument-map",
+        "output_path": "examples/visual-grammar/argument_map.png",
+        "status": "generated"
+      },
+      {
+        "id": "timeline",
+        "output_path": "examples/visual-grammar/timeline.png",
+        "status": "generated"
+      },
+      {
+        "id": "continuum",
+        "output_path": "examples/visual-grammar/continuum.png",
+        "status": "generated"
+      },
+      {
+        "id": "layer-stack",
+        "output_path": "examples/visual-grammar/layer_stack.png",
+        "status": "generated"
+      }
+    ]
+  },
   "logo": {
-    "requested": true,
-    "status": "applied"
+    "enabled": true,
+    "status": "completed",
+    "assets": [
+      {
+        "id": "architecture",
+        "status": "applied"
+      },
+      {
+        "id": "hierarchy",
+        "status": "applied"
+      },
+      {
+        "id": "flow",
+        "status": "applied"
+      },
+      {
+        "id": "loop",
+        "status": "applied"
+      },
+      {
+        "id": "decision-tree",
+        "status": "applied"
+      },
+      {
+        "id": "comparison",
+        "status": "applied"
+      },
+      {
+        "id": "matrix",
+        "status": "applied"
+      },
+      {
+        "id": "overlap-map",
+        "status": "applied"
+      },
+      {
+        "id": "boundary-map",
+        "status": "applied"
+      },
+      {
+        "id": "argument-map",
+        "status": "applied"
+      },
+      {
+        "id": "timeline",
+        "status": "applied"
+      },
+      {
+        "id": "continuum",
+        "status": "applied"
+      },
+      {
+        "id": "layer-stack",
+        "status": "applied"
+      }
+    ]
+  },
+  "layout": {
+    "status": "completed",
+    "assets": [
+      {
+        "id": "architecture",
+        "status": "finalized"
+      },
+      {
+        "id": "hierarchy",
+        "status": "finalized"
+      },
+      {
+        "id": "flow",
+        "status": "finalized"
+      },
+      {
+        "id": "loop",
+        "status": "finalized"
+      },
+      {
+        "id": "decision-tree",
+        "status": "finalized"
+      },
+      {
+        "id": "comparison",
+        "status": "finalized"
+      },
+      {
+        "id": "matrix",
+        "status": "finalized"
+      },
+      {
+        "id": "overlap-map",
+        "status": "finalized"
+      },
+      {
+        "id": "boundary-map",
+        "status": "finalized"
+      },
+      {
+        "id": "argument-map",
+        "status": "finalized"
+      },
+      {
+        "id": "timeline",
+        "status": "finalized"
+      },
+      {
+        "id": "continuum",
+        "status": "finalized"
+      },
+      {
+        "id": "layer-stack",
+        "status": "finalized"
+      }
+    ]
+  },
+  "placement": {
+    "status": "pending",
+    "assets": []
   },
   "qa": {
-    "requested": false,
-    "status": "skipped"
-  },
-  "images": [
-    {
-      "id": "architecture",
-      "role": "content_image",
-      "output_path": "architecture.png",
-      "placement": {
-        "kind": "grammar_example",
-        "sequence": 1
-      },
-      "accepted_attempt": 1,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "Create one finished 16:9 1200×675 Chinese editorial diagram on a pure-white #FFFFFF canvas. Exact centered forest-green Songti-like title: 依赖关系，需要看见分支与汇合. Exact quiet-gray subtitle: Architecture / 架构：组件依赖、分支与汇合. Keep title/subtitle upper centered; keep all semantics inside x=54–1146 y=190–560 and clear of Logo zone x=1056–1200 y=0–60; no white reserve block or model wordmark. Use one architecture grammar: a research question feeds one core judgment, branches to 内容校验 and 表达校验, then visibly reunites into one 清晰解释. Depict the branch and merge with concrete editorial marks, not anonymous boxes. Fine green-gray ink, airy engraving contours, restrained hatching, low-contrast 1–1.5px lines, no shadow; paper only where a document is semantically necessary. Avoid UI cards, generic flow steps, grids, nature, people, decorative objects, handwriting, crop marks, or extra prose.",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": "architecture.png",
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "flow",
-      "role": "content_image",
-      "output_path": "flow.png",
-      "placement": {
-        "kind": "grammar_example",
-        "sequence": 2
-      },
-      "accepted_attempt": 1,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "Create one finished 16:9 1200×675 Chinese editorial diagram on pure-white #FFFFFF. Exact centered forest-green Songti-like title: 步骤必须有先后. Exact quiet-gray subtitle: Flow / 流程：输入、处理与交接. Upper centered title band; semantics inside x=54–1146 y=190–560; keep clear of Logo zone x=1056–1200 y=0–60; no white reserve block or model wordmark. Use one left-to-right flow grammar: 原始材料 enters, then 识别关系, 选择图法, 生成并落位. Each stage shows a compact concrete editorial action, with thin connectors and small anchors; make order and handoff visibly necessary. Fine green-gray ink, pencil contours, restrained hatching, 1–1.5px low-contrast lines, no shadow, no default paper cards. Avoid branches, loopbacks, UI cards, grids, nature, people, heavy arrows, handwriting, crop marks, or long prose.",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": "flow.png",
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "loop",
-      "role": "content_image",
-      "output_path": "loop.png",
-      "placement": {
-        "kind": "grammar_example",
-        "sequence": 3
-      },
-      "accepted_attempt": 1,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "Create one finished 16:9 1200×675 Chinese editorial diagram on pure-white #FFFFFF. Exact centered forest-green Songti-like title: 反馈让方案继续变好. Exact quiet-gray subtitle: Loop / 循环：生成、检视、修订、再生成. Upper centered title band; semantics inside x=54–1146 y=190–560; clear of Logo zone x=1056–1200 y=0–60; no reserve block or model wordmark. Use one circular loop grammar: a draft explanatory figure is checked against a reader question, revised through a marked relation, and returns as a clearer figure. Show repeated feedback, not one-way sequence, through circular thin leaders and concrete editorial marks. Fine green-gray ink, airy pencil/engraving contour, restrained hatch, no shadow; paper only for the draft figure. Avoid linear timelines, generic nodes, UI cards, nature, people, heavy arrows, grids, handwriting, crop marks, or excess prose.",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": "loop.png",
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "decision-tree",
-      "role": "content_image",
-      "output_path": "decision-tree.png",
-      "placement": {
-        "kind": "grammar_example",
-        "sequence": 4
-      },
-      "accepted_attempt": 1,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "Create one finished 16:9 1200×675 Chinese editorial diagram on pure-white #FFFFFF. Exact centered forest-green Songti-like title: 条件不同，路径不同. Exact quiet-gray subtitle: Decision tree / 决策树：先判断，再选择. Upper centered title band; semantics inside x=54–1146 y=190–560; clear of Logo zone x=1056–1200 y=0–60; no reserve block or model wordmark. Use one decision-tree grammar: start with 是否存在明确条件？; yes leads to 条件分支 and then 决策图, no leads to 关系依赖 and then 架构图. Make the if/then split visually explicit with one decision point and two materially distinct paths, not a generic hierarchy. Fine green-gray ink, pencil contours, restrained hatching, no shadow and no default paper cards. Avoid flow-only layout, UI cards, grids, nature, people, heavy arrows, handwriting, crop marks, or extra prose.",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": "decision-tree.png",
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "comparison",
-      "role": "content_image",
-      "output_path": "comparison.png",
-      "placement": {
-        "kind": "grammar_example",
-        "sequence": 5
-      },
-      "accepted_attempt": 1,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "Create one finished 16:9 1200×675 Chinese editorial diagram on pure-white #FFFFFF. Exact centered forest-green Songti-like title: 同一份内容，两种交付方式. Exact quiet-gray subtitle: Comparison / 对比：阅读与讲述的差异. Upper centered title band; semantics inside x=54–1146 y=190–560; clear of Logo zone x=1056–1200 y=0–60; no reserve block or model wordmark. Use one comparison grammar: left is 文章包, where reader follows paragraph anchors; right is 演示画面, where audience follows a speaker-led frame sequence. Depict their different reading paths, input scope, and completed outputs with paired concrete editorial forms; do not make a flow or matrix. Fine green-gray ink, airy engraving, restrained hatching, no shadow. Avoid dashboards, generic paper stacks, grids, nature, people, heavy arrows, handwriting, crop marks, or long prose.",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": "comparison.png",
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "matrix",
-      "role": "content_image",
-      "output_path": "matrix.png",
-      "placement": {
-        "kind": "grammar_example",
-        "sequence": 6
-      },
-      "accepted_attempt": 1,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "Create one finished 16:9 1200×675 Chinese editorial diagram on pure-white #FFFFFF. Exact centered forest-green Songti-like title: 两个维度，才能准确定位. Exact quiet-gray subtitle: Matrix / 矩阵：关系复杂度 × 讲述场景. Upper centered title band; semantics inside x=54–1146 y=190–560; clear of Logo zone x=1056–1200 y=0–60; no reserve block or model wordmark. Use one matrix grammar with two explicit axes: 横轴 关系复杂度 from 单一 to 复合, 纵轴 使用场景 from 自主阅读 to 现场讲述. Place four small concrete figure choices in the cells—flow, comparison, architecture, narrative frame—showing classification rather than time or choice. Fine green-gray ink, light hatch, no shadow. Avoid lists of anonymous blocks, UI cards, nature, people, heavy arrows, handwriting, crop marks, or long prose.",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": "matrix.png",
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "overlap-map",
-      "role": "content_image",
-      "output_path": "overlap-map.png",
-      "placement": {
-        "kind": "grammar_example",
-        "sequence": 7
-      },
-      "accepted_attempt": 1,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "Create one finished 16:9 1200×675 Chinese editorial diagram on pure-white #FFFFFF. Exact centered forest-green Songti-like title: 共享部分，不能被忽略. Exact quiet-gray subtitle: Overlap map / 交集：共性、差异与重叠. Upper centered title band; semantics inside x=54–1146 y=190–560; clear of Logo zone x=1056–1200 y=0–60; no reserve block or model wordmark. Use one overlap-map grammar: two softly outlined editorial regions 文章阅读 and 演示讲述 overlap at 解释关系. Show distinct outside roles—段落锚点 on the left and 叙事顺序 on the right—and one shared center. Make intersection visibly meaningful with thin lines and restrained hatch, not a comparison table. Fine green-gray ink, no shadow. Avoid grids, dashboards, nature, people, heavy arrows, handwriting, crop marks, or excess prose.",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": "overlap-map.png",
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "boundary-map",
-      "role": "content_image",
-      "output_path": "boundary-map.png",
-      "placement": {
-        "kind": "grammar_example",
-        "sequence": 8
-      },
-      "accepted_attempt": 1,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "Create one finished 16:9 1200×675 Chinese editorial diagram on pure-white #FFFFFF. Exact centered forest-green Songti-like title: 明确边界，才能保护理解. Exact quiet-gray subtitle: Boundary map / 边界：解释内容与视觉噪声. Upper centered title band; semantics inside x=54–1146 y=190–560; clear of Logo zone x=1056–1200 y=0–60; no reserve block or model wordmark. Use one boundary-map grammar: inside a thin calm boundary show 原文关系, 主图法, 必要标签 and 留白 working together; outside show three restrained crossed-out intrusions: 装饰堆叠, 仪表盘 UI, 伪造截图. Make the boundary itself the primary explanation. Fine green-gray ink, airy engraving, light hatch, no shadow. Avoid scenes, people, nature, actual fake screens, heavy arrows, grids, handwriting, crop marks, or long prose.",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": "boundary-map.png",
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "argument-map",
-      "role": "content_image",
-      "output_path": "argument-map.png",
-      "placement": {
-        "kind": "grammar_example",
-        "sequence": 9
-      },
-      "accepted_attempt": 1,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "Create one finished 16:9 1200×675 Chinese editorial diagram on pure-white #FFFFFF. Exact centered forest-green Songti-like title: 判断需要依据，也需要限定. Exact quiet-gray subtitle: Argument map / 论证：主张、依据、限制与结论. Upper centered title band; semantics inside x=54–1146 y=190–560; clear of Logo zone x=1056–1200 y=0–60; no reserve block or model wordmark. Use one argument-map grammar built only from supplied conceptual statements: claim 图像应解释关系; basis 阅读中的理解卡点; caveat 不是每段都要配图; conclusion 选择最小充分图法. Show support and caveat as visibly different relations converging on the conclusion. Fine green-gray ink, restrained hatch, no shadow, no fake evidence. Avoid causal flow, data charts, nature, people, UI cards, heavy arrows, grids, handwriting, crop marks, or long prose.",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": "argument-map.png",
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "timeline",
-      "role": "content_image",
-      "output_path": "timeline.png",
-      "placement": {
-        "kind": "grammar_example",
-        "sequence": 10
-      },
-      "accepted_attempt": 1,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "Create one finished 16:9 1200×675 Chinese editorial diagram on pure-white #FFFFFF. Exact centered forest-green Songti-like title: 阶段推进，需要看见时间. Exact quiet-gray subtitle: Timeline / 时间线：从原文到完成交付. Upper centered title band; semantics inside x=54–1146 y=190–560; clear of Logo zone x=1056–1200 y=0–60; no reserve block or model wordmark. Use one timeline grammar: 原文完成, 配图判断, 图像生成, 准确落位, 交付记录 in genuine temporal order along a calm horizontal line. Each milestone shows a concrete editorial action; do not turn it into a generic pipeline or loop. Fine green-gray ink, airy pencil detail, restrained hatch, no shadow. Avoid charts, UI cards, nature, people, heavy arrows, grids, handwriting, crop marks, or excess prose.",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": "timeline.png",
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "continuum",
-      "role": "content_image",
-      "output_path": "continuum.png",
-      "placement": {
-        "kind": "grammar_example",
-        "sequence": 11
-      },
-      "accepted_attempt": 1,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "Create one finished 16:9 1200×675 Chinese editorial diagram on pure-white #FFFFFF. Exact centered forest-green Songti-like title: 关系清晰度，是连续变化. Exact quiet-gray subtitle: Continuum / 连续谱：从文字可懂到需要解释. Upper centered title band; semantics inside x=54–1146 y=190–560; clear of Logo zone x=1056–1200 y=0–60; no reserve block or model wordmark. Use one continuum grammar: a single horizontal spectrum moves from 文字即可理解 through 建议补充图示 to 必须可视化关系. Place concrete relationship examples along it—simple statement, two-way comparison, multi-part dependency—without implying time. Fine green-gray ink, restrained hatch, small anchors, no shadow. Avoid timeline markers, decision branches, UI cards, nature, people, heavy arrows, grids, handwriting, crop marks, or long prose.",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": "continuum.png",
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "layer-stack",
-      "role": "content_image",
-      "output_path": "layer-stack.png",
-      "placement": {
-        "kind": "grammar_example",
-        "sequence": 12
-      },
-      "accepted_attempt": 1,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "Create one finished 16:9 1200×675 Chinese editorial diagram on pure-white #FFFFFF. Exact centered forest-green Songti-like title: 每一层，只负责一个问题. Exact quiet-gray subtitle: Layer stack / 层级：内容、图法与母版. Upper centered title band; semantics inside x=54–1146 y=190–560; clear of Logo zone x=1056–1200 y=0–60; no reserve block or model wordmark. Use one layer-stack grammar with three near-flat horizontal layers: 文章结构 decides what needs explaining and where; 图法 preserves the relationship; 编辑图母版 unifies type, line, hatch and whitespace. Fine vertical guides show coordination without causal arrows or dense dependencies. Fine green-gray ink, airy engraving, restrained hatching, no shadow, paper only if semantically necessary. Avoid UI cards, grids, nature, people, decorative paper stacks, handwriting, crop marks, or extra prose.",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": "layer-stack.png",
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "annotated-source",
-      "role": "content_image",
-      "output_path": "annotated-source.png",
-      "placement": {
-        "kind": "grammar_example",
-        "sequence": 13
-      },
-      "accepted_attempt": 2,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "Annotate the supplied authentic source image without fabricating a screenshot or changing its topology. Create one finished 16:9 1200×675 Chinese editorial diagram on pure-white #FFFFFF. Exact centered forest-green Songti-like title: 来源图保持原貌，标注只服务理解. Exact quiet-gray subtitle: Annotated source / 来源标注：看清已有关系. Upper centered title band; semantics inside x=54–1146 y=190–560; clear of Logo zone x=1056–1200 y=0–60; no reserve block or model wordmark. Use one annotated-source grammar: place the supplied source image as the actual central evidence and add only three fine direct-ink annotations with circular anchors—场景、关系、阅读路径—pointing to existing parts. Do not add new claims, objects, data, or invented content. Fine green-gray lines, restrained hatching only in the annotation marks, no shadow. Avoid redraw, UI cards, grids, people, nature, heavy arrows, handwriting, crop marks, or extra prose.",
-          "status": "rejected",
-          "adjustment_reason": "The model rendered a duplicate SimpleMkt wordmark in the Logo overlay zone before deterministic Logo placement.",
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        },
-        {
-          "id": 2,
-          "prompt": "Annotate the supplied authentic source image without changing its topology or generating a screenshot. Create one finished 16:9 1200×675 Chinese editorial diagram on a pure-white #FFFFFF canvas. Exact centered forest-green Songti-like title: 来源图保持原貌，标注只服务理解. Exact quiet-gray subtitle: Annotated source / 来源标注：看清已有关系. Keep title/subtitle in the upper centered band. Keep all semantic content inside x=54–1146 and y=190–560. The top-right Logo overlay zone x=1056–1200 y=0–60 must remain naturally empty white canvas with absolutely no text, lettering, wordmark, symbol, line, mark, or object; do not render any Logo anywhere. Place the supplied source image as the unchanged central evidence. Add only three fine direct-ink annotations with circular anchors—场景、关系、阅读路径—pointing to existing parts. Do not add claims, objects, data, invented content, or title-external text. Use thin green-gray lines, restrained annotation hatching, and no shadow. Avoid redraw, UI cards, grids, people, nature, heavy arrows, handwriting, crop marks, and decorative elements.",
-          "status": "accepted",
-          "adjustment_reason": "Replaced a candidate containing a model-rendered duplicate wordmark.",
-          "candidate_file": "annotated-source.png",
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    }
-  ],
-  "legacy_images": [
-    {
-      "id": "architecture",
-      "visual_grammar": "architecture",
-      "output_path": "examples/visual-grammar/architecture.png",
-      "accepted_attempt": 2,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "Create a final native 16:9 Chinese editorial article figure at exactly 1200×675. It is a conceptual architecture explanation only: no facts, data, real company claims, people, or source-like evidence. Use one full pure #FFFFFF background with no outer frame, tint, background texture, gradient, ivory, cream, or beige. Reserve the exact top-right x=1056–1200, y=0–60 rectangle as completely empty pure white for a deterministic Logo overlay; do not render a wordmark. Use one consistent printed Chinese Songti-like editorial-serif family, no sans, script, handwriting, or mixed Chinese font. Center an exact #1A6B3A 52px-equivalent semibold title: ‘依赖关系，不等于步骤’. Place the exact #6B6B6B 28px-equivalent regular subtitle beneath: ‘组件、分支与汇合要同时看见’. Use a single editorial botanical engraving as the central explanatory subject, not decoration: a fine, realistic but restrained ink drawing of a rooted plant whose one main stem branches into two distinct stems then visibly reunites into one seedpod or tied stem at the right. Use controlled contour lines and delicate cross-hatching in forest green and gray. The botanical topology must precisely explain architecture: left small neutral source sheet labelled ‘输入’ connects by a hairline leader to the plant root labelled ‘核心模块’; the two branch stems have direct printed labels ‘模块甲’ and ‘模块乙’ with small circular leader anchors; the visibly reunited ending has one direct label ‘汇合’. Place pale green/gray construction lines and one faint vertical alignment grid only around the plant, terminating at leaders or framing the stem anatomy. They must clarify the topology, not appear as decoration. Do not use paper slips at all. Use direct labels at 28px-equivalent #141414, and all leaders at hairline 1–1.5px-equivalent low contrast. The engraved plant, labels, leaders, and construction lines must have no shadows. Do not use cards, panels, stickers, UI containers, drop shadows, thick arrows, heavy frames, dashboard, generic report, flat SVG/wireframe, outline-only diagram, landscape, scenery, stock photo, 3D, neon, watermark, QR code, decorative crosses, crop marks, floating strokes, ornamental arrows, isolated color blocks, or extra prose/labels. Every visible mark must explain input, core, branching, or merge.",
-          "status": "rejected",
-          "adjustment_reason": "Replaced by the complete regenerated gallery under the current editorial content-element vocabulary and relation-derived-subject contract.",
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        },
-        {
-          "id": 2,
-          "prompt": "生成一张 16:9（1200×675 构图）的中文文章正文关系图，概念示意，图法 architecture，表达“依赖关系，不等于步骤”。纯 #FFFFFF 白底；右上 x=1056–1200、y=0–60 完全空白，不生成 Logo。标题精确为“依赖关系，不等于步骤”，52px 等效半粗 #1A6B3A；副标题精确为“组件、分支与汇合要同时看见”，28px #6B6B6B；所有中文同一宋体感编辑衬线。主图仅为：左侧白色纤维直边摘录纸“输入”（中性印刷横线）→ 中央切纸面“核心” → 两条等宽直边窄纸条“模块 α”“模块 β” → 右侧切纸面“汇合”；以 1–1.5px 的浅森林绿依赖线分支、汇合，不能画成步骤或时间轴。纸件白色、纤维、直边或切边，同等 4–6px 极轻悬浮与 4–6% 柔和中性阴影；文字、引线无阴影。禁用人物、植物、动物、物件隐喻、图标、机器、容器、抽象图案、圆角卡片、UI、仪表板、SVG/wireframe、格栅、裁切标、角落十字、粗箭头、照片、水印、二维码和额外文本。",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "flow",
-      "visual_grammar": "flow",
-      "output_path": "examples/visual-grammar/flow.png",
-      "accepted_attempt": 2,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "Create a final native 16:9 Chinese editorial body figure at exactly 1200×675. It is a conceptual flow explanation only: no data, facts, companies, people, or source-like evidence. Use one full pure solid #FFFFFF background, no outer frame, tint, background texture, gradient, cream, ivory, or beige. Reserve the exact top-right rectangle x=1056–1200,y=0–60 as empty pure white for a deterministic Logo overlay; render no wordmark or element there. Use one consistent printed Chinese Songti-like editorial-serif family. Center exact #1A6B3A 52px-equivalent semibold title: ‘步骤必须有先后’. Under it, center exact #6B6B6B 28px-equivalent subtitle: ‘输入经过处理走向输出’. The visual grammar is one left-to-right ordered flow only: 输入 → 处理 → 校验 → 输出. No branching, loop, parallel route, matrix, timeline, objects, icons, machines, containers, or abstract patterns. Use only this fixed editorial content vocabulary. At the far left, render ‘输入’ as one small white fibrous excerpt sheet with straight/cut edges and four neutral fine printed rules; label it directly ‘输入’ at 28px-equivalent #141414. Then render ‘处理’, ‘校验’, and ‘输出’ as three identical white fibrous straight-edged narrow paper strips, equal width and height, labelled directly at 28px-equivalent #141414. The three strips must be one visual family; each has only a small assigned material variation that explains its stage: processing has restrained ordered diagonal hatch, checking has one small ruled seam with a circular ink anchor, output has cleaner parallel print rules. Connect all four elements with thin low-contrast pale-green hairline route segments and restrained small arrowheads. Direct labels use thin leaders and circular anchors only where they improve reading. All paper elements have identical deliberately faint floating: 4–6px-equivalent lift and diffuse neutral 12–16px-equivalent shadow at 4–6% opacity. They must look like editorial paper, never rounded cards, panels, stickers, UI containers, or product tiles. Add only a few pale construction lines inside the flow to align the route; no decorative grid, crop mark, cross, floating stroke, ornamental arrow, or unrelated texture. Do not create a figurative sketch subject here: the paper elements and route themselves carry the flow relation. Do not render landscape, product UI, dashboard, flat SVG/wireframe, glossy 3D, neon, watermark, QR code, handwritten text, extra prose, or extra labels.",
-          "status": "rejected",
-          "adjustment_reason": "Replaced by the complete regenerated gallery under the current editorial content-element vocabulary and relation-derived-subject contract.",
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        },
-        {
-          "id": 2,
-          "prompt": "生成一张 16:9（1200×675 构图）的中文正文关系图，概念示意，图法 flow，表达“步骤必须有先后”。纯 #FFFFFF 白底；右上 x=1056–1200、y=0–60 完全空白，不生成 Logo。标题“步骤必须有先后”是 52px 等效半粗 #1A6B3A；副标题“输入经过处理走向输出”是 28px #6B6B6B；所有中文同一宋体感编辑衬线。中下部只有单一路径：白色直边纤维摘录纸“输入”（中性印刷横线）→ 三条同宽直边窄纸条“处理”“检查”“输出”，用安静连续的 1–1.5px 浅森林绿细方向线和小锚点连接；不形成回路、编号或平行分支。所有纸件相同的白色纤维、极轻 4–6px 悬浮和 4–6% 中性阴影；无拟物素描主体。禁用人物、植物、动物、物件隐喻、图标、机器、容器、抽象图案、圆角卡片、UI、仪表板、SVG/wireframe、格栅、裁切标、角落十字、厚箭头、照片、水印、二维码和额外文字。",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "loop",
-      "visual_grammar": "loop",
-      "output_path": "examples/visual-grammar/loop.png",
-      "accepted_attempt": 1,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "生成一张 16:9（1200×675 构图）的中文正文关系图，概念示意，图法 loop，表达“迭代要回到判断处”。纯 #FFFFFF 白底；右上 x=1056–1200、y=0–60 完全空白，不生成 Logo。标题“迭代要回到判断处”是 52px 等效半粗 #1A6B3A；副标题“生成、检查、更新、再生成”是 28px #6B6B6B；所有中文同一宋体感编辑衬线。中下部唯一关系是闭环：四条尺寸和视觉完全一致的白色直边纤维窄纸条，按顺时针为“生成”“检查”“更新”“再生成”，围绕克制近矩形闭合细线；浅森林绿 1–1.5px 细线让检查输入更新、更新返回再生成、再生成回到生成。纸条同等极轻 4–6px 悬浮及 4–6% 柔和中性阴影；回路线和文字无阴影。禁用人物、植物、动物、物件隐喻、图标、机器、容器、抽象图案、圆角卡片、UI、仪表板、SVG/wireframe、格栅、裁切标、角落十字、厚箭头、照片、水印、二维码和额外文字。",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "decision-tree",
-      "visual_grammar": "decision_tree",
-      "output_path": "examples/visual-grammar/decision-tree.png",
-      "accepted_attempt": 1,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "生成一张 16:9（1200×675 构图）的中文正文关系图，概念示意，图法 decision_tree，表达“条件决定走哪条路”。纯 #FFFFFF 白底；右上 x=1056–1200、y=0–60 完全空白，不生成 Logo。标题“条件决定走哪条路”是 52px 等效半粗 #1A6B3A；副标题“不同条件进入不同选择”是 28px #6B6B6B；所有中文同一宋体感编辑衬线。下方只呈现一个真实条件分叉：中央白色纤维切纸面“条件”，以两条极细浅森林绿分支线分别通往尺寸相同的直边窄纸条“行动 α”“行动 β”，线旁印刷“满足”“不满足”。分歧必须由条件发出，不显示时间或优劣。纸件同等极轻 4–6px 悬浮及 4–6% 柔和中性阴影。禁用人物、植物、动物、物件隐喻、图标、机器、容器、抽象图案、圆角卡片、UI、仪表板、SVG/wireframe、格栅、裁切标、角落十字、照片、水印、二维码和额外文字。",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "comparison",
-      "visual_grammar": "comparison",
-      "output_path": "examples/visual-grammar/comparison.png",
-      "accepted_attempt": 2,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "Create a final native 16:9 Chinese editorial article figure at 1200×675. It is a conceptual explanation only: no facts, data, real company claims, people, or source-like evidence. Use one full pure solid #FFFFFF background with no outer frame, tint, background texture, gradient, cream, ivory, or beige. Every visible Chinese character uses one consistent printed Songti-like editorial-serif family. Center the exact title in #1A6B3A: ‘并排看，才能看清差异’. Under it, use one centered #6B6B6B subtitle: ‘同一判断下的两种方案’. Keep all visible text away from the exact top-right protected rectangle x=1056–1200, y=0–60, which must remain completely empty pure white for a deterministic packaged Logo overlay; do not render any wordmark. Visual grammar: comparison. Beneath the heading, make one dominant balanced two-column editorial comparison—not a matrix, coordinate chart, process, or card grid. Left column heading is exactly ‘方案甲’; right column heading is exactly ‘方案乙’. Both columns have the same three vertically aligned comparison points, labelled exactly ‘速度’, ‘协作’, ‘弹性’. Let each comparison point be represented by one white, subtly fibrous, straight- or cut-edge editorial paper slip; make the two columns distinguish trade-offs through restrained paper hatch density and connected alignment only, never through numbers, scores, rankings, factual claims, or color coding. Keep each of the six information slips equally spaced, equal visual weight, and visibly connected across the two columns by three fine, pale low-contrast horizontal relation lines. The reader must see comparison of the same criteria, not a winner. Every labeled information node must use precisely the same white fibrous editorial paper-slip family: straight or cut edges, no rounded corners, card fill, panel, sticker, or UI-container treatment. Give every independent paper node exactly the same light floating treatment: about 6–8px-equivalent lift and one diffuse neutral 10–14px-equivalent shadow at 8–12% opacity. No dark, hard, unequal, or stacked shadows. Use thin 1–1.5px-equivalent pale-green or light-gray connectors and outlines only, no thick arrows, frames, or dominant boxes. Restrained hatch, shallow paper edge, and paper overlap may only clarify the comparison. Do not use dashboard, generic report, flat SVG/wireframe, outline-only diagram, landscape, scenery, stock photo, 3D, neon, watermark, QR code, decorative crosses, registration marks, crop marks, floating strokes, isolated decorative color blocks, ornamental arrows, handwritten text, extra prose, or extra labels. Every visible object, line, and texture must communicate a planned label, relation, or structure.",
-          "status": "rejected",
-          "adjustment_reason": "Replaced by the complete regenerated gallery under the current editorial content-element vocabulary and relation-derived-subject contract.",
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        },
-        {
-          "id": 2,
-          "prompt": "生成一张 16:9（1200×675 构图）的中文正文关系图，概念示意，图法 comparison，表达“并排看，才能看清差异”。纯 #FFFFFF 白底；右上 x=1056–1200、y=0–60 完全空白，不生成 Logo。标题“并排看，才能看清差异”是 52px 等效半粗 #1A6B3A；副标题“同一判断下的两种方案”是 28px #6B6B6B；所有中文同一宋体感编辑衬线。中下部只有并排、对称、同尺寸的两块白色纤维切纸面：左“方案 α”、右“方案 β”；各自有同样三行直接印刷标签“速度”“协作”“弹性”，其右只用无数值、浅灰或浅绿细墨线/短线/细小斜线表达不同表现。无柱状图、评分、勾叉、奖杯、胜负或突出赢家。两纸面同等极轻 4–6px 悬浮与 4–6% 柔和中性阴影，内部线无阴影。禁用人物、植物、动物、物件隐喻、图标、机器、容器、抽象图案、圆角卡片、UI、仪表板、SVG/wireframe、厚边框、粗箭头、格栅、裁切标、角落十字、照片、水印、二维码、虚构数据和额外文字。",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "matrix",
-      "visual_grammar": "matrix",
-      "output_path": "examples/visual-grammar/matrix.png",
-      "accepted_attempt": 1,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "生成 16:9、1200×675 意图的中文编辑正文图，图法 matrix。纯 #FFFFFF 白底，无边框、色调、纹理、渐变或 Logo；右上 x=1056–1200、y=0–60 完全空白。只显示标题“两条维度，决定所在位置”、副标题“横纵坐标交叉后再分类”、端点标签“低”“高”及点标签“α”“β”“γ”。所有中文单一宋体感编辑衬线：标题 52px 等效半粗 #1A6B3A，副标题 28px #6B6B6B，标签 28px #141414。标题下只是一组低对比细墨横纵轴，三个分处不同位置的小圆锚点及其细引线。轴、锚点是唯一解释主体，无纸节点、无数据、无箭头、无网格或拟物插画。线条 1–1.5px、浅森林绿或浅灰。禁用植物、动物、人物、物件、图标、机器、容器、抽象图案、卡片、面板、UI、仪表板、Venn 圆、随机圆箭头、裁切标、角落十字、手写、模型字标、水印、二维码和额外文本。",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "overlap-map",
-      "visual_grammar": "overlap_map",
-      "output_path": "examples/visual-grammar/overlap-map.png",
-      "accepted_attempt": 1,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "生成 16:9、1200×675 意图的中文编辑正文图，图法 overlap_map。纯 #FFFFFF 白底；右上 x=1056–1200、y=0–60 完全空白，不生成 Logo。仅显示标题“交集里，才看得到共同部分”、副标题“共存、差异与交集分别落位”、标签“α”“β”“共同”。所有中文单一宋体感编辑衬线；标题 52px 等效半粗 #1A6B3A，副标题 28px #6B6B6B，标签 28px #141414。标题下为两张白色、微纤维、切纸轮廓的纸面轻微重叠；左 α、右 β，实际重叠的唯一交集内有克制森林绿细斜线，标注“共同”。两纸面相同极轻 4–6px 悬浮和 4–6% 柔和中性阴影，其他元素无阴影。线条 1–1.5px、低对比；不使用圆形 Venn、拟物插画或额外物件。禁用植物、动物、人物、图标、机器、容器、抽象图案、圆角卡片、UI、仪表板、边框、格栅、裁切标、角落十字、模型字标、水印、二维码、虚构数据和额外文本。",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "boundary-map",
-      "visual_grammar": "boundary_map",
-      "output_path": "examples/visual-grammar/boundary-map.png",
-      "accepted_attempt": 1,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "生成 16:9、1200×675 意图的中文编辑正文图，图法 boundary_map。纯 #FFFFFF 白底；右上 x=1056–1200、y=0–60 完全空白，不生成 Logo。可见文字仅为标题“先看边界，再谈定义”、副标题“留下必要信息，排除不属于它的部分”、标签“范围”“保留”“排除”；均为单一宋体感编辑衬线，标题 52px 半粗 #1A6B3A，副标题 28px #6B6B6B，标签 28px #141414。标题下中央一张白色微纤维切纸面，标“范围”；“保留”在内部以小锚点定位，“排除”在轮廓外以小锚点定位；只以极细直接引线终止在锚点，无箭头、X、外框或拒绝符号。纸面有唯一同等极轻 4–6px 悬浮和 4–6% 中性阴影；其余无阴影。禁用拟物插画、植物、动物、人物、物件、图标、机器、容器、抽象图案、圆角卡片、UI、仪表板、格栅、裁切标、角落十字、模型字标、水印、二维码、虚构数据与额外文字。",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "argument-map",
-      "visual_grammar": "argument_map",
-      "output_path": "examples/visual-grammar/argument-map.png",
-      "accepted_attempt": 1,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "生成 16:9、1200×675 意图的中文编辑正文图，图法 argument_map。纯 #FFFFFF 白底，右上 x=1056–1200、y=0–60 完全空白，不生成 Logo。仅显示标题“结论要看它站在哪里”、副标题“观点、依据、限定与结论相连”、节点“观点”“依据”“限定”“结论”；单一宋体感编辑衬线：标题 52px 半粗 #1A6B3A，副标题 28px #6B6B6B，节点 28px #141414。标题下有唯一左至右链：白色微纤维摘录纸“观点”（只含不可读的中性印刷横线）→ 三条匹配的直边白色窄纸条“依据”“限定”“结论”；所有节点用低对比森林绿细引线和小圆锚点严格相连。纸件同等极轻 4–6px 悬浮与 4–6% 中性阴影，文字和引线无阴影。无任何主张、证据或额外结论。禁用植物、动物、人物、物件、图标、机器、容器、抽象图案、卡片、面板、圆角矩形、UI、仪表板、格栅、裁切标、角落十字、装饰箭头、手写、模型字标、水印、二维码和额外文字。",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "timeline",
-      "visual_grammar": "timeline",
-      "output_path": "examples/visual-grammar/timeline.png",
-      "accepted_attempt": 1,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "生成一张 16:9、1200×675 意图的中文编辑正文时间图。纯 #FFFFFF 白底；右上 x=1056–1200、y=0–60 完全空白，不生成 Logo。每个文本仅出现一次并清晰：标题“时间让变化有了顺序”、副标题“阶段按发生次序展开”、“起点”“阶段 1”“阶段 2”“现在”；同一宋体感编辑衬线，标题 52px 等效半粗 #1A6B3A，副标题 28px #6B6B6B，时间标签 28px #141414。唯一图形是一条安静的下部水平细时间线：左 15% 圆锚点下方“起点”、上方直边白色纤维窄纸条“阶段 1”；中间圆锚点上方“阶段 2”；右 83% 圆锚点上方“现在”并在其下方或右侧标“现在”。只是单向时间推进，无箭头、回路和循环；三纸条尺寸、材质、4–6px 极轻悬浮与 4–6% 中性阴影一致；线条 1–1.5px 森林绿或灰，文字无线影。禁用拟物、植物、动物、人物、图标、机器、容器、抽象图案、卡片、UI、格栅、裁切标、角落十字、手写、模型字标、水印、二维码、额外文本和数据。",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "continuum",
-      "visual_grammar": "continuum",
-      "output_path": "examples/visual-grammar/continuum.png",
-      "accepted_attempt": 1,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "生成一张 16:9 中文编辑正文图，图法 continuum。纯 #FFFFFF 白底；右上 x=1056–1200、y=0–60 完全空白，不生成 Logo。标题精确“连续变化，不等于时间推进”，52px 等效半粗 #1A6B3A；副标题精确“位置、强弱与成熟度落在一条光谱上”，28px #6B6B6B；同一宋体感编辑衬线。标题带下方只有一条细墨水平连续谱：左端“低”、右端“高”，沿线三处小圆形直接墨锚点，标为 Inter 正体“α”“β”“γ”。表示非时间的位置、强弱与成熟度；没有日期、时钟、阶段编号、路线、箭头、回路或时间线。只允许有帮助定位的浅细刻度。连续谱自身是主体，无纸卡、拟物素描、植物、动物、图标、机器、容器、抽象图案、UI、外框、格栅、裁切标、角落十字、手写、水印、二维码或额外文字。线条 1–1.5px，低对比森林绿或浅灰，无阴影。",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "layer-stack",
-      "visual_grammar": "layer_stack",
-      "output_path": "examples/visual-grammar/layer-stack.png",
-      "accepted_attempt": 1,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "生成一张 16:9 中文编辑正文图，图法 layer_stack。纯 #FFFFFF 白底；右上 x=1056–1200、y=0–60 完全空白，不生成 Logo。标题精确“层次不同，职责不同”，52px 等效半粗 #1A6B3A；副标题精确“上层定义，下层承接”，28px #6B6B6B；所有中文同一宋体感编辑衬线。标题下中央严格垂直对齐三块白色微纤维切纸面，自上而下标签“原则”“结构”“表达”，均 28px 深黑 #141414。相邻层之间只有极细、低对比的向下约束引线，不用箭头、处理路径、依赖网络、时间线或循环。三层是唯一解释主体；每张纸独立且拥有同样 4–6px 极轻悬浮和 4–6% 柔和中性阴影。无拟物素描、摘录纸、图标、植物、动物、机器、容器、抽象图案、UI、卡片、外框、格栅、裁切标、角落十字、手写、模型字标、水印、二维码或额外文字。",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "annotated-source",
-      "visual_grammar": "annotated_source",
-      "source_image_path": "examples/readme-visuals/usage-scenarios.png",
-      "output_path": "examples/visual-grammar/annotated-source.png",
-      "accepted_attempt": 1,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "将 supplied image `examples/readme-visuals/usage-scenarios.png` 编辑为 16:9 中文编辑正文图，图法 annotated_source。保留 supplied image 的整体拓扑、纸面、标签、路径和可读关系，不重画成其他图、不伪造截图、不改变内容。将原图作为下半部中央真实来源图，顶部新增标题“来源图只做解释，不被改写”（52px 等效半粗 #1A6B3A）和副标题“真实素材保持原貌，标注只服务理解”（28px #6B6B6B），所有中文单一宋体感编辑衬线。围绕来源图只能新增三项克制的直接印刷标注“场景”“关系”“阅读路径”，它们用低对比森林绿 1–1.5px 细引线与小锚点指向原图已有元素；不能添加新纸节点、图标、拟物、主张或事实。全画布纯 #FFFFFF；右上 x=1056–1200、y=0–60 完全空白，不生成或模仿 Logo。无外框、裁切标、角落十字、装饰格栅、手写、卡片 UI、额外阴影、水印、二维码和额外文本。",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    }
-  ]
+    "enabled": true,
+    "status": "pending"
+  }
 }

@@ -1,425 +1,266 @@
 {
-  "schema_version": 1,
-  "document_path": "README.md",
-  "images": [
-    {
-      "id": "hero-banner",
-      "output_path": "examples/readme-visuals/hero-banner.png",
-      "placement": {
-        "kind": "after_intro"
-      },
-      "accepted_attempt": 1,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "Cinematic 2.35:1 SimpleMkt editorial opening banner in the same paper-unfolding explanation-path style as the demo cover. No headline, subtitle, labels, handwriting, model logo, or other text. Pure #FFFFFF canvas; blank top-right Logo reserve. One dominant metaphor: restrained narrative paper sheets unfold into a precise connected explanation path. Fine pale-green and gray hairlines; shallow paper edges and restrained hatch only inside semantic paper elements; no scenery, people, UI, dashboard, icons, decoration, marks, watermark, or QR.",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 512
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "audience-fit",
-      "output_path": "examples/readme-visuals/audience-fit.png",
-      "placement": {
-        "kind": "after_sections",
-        "anchors": [
-          "适合谁",
-          "不适合谁"
+  "schema_version": 5,
+  "source_path": "README.md",
+  "delivery_mode": "article_package",
+  "scope": "README explanatory figures plus one titleless product banner; no article cover was requested.",
+  "stage": "complete",
+  "plan": {
+    "status": "ready",
+    "body_figures": [
+      {
+        "id": "readme-banner",
+        "before": "# smkt-article-visual",
+        "reader_question": "一份 Markdown 叙事如何被提取为可讲述的关系系统？",
+        "core_judgment": "叙事关系成为解释图系统",
+        "subtitle": "README 横幅：不渲染任何标题或文字",
+        "grammar": "architecture",
+        "render_text": false,
+        "must_show": [
+          "左侧一份连续的叙事稿件作为输入",
+          "细线从稿件提取关系并在中部汇合",
+          "右侧形成克制的解释图系统，含分支、连接与边界"
         ]
       },
-      "accepted_attempt": 2,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "Create a final native 16:9 Chinese editorial explainer illustration for the SimpleMkt Article Visual README. It is a conceptual product-boundary illustration, not evidence, no real product screenshot, no data, no people. Pure solid #FFFFFF 1200×675 canvas, no frame, no tint, no texture or gradient in the background. Reserve top-right rectangle x=1056–1200, y=0–60 as completely empty pure white; do not render any logo, title, subtitle, label, line, or diagram element there. Centered exact dark forest-green #1A6B3A Songti-like serif title: “适合解决文章里的理解问题”. One secondary-gray #6B6B6B Songti-like serif subtitle: “不是所有“想要一张图”的需求都该交给它”. Under it make one dominant, lively but restrained comparison grammar: on the left, heading “适合”, a finished article sheet unfolds into a connected explanatory path of three paper elements labelled exactly “复杂判断”, “流程、对比、层级”, “已完成文章”; show fine green links, paper overlap, restrained hatch and shallow paper edges. On the right, heading “不适合”, three clearly separate lightweight elements labelled exactly “独立海报”, “写作、发布”, “真实证据”; their visual separation must show that these are outside the product boundary, without using X marks or error icons. The composition must make the reader see the product’s fit boundary first, not a generic feature grid. Every Chinese character uses one consistent printed Songti-like editorial-serif family. Use hairline low-contrast pale-green or light-gray connectors, no thick arrows, no cards, no UI/dashboard, no generic SVG/wireframe treatment, no handwriting, no ornamental arrows, no registration marks, no corner crosses, no floating strokes, no isolated decorative color blocks, no QR code, watermark, signature, or extra words. Material detail may only clarify the connected paper structures. Do not use landscape, scenery, figures, stock photography, neon, 3D, or fabricated claims.",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        },
-        {
-          "id": 2,
-          "prompt": "Final 16:9 SimpleMkt editorial boundary illustration. Pure #FFFFFF canvas and empty top-right Logo reserve. Exact centered title ‘适合解决叙事中的理解问题’ and subtitle ‘不是所有“想要一张图”的需求都该交给它’. A two-part boundary map: connected paper elements ‘复杂判断’ → ‘关系解释’ → ‘成稿或讲述’ under ‘适合’; deliberately separate ‘独立海报’, ‘写作、发布’, ‘真实证据’ under ‘不适合’. Only these labels; no prose, data, examples, people, plants, scenery, UI, 3D, decorative marks, or extra text. Use one printed Songti-like family, fine pale-green/gray hairlines, consistent paper construction and faint shared elevation.",
-          "status": "accepted",
-          "adjustment_reason": "Expanded the boundary from article-only use to structured narrative while preserving the product exclusions.",
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "usage-scenarios",
-      "output_path": "examples/readme-visuals/usage-scenarios.png",
-      "placement": {
-        "kind": "after_section",
-        "anchor": "用在哪些场景"
-      },
-      "accepted_attempt": 3,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "Create a final native 16:9 Chinese editorial explainer illustration for the SimpleMkt Article Visual README. It is a conceptual usage-scenarios illustration, not evidence, no real product screenshot, no data, no people. Pure solid #FFFFFF 1200×675 canvas, no frame, no tint, no texture or gradient in the background. Reserve top-right rectangle x=1056–1200, y=0–60 as completely empty pure white; do not render any logo, title, subtitle, label, line, or diagram element there. Centered exact dark forest-green #1A6B3A Songti-like serif title: “不同难点，要用不同图法”. One secondary-gray #6B6B6B Songti-like serif subtitle: “让图紧跟它要解释的段落”. Below it create one unified four-part editorial map, not a generic card grid. From one small neutral article sheet at the center, four fine pale-green routes lead to four distinct paper-based visual grammars arranged around it. Each grammar has exactly one short title: “流程太绕”, “差异难比”, “关系抽象”, “图文脱节”. The first is a visible ordered sequence; the second is two parallel comparable paths; the third is a nested boundary/layer structure; the fourth is a paragraph sheet with one image anchored immediately after the relevant paragraph. Use a few tiny structural marks only, no extra text and no numerical examples. The reader must see that the same article can need different explanatory structures, each serving a specific reading obstacle. Every Chinese character uses one consistent printed Songti-like editorial-serif family. Use hairline low-contrast pale-green or light-gray connectors, no thick arrows, no cards, no UI/dashboard, no generic SVG/wireframe treatment, no handwriting, no ornamental arrows, no registration marks, no corner crosses, no floating strokes, no isolated decorative color blocks, no QR code, watermark, signature, or extra words. Use paper-cut overlap, restrained hatch, and shallow paper edges only where they clarify the four relationships. Do not use landscape, scenery, figures, stock photography, neon, 3D, or fabricated claims.",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        },
-        {
-          "id": 2,
-          "prompt": "First expanded five-scenario editorial map: a central ‘关键判断’ sheet routes to ‘文章或报告’, ‘演讲或分享’, ‘咨询提案’, ‘内部对齐’, and ‘工作坊或课程’, using scene-specific explanation structures on a pure #FFFFFF canvas with a blank Logo reserve.",
-          "status": "rejected",
-          "adjustment_reason": "The candidate introduced long explanatory prose and a botanical illustration, both outside the fixed content-element contract.",
-          "candidate_file": null,
-          "logo": {
-            "status": "pending"
-          }
-        },
-        {
-          "id": 3,
-          "prompt": "Final 16:9 SimpleMkt editorial map. Pure #FFFFFF canvas and empty top-right Logo reserve. Exact title ‘一段叙事，能走进不同场景’; exact subtitle ‘同一套解释能力，服务不同的讲述任务’. A central ‘关键判断’ paper element connects to exactly five labelled scenes: ‘文章或报告’, ‘演讲或分享’, ‘咨询提案’, ‘内部对齐’, ‘工作坊或课程’. Use only these labels, each scene shows its meaning through a miniature explanation structure. One printed Songti-like family, fine pale-green/gray hairlines, matching editorial paper construction, faint shared elevation. No prose, numbers, plants, people, scenery, UI, dashboard, 3D, generic SVG/wireframe, decorative marks, watermark, QR, model logo, or extra text.",
-          "status": "accepted",
-          "adjustment_reason": "Replaced the article-only grammar-selection map with the five supported narrative-use scenarios.",
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "typography-hierarchy",
-      "output_path": "examples/readme-visuals/typography-hierarchy.png",
-      "placement": {
-        "kind": "style_reference"
-      },
-      "accepted_attempt": 2,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "Create a final native 16:9 Chinese editorial reference figure at exactly 1200×675 that demonstrates the fixed body-figure typography hierarchy. It is a design-system sample, not a factual article, data visualization, product UI, or source image. Use one full pure #FFFFFF background with no outer frame, tint, texture, gradient, ivory, or beige. Reserve the exact top-right rectangle x=1056–1200, y=0–60 as completely empty pure white for deterministic Logo placement; do not render a wordmark or any graphic in it. Use one consistent printed Chinese Songti-like editorial-serif family, no sans, script, handwriting, or mixed Chinese fonts. Make the typography itself the dominant visual structure. Center exact brand-green #1A6B3A semibold title at 52px-equivalent: ‘字体有层级，判断才有重心’. Directly under it center exact gray #6B6B6B regular subtitle at 28px-equivalent: ‘正文图固定使用五档文字层级’. Under the subtitle, show a compact hierarchy specimen—not a card grid. First show one exact 32px-equivalent medium #141414 structural heading: ‘结构标题 · 32px’. Then use two identical white, subtly fibrous straight- or cut-edge editorial paper slips, horizontally aligned and both at exactly 28px-equivalent regular #141414, labelled ‘内容标签 · 28px’ and ‘关系标签 · 28px’. Add only a very fine pale-green relation line linking those two paper slips. At the lower-left safe area, show one exact #8C8C8C italic note at 16px-equivalent: ‘备注文本 · 16px / 斜体’. Every paper slip must have the same straight/cut paper construction with no rounded corners, cards, panels, stickers, or UI-container appearance. Give each independent paper slip the same deliberately faint floating effect: about 4–6px-equivalent lift with one diffuse neutral 12–16px-equivalent shadow at 4–6% opacity; no dark, hard, or unequal shadows. Keep all linework hairline and low contrast. Material detail is limited to purposeful paper fiber, subtle hatch, and shallow paper edge. Do not add people, landscape, dashboard, flat SVG/wireframe, generic report, 3D, neon, watermark, QR code, decorative crosses, registration marks, crop marks, floating strokes, ornamental arrows, isolated color blocks, extra prose, or extra labels.",
-          "status": "rejected",
-          "adjustment_reason": "The earlier sample stated five levels but did not visibly demonstrate the green core judgment, gray subtitle, or fixed centered title band.",
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        },
-        {
-          "id": 2,
-          "prompt": "Create a final native 16:9 Chinese editorial reference figure at exactly 1200×675 for the smkt-article-visual README. This is a genuine design-system reference, not a factual data chart or product UI. Pure solid #FFFFFF canvas, absolutely no background tint, ivory, cream, texture, gradient, outer frame, or vignette. Keep the exact top-right rectangle x=1056–1200, y=0–60 completely blank pure white for a deterministic Logo finalizer: render no logo, wordmark, text, connector, or graphic there. Use one consistent printed Chinese Songti-like editorial-serif family only; no sans, handwriting, script, or mixed Chinese fonts. Apply a clear fixed body-figure hierarchy: centered exact forest-green #1A6B3A semibold core judgment ‘判断有重心，信息才有层级’ at 52px-equivalent, then one centered secondary-gray #6B6B6B subtitle ‘正文图固定使用五档文字层级’ at 28px-equivalent. Both must share horizontal center x=600 within y=76–176. Begin the explanatory structure below y=200. Use one dominant annotated hierarchy structure, not a card grid. Directly below, show printed structural heading ‘结构标题 · 32px’ in #141414 at 32px-equivalent. Under it, use two matching, subtly fibrous, straight/cut-edge white paper slips at equal faint elevation, linked by one hairline pale-green line. Their exact labels are ‘内容标签 · 28px’ and ‘关系标签 · 28px’, in #141414 regular 28px-equivalent. In the lower-left safe area add exact small #8C8C8C italic note ‘备注文本 · 16px / 斜体’. Make the five levels visibly legible as: green core judgment 52, gray subtitle 28, structural heading 32, paper-node labels 28, note 16. Include a very light, purposeful alignment guide only if it clarifies the centered title band; do not add decorative marks. Every paper primitive has the same deliberately faint 4–6px-equivalent lift and diffuse neutral shadow at 4–6% opacity; do not shadow direct labels, leaders, or guides. Use fine 1–1.5px-equivalent low-contrast green/gray linework. Material texture is clipped to paper elements only. The image must feel like a precise editorial engraving/pencil-sketch reference, not an SVG, wireframe, dashboard, product UI, report slide, generic document, poster, or a set of rounded cards. Do not include people, plants, scenery, generic objects, icons, machines, containers, 3D, neon, data, decorative arrows, registration marks, crop marks, floating strokes, isolated color blocks, watermark, QR, author credit, or extra text.",
-          "status": "accepted",
-          "adjustment_reason": "Added the missing core-judgment and subtitle levels and made the centered body-figure title band visible.",
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "delivery-modes",
-      "output_path": "examples/readme-visuals/delivery-modes.png",
-      "placement": {
-        "kind": "after_section",
-        "anchor": "选择交付方式"
-      },
-      "accepted_attempt": 5,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "Create a final native 16:9 Chinese editorial explainer illustration at exactly 1200×675 for the smkt-article-visual README. It explains two delivery modes, not factual data, not a product UI, and not a generic feature grid. Use one full pure #FFFFFF canvas with no tint, paper texture, ivory, frame, gradient, or vignette. Reserve the exact top-right rectangle x=1056–1200, y=0–60 as completely empty pure white for deterministic Logo placement; do not render a logo, wordmark, label, line, connector, or diagram element there. Center the exact forest-green #1A6B3A Songti-like semibold core judgment ‘同一套判断，两种交付方式’ at 52px-equivalent, with exact gray #6B6B6B one-line subtitle ‘文章图落在阅读锚点，讲述图按叙事顺序展开’ at 28px-equivalent. Both share horizontal center x=600 and must sit within y=76–176. Begin the diagram at y=200 or below. Use one dominant branching-flow grammar with a small central source excerpt sheet labelled exactly ‘关键判断’. It branches into two clearly different but equal reading paths, labelled direct printed headings ‘文章包’ and ‘讲述图’ at 32px-equivalent. Left, ‘文章包’: show a realistic article excerpt sheet with a small H1 area, then one cover sheet, then a short excerpt paragraph with one explanatory image narrow paper strip attached immediately after its relevant paragraph. Use exact small direct labels ‘文章 H1’, ‘封面’, ‘段落锚点’, ‘正文图’. The visual must make placement after a paragraph obvious. Right, ‘讲述图’: show a short speech/proposal script excerpt sheet leading through three narrow paper-strip pairs in an ordered sequence: exact labels ‘判断 1’ → ‘讲述图 1’, ‘判断 2’ → ‘讲述图 2’, ‘判断 3’ → ‘讲述图 3’. The visual must make standalone frame order obvious and must not show images inserted into the script. Every Chinese string uses one consistent printed Songti-like editorial-serif family; no handwritten semantic text. Use only the fixed editorial vocabulary: excerpt sheets for source/script/article, straight-edged narrow paper strips for frames and stages, direct ink/hatch/circular anchors for sequence and relation. Every element visibly depicts its role: article sheet shows selected lines, frames show a simple grammar-specific sketch, script sheet shows selected lines. Use direct labels with thin leaders and small circular anchors where needed. Keep paper primitives white, subtly fibrous, straight/cut-edge, with the same faint 4–6px elevation and diffuse neutral 12–16px shadow at 4–6% opacity. Use fine 1–1.5px low-contrast forest-green or light-gray connectors; no heavy arrows or frames. This must feel vivid and editorial through meaningful paper detail and a restrained engraved/pencil-sketch relation, not through a plant, person, generic object, icon, machine, container, card, dashboard, or UI. No rounded cards, no panels, no stickers, no UI/dashboard, no flat SVG/wireframe, no landscape/scenery/people, no 3D/neon, no factual numbers, no decorative grids, crop marks, registration crosses, floating strokes, isolated color blocks, ornamental arrows, watermark, QR, author credit, model-rendered Logo, or extra words. Keep all visual material inside semantic elements; background stays perfectly white.",
-          "status": "rejected",
-          "adjustment_reason": "The candidate used generic object icons and tool sketches instead of directly depicting article placement and standalone narrative-frame order.",
-          "candidate_file": null,
-          "logo": {
-            "status": "pending"
-          }
-        },
-        {
-          "id": 2,
-          "prompt": "Regenerate the 1200×675 Chinese editorial explainer for smkt-article-visual README. This is attempt 2 after rejecting a candidate that used generic target, mountain, bridge, scale, compass, and other object icons. Do not render any recognizable object, icon, machine, instrument, landmark, scene, or metaphor whatsoever. Use only meaningful editorial paper primitives, printed source lines, explicit labels, fine leaders, anchor points, hatch, and simple relation topology. Pure solid #FFFFFF background only: no tint, texture, frame, gradient, vignette, UI, dashboard, rounded cards, or decorative marks. Keep top-right x=1056–1200, y=0–60 completely blank white for the deterministic Logo finalizer. Centered exact #1A6B3A Songti-like semibold 52px core judgment: ‘同一套判断，两种交付方式’. Centered exact #6B6B6B 28px subtitle: ‘文章图落在阅读锚点，讲述图按叙事顺序展开’. Both centered at x=600 within y=76–176. Everything meaningful begins at y=200. Build one precise branching-flow structure from a central excerpt sheet labelled ‘关键判断’. It divides into two semantic paper-only paths. LEFT path, heading ‘文章包’ at 32px: a vertical article excerpt sheet with a printed H1 area labelled exactly ‘文章 H1’, then directly below a small cover sheet labelled ‘封面’, then a visible article paragraph where one dotted rectangle sits immediately after the relevant selected paragraph and is labelled ‘段落锚点’; from that anchor a connected explanatory paper figure labelled ‘正文图’. Show the exact reading/placement relationship through thin leaders and actual printed lines/highlight, never through a generic visual symbol. The article page, cover sheet, anchored figure, and their relation must be visibly distinct. RIGHT path, heading ‘讲述图’ at 32px: a script excerpt sheet with selected printed lines and no inserted images. To its right, three ordered pairs of narrow paper strips, reading from top to bottom: exact labels ‘判断 1’ → ‘讲述图 1’, ‘判断 2’ → ‘讲述图 2’, ‘判断 3’ → ‘讲述图 3’. Each ‘讲述图’ strip contains a tiny different abstract-but-semantic relation topology made only of excerpt fragments, linked paper strips, cut-paper fields, direct ink hatching, and circular anchors; no pictures or objects. Make their sequential order and standalone-frame status immediately evident. All Chinese uses one printed Songti-like editorial-serif. Use the only allowed content vocabulary: excerpt sheet for article/script/source; straight-edged narrow paper strip for stage/judgment/output/frame; cut-paper field for a contained reading anchor; direct ink/hatch/circular anchor for a relation. Make each paper primitive white, subtly fibrous, straight/cut edge, same faint 4–6px lift plus diffuse neutral 12–16px 4–6% shadow. Hairline 1–1.5px low-contrast green/light-gray connectors only. No shadows on direct labels or lines. No model-rendered Logo, no extra text, no factual data, no lower-left example note because all labels state the actual delivery contract. The result should feel like a detailed editorial explanation chain, not a generic flowchart, SVG/wireframe, cards, or a poster.",
-          "status": "rejected",
-          "adjustment_reason": "The paths were present but too dense to make the reader-led article experience and presenter-led frame sequence immediately distinguishable in the README.",
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        },
-        {
-          "id": 3,
-          "prompt": "Create one final native 1200×675 Chinese editorial explainer illustration for the smkt-article-visual README. Truth boundary: concept; it explains the documented delivery contract, not a product UI, data chart, or real screenshot. Core judgment: the same visual judgment has two different delivery forms because readers self-navigate an article while a presenter guides an audience through a sequence. Pure solid #FFFFFF canvas with no outer frame, tint, background texture, ivory, gradient, or vignette. Keep top-right rectangle x=1056–1200, y=0–60 completely empty pure white for a deterministic Logo finalizer: render no wordmark, title, label, connector, or diagram element there. Use one printed Chinese Songti-like editorial-serif family for every Chinese character; no sans, script, handwriting, or mixed fonts. Fixed title band centered at x=600 within y=76–176: exact #1A6B3A semibold 52px-equivalent title ‘同一套判断，两种交付方式’; exact #6B6B6B regular 28px-equivalent subtitle ‘读文章，看锚点；听讲述，看顺序’. Start all diagram content below y=200. Use one clear side-by-side comparison grammar, not a grid of cards. Split the lower area into two large equal reading paths with one thin, pale vertical divider. LEFT heading exact ‘文章包’ at 32px #141414, with small direct descriptor ‘读者自己读’. Show a tall meaningful article excerpt sheet labelled exactly ‘article.md’: it visibly contains an H1 area, selected paragraph lines, a cover sheet directly after the H1 labelled ‘封面’, and one explanatory figure attached immediately after a selected paragraph via a thin leader and circular anchor labelled ‘段落锚点’. The difference must be unmistakable: cover plus body figure lives inside an article's reading path. RIGHT heading exact ‘演示画面’ at 32px #141414, with small direct descriptor ‘讲述者带着看’. Show one short source sheet labelled ‘talk.md’ with selected speech lines, then three equal, standalone landscape explanation frames in a clear left-to-right sequence labelled exactly ‘Frame 01’, ‘Frame 02’, ‘Frame 03’. Each frame visibly contains a different tiny semantic editorial relation made from source fragments, narrow strips, direct ink hatching, hairline leaders, and circular anchors. The three frames must be outside the source sheet, visually independent, and connected only by subtle sequential hairlines. Make the difference unmistakable: frames are consumed in a presenter-led sequence and are never inserted into talk.md. Use only the editorial vocabulary: excerpt sheets for article/source, straight-edged narrow paper strips for stages or outputs, cut-paper fields for anchor scope, direct ink/hatch/circular anchor for relation and sequence. Every paper element white, subtly fibrous, straight or cut edge, same extremely faint 4–6px lift and diffuse neutral shadow at 4–6% opacity. Use 1–1.5px low-contrast pale forest-green or light-gray hairlines; no thick arrows, heavy frames, UI panels, rounded cards, decorative grid, crop marks, corner crosses, floating strokes, isolated color blocks, generic icons, plants, people, scenery, machines, containers, abstract patterns, dashboard, SVG/wireframe, 3D, watermark, QR, author credit, model-rendered logo, or extra words. Keep all material texture clipped to paper elements; the background must stay pure white. The result must feel detailed and vivid because each element depicts its delivery role, not because it uses decoration.",
-          "status": "rejected",
-          "adjustment_reason": "Superseded by the cover-led presentation contract: it depicts the frame sequence without the required presentation cover.",
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        },
-        {
-          "id": 4,
-          "prompt": "Regenerate the same 1200×675 Chinese editorial delivery comparison. Preserve the exact title ‘同一套判断，两种交付方式’, subtitle ‘读文章，看锚点；听讲述，看顺序’, left article_package path with article.md, cover, paragraph anchor and explanatory figure, and right presentation_frames path with talk.md then Frame 01, Frame 02, Frame 03 in ordered standalone sequence. Keep the top-right Logo reserve x=1056–1200, y=0–60 empty. Critical correction: every background pixel outside semantic paper elements must be literal solid RGB #FFFFFF / 255,255,255; no near-white, gray, cream, ivory, noise, texture, gradient, vignette, or shadow reaches the canvas edge. Use the same pure-white SimpleMkt editorial paper vocabulary, one printed Songti-like Chinese serif, thin pale-green/gray lines, only faint unified paper elevation, no UI/cards/icons/people/plants/scenery/objects/decorative marks/Logo or extra text.",
-          "status": "rejected",
-          "adjustment_reason": "The retry introduced generic landscape imagery inside the cover and frames, weakening the semantic editorial contract.",
-          "candidate_file": null,
-          "logo": {
-            "status": "pending"
-          }
-        },
-        {
-          "id": 5,
-          "prompt": "Regenerate the exact 1200×675 Chinese SimpleMkt editorial delivery comparison in the same white paper-and-fine-ink visual system. Pure #FFFFFF canvas and an empty top-right Logo reserve x=1056–1200,y=0–60. Keep the centered title ‘同一套判断，两种交付方式’ and subtitle ‘读文章，看锚点；听讲述，看顺序’. Keep the left article-package path: 文章包 / 读者自己读, article.md with an H1, a cover after the H1, a selected paragraph anchor, and one explanatory body figure after it. Correct the right presentation path: 演示画面 / 讲述者带着看, one talk.md script sheet leading first to a distinct PPT cover sheet labelled 封面 with a calm title area, then to Frame 01 提出判断, Frame 02 展开关系, and Frame 03 收束结论 in clear order. The cover must visibly begin the narrative before Frame 01. Use only white fibrous straight/cut paper, printed Songti-like type, thin pale-green/light-gray connectors, direct labels, excerpt lines, anchors, restrained hatch, and faint unified paper elevation. No rendered Logo, scenery, people, UI, generic icons, rounded cards, decorative marks, factual data, or extra words.",
-          "status": "accepted",
-          "adjustment_reason": "Add the required presentation cover and make the frame sequence read as one cover-led narrative rather than a set of independent slides.",
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    },
-    {
-      "id": "core-advantages",
-      "output_path": "examples/readme-visuals/core-advantages.png",
-      "placement": {
-        "kind": "after_section",
-        "anchors": [
-          "Why this Skill",
-          "为什么是这个 Skill"
+      {
+        "id": "how-it-works",
+        "after": "Logo 无需配置：终处理脚本只检测 `assets/logo/` 中、且与样式契约同名的普通 PNG；找到便叠加，缺失或为符号链接便跳过。模型不得绘制 Logo、品牌名或水印。`enable_qa` 默认关闭；打开后只报告，不会自动重画、改 Prompt 或改写原文。",
+        "reader_question": "一份 Markdown 如何从原文进入计划、生成和交付？",
+        "core_judgment": "先计划，再生成，再交付",
+        "subtitle": "一份 manifest 串起所有阶段",
+        "grammar": "flow",
+        "must_show": [
+          "Markdown 与真实已有素材进入同一计划",
+          "plan、style、generate、logo、placement、qa 连续写入 manifest",
+          "文章模式把已接受图片放回锚点；演示模式只保存顺序"
         ]
       },
-      "accepted_attempt": 1,
-      "attempts": [
-        {
-          "id": 1,
-          "prompt": "Create one final native 16:9 Chinese editorial capability illustration for the smkt-article-visual README. Conceptual product explanation only; pure solid #FFFFFF 1200×675 canvas and an empty top-right Logo reserve x=1056–1200, y=0–60. Use the exact centered title ‘把信息讲清楚，图片才有价值’ and subtitle ‘四个能力，服务同一个理解目标’. Build one coherent editorial map, not a feature-card grid: central source excerpt ‘关键信息’ flows through four meaningful paper structures labelled exactly ‘先判断，再出图’, ‘一套图片系统，两种交付’, ‘图片参与解释’, and ‘可用，也可复盘’. Depict respectively a source-to-decision reading path, one shared image splitting into reading-anchor and speaking-order paths, source detail becoming a directly annotated explanatory relationship, and an accepted image plus compact manifest record. Use printed Songti-like Chinese type, white fibrous straight/cut paper, fine pale-green/light-gray leaders, direct labels, restrained hatch, and one faint consistent paper elevation. No extra prose, model-rendered Logo, people, plants, scenery, UI, rounded cards, generic icons, wireframe, 3D, dark shadows, decorative marks, data, watermark, QR, or author credit.",
-          "status": "accepted",
-          "adjustment_reason": null,
-          "candidate_file": null,
-          "logo": {
-            "status": "applied",
-            "canvas": {
-              "width": 1200,
-              "height": 675
-            },
-            "wordmark": {
-              "x": 1062,
-              "y": 27,
-              "width": 96,
-              "height": 32,
-              "coordinate_origin": "top-left"
-            },
-            "reserve": {
-              "x": 1056,
-              "y": 0,
-              "width": 144,
-              "height": 60,
-              "coordinate_origin": "top-left"
-            },
-            "asset": "simplemkt-logo-demo.png"
-          }
-        }
-      ]
-    }
-  ]
+      {
+        "id": "what-it-does",
+        "after": "图法只用于让原文关系可读，不会添加数据、因果或结论。完整选择规则见 [references/visual-grammar.md](references/visual-grammar.md)。",
+        "reader_question": "这个 Skill 如何从原文关系得到一张解释图，而不是装饰图？",
+        "core_judgment": "原文关系决定配图",
+        "subtitle": "图法只让已有关系更清楚",
+        "grammar": "architecture",
+        "must_show": [
+          "原文中的流程、比较、边界、层级或论证作为来源",
+          "每张图包含一个读者问题、一个核心判断和一种主图法",
+          "真实来源素材与生成编辑插图保持清晰边界"
+        ]
+      },
+      {
+        "id": "where-it-helps",
+        "after": "- 一份教学或工作坊提纲，需要让抽象关系变成可跟随的图。",
+        "reader_question": "不同叙事在什么情况下选择文章包或连续讲述图？",
+        "core_judgment": "不同叙事，选择不同交付方式",
+        "subtitle": "阅读锚点与讲述顺序各有位置",
+        "grammar": "hierarchy",
+        "must_show": [
+          "文章或研究报告归入 article_package，并在阅读锚点交付",
+          "演讲、提案、课程或工作坊归入 presentation_frames，并按叙事顺序交付",
+          "两种方式共用解释图系统但不混淆源文处理"
+        ]
+      },
+      {
+        "id": "who-it-is-for",
+        "after": "- 希望伪造截图、来源图片、数据或未经授权第三方素材的人。",
+        "reader_question": "谁适合用它，谁不该把它当作自己的需求解法？",
+        "core_judgment": "需要解释关系，不是装饰图片",
+        "subtitle": "有论述的人，才适合使用",
+        "grammar": "boundary_map",
+        "must_show": [
+          "边界内是已有论述且需要读者或听众理解关系的创作者、团队、顾问、研究者与教育者",
+          "边界外包括纯海报或情绪图、代写与发布、完整 Deck 或可编辑 PPTX",
+          "伪造或无授权素材明确在边界外"
+        ]
+      },
+      {
+        "id": "core-capabilities",
+        "after": "运行字段、Prompt 编译、Logo 终处理和 QA 条件以 [SKILL.md](SKILL.md) 为准。",
+        "reader_question": "哪些约束保证配图没有脱离原文与交付边界？",
+        "core_judgment": "契约让配图留在原文边界内",
+        "subtitle": "一图一问，一种图法，一次落位",
+        "grammar": "layer_stack",
+        "must_show": [
+          "一张内容图只回答一个主要问题并选择一种主图法",
+          "对比图必须有可见的左右差异",
+          "文章图片只在批准锚点出现一次，真实来源素材需要显式记录"
+        ]
+      }
+    ]
+  },
+  "style": {
+    "status": "compiled",
+    "source": "assets/simplemkt-editorial-style.json",
+    "prompts": [
+      {
+        "id": "readme-banner",
+        "prompt": "Create a 1200×675 titleless editorial banner on an opaque pure-white background for a Markdown narrative-to-explanatory-visual Skill. Render absolutely no text, title, subtitle, letters, numerals, words, logos, wordmarks, watermark, signature, badge, or readable microcopy in any language. Keep the upper-right 144×60 logo reserve as uninterrupted white space with no essential content. On the left, show one continuous neutral-white manuscript sheet as the semantic input, with only abstract non-linguistic pale line marks and one lightly irregular edge; never show stacked or floating paper props. From that sheet, very fine pale-green and graphite reading threads extract a few concrete relationships and converge calmly near the center. On the right, those relationships resolve into one airy explanatory system: a central interpretive node, a restrained branch, connected small states, and a clearly bounded field. Use thin low-contrast one-pixel lines, forest-green only for one semantic focus, quiet spacing, subtle white-paper grain, and restrained local pencil hatching on the manuscript sheet. No chart, graph, dashboard, UI, card wall, generic wireframe, screenshot, scenery, landscape, people, or decorative objects. The visual must feel like a single editorial transformation from narrative to legible structure, not a process diagram with labels."
+      },
+      {
+        "id": "how-it-works",
+        "prompt": "1200×675 white editorial flow diagram. Render exact title 先计划，再生成，再交付 and subtitle 一份 manifest 串起所有阶段. Markdown and existing material enter one manifest ribbon with plan, style, generate, logo, placement, qa, then branch to article anchor and presentation order. No logo, watermark, charts, dashboard, scenery, or fake source content."
+      },
+      {
+        "id": "what-it-does",
+        "prompt": "1200×675 white editorial architecture diagram. Render exact title 原文关系决定配图 and subtitle 图法只让已有关系更清楚. A source manuscript, its flow, comparison, and boundary relationships converge into one explanatory figure; real material remains separately marked. No paragraphs, citations, data, charts, dashboard, scenery, logo, or watermark."
+      },
+      {
+        "id": "where-it-helps",
+        "prompt": "1200×675 white editorial hierarchy diagram. Render exact title 不同叙事，选择不同交付方式 and subtitle 阅读锚点与讲述顺序各有位置. 已有叙事 branches to article_package with 文章 and 报告, and presentation_frames with 演讲 and 工作坊; show one article anchor and empty ordered frame sheets. No thumbnails, charts, scenery, people, logo, or watermark."
+      },
+      {
+        "id": "who-it-is-for",
+        "prompt": "1200×675 white editorial boundary map. Render exact title 需要解释关系，不是装饰图片 and subtitle 有论述的人，才适合使用. One suitable boundary contains 创作者, 内容团队, 顾问, 研究者, 教育者 and an argument manuscript; pure decoration, ghostwriting/publishing, complete PPTX, and fabricated material remain outside. No people, paragraphs, examples, data, charts, logo, or watermark."
+      },
+      {
+        "id": "core-capabilities",
+        "prompt": "1200×675 white editorial layer-stack diagram. Render exact title 契约让配图留在原文边界内 and subtitle 一图一问，一种图法，一次落位. Stack 原文支持, 一问一图法, and 一次落位; show real material recorded and a visibly different comparison pair. No fake source text, citations, data, charts, logo, or watermark."
+      }
+    ]
+  },
+  "generate": {
+    "status": "completed",
+    "assets": [
+      {
+        "id": "readme-banner",
+        "output_path": "examples/readme-visuals/readme-banner.png",
+        "status": "generated"
+      },
+      {
+        "id": "how-it-works",
+        "output_path": "examples/readme-visuals/how-it-works.png",
+        "status": "generated"
+      },
+      {
+        "id": "what-it-does",
+        "output_path": "examples/readme-visuals/what-it-does.png",
+        "status": "generated"
+      },
+      {
+        "id": "where-it-helps",
+        "output_path": "examples/readme-visuals/where-it-helps.png",
+        "status": "generated"
+      },
+      {
+        "id": "who-it-is-for",
+        "output_path": "examples/readme-visuals/who-it-is-for.png",
+        "status": "generated"
+      },
+      {
+        "id": "core-capabilities",
+        "output_path": "examples/readme-visuals/core-capabilities.png",
+        "status": "generated"
+      }
+    ]
+  },
+  "logo": {
+    "enabled": true,
+    "status": "completed",
+    "assets": [
+      {
+        "id": "readme-banner",
+        "status": "applied"
+      },
+      {
+        "id": "how-it-works",
+        "status": "applied"
+      },
+      {
+        "id": "what-it-does",
+        "status": "applied"
+      },
+      {
+        "id": "where-it-helps",
+        "status": "applied"
+      },
+      {
+        "id": "who-it-is-for",
+        "status": "applied"
+      },
+      {
+        "id": "core-capabilities",
+        "status": "applied"
+      }
+    ]
+  },
+  "layout": {
+    "status": "completed",
+    "assets": [
+      {
+        "id": "readme-banner",
+        "status": "finalized"
+      },
+      {
+        "id": "how-it-works",
+        "status": "finalized",
+        "dimensions": "1200x675"
+      },
+      {
+        "id": "what-it-does",
+        "status": "finalized",
+        "dimensions": "1200x675"
+      },
+      {
+        "id": "where-it-helps",
+        "status": "finalized",
+        "dimensions": "1200x675"
+      },
+      {
+        "id": "who-it-is-for",
+        "status": "finalized",
+        "dimensions": "1200x675"
+      },
+      {
+        "id": "core-capabilities",
+        "status": "finalized",
+        "dimensions": "1200x675"
+      }
+    ]
+  },
+  "placement": {
+    "status": "completed",
+    "assets": [
+      {
+        "id": "readme-banner",
+        "status": "placed",
+        "alt_text": "从叙事稿件提取关系并组织为解释图系统的无标题横幅"
+      },
+      {
+        "id": "how-it-works",
+        "status": "placed",
+        "alt_text": "Markdown 和素材经由 manifest 流向文章锚点或讲述顺序"
+      },
+      {
+        "id": "what-it-does",
+        "status": "placed",
+        "alt_text": "原文关系决定解释图，真实素材保持边界"
+      },
+      {
+        "id": "where-it-helps",
+        "status": "placed",
+        "alt_text": "文章阅读锚点和演示讲述顺序的交付选择"
+      },
+      {
+        "id": "who-it-is-for",
+        "status": "placed",
+        "alt_text": "适用与不适用人群和需求的边界"
+      },
+      {
+        "id": "core-capabilities",
+        "status": "placed",
+        "alt_text": "原文支持到一次准确落位的契约层次"
+      }
+    ]
+  },
+  "qa": {
+    "enabled": true,
+    "status": "passed",
+    "checks": [
+      "six output files are 1200x675",
+      "each asset uses its planned visual structure",
+      "each titled explanatory figure has one core judgment and subtitle; the README banner has no model-rendered text",
+      "no model-rendered logo or watermark is accepted; the packaged wordmark is applied once per image",
+      "no image presents invented data, screenshot, or source evidence"
+    ]
+  }
 }

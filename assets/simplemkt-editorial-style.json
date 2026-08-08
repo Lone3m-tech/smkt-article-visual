@@ -1,0 +1,540 @@
+{
+  "schema_version": 2,
+  "style_id": "simplemkt-editorial",
+  "dimensions": {
+    "series": {
+      "focus": "封面和正文图使用同一视觉语言，但承担不同职责。",
+      "shared_series": true,
+      "avoid": [
+        "landscape_photography",
+        "pale_green_outer_frame",
+        "paper_tinted_canvas",
+        "warm_color_cast",
+        "generic_svg_or_wireframe_treatment"
+      ]
+    },
+    "canvas": {
+      "focus": "固定交付画布、纯白背景和安全边界。",
+      "output_contract": {
+        "enforcement": "hard",
+        "width_px": 1200,
+        "height_px": 675,
+        "background_color": "#FFFFFF",
+        "opaque": true
+      },
+      "safe_area": {
+        "enforcement": "prompt_target",
+        "percent": 5,
+        "applies_to": [
+          "title",
+          "label",
+          "arrow",
+          "note"
+        ]
+      },
+      "material_detail_scope": "explanatory_elements_only"
+    },
+    "logo": {
+      "focus": "为 Prompt 和最终处理共同保留确定的生成后 Logo 区域。",
+      "enforcement": "hard_finalizer_contract",
+      "asset": "simplemkt-logo-demo.png",
+      "application": "post_generation",
+      "clear_before_overlay": true,
+      "shared_prompt_and_finalizer_contract": true,
+      "wordmark": {
+        "x": 1062,
+        "y": 27,
+        "width": 96,
+        "height": 32,
+        "coordinate_origin": "top-left"
+      },
+      "reserve": {
+        "x": 1056,
+        "y": 0,
+        "width": 144,
+        "height": 60,
+        "coordinate_origin": "top-left"
+      },
+      "prompt_avoid_in_reserve": [
+        "title",
+        "subtitle",
+        "label",
+        "connector",
+        "essential_diagram_content",
+        "placeholder",
+        "dashed outline",
+        "border",
+        "frame",
+        "badge"
+      ],
+      "reserve_is_prerendered_white_block": false,
+      "allow_nonsemantic_background_beneath_logo": true,
+      "allow_model_generated_wordmark": false
+    },
+    "typography": {
+      "focus": "规定正文图中的字体角色、字号、字重和颜色。",
+      "enforcement": "prompt_target",
+      "chinese_family": "high-contrast Songti-like editorial serif",
+      "english_fallback": {
+        "family": "Inter Variable",
+        "condition": "only_when_no_clear_chinese_label_exists"
+      },
+      "core_judgment": {
+        "size_px": 52,
+        "weight": "semibold",
+        "color": "#1A6B3A",
+        "max_lines": 1,
+        "alignment": "center",
+        "role": "one conclusion, never a topic label or section heading"
+      },
+      "subtitle": {
+        "size_px": 28,
+        "weight": "regular",
+        "color": "#6B6B6B",
+        "max_lines": 1,
+        "alignment": "center",
+        "role": "one short clarification of the core judgment, never a second conclusion"
+      },
+      "structural_heading": {
+        "size_px": 32,
+        "weight": "medium",
+        "color": "#28322C"
+      },
+      "structural_label": {
+        "size_px": 28,
+        "weight": "regular",
+        "color": "#6D8B7B"
+      },
+      "semantic_accent": {
+        "color": "#1A6B3A",
+        "required_groups": 1,
+        "max_groups": 1,
+        "usage": "one primary state, relationship, focus field, or route per figure",
+        "forbidden_usage": [
+          "ordinary_labels",
+          "ordinary_connectors",
+          "large_background_blocks"
+        ]
+      },
+      "disclosure_note": {
+        "size_px": 16,
+        "style": "italic",
+        "color": "#8C8C8C"
+      }
+    },
+    "visual_language": {
+      "focus": "用轻盈的编辑草图表现原文特有的对象、行动、状态、位置和关系。",
+      "enforcement": "design_judgment",
+      "treatment": [
+        "editorial composition and typographic hierarchy first",
+        "one restrained hand-drawn contour or local hatching intervention second",
+        "quiet editorial spacing and one clear reading path"
+      ],
+      "principles": [
+        "先确定来自原文的语义形态，再决定材质处理。",
+        "先呈现原文特有信息，再用标签和短说明辅助理解。",
+        "图法只作为隐含的组织骨架，不能成为画面主角或替代原文含义。",
+        "优先通过位置、比例、状态和动作表达关系，再考虑连接线。",
+        "所有元素必须符合正常的物理、因果和语义关系。",
+        "手绘线条只为原文对象增加触感，不能变成独立道具或第二叙事。"
+      ],
+      "primary_meaning_carriers": [
+        "editorial_artifact",
+        "object",
+        "actor",
+        "action",
+        "state_change",
+        "position",
+        "compact_content_scene",
+        "relationship",
+        "evidence_detail"
+      ],
+      "secondary_only": [
+        "generic_icon",
+        "ui_control",
+        "empty_document_shell",
+        "placeholder_thumbnail"
+      ],
+      "fictional_microcopy": {
+        "allowed_when": "it_clarifies_the_explanation",
+        "requires_disclosure": true
+      },
+      "avoid": [
+        "labels_substituting_for_depiction",
+        "unrelated_meaning_forced_into_document_pages_or_cards",
+        "detached_decorative_subject",
+        "large_shaded_illustration",
+        "collection_of_sketch_props",
+        "multiple_paper_objects",
+        "magnifying_glass_clipboard_folded_page_combo"
+      ]
+    },
+    "materials": {
+      "focus": "材质必须平面、中性，并且只有在承担语义时才出现。",
+      "enforcement": "design_judgment",
+      "canvas_texture": "subtle_white_paper_grain",
+      "hand_drawn_role": "a restrained tactile layer on the dominant editorial object, never separate sketch props",
+      "supporting_object_limit": 2,
+      "paper_presence": {
+        "required_when": ["article", "plan", "claim", "source"],
+        "max_surfaces": 2,
+        "surface": "clean neutral white with visible-but-subtle fine paper grain",
+        "edge": "one soft-cut or lightly irregular edge only when semantically meaningful",
+        "forbidden": ["rounded UI card", "stacked paper props", "warm paper tint"]
+      },
+      "hand_drawn_marks": {
+        "role": "light graphite contour and local pencil hatching on the dominant paper surface",
+        "forbidden": ["uniform vector outline", "full-image hatching", "decorative sketch props"]
+      },
+      "paper": {
+        "usage": "conditional_semantic_material",
+        "application": "one continuous clean neutral-white editorial sheet, never floating paper objects",
+        "allowed_when": [
+          "text",
+          "document",
+          "claim",
+          "source"
+        ],
+        "surface": "clean_neutral_white",
+        "grain": "subtle_white_paper",
+        "edges": [
+          "straight",
+          "cut",
+          "softly_irregular"
+        ],
+        "repeat_as_default_primary_container": false,
+        "force_every_element_to_be_paper": false,
+        "avoid": [
+          "cream",
+          "beige",
+          "yellowed",
+          "stained",
+          "weathered",
+          "recycled",
+          "antique",
+          "warm_cast",
+          "thick_torn_edges",
+          "decorative_paper_stacks"
+        ]
+      },
+      "semantic_forms": {
+        "excerpt_sheet": [
+          "text",
+          "document",
+          "claim",
+          "source"
+        ],
+        "outlined_strip": [
+          "stage"
+        ],
+        "outlined_field": [
+          "decision",
+          "boundary",
+          "contained_scope"
+        ]
+      },
+      "shadow": "none"
+    },
+    "linework": {
+      "focus": "使用细而低对比的线条建立关系和位置。",
+      "enforcement": "prompt_target",
+      "width_px_equivalent": {
+        "min": 1,
+        "max": 1
+      },
+      "contrast": "low",
+      "uniform_weight": true,
+      "connector_width_px_equivalent": 1,
+      "emphasis_strategy": "use position, white space, and colour; never line thickness",
+      "forbidden": [
+        "thick arrow",
+        "thick green route",
+        "double-weight connector",
+        "mixed connector widths"
+      ],
+      "colors": [
+        "#B5CBBE",
+        "#D7E4DB"
+      ],
+      "element_boundary": {
+        "color": "#C6D9CC",
+        "width_px_equivalent_max": 1,
+        "closed_outline": "only_when_a_source_document_field_or_boundary_requires_it",
+        "avoid": [
+          "dark_or_black_element_border",
+          "closed_card_border_without_source_meaning"
+        ]
+      },
+      "construction_line_uses": [
+        "frame_subject_only_when_source_required",
+        "terminate_leader",
+        "clarify_position"
+      ]
+    },
+    "cover": {
+      "focus": "制作一张视觉方向服务于获批准标题的克制 PPT 封面。",
+      "role": "ppt_cover",
+      "enforcement": "prompt_contract",
+      "text": {
+        "default_content": "model_rendered_exact_h1",
+        "extra_text_requires_explicit_request": [
+          "subtitle",
+          "label",
+          "source_excerpt",
+          "data",
+          "note",
+          "microcopy",
+          "other_title_external_text"
+        ],
+        "deliberate_line_break_condition": "readability_only"
+      },
+      "layout": {
+        "title_safe_zone": {
+          "enforcement": "image_gen_layout_contract",
+          "x_min": 72,
+          "x_max": 852,
+          "y_min": 250,
+          "y_max": 414,
+          "center_x": 462,
+          "center_y": 337,
+          "alignment": "left",
+          "vertical_alignment": "center",
+          "fill": "#FFFFFF",
+          "artwork_allowed": false
+        },
+        "title": {
+          "size_px": 56,
+          "min_size_px": 52,
+          "line_height_px": 68,
+          "max_lines": 2,
+          "max_width_px": 780,
+          "line_break_strategy": "prefer punctuation, then nearest semantic phrase",
+          "weight": "semibold",
+          "color": "#1A6B3A"
+        },
+        "artwork_regions": [
+          {"x_min": 72, "x_max": 1146, "y_min": 72, "y_max": 603}
+        ]
+      },
+      "composition": {
+        "layout_model": "left_text_expanding_right_hero",
+        "title_scale": "left_column_editorial_cover_scale",
+        "title_zone": "left_aligned_vertically_centered_continuous_title_safe_zone",
+        "visual_direction_count": 1,
+        "visual_direction_options": [
+          "vivid_metaphor",
+          "restrained_abstract_composition"
+        ],
+        "complexity": "simple",
+        "artwork_subject_count": 1,
+        "left_text_zone_artwork": "forbidden",
+        "artwork_flow": "one continuous source-derived subject begins lightly on the left and grows toward the right",
+        "left_transition_visual_weight_max_percent": 20,
+        "right_core_x_min": 500,
+        "right_core_visual_weight_min_percent": 80,
+        "artwork_color_roles": {
+          "title_only": "#1A6B3A",
+          "visual_primary": "#9BBBA7",
+          "visual_secondary": "#DCE9E0",
+          "forbidden": ["#1A6B3A", "#141414", "#28322C"]
+        },
+        "artwork_contrast_relation": "the title is the darkest and strongest green element; all artwork remains visually subordinate",
+        "right_hero": "one source-derived editorial subject, not a flowchart",
+        "allow_multi_object_scene": false,
+        "allow_explanatory_diagram_complexity": false
+      },
+      "visual_vocabulary_examples": [
+        "one typographic excerpt",
+        "one annotated editorial crop",
+        "one focus field",
+        "one relationship mark"
+      ],
+      "vocabulary_treatment": [
+        "clean editorial composition",
+        "one restrained hand-drawn contour",
+        "subtle local hatching"
+      ],
+      "fallback_elements": [
+        "source_related_object",
+        "restrained_abstract_form"
+      ],
+      "avoid": [
+        "natural_scenery_as_filler",
+        "plants_as_filler",
+        "animals_as_filler",
+        "people_as_filler",
+        "visual_grammar_topology",
+        "explanatory_labels",
+        "relation_words",
+        "short_explanation",
+        "evidence_note",
+        "flowchart",
+        "generic_report_slide"
+      ],
+      "mandatory_avoid": [
+        "generic chart, map, mountain, river, landscape, or data-preview panel unrelated to the article",
+        "multiple generic preview panels substituting for one source-derived editorial subject",
+        "scattered top-and-bottom composition, multiple paper props, or diagram fragments around the title",
+        "placeholder, dashed box, border, frame, or badge in the logo reserve"
+      ],
+      "extra_description": "标题在左侧清晰呈现，主画面是从左侧轻量起势并向右侧核心区域蔓延的连续编辑对象；右侧承担至少八成视觉重量，标题安全区保持纯白且不被画面覆盖。"
+    },
+    "content_image": {
+      "focus": "围绕一个来自原文的主关系，建立最小但足够的解释系统。",
+      "role": "explanatory_diagram",
+      "enforcement": "prompt_contract",
+      "reading_order": [
+        "core_judgment",
+        "short_explanation",
+        "one_dominant_grammar_structure_with_source_specific_meaning",
+        "optional_evidence_note"
+      ],
+      "dominant_relationship_count": 1,
+      "color_role_distribution": {
+        "graphite_material_contour": "#7E8581",
+        "pale_green_relationship_scaffold": "#B5CBBE",
+        "dark_gray_small_heading": "#28322C",
+        "gray_note": "#8C8C8C",
+        "brand_green_semantic_accent": "#1A6B3A"
+      },
+      "material_consistency": {
+        "applies_to": ["article_package", "presentation_frames"],
+        "required": "every body figure uses one continuous neutral-white paper surface with subtle grain, graphite contour, and local pencil hatching",
+        "forbidden": ["flat vector UI surface", "rounded dashboard card", "multiple detached paper props"]
+      },
+      "green_usage": {
+        "allowed_for": ["one key node", "one relationship route", "one local focus field", "short underline"],
+        "forbidden_for": ["default object outline", "repeated chart bars", "repeated icons", "large fills", "all card borders"]
+      },
+      "layout": {
+        "title_region": {
+          "enforcement": "image_gen_layout_contract",
+          "x_min": 96,
+          "x_max": 1104,
+          "fill": "#FFFFFF",
+          "y_min": 72,
+          "y_max": 152,
+          "center_x": 600,
+          "core_judgment_y": 106,
+          "subtitle_y": 140,
+          "content_gap_px": 20,
+          "logo_gap_px": 16,
+          "core_judgment_role": "exact_model_rendered_title",
+          "subtitle_role": "exact_model_rendered_subtitle",
+          "artwork_allowed": false,
+          "occupies_canvas_height_percent": 12
+        },
+        "content_stage": {
+          "enforcement": "image_gen_layout_contract",
+          "x_min": 72,
+          "x_max": 1128,
+          "y_min": 180,
+          "y_max": 588,
+          "visible": true,
+          "contains_all_semantic_elements": true,
+          "clip": false,
+          "outside_fill": "#FFFFFF"
+        },
+        "white_space": {
+          "content_stage_min_percent": 42,
+          "content_stage_max_percent": 52,
+          "outer_margin_min_percent": 6,
+          "enforcement": "image_gen_layout_contract"
+        }
+      },
+      "composition": {
+        "core_structure": {
+          "count": 1,
+          "enforcement": "required"
+        },
+        "dominant_source_derived_carrier_count": 1,
+        "supporting_elements": {
+          "normal_min": 0,
+          "normal_max": 2,
+          "enforcement": "soft_target",
+          "use_varied_scales": true
+        },
+        "quiet_space_percent": {
+          "min": 42,
+          "max": 52,
+          "enforcement": "prompt_target"
+        },
+        "cluster": "compact_continuous_not_edge_to_edge",
+        "semantic_group_limit": 3,
+        "internal_level_limit_per_group": 1,
+        "over_budget_handling": "reduce secondary detail to prose or split the figure; never add props, cards, or a second grammar",
+        "semantic_label_attachment": "each primary semantic group and each non-self-evident key element has one adjacent or leader-connected short description",
+        "source_details": "nested_inside_owning_semantic_element",
+        "connectors_allowed_when": "required_by_selected_grammar",
+        "preserve": [
+          "source_specific_meaning",
+          "selected_visual_grammar",
+          "source_topology",
+          "every_must_show"
+        ],
+        "split_when": "necessary_meaning_remains_overcrowded"
+      },
+      "text_policy": {
+        "primary_text": {
+          "core_judgment": "must_render_exactly_once_in_title_region",
+          "subtitle": "must_render_exactly_once_in_title_region",
+          "body_title_band": "no_post_generation_replacement_or_reflow"
+        },
+        "paragraphs_excerpts_or_fictional_copy_allowed_when": "text_document_or_claim_helps_explain_relationship",
+        "scope": "necessary_local_content_only",
+        "must_remain_subordinate_to_visual_relationship": true,
+        "source_excerpt_allowed_when": "text_or_document_is_itself_relevant",
+        "non_factual_copy_requires_disclosure": true,
+        "key_element_copy": {
+        "structural_labels": {
+          "per_primary_semantic_group": 1,
+          "required": true,
+          "required_for": [
+            "primary_semantic_group",
+            "non_self_evident_key_element"
+          ],
+          "max_items": 3,
+          "max_chinese_characters_per_item": 8,
+          "purpose": "short descriptive text for a necessary object, state, or relationship; never decorative filler",
+          "source_support": "required"
+          },
+          "short_explanations": {
+            "max_items": 3,
+            "max_chinese_characters_per_item": 16,
+            "purpose": "clarify a necessary object, state, or relationship"
+          },
+          "forbid": [
+            "paragraph_restatement",
+            "feature_list",
+            "second_argument"
+          ]
+        }
+      },
+      "disclosure": {
+        "style_ref": "dimensions.typography.disclosure_note",
+        "placement": "lower-left_safe_area",
+        "role": "disclosure_not_caption_or_diagram_component"
+      },
+      "avoid": [
+          "generic_geometry_replacing_source_meaning",
+          "equal_weight_groups",
+          "repeated_card_row",
+          "card_wall",
+          "summary_table",
+          "dashboard_layout",
+          "multiple_competing_grammars",
+          "unrelated_decoration",
+        "deleting_necessary_semantics",
+        "shrinking_content_below_readable_size",
+        "separate_narrative_scene_by_default",
+        "separate_metaphor_by_default"
+      ],
+      "mandatory_avoid": [
+        "landscape, mountains, trees, plants, animals, people, or architectural scenery as filler",
+        "chart, plot, bar chart, line chart, pie chart, table, dashboard, analytics panel, or data-preview panel not supported by the selected visual grammar",
+        "placeholder, dashed box, border, frame, or badge in the logo reserve"
+      ],
+      "extra_description": "空间目标不能被当成节点、步骤、分支、矩阵格或来源标注的硬上限；必要语义必须保留，拥挤时应拆成另一张计划内正文图。"
+    }
+  }
+}
