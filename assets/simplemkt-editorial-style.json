@@ -128,6 +128,30 @@
         "color": "#8C8C8C"
       }
     },
+    "color_system": {
+      "focus": "品牌绿表达语义，结构色组织关系，现实实体保留符合常识的局部色。",
+      "enforcement": "prompt_contract_and_qa",
+      "allocation_method": "assign colour by semantic role and source meaning, never by a mechanical whole-canvas percentage quota",
+      "semantic_layer": {
+        "brand_color": "#1A6B3A",
+        "allowed_for": ["cover title", "core judgment", "one approved semantic accent group"],
+        "max_groups": 1,
+        "coverage_guidance": "small, concentrated, and subordinate to the white canvas; a cover title is an allowed typographic exception",
+        "forbidden": ["default rendering colour for recognizable real-world entities", "large decorative field", "default outline or hatching for a natural entity"]
+      },
+      "structural_layer": {
+        "colors": ["#B5CBBE", "#D7E4DB", "#C6D9CC", "#7E8581", "#6B6B6B", "#8C8C8C"],
+        "allowed_for": ["relationship scaffolds", "boundaries", "construction lines", "secondary labels", "subordinate paper texture"],
+        "treatment": "low-saturation and low-contrast; it supports relationships without recoloring the semantic object"
+      },
+      "object_layer": {
+        "applies_when": "must_show or the cover hero contains a recognizable person, animal, food, plant, product, natural material, or other real-world entity",
+        "treatment": "preserve plausible local colour in a gently desaturated editorial treatment, then apply the shared graphite, engraving, and paper material language",
+        "source_asset_rule": "when a supplied real asset is used, preserve its recognizable local colour unless the source itself supports a deliberate recolouring",
+        "brand_green_rule": "brand green may mark one approved semantic relationship attached to an entity, but never becomes the entity's default body colour, contour, or hatching",
+        "not_required_for": ["abstract node", "document field", "boundary", "pure relationship structure", "source-supported monochrome artifact"]
+      }
+    },
     "visual_language": {
       "focus": "用轻盈的编辑草图表现原文特有的对象、行动、状态、位置和关系。",
       "enforcement": "design_judgment",
@@ -369,7 +393,8 @@
           "title_only": "#1A6B3A",
           "visual_primary": "#9BBBA7",
           "visual_secondary": "#DCE9E0",
-          "forbidden": ["#1A6B3A", "#141414", "#28322C"]
+          "entity_local_color": "required when the right hero is a recognizable real-world entity; use plausible, gently desaturated local colour with graphite or engraving texture",
+          "forbidden": ["#1A6B3A", "#141414", "#28322C", "brand-green default body colour, contour, or hatching on a natural entity"]
         },
         "artwork_contrast_relation": "the title is the darkest and strongest green element; all artwork remains visually subordinate",
         "right_hero": "one source-derived editorial subject, not a flowchart",
@@ -429,7 +454,8 @@
         "pale_green_relationship_scaffold": "#B5CBBE",
         "dark_gray_small_heading": "#28322C",
         "gray_note": "#8C8C8C",
-        "brand_green_semantic_accent": "#1A6B3A"
+        "brand_green_semantic_accent": "#1A6B3A",
+        "recognizable_real_world_entity": "plausible gently desaturated local colour when present; see color_system.object_layer"
       },
       "material_consistency": {
         "applies_to": ["article_package", "presentation_frames"],
@@ -438,7 +464,7 @@
       },
       "green_usage": {
         "allowed_for": ["one key node", "one relationship route", "one local focus field", "short underline"],
-        "forbidden_for": ["default object outline", "repeated chart bars", "repeated icons", "large fills", "all card borders"]
+        "forbidden_for": ["default object outline", "repeated chart bars", "repeated icons", "large fills", "all card borders", "recognizable natural entity local colour", "recognizable natural entity default contour", "recognizable natural entity default hatching"]
       },
       "layout": {
         "title_region": {
