@@ -172,8 +172,28 @@
     "materials": {
       "focus": "材质必须平面、中性，并且只有在承担语义时才出现。",
       "enforcement": "design_judgment",
-      "canvas_texture": "subtle_white_paper_grain",
-      "hand_drawn_role": "a restrained tactile layer on the dominant editorial object, never separate sketch props",
+      "canvas_texture": "subtle neutral-white uncoated editorial-paper grain",
+      "editorial_patina": {
+        "intensity": "subtle",
+        "purpose": "add quiet material presence without changing the source-derived subject, visual grammar, or reading hierarchy",
+        "applies_to": ["cover", "content_image"],
+        "allowed": [
+          "fine paper-fiber grain",
+          "localized print-density variation",
+          "brief graphite or engraving-like hatching on a semantic object",
+          "one lightly irregular crop or paper edge only when source meaning requires it"
+        ],
+        "must_remain": "neutral white, low-contrast, and subordinate to exact titles, labels, relationships, and source meaning",
+        "forbidden": [
+          "yellowed or cream paper cast",
+          "weathering, stains, or damage",
+          "nostalgic source imagery unrelated to the narrative",
+          "ornamental collage",
+          "decorative retro motifs",
+          "texture that lowers text or structural readability"
+        ]
+      },
+      "hand_drawn_role": "a restrained tactile editorial-print layer on the dominant semantic object, never separate sketch props",
       "supporting_object_limit": 2,
       "paper_presence": {
         "required_when": ["article", "plan", "claim", "source"],
@@ -183,7 +203,7 @@
         "forbidden": ["rounded UI card", "stacked paper props", "warm paper tint"]
       },
       "hand_drawn_marks": {
-        "role": "light graphite contour and local pencil hatching on the dominant paper surface",
+        "role": "light graphite contour with local pencil or fine engraving-like hatching on the dominant semantic surface",
         "forbidden": ["uniform vector outline", "full-image hatching", "decorative sketch props"]
       },
       "paper": {
@@ -244,6 +264,7 @@
       },
       "contrast": "low",
       "uniform_weight": true,
+      "surface_variation": "keep one nominal hairline weight; allow only slight non-semantic print or hand-pressure texture, never a hierarchy encoded by line thickness",
       "connector_width_px_equivalent": 1,
       "emphasis_strategy": "use position, white space, and colour; never line thickness",
       "forbidden": [
@@ -303,9 +324,10 @@
           "artwork_allowed": false
         },
         "title": {
-          "size_px": 56,
-          "min_size_px": 52,
-          "line_height_px": 68,
+          "family": "high-contrast Songti-like editorial serif",
+          "size_px": 64,
+          "min_size_px": 58,
+          "line_height_px": 78,
           "max_lines": 2,
           "max_width_px": 780,
           "line_break_strategy": "prefer punctuation, then nearest semantic phrase",
@@ -328,7 +350,12 @@
         "complexity": "simple",
         "artwork_subject_count": 1,
         "left_text_zone_artwork": "forbidden",
-        "artwork_flow": "one continuous source-derived subject begins lightly on the left and grows toward the right",
+        "artwork_flow": "one continuous source-derived subject establishes a calm editorial reading trajectory from the title side toward the right-side resolution; use the source's clearest movement, expansion, sequence, or focus shift rather than a fixed decorative route",
+        "visual_rhythm": {
+          "purpose": "create a composed progression with quiet entry, measured development, and one resolved focal area",
+          "fragment_rule": "partial views or crops are allowed only when they remain integrated aspects of one source-derived subject; they must never read as independent preview cards or decorative collage",
+          "forbidden": ["mandatory green route", "generic scenic sequence", "unrelated vintage montage", "flowchart-like checkpoints"]
+        },
         "left_transition_visual_weight_max_percent": 20,
         "right_core_x_min": 500,
         "right_core_visual_weight_min_percent": 80,
@@ -351,8 +378,8 @@
       ],
       "vocabulary_treatment": [
         "clean editorial composition",
-        "one restrained hand-drawn contour",
-        "subtle local hatching"
+        "one restrained tactile editorial-print treatment",
+        "subtle local graphite or engraving-like hatching"
       ],
       "fallback_elements": [
         "source_related_object",
@@ -375,7 +402,8 @@
         "generic chart, map, mountain, river, landscape, or data-preview panel unrelated to the article",
         "multiple generic preview panels substituting for one source-derived editorial subject",
         "scattered top-and-bottom composition, multiple paper props, or diagram fragments around the title",
-        "placeholder, dashed box, border, frame, or badge in the logo reserve"
+        "placeholder, dashed box, border, frame, or badge in the logo reserve",
+        "yellowed paper, faux-aged filter, ornamental retro motif, or decorative collage unrelated to the source"
       ],
       "extra_description": "标题在左侧清晰呈现，主画面是从左侧轻量起势并向右侧核心区域蔓延的连续编辑对象；右侧承担至少八成视觉重量，标题安全区保持纯白且不被画面覆盖。"
     },
@@ -399,7 +427,7 @@
       },
       "material_consistency": {
         "applies_to": ["article_package", "presentation_frames"],
-        "required": "every body figure uses one continuous neutral-white paper surface with subtle grain, graphite contour, and local pencil hatching",
+        "required": "every body figure uses one continuous neutral-white editorial-paper surface with subtle grain, graphite contour, and local pencil or engraving-like hatching; any print-density variation remains localized and subordinate to the explanation",
         "forbidden": ["flat vector UI surface", "rounded dashboard card", "multiple detached paper props"]
       },
       "green_usage": {
