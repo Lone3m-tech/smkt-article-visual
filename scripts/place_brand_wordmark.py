@@ -16,16 +16,16 @@ LOGO_DIRECTORY = STYLE_FILE.parent / "logo"
 
 def load_image_module():
     try:
-        from PIL import Image, ImageDraw
+        from PIL import Image
     except ImportError as error:
         raise SystemExit(
             "Pillow is required. Install scripts/requirements.txt before running the finalizer."
         ) from error
-    return Image, ImageDraw
+    return Image
 
 
 def open_image(path: Path):
-    Image, _ = load_image_module()
+    Image = load_image_module()
     try:
         with Image.open(path) as image:
             return image.convert("RGBA")
@@ -52,9 +52,7 @@ def load_contract() -> dict[str, object]:
         body_space = body_layout["white_space"]
         contract = {
             "asset": logo["asset"],
-            "clear_logo_reserve": logo["clear_before_overlay"],
             "canvas": (canvas["width_px"], canvas["height_px"]),
-            "background": canvas["background_color"],
             "wordmark_box": (wordmark["width"], wordmark["height"]),
             "wordmark_top_left": (wordmark["x"], wordmark["y"]),
             "reserve_top_left": (reserve["x"], reserve["y"]),
@@ -117,8 +115,7 @@ def load_contract() -> dict[str, object]:
         *contract["body_white_space"].values(),
     ]
     if (
-        not contract["clear_logo_reserve"]
-        or not all(isinstance(value, int) and not isinstance(value, bool) for value in integers)
+        not all(isinstance(value, int) and not isinstance(value, bool) for value in integers)
         or contract["canvas"][0] <= 0
         or contract["canvas"][1] <= 0
         or contract["cover_title"]["x_min"] < 0
@@ -280,18 +277,8 @@ def main(arguments: list[str]) -> int:
         parsed.manifest, parsed.image_id, logo_enabled
     )
 
-    Image, ImageDraw = load_image_module()
+    Image = load_image_module()
     image = open_image(source_path).resize(contract["canvas"], Image.Resampling.LANCZOS)
-
-    ImageDraw.Draw(image).rectangle(
-        (
-            contract["reserve_top_left"][0],
-            contract["reserve_top_left"][1],
-            contract["reserve_top_left"][0] + contract["reserve_size"][0] - 1,
-            contract["reserve_top_left"][1] + contract["reserve_size"][1] - 1,
-        ),
-        fill=contract["background"],
-    )
     if logo_enabled:
         assert wordmark_path is not None
         wordmark = open_image(wordmark_path).resize(contract["wordmark_box"], Image.Resampling.LANCZOS)

@@ -45,7 +45,6 @@
       "enforcement": "hard_finalizer_contract",
       "asset": "simplemkt-logo-demo.png",
       "application": "post_generation",
-      "clear_before_overlay": true,
       "shared_prompt_and_finalizer_contract": true,
       "wordmark": {
         "x": 1062,
@@ -140,8 +139,8 @@
         "forbidden": ["default rendering colour for recognizable real-world entities", "large decorative field", "default outline or hatching for a natural entity"]
       },
       "structural_layer": {
-        "colors": ["#B5CBBE", "#D7E4DB", "#C6D9CC", "#7E8581", "#6B6B6B", "#8C8C8C"],
-        "allowed_for": ["relationship scaffolds", "boundaries", "construction lines", "secondary labels", "subordinate paper texture"],
+        "colors": ["#7E8581", "#6B6B6B", "#8C8C8C"],
+        "allowed_for": ["source-required relationship", "source-required boundary", "secondary labels"],
         "treatment": "low-saturation and low-contrast; it supports relationships without recoloring the semantic object"
       },
       "object_layer": {
@@ -202,16 +201,13 @@
     "materials": {
       "focus": "材质必须平面、中性，并且只有在承担语义时才出现。",
       "enforcement": "design_judgment",
-      "canvas_texture": "subtle neutral-white uncoated editorial-paper grain",
       "editorial_patina": {
         "intensity": "subtle",
         "purpose": "add quiet material presence without changing the source-derived subject, visual grammar, or reading hierarchy",
         "applies_to": ["cover", "content_image"],
         "allowed": [
-          "fine paper-fiber grain",
           "localized print-density variation",
-          "brief graphite or engraving-like hatching on a semantic object",
-          "one lightly irregular crop or paper edge only when source meaning requires it"
+          "brief graphite or engraving-like hatching on a semantic object"
         ],
         "must_remain": "neutral white, low-contrast, and subordinate to exact titles, labels, relationships, and source meaning",
         "forbidden": [
@@ -228,8 +224,8 @@
       "paper_presence": {
         "required_when": ["article", "plan", "claim", "source"],
         "max_surfaces": 2,
-        "surface": "clean neutral white with visible-but-subtle fine paper grain",
-        "edge": "one soft-cut or lightly irregular edge only when semantically meaningful",
+        "surface": "pure white",
+        "edge": "none",
         "forbidden": ["rounded UI card", "stacked paper props", "warm paper tint"]
       },
       "hand_drawn_marks": {
@@ -238,7 +234,7 @@
       },
       "paper": {
         "usage": "conditional_semantic_material",
-        "application": "one continuous clean neutral-white editorial sheet, never floating paper objects",
+        "application": "only a source-required paper object",
         "allowed_when": [
           "text",
           "document",
@@ -246,11 +242,9 @@
           "source"
         ],
         "surface": "clean_neutral_white",
-        "grain": "subtle_white_paper",
+        "grain": "none",
         "edges": [
-          "straight",
-          "cut",
-          "softly_irregular"
+          "straight"
         ],
         "repeat_as_default_primary_container": false,
         "force_every_element_to_be_paper": false,
@@ -303,12 +297,9 @@
         "double-weight connector",
         "mixed connector widths"
       ],
-      "colors": [
-        "#B5CBBE",
-        "#D7E4DB"
-      ],
+      "colors": ["#7E8581", "#6B6B6B", "#8C8C8C"],
       "element_boundary": {
-        "color": "#C6D9CC",
+        "color": "#8C8C8C",
         "width_px_equivalent_max": 1,
         "closed_outline": "only_when_a_source_document_field_or_boundary_requires_it",
         "avoid": [
@@ -317,7 +308,6 @@
         ]
       },
       "construction_line_uses": [
-        "frame_subject_only_when_source_required",
         "terminate_leader",
         "clarify_position"
       ]
@@ -391,8 +381,8 @@
         "right_core_visual_weight_min_percent": 80,
         "artwork_color_roles": {
           "title_only": "#1A6B3A",
-          "visual_primary": "#9BBBA7",
-          "visual_secondary": "#DCE9E0",
+          "visual_primary": "#A8AAA7",
+          "visual_secondary": "#E8E8E5",
           "entity_local_color": "required when the right hero is a recognizable real-world entity; use plausible, gently desaturated local colour with graphite or engraving texture",
           "forbidden": ["#1A6B3A", "#141414", "#28322C", "brand-green default body colour, contour, or hatching on a natural entity"]
         },
@@ -451,7 +441,7 @@
       "dominant_relationship_count": 1,
       "color_role_distribution": {
         "graphite_material_contour": "#7E8581",
-        "pale_green_relationship_scaffold": "#B5CBBE",
+        "gray_relationship_scaffold": "#8C8C8C",
         "dark_gray_small_heading": "#28322C",
         "gray_note": "#8C8C8C",
         "brand_green_semantic_accent": "#1A6B3A",
@@ -459,11 +449,11 @@
       },
       "material_consistency": {
         "applies_to": ["article_package", "presentation_frames"],
-        "required": "every body figure uses one continuous neutral-white editorial-paper surface with subtle grain, graphite contour, and local pencil or engraving-like hatching; any print-density variation remains localized and subordinate to the explanation",
+        "required": "every body figure uses a pure-white canvas; graphite contour, hatching, and print-density variation stay on semantic objects",
         "forbidden": ["flat vector UI surface", "rounded dashboard card", "multiple detached paper props"]
       },
       "green_usage": {
-        "allowed_for": ["one key node", "one relationship route", "one local focus field", "short underline"],
+        "allowed_for": ["one key node", "one local focus field", "short underline"],
         "forbidden_for": ["default object outline", "repeated chart bars", "repeated icons", "large fills", "all card borders", "recognizable natural entity local colour", "recognizable natural entity default contour", "recognizable natural entity default hatching"]
       },
       "layout": {
