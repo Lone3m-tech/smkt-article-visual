@@ -22,6 +22,12 @@
         "background_color": "#FFFFFF",
         "opaque": true
       },
+      "technical_specification_rendering_rule": {
+        "enforcement": "hard_prompt_instruction",
+        "applies_to": ["cover", "content_image"],
+        "placement": "append_verbatim_to_every_compiled_image_prompt",
+        "instruction": "Technical specifications—including coordinates, color codes, dimensions, spacing targets, and layout annotations—are internal composition guidance only. Do not render, reproduce, label, or visually display any of them anywhere in the image."
+      },
       "safe_area": {
         "enforcement": "prompt_target",
         "percent": 5,
