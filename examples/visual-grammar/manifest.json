@@ -1,14 +1,13 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "source_path": "references/visual-grammar.md",
   "delivery_mode": "article_package",
-  "scope": "Visual grammar reference figures only; no cover or source placement requested.",
-  "stage": "logo",
-  "plan": {
-    "status": "ready",
-    "body_figures": [
-      {
-        "id": "architecture",
+  "pages": [
+    {
+      "id": "architecture",
+      "role": "body_figure",
+      "status": "finalized",
+      "plan": {
         "reader_question": "组件如何连接、分支与汇合？",
         "core_judgment": "架构图法呈现组件关系",
         "subtitle": "依赖、分支与汇合",
@@ -20,8 +19,35 @@
           "一个汇合点"
         ]
       },
-      {
-        "id": "hierarchy",
+      "prompt": {
+        "status": "compiled",
+        "style_id": "simplemkt-editorial",
+        "text": "Approved architecture grammar reference."
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "examples/visual-grammar/architecture.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "examples/visual-grammar/architecture.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      },
+      "qa": {
+        "enabled": true,
+        "status": "pending"
+      }
+    },
+    {
+      "id": "hierarchy",
+      "role": "body_figure",
+      "status": "finalized",
+      "plan": {
         "reader_question": "整体如何分成类别与子类？",
         "core_judgment": "层级图法呈现父子关系",
         "subtitle": "从整体到子类",
@@ -32,8 +58,35 @@
           "末级成员"
         ]
       },
-      {
-        "id": "flow",
+      "prompt": {
+        "status": "compiled",
+        "style_id": "simplemkt-editorial",
+        "text": "Approved hierarchy grammar reference."
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "examples/visual-grammar/hierarchy.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "examples/visual-grammar/hierarchy.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      },
+      "qa": {
+        "enabled": true,
+        "status": "pending"
+      }
+    },
+    {
+      "id": "flow",
+      "role": "body_figure",
+      "status": "finalized",
+      "plan": {
         "reader_question": "输入如何经过步骤成为输出？",
         "core_judgment": "流程图法呈现先后步骤",
         "subtitle": "从输入到输出",
@@ -44,8 +97,35 @@
           "输出"
         ]
       },
-      {
-        "id": "loop",
+      "prompt": {
+        "status": "compiled",
+        "style_id": "simplemkt-editorial",
+        "text": "Approved flow grammar reference."
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "examples/visual-grammar/flow.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "examples/visual-grammar/flow.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      },
+      "qa": {
+        "enabled": true,
+        "status": "pending"
+      }
+    },
+    {
+      "id": "loop",
+      "role": "body_figure",
+      "status": "finalized",
+      "plan": {
         "reader_question": "行动如何回到下一轮改进？",
         "core_judgment": "循环图法呈现反馈迭代",
         "subtitle": "结果回到下一轮",
@@ -57,8 +137,35 @@
           "回到观察"
         ]
       },
-      {
-        "id": "decision-tree",
+      "prompt": {
+        "status": "compiled",
+        "style_id": "simplemkt-editorial",
+        "text": "Approved loop grammar reference."
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "examples/visual-grammar/loop.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "examples/visual-grammar/loop.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      },
+      "qa": {
+        "enabled": true,
+        "status": "pending"
+      }
+    },
+    {
+      "id": "decision-tree",
+      "role": "body_figure",
+      "status": "finalized",
+      "plan": {
         "reader_question": "条件如何导向不同路径？",
         "core_judgment": "决策树呈现条件选择",
         "subtitle": "条件决定下一步",
@@ -69,8 +176,35 @@
           "两个不同结果"
         ]
       },
-      {
-        "id": "comparison",
+      "prompt": {
+        "status": "compiled",
+        "style_id": "simplemkt-editorial",
+        "text": "Approved decision tree grammar reference."
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "examples/visual-grammar/decision_tree.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "examples/visual-grammar/decision_tree.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      },
+      "qa": {
+        "enabled": true,
+        "status": "pending"
+      }
+    },
+    {
+      "id": "comparison",
+      "role": "body_figure",
+      "status": "finalized",
+      "plan": {
         "reader_question": "两个方案的差别如何一眼可见？",
         "core_judgment": "对比图法呈现可见差异",
         "subtitle": "左右结构必须不同",
@@ -85,8 +219,35 @@
           "可见结构差异"
         ]
       },
-      {
-        "id": "matrix",
+      "prompt": {
+        "status": "compiled",
+        "style_id": "simplemkt-editorial",
+        "text": "Approved comparison grammar reference."
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "examples/visual-grammar/comparison.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "examples/visual-grammar/comparison.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      },
+      "qa": {
+        "enabled": true,
+        "status": "pending"
+      }
+    },
+    {
+      "id": "matrix",
+      "role": "body_figure",
+      "status": "finalized",
+      "plan": {
         "reader_question": "对象如何按两个独立维度定位？",
         "core_judgment": "矩阵图法呈现双维定位",
         "subtitle": "两个维度共同分类",
@@ -97,8 +258,35 @@
           "四个不同位置"
         ]
       },
-      {
-        "id": "overlap-map",
+      "prompt": {
+        "status": "compiled",
+        "style_id": "simplemkt-editorial",
+        "text": "Approved matrix grammar reference."
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "examples/visual-grammar/matrix.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "examples/visual-grammar/matrix.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      },
+      "qa": {
+        "enabled": true,
+        "status": "pending"
+      }
+    },
+    {
+      "id": "overlap-map",
+      "role": "body_figure",
+      "status": "finalized",
+      "plan": {
         "reader_question": "两部分的共同与独有内容是什么？",
         "core_judgment": "交集图法呈现共存关系",
         "subtitle": "交集与差异同时可见",
@@ -109,8 +297,35 @@
           "中间交集"
         ]
       },
-      {
-        "id": "boundary-map",
+      "prompt": {
+        "status": "compiled",
+        "style_id": "simplemkt-editorial",
+        "text": "Approved overlap map grammar reference."
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "examples/visual-grammar/overlap_map.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "examples/visual-grammar/overlap_map.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      },
+      "qa": {
+        "enabled": true,
+        "status": "pending"
+      }
+    },
+    {
+      "id": "boundary-map",
+      "role": "body_figure",
+      "status": "finalized",
+      "plan": {
         "reader_question": "什么在范围内，什么在范围外？",
         "core_judgment": "边界图法呈现所属范围",
         "subtitle": "包含与排除清晰分开",
@@ -121,8 +336,35 @@
           "范围外对象"
         ]
       },
-      {
-        "id": "argument-map",
+      "prompt": {
+        "status": "compiled",
+        "style_id": "simplemkt-editorial",
+        "text": "Approved boundary map grammar reference."
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "examples/visual-grammar/boundary_map.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "examples/visual-grammar/boundary_map.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      },
+      "qa": {
+        "enabled": true,
+        "status": "pending"
+      }
+    },
+    {
+      "id": "argument-map",
+      "role": "body_figure",
+      "status": "finalized",
+      "plan": {
         "reader_question": "结论由哪些依据支持，又受何种限制？",
         "core_judgment": "论证图法呈现主张结构",
         "subtitle": "依据、限制与结论",
@@ -134,8 +376,35 @@
           "一个结论"
         ]
       },
-      {
-        "id": "timeline",
+      "prompt": {
+        "status": "compiled",
+        "style_id": "simplemkt-editorial",
+        "text": "Approved argument map grammar reference."
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "examples/visual-grammar/argument_map.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "examples/visual-grammar/argument_map.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      },
+      "qa": {
+        "enabled": true,
+        "status": "pending"
+      }
+    },
+    {
+      "id": "timeline",
+      "role": "body_figure",
+      "status": "finalized",
+      "plan": {
         "reader_question": "真实时间推进中发生了哪些阶段？",
         "core_judgment": "时间线呈现阶段推进",
         "subtitle": "按时间顺序阅读",
@@ -146,8 +415,35 @@
           "终点年份"
         ]
       },
-      {
-        "id": "continuum",
+      "prompt": {
+        "status": "compiled",
+        "style_id": "simplemkt-editorial",
+        "text": "Approved timeline grammar reference."
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "examples/visual-grammar/timeline.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "examples/visual-grammar/timeline.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      },
+      "qa": {
+        "enabled": true,
+        "status": "pending"
+      }
+    },
+    {
+      "id": "continuum",
+      "role": "body_figure",
+      "status": "finalized",
+      "plan": {
         "reader_question": "对象处在非时间的渐进位置哪里？",
         "core_judgment": "连续谱呈现渐进位置",
         "subtitle": "不是时间进程",
@@ -158,8 +454,35 @@
           "高端"
         ]
       },
-      {
-        "id": "layer-stack",
+      "prompt": {
+        "status": "compiled",
+        "style_id": "simplemkt-editorial",
+        "text": "Approved continuum grammar reference."
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "examples/visual-grammar/continuum.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "examples/visual-grammar/continuum.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      },
+      "qa": {
+        "enabled": true,
+        "status": "pending"
+      }
+    },
+    {
+      "id": "layer-stack",
+      "role": "body_figure",
+      "status": "finalized",
+      "plan": {
         "reader_question": "不同抽象层如何叠放与包含？",
         "core_judgment": "层叠图法呈现系统层次",
         "subtitle": "上层建立在下层之上",
@@ -169,258 +492,30 @@
           "能力层",
           "体验层"
         ]
-      }
-    ]
-  },
-  "style": {
-    "status": "compiled",
-    "source": "assets/simplemkt-editorial-style.json",
-    "prompts": [
-      {
-        "id": "architecture",
-        "prompt": "Approved architecture grammar reference."
       },
-      {
-        "id": "hierarchy",
-        "prompt": "Approved hierarchy grammar reference."
+      "prompt": {
+        "status": "compiled",
+        "style_id": "simplemkt-editorial",
+        "text": "Approved layer stack grammar reference."
       },
-      {
-        "id": "flow",
-        "prompt": "Approved flow grammar reference."
+      "generation": {
+        "status": "generated",
+        "candidate_file": "examples/visual-grammar/layer_stack.png"
       },
-      {
-        "id": "loop",
-        "prompt": "Approved loop grammar reference."
-      },
-      {
-        "id": "decision-tree",
-        "prompt": "Approved decision tree grammar reference."
-      },
-      {
-        "id": "comparison",
-        "prompt": "Approved comparison grammar reference."
-      },
-      {
-        "id": "matrix",
-        "prompt": "Approved matrix grammar reference."
-      },
-      {
-        "id": "overlap-map",
-        "prompt": "Approved overlap map grammar reference."
-      },
-      {
-        "id": "boundary-map",
-        "prompt": "Approved boundary map grammar reference."
-      },
-      {
-        "id": "argument-map",
-        "prompt": "Approved argument map grammar reference."
-      },
-      {
-        "id": "timeline",
-        "prompt": "Approved timeline grammar reference."
-      },
-      {
-        "id": "continuum",
-        "prompt": "Approved continuum grammar reference."
-      },
-      {
-        "id": "layer-stack",
-        "prompt": "Approved layer stack grammar reference."
-      }
-    ]
-  },
-  "generate": {
-    "status": "completed",
-    "assets": [
-      {
-        "id": "architecture",
-        "output_path": "examples/visual-grammar/architecture.png",
-        "status": "generated"
-      },
-      {
-        "id": "hierarchy",
-        "output_path": "examples/visual-grammar/hierarchy.png",
-        "status": "generated"
-      },
-      {
-        "id": "flow",
-        "output_path": "examples/visual-grammar/flow.png",
-        "status": "generated"
-      },
-      {
-        "id": "loop",
-        "output_path": "examples/visual-grammar/loop.png",
-        "status": "generated"
-      },
-      {
-        "id": "decision-tree",
-        "output_path": "examples/visual-grammar/decision_tree.png",
-        "status": "generated"
-      },
-      {
-        "id": "comparison",
-        "output_path": "examples/visual-grammar/comparison.png",
-        "status": "generated"
-      },
-      {
-        "id": "matrix",
-        "output_path": "examples/visual-grammar/matrix.png",
-        "status": "generated"
-      },
-      {
-        "id": "overlap-map",
-        "output_path": "examples/visual-grammar/overlap_map.png",
-        "status": "generated"
-      },
-      {
-        "id": "boundary-map",
-        "output_path": "examples/visual-grammar/boundary_map.png",
-        "status": "generated"
-      },
-      {
-        "id": "argument-map",
-        "output_path": "examples/visual-grammar/argument_map.png",
-        "status": "generated"
-      },
-      {
-        "id": "timeline",
-        "output_path": "examples/visual-grammar/timeline.png",
-        "status": "generated"
-      },
-      {
-        "id": "continuum",
-        "output_path": "examples/visual-grammar/continuum.png",
-        "status": "generated"
-      },
-      {
-        "id": "layer-stack",
+      "final": {
+        "status": "finalized",
         "output_path": "examples/visual-grammar/layer_stack.png",
-        "status": "generated"
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      },
+      "qa": {
+        "enabled": true,
+        "status": "pending"
       }
-    ]
-  },
-  "logo": {
-    "enabled": true,
-    "status": "completed",
-    "assets": [
-      {
-        "id": "architecture",
-        "status": "applied"
-      },
-      {
-        "id": "hierarchy",
-        "status": "applied"
-      },
-      {
-        "id": "flow",
-        "status": "applied"
-      },
-      {
-        "id": "loop",
-        "status": "applied"
-      },
-      {
-        "id": "decision-tree",
-        "status": "applied"
-      },
-      {
-        "id": "comparison",
-        "status": "applied"
-      },
-      {
-        "id": "matrix",
-        "status": "applied"
-      },
-      {
-        "id": "overlap-map",
-        "status": "applied"
-      },
-      {
-        "id": "boundary-map",
-        "status": "applied"
-      },
-      {
-        "id": "argument-map",
-        "status": "applied"
-      },
-      {
-        "id": "timeline",
-        "status": "applied"
-      },
-      {
-        "id": "continuum",
-        "status": "applied"
-      },
-      {
-        "id": "layer-stack",
-        "status": "applied"
-      }
-    ]
-  },
-  "layout": {
-    "status": "completed",
-    "assets": [
-      {
-        "id": "architecture",
-        "status": "finalized"
-      },
-      {
-        "id": "hierarchy",
-        "status": "finalized"
-      },
-      {
-        "id": "flow",
-        "status": "finalized"
-      },
-      {
-        "id": "loop",
-        "status": "finalized"
-      },
-      {
-        "id": "decision-tree",
-        "status": "finalized"
-      },
-      {
-        "id": "comparison",
-        "status": "finalized"
-      },
-      {
-        "id": "matrix",
-        "status": "finalized"
-      },
-      {
-        "id": "overlap-map",
-        "status": "finalized"
-      },
-      {
-        "id": "boundary-map",
-        "status": "finalized"
-      },
-      {
-        "id": "argument-map",
-        "status": "finalized"
-      },
-      {
-        "id": "timeline",
-        "status": "finalized"
-      },
-      {
-        "id": "continuum",
-        "status": "finalized"
-      },
-      {
-        "id": "layer-stack",
-        "status": "finalized"
-      }
-    ]
-  },
-  "placement": {
-    "status": "pending",
-    "assets": []
-  },
-  "qa": {
-    "enabled": true,
-    "status": "pending"
-  }
+    }
+  ]
 }

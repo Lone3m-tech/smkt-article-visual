@@ -172,84 +172,69 @@ def write_json_atomically(path: Path, payload: dict[str, object]) -> None:
     os.replace(temporary_path, path)
 
 
-def load_manifest_state(manifest_path: Path, image_id: str, logo_enabled: bool):
+def load_manifest_page(manifest_path: Path, image_id: str) -> tuple[dict[str, object], dict[str, object]]:
     try:
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-        if manifest["schema_version"] != 5 or manifest["plan"]["status"] != "ready":
-            raise ValueError("manifest requires schema 5 and a ready plan")
-        if manifest["style"]["status"] != "compiled":
-            raise ValueError("style must be compiled before finalization")
-        if manifest["generate"]["status"] != "completed":
-            raise ValueError("generation must be completed before finalization")
+        if manifest["schema_version"] != 6 or not isinstance(manifest["pages"], list):
+            raise ValueError("manifest requires schema 6 and pages[]")
+        pages = manifest["pages"]
+        if not pages or any(not isinstance(item, dict) for item in pages):
+            raise ValueError("manifest pages must be non-empty objects")
+        page_ids = [item.get("id") for item in pages]
+        if any(not isinstance(item_id, str) or not item_id for item_id in page_ids):
+            raise ValueError("every page requires a non-empty id")
+        if len(page_ids) != len(set(page_ids)):
+            raise ValueError("page ids must be unique")
+        page = next((item for item in pages if item["id"] == image_id), None)
+        if page is None:
+            raise ValueError(f"page is not planned: {image_id}")
 
-        cover = manifest["plan"].get("cover")
-        expected_ids = [
-            *(["cover"] if cover is not None else []),
-            *[item["id"] for item in manifest["plan"]["body_figures"]],
-        ]
-        prompt_ids = [item["id"] for item in manifest["style"]["prompts"]]
-        generated_ids = [item["id"] for item in manifest["generate"]["assets"]]
-        if prompt_ids != expected_ids or generated_ids != expected_ids:
-            raise ValueError("style and generate asset IDs must match plan order")
-        if any(item.get("status") != "generated" for item in manifest["generate"]["assets"]):
-            raise ValueError("every generated asset must have status generated")
-        if image_id not in expected_ids:
-            raise ValueError(f"image is not planned: {image_id}")
+        plan = page.get("plan")
+        prompt = page.get("prompt")
+        generation = page.get("generation")
+        if not isinstance(plan, dict):
+            raise ValueError(f"page requires plan: {image_id}")
+        if not isinstance(prompt, dict) or prompt.get("status") != "compiled" or not prompt.get("text"):
+            raise ValueError(f"page requires compiled prompt: {image_id}")
+        if not isinstance(generation, dict) or generation.get("status") != "generated":
+            raise ValueError(f"page requires generated asset: {image_id}")
+        if not isinstance(generation.get("candidate_file"), str) or not generation["candidate_file"]:
+            raise ValueError(f"page requires candidate_file: {image_id}")
 
-        logo = manifest.setdefault(
-            "logo", {"enabled": logo_enabled, "status": "in_progress", "assets": []}
-        )
-        if logo.get("enabled") is not logo_enabled or not isinstance(logo.get("assets", []), list):
-            raise ValueError("Logo mode must be consistent across finalization")
-        layout = manifest.setdefault("layout", {"status": "in_progress", "assets": []})
-        if not isinstance(layout.get("assets"), list):
-            raise ValueError("layout must have an assets array")
-
-        if cover is not None and (
-            not isinstance(cover, dict)
-            or not isinstance(cover.get("title"), str)
-            or not cover["title"]
-        ):
-            raise ValueError("cover requires an exact title")
-
-        body_figure = next(
-            (item for item in manifest["plan"]["body_figures"] if item["id"] == image_id), None
-        )
-        if image_id != "cover" and (
-            not isinstance(body_figure.get("core_judgment"), str)
-            or not body_figure["core_judgment"]
-            or not isinstance(body_figure.get("subtitle"), str)
-            or not body_figure["subtitle"]
-        ):
-            raise ValueError(f"body figure requires core_judgment and subtitle: {image_id}")
+        if page.get("role") == "cover":
+            if not isinstance(plan.get("title"), str) or not plan["title"]:
+                raise ValueError("cover requires an exact title")
+        elif page.get("role") == "body_figure":
+            if not isinstance(plan.get("core_judgment"), str) or not plan["core_judgment"]:
+                raise ValueError(f"body figure requires core_judgment: {image_id}")
+            if not isinstance(plan.get("subtitle"), str) or not plan["subtitle"]:
+                raise ValueError(f"body figure requires subtitle: {image_id}")
+        else:
+            raise ValueError(f"page requires role cover or body_figure: {image_id}")
     except (KeyError, OSError, TypeError, ValueError, json.JSONDecodeError) as error:
-        raise SystemExit(f"invalid staged manifest for finalization: {manifest_path}: {error}") from error
-    return manifest, logo, layout, expected_ids, cover
+        raise SystemExit(f"invalid page-centred manifest for finalization: {manifest_path}: {error}") from error
+    return manifest, page
 
 
 def record_finalization(
     manifest_path: Path,
     manifest: dict[str, object],
-    image_id: str,
-    expected_ids: list[str],
+    page: dict[str, object],
+    output_path: Path,
+    contract: dict[str, object],
     logo_enabled: bool,
 ) -> None:
-    layout = manifest["layout"]
-    layout_by_id = {item["id"]: item for item in layout["assets"] if isinstance(item, dict) and "id" in item}
-    layout_by_id[image_id] = {"id": image_id, "status": "finalized"}
-    layout["assets"] = [layout_by_id[item_id] for item_id in expected_ids if item_id in layout_by_id]
-    layout["status"] = "completed" if len(layout["assets"]) == len(expected_ids) else "in_progress"
-
-    logo = manifest["logo"]
-    if not logo_enabled:
-        logo["status"] = "skipped"
-        logo["assets"] = []
-    else:
-        logo_by_id = {item["id"]: item for item in logo["assets"] if isinstance(item, dict) and "id" in item}
-        logo_by_id[image_id] = {"id": image_id, "status": "applied"}
-        logo["assets"] = [logo_by_id[item_id] for item_id in expected_ids if item_id in logo_by_id]
-        logo["status"] = "completed" if len(logo["assets"]) == len(expected_ids) else "in_progress"
-    manifest["stage"] = "logo"
+    page["final"] = {
+        "status": "finalized",
+        "output_path": str(output_path),
+        "width_px": contract["canvas"][0],
+        "height_px": contract["canvas"][1],
+        "logo": {
+            "enabled": logo_enabled,
+            "status": "applied" if logo_enabled else "skipped",
+        },
+    }
+    page["status"] = "finalized"
     write_json_atomically(manifest_path, manifest)
 
 
@@ -273,9 +258,7 @@ def main(arguments: list[str]) -> int:
     contract = load_contract()
     wordmark_path = resolve_packaged_wordmark(contract)
     logo_enabled = wordmark_path is not None
-    manifest, _, _, expected_ids, _ = load_manifest_state(
-        parsed.manifest, parsed.image_id, logo_enabled
-    )
+    manifest, page = load_manifest_page(parsed.manifest, parsed.image_id)
 
     Image = load_image_module()
     image = open_image(source_path).resize(contract["canvas"], Image.Resampling.LANCZOS)
@@ -286,7 +269,7 @@ def main(arguments: list[str]) -> int:
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     image.convert("RGB").save(output_path, format="PNG", optimize=True)
-    record_finalization(parsed.manifest, manifest, parsed.image_id, expected_ids, logo_enabled)
+    record_finalization(parsed.manifest, manifest, page, output_path, contract, logo_enabled)
     return 0
 
 
