@@ -103,7 +103,9 @@ Let the manifest contract define fields, encoding limits, projection mode, and l
 
 - Keep `cover`, `body`, and `agenda` source-faithful: do not add causality, sequence, priority, containment, data, or conclusions absent from their declared support. `closing` may use only its standard closing text and must not add a source claim, summary, promise, or call to action.
 - Explicitly declare `annotation_plan` for every body page. Use it for any source-supported relationship that objects alone cannot show; choose `mode: none` only when every required relationship remains legible without words.
-- Use two automatic green modes when `colour_plan` is omitted: a representational `cover` resolves to `brand_green_subject_fill`, with one or two connected primary-subject local regions in translucent dry-brush green; every other page resolves to `brand_green_accent`, with one small semantic detail or source-supported auxiliary relationship. The subject-fill mode replaces every other green illustration accent on that page; keep all structural lines gray. An explicit existing `colour_plan` remains the page-level override. It never changes a selected grammar or adds gradients.
+- When `colour_plan` is omitted, use `brand_green_accent`. A cover reserves that single accent for its required title selection field; it never uses `brand_green_subject_fill`. An explicit existing `colour_plan` remains the page-level override within this rule. It never changes a selected grammar or adds gradients.
+- Every cover uses `scene_integrity.mode: abstract`: its right-side carrier may express only source-supported abstract relationships such as density, interval, porosity, layering, dispersion, convergence, fracture, containment, or a non-directional curve. Never plan or render a recognizable entity, product, object, scene, industry symbol, or body part.
+- Every cover requires `editorial_treatment`: split the exact H1 into two or three contiguous title units, set exactly one to `selection_field`, and keep every title character deep ink. The selection field is the sole brand-green cover area.
 - For every representational page, use the existing `visual_solution` to state selectively observed details, a frontal/profile/lightly-oblique or flat-cutaway view with only shallow spatial cues, an allowable short/broad/skewed silhouette, one source-compatible memorable feature, one posture relation (tilt, opening, overlap, crop, or weight shift), one local directional fill gesture when colour is used, and an irregular cluster rhythm for its source-supported related objects. Do not put visual style in `must_show`.
 - For every page, write `scene_integrity`: use `representational` for a person, animal, object, or embodied action; otherwise use `abstract` with a rationale. For representational pages, declare subject count, object continuity, required occlusion, and forbidden detached or duplicated parts. Split incompatible simultaneous actions into separate pages.
 - For `article_package`, place each accepted body page at its source anchor. For `presentation_frames`, retain source prose and use narrative-frame sequencing.
@@ -147,11 +149,10 @@ A failed page never reaches Logo finalization or placement. `mode: qa` checks ex
 ### Visual QA acceptance
 
 - 语义：检查 `source_support`、`must_not_imply`、`grammar_proof`；遮住标题后，所有非自明关系仍能通过对象、标签、备注及其连接读出。
-- 文字与版式：检查准确渲染的文字、层级、封面递进、纯白画布、Logo 留白；不得有外框、标题分隔线、模型生成的品牌或技术标记。
-- 色彩与连接：黑、白、克制灰为主；品牌绿仅可作为声明且原文支持的一条细局部关系线或元素细节，或作为 `brand_green_subject_fill` 声明的一处主对象局部干擦填色；后者不得与其他绿色插画元素并用。非品牌色仅可为一个微小次要细节。拒绝重复、装饰性、无依据或粗重的绿色连接线。
-- 构图与笔触：主体不得占满下半部或触及内容边缘；拒绝精致商品图、摄影、棚拍、写实材质、3D 光泽、投影或地面阴影、精确后退透视、密集雕刻／排线、统一矢量线、粗马克笔、渐变和写实体积光影；允许浅的遮挡、倾斜和边缘厚度，但拒绝所有轮廓同粗、同样闭合平滑、没有观察细节的中性标本式对象、规整填色与等距陈列；灰色不得承担连续明暗建模，蜡笔或干擦笔触不得形成密集纹理、平行排线、体积塑形、阴影或材质说明。
-- 完整性：检查全部 `scene_integrity`；拒绝断肢、重复主体、不可能遮挡和无法完成的动作。
-- 参考图：只接受已声明的高层画法迁移；拒绝其主体、构图、文字、签名、水印或识别性标记。
+- 文字与交付：检查所有声明的可见文字是否准确、纯白画布、Logo 留白，以及没有模型生成的 Logo、品牌名、签名、水印、外框或标题分隔线。
+- 完整性：检查 `scene_integrity`；拒绝断肢、重复主体、不可能遮挡和无法完成的动作。
+
+色彩分配、排版处理、构图比例、笔触与表面细节，以及参考图的高层画法迁移，属于 Plan 与 Prompt 的引导，不作为独立 QA 拦截项；只有当它们造成上述语义、文字与交付或完整性失败时，才记录为 QA 问题。
 
 ### 4. Deliver accepted pages
 

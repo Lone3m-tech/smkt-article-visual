@@ -69,10 +69,10 @@ def fixed_dimensions() -> dict[str, Any]:
         "cover": {
             "layout": {
                 "title_safe_zone": {"x_min": 72, "x_max": 852, "y_min": 250, "y_max": 414, "center_x": 462, "center_y": 337, "fill": "#FFFFFF"},
-                "title": {"family": "high-contrast Songti-like editorial serif", "weight": "semibold", "color": "#1A6B3A", "max_lines": 2, "size_px": 64, "line_height_px": 78, "max_width_px": 780},
+                "title": {"family": "high-contrast Songti-like editorial serif", "weight": "semibold", "color": "#1A1A1A", "max_lines": 2, "size_px": 64, "line_height_px": 78, "max_width_px": 780},
             },
-            "composition": {"artwork_flow": "one continuous source-derived subject moves from the title side to one right-side resolution", "visual_rhythm": {"purpose": "quiet entry, measured development, and one resolved focal area"}},
-            "mandatory_avoid": ["body diagram", "collage", "logo reserve content"],
+            "composition": {"artwork_flow": "one continuous source-derived abstract relationship moves from the title side to one right-side resolution", "visual_rhythm": {"purpose": "quiet entry, measured development, and one resolved focal area"}},
+            "mandatory_avoid": ["body diagram", "collage", "logo reserve content", "recognizable entity", "representational illustration"],
         },
         "content_image": {
             "layout": {
@@ -81,9 +81,9 @@ def fixed_dimensions() -> dict[str, Any]:
                 "white_space": {"content_stage_min_percent": 60, "content_stage_max_percent": 72, "outer_margin_min_percent": 10},
             },
             "composition": {
-                "quiet_space_percent": {"min": 55, "max": 68}, "semantic_group_limit": 4,
+                "quiet_space_percent": {"min": 68, "max": 78}, "semantic_group_limit": 4,
                 "supporting_elements": {"normal_min": 0, "normal_max": 3},
-                "artwork_footprint": {"max_stage_width_percent": 64, "max_stage_height_percent": 62, "hero_scale": "medium", "avoid": ["edge-to-edge hero", "oversized object"]},
+                "artwork_footprint": {"max_stage_width_percent": 44, "max_stage_height_percent": 44, "hero_scale": "small", "avoid": ["edge-to-edge hero", "oversized object", "lower-stage fill", "large cutaway hero"]},
             },
             "mandatory_avoid": ["dashboard", "card wall", "unrelated scenery", "logo reserve content"],
         },

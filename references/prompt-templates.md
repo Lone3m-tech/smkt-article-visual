@@ -8,10 +8,10 @@ This file is the executable wording source for every compiled Prompt. The compil
 ```json
 {
   "role": "cover",
-  "required_plan": ["source_support", "intent", "title", "core_promise", "primary_carrier", "visual_direction", "visual_progression", "must_show", "must_not_imply", "scene_integrity"],
+  "required_plan": ["source_support", "intent", "title", "core_promise", "primary_carrier", "visual_direction", "visual_progression", "must_show", "must_not_imply", "editorial_treatment", "scene_integrity"],
   "style_sections": ["shared", "cover"],
   "block_sequence": {
-    "base": ["cover-identity-v1", "cover-semantics-v1", "scene-integrity-v1", "cover-no-annotation-v1", "shared-editorial-v1"],
+    "base": ["cover-identity-v1", "cover-editorial-treatment-v1", "cover-semantics-v1", "scene-integrity-v1", "cover-no-annotation-v1", "shared-editorial-v1"],
     "projection": {
       "default": [],
       "expanded": ["expanded-style-v1"],
@@ -119,7 +119,7 @@ Use the supplied source asset only as annotated source material: {{plan_source_a
 
 <!-- smkt-prompt-block:cover-no-annotation-v1 -->
 ```text
-Do not add labels, leaders, connectors, directional lines, notes, relation words, source excerpts, data, or microcopy. The cover uses no annotation plan and must remain one editorial subject rather than a body diagram.
+Do not add labels, leaders, connectors, directional arrows, notes, relation words, source excerpts, data, microcopy, or any visible text beyond the exact cover title. The cover uses no annotation plan and must remain one editorial subject rather than a body diagram. A declared quiet trace is the sole permitted non-semantic graphic mark: it contains no text, arrow, metric, causal encoding, or claim.
 ```
 
 <!-- smkt-prompt-block:body-grammar-v1 -->
@@ -148,11 +148,18 @@ Its visual language is: {{annotation_appearance}} {{annotation_text}} {{annotati
 
 <!-- smkt-prompt-block:cover-identity-v1 -->
 ```text
-Create a single cover image. The only visible text anywhere in the image is exactly: {{plan_title}}. Render it exactly once, with no subtitle or other text, in {{cover_title_color}}, {{cover_title_family}}, {{cover_title_weight}}, left aligned in the continuous white title-safe zone, with at most {{cover_title_max_lines}} lines and only readability-driven wrapping. This instruction overrides every non-title sentence elsewhere in the Prompt. The title is the strongest visual element; never place artwork in its safe zone.
+Create a single cover image. The only visible text anywhere in the image is exactly: {{plan_title}}. Render it exactly once, with no subtitle or other text, in {{cover_title_color}}, {{cover_title_family}}, {{cover_title_weight}}, left aligned in a continuous pure-white title-safe zone occupying the left 40% of the canvas. Keep it to at most two lines with only readability-driven wrapping, and vertically center the complete title block in that left field. This instruction overrides every non-title sentence elsewhere in the Prompt. The title is the strongest visual element; never place artwork in its safe zone.
 
-Use {{plan_visual_direction}} as the cover direction. Build one continuous left-to-right reading movement from the title side toward a right-side resolution. Begin outside the title zone with this low-weight, source-derived entry: {{plan_progression_entry}}. Develop the same carrier as: {{plan_progression_development}}. Resolve it as: {{plan_progression_resolution}}. Follow the cover flow and rhythm: {{cover_artwork_flow}} {{cover_visual_rhythm}}.
+Use {{plan_visual_direction}} as the cover direction. Build one continuous left-to-right reading movement from the title side toward a right-side resolution. Begin outside the title zone with this low-weight, source-derived entry: {{plan_progression_entry}}. Develop the same carrier as: {{plan_progression_development}}. Resolve it as: {{plan_progression_resolution}}. Keep the semantic illustration primarily in the right 55% of the canvas. Its low-density, nonessential edge may extend into the remaining left whitespace by no more than 20% of the illustration area, but never into the title-safe zone. Follow the cover flow and rhythm: {{cover_artwork_flow}} {{cover_visual_rhythm}}.
 
-Keep one source-derived carrier rather than a body diagram, data preview, card wall, or collage. Do not use {{cover_mandatory_avoid}}.
+Use one source-derived abstract editorial metaphor rather than a body diagram, data preview, card wall, collage, or representational illustration. The right-side carrier may make one relationship and up to two source-supported states visible only through density, interval, porosity, layering, dispersion, convergence, fracture, containment, or a non-directional curve. Never render a recognizable person, animal, product, tool, vehicle, building, landscape, plant, body part, or industry object. Do not use {{cover_mandatory_avoid}}.
+```
+
+<!-- smkt-prompt-block:cover-editorial-treatment-v1 -->
+```text
+Apply this required cover editorial treatment:
+{{plan_editorial_treatment}}
+All non-highlighted title characters are deep ink. The sole declared selection field is the only brand-green area anywhere on the cover. This treatment may change the rhythm of the one exact title, but must never add, omit, reorder, paraphrase, or duplicate title characters. It is not a body annotation system, interface, diagram, or source claim.
 ```
 
 <!-- smkt-prompt-block:agenda-identity-v1 -->
@@ -179,7 +186,7 @@ Create a single titleless explanatory body image. Render no title or subtitle. R
 
 <!-- smkt-prompt-block:body-stage-v1 -->
 ```text
-Keep all semantic elements inside one calm, asymmetric content cluster with {{body_quiet_space_min}}–{{body_quiet_space_max}}% quiet space, no more than {{body_semantic_group_limit}} semantic groups, and {{body_supporting_elements_min}}–{{body_supporting_elements_max}} supporting elements. Vary the related objects' scale, spacing, and vertical placement; do not arrange them as an even row, mirrored pair, grid, card wall, or unrelated decorative collage. The drawn cluster occupies at most {{body_artwork_max_stage_width}}% of the content-stage width and {{body_artwork_max_stage_height}}% of its height. Use a {{body_hero_scale}} hero scale: do not enlarge the central object merely to make its relationship legible; do not let it fill the lower half or reach the stage edges. Keep any declared labels and explanations local and subordinate. Split the page instead of adding competing structures when the relationship cannot remain legible. Do not use {{body_artwork_avoid}} or {{body_mandatory_avoid}}.
+Keep all semantic elements inside one calm, asymmetric content cluster with {{body_quiet_space_min}}–{{body_quiet_space_max}}% quiet space, no more than {{body_semantic_group_limit}} semantic groups, and {{body_supporting_elements_min}}–{{body_supporting_elements_max}} supporting elements. Treat this as a hard layout constraint, not a preference: the full drawn cluster is a small editorial vignette surrounded by white paper. Vary the related objects' scale, spacing, and vertical placement; do not arrange them as an even row, mirrored pair, grid, card wall, or unrelated decorative collage. The drawn cluster occupies at most {{body_artwork_max_stage_width}}% of the content-stage width and {{body_artwork_max_stage_height}}% of its height. Use a {{body_hero_scale}} hero scale: scale down objects instead of enlarging one central object to explain internal detail; do not let a cutaway, product, person, or other primary object fill the lower content stage, reach the stage edges, or occupy more than two thirds of the cluster. Keep any declared labels and explanations local and subordinate. Split the page instead of adding competing structures when the relationship cannot remain legible. Do not use {{body_artwork_avoid}} or {{body_mandatory_avoid}}.
 ```
 
 ### D. Shared editorial language

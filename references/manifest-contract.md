@@ -28,17 +28,28 @@ Do not create top-level `plan`, `style`, `generate`, `logo`, `layout`, `placemen
     "intent": "establish the article's reading promise",
     "title": "exact source H1",
     "core_promise": "...",
-    "primary_carrier": "...",
-    "visual_direction": "vivid_metaphor | restrained_abstract_composition",
+    "primary_carrier": "one abstract relationship carrier, never an entity or industry object",
+    "visual_direction": "restrained_abstract_composition",
     "visual_progression": {"entry": "...", "development": "...", "resolution": "..."},
     "must_show": ["..."],
     "must_not_imply": ["..."],
-    "colour_plan": {"mode": "brand_green_accent", "local_colours": [{"target": "tiny semantic detail", "colour_family": "brand green", "rationale": "local reading emphasis"}], "limits": {"max_local_colours": 1, "gradients": "forbidden", "coverage": "small_detail_only"}},
-    "scene_integrity": {"mode": "representational", "subject_count": 1, "continuity_rules": ["..."], "forbidden": ["detached limb", "duplicated actor"]},
+    "editorial_treatment": {
+      "title_units": [
+        {"text": "first exact contiguous H1 unit", "emphasis": "none | selection_field"},
+        {"text": "next exact contiguous H1 unit", "emphasis": "none | selection_field"}
+      ],
+      "trace": {"mode": "none | quiet_curve", "node_count": 0}
+    },
+    "colour_plan": {"mode": "brand_green_accent", "local_colours": [{"target": "the sole declared title selection field", "colour_family": "brand green", "rationale": "editorial title emphasis"}], "limits": {"max_local_colours": 1, "gradients": "forbidden", "coverage": "small_detail_only"}},
+    "scene_integrity": {"mode": "abstract", "rationale": "cover expresses the source promise through abstract spatial relationships only"},
     "annotation_plan": {"mode": "none", "items": [], "limits": {"max_items": 0, "max_text_items": 0}}
   }
 }
 ```
+
+`editorial_treatment` is required. `title_units` contains two or three ordered, contiguous strings whose exact concatenation equals `title`; each uses `none` or `selection_field`, and exactly one unit uses `selection_field`. All title characters remain deep ink; the sole selection field is the only brand-green area on the cover. `trace.mode` is `none` or `quiet_curve`; `node_count` is 0–2 and must be 0 when the mode is `none`. The trace carries no text, arrow, metric, relation, direction, source fact, or claim.
+
+Every cover requires `scene_integrity.mode: abstract`. Its `primary_carrier`, `visual_progression`, and `must_show` may describe only abstract spatial relationships—such as density, interval, porosity, layering, dispersion, convergence, fracture, containment, or a non-directional curve—not a recognizable entity, object, scene, or industry symbol.
 
 The cover never chooses a body grammar and never uses labels, leaders, connectors, directional lines, or notes.
 
@@ -165,7 +176,7 @@ If the declared evidence cannot support `reader_block` without the title, revise
 
 ### Optional page colour plan
 
-`colour_plan` is optional. When omitted, the compiler records one of two automatic existing modes: a representational cover receives `brand_green_subject_fill`; every other page receives `brand_green_accent`. When supplied, it remains the page-specific override and records one local colour entry when applicable with its required limits.
+`colour_plan` is optional. When omitted, the compiler records `brand_green_accent`. For a cover, that single accent is reserved for the required title selection field; `brand_green_subject_fill` is not valid for covers. When supplied, it remains the page-specific override and records one local colour entry when applicable with its required limits.
 
 ```json
 {

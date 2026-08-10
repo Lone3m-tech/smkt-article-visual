@@ -14,7 +14,7 @@ from typing import Any
 from style_contract import load_style_data
 
 
-COMPILER_VERSION = 10
+COMPILER_VERSION = 11
 TEMPLATE_FILE = Path(__file__).resolve().parent.parent / "references" / "prompt-templates.md"
 GRAMMAR_FILE = Path(__file__).resolve().parent.parent / "references" / "visual-grammar.md"
 TEMPLATE_CONTRACT_PATTERN = re.compile(
@@ -240,6 +240,52 @@ def validate_annotation_plan(plan: dict[str, Any], role: str, grammar: dict[str,
     return normalized
 
 
+def validate_editorial_treatment(plan: dict[str, Any]) -> dict[str, Any]:
+    """Validate the required cover-only title rhythm and non-semantic trace."""
+    raw = plan.get("editorial_treatment")
+    if raw is None:
+        raise ValueError("cover requires editorial_treatment")
+    if not isinstance(raw, dict):
+        raise ValueError("cover editorial_treatment must be an object")
+
+    raw_units = raw.get("title_units", [])
+    if not isinstance(raw_units, list) or not 2 <= len(raw_units) <= 3:
+        raise ValueError("cover editorial_treatment.title_units must contain two to three units")
+    title_units: list[dict[str, str]] = []
+    selection_fields = 0
+    for item in raw_units:
+        if not isinstance(item, dict):
+            raise ValueError("cover editorial_treatment.title_units must contain objects")
+        text = item.get("text")
+        emphasis = item.get("emphasis")
+        if not isinstance(text, str) or not text:
+            raise ValueError("cover editorial_treatment title unit requires non-empty text")
+        if emphasis not in {"none", "selection_field"}:
+            raise ValueError("cover editorial_treatment title unit emphasis must be none or selection_field")
+        selection_fields += emphasis == "selection_field"
+        title_units.append({"text": text, "emphasis": emphasis})
+    if "".join(item["text"] for item in title_units) != plan["title"]:
+        raise ValueError("cover editorial_treatment.title_units must concatenate exactly to title")
+    if selection_fields != 1:
+        raise ValueError("cover editorial_treatment requires exactly one selection_field")
+
+    raw_trace = raw.get("trace", {"mode": "none", "node_count": 0})
+    if not isinstance(raw_trace, dict):
+        raise ValueError("cover editorial_treatment.trace must be an object")
+    mode = raw_trace.get("mode", "none")
+    node_count = raw_trace.get("node_count", 0)
+    if mode not in {"none", "quiet_curve"}:
+        raise ValueError("cover editorial_treatment.trace.mode must be none or quiet_curve")
+    if not isinstance(node_count, int) or not 0 <= node_count <= 2:
+        raise ValueError("cover editorial_treatment.trace.node_count must be an integer from 0 to 2")
+    if mode == "none" and node_count != 0:
+        raise ValueError("cover editorial_treatment trace mode none requires node_count 0")
+
+    normalized = {"title_units": title_units, "trace": {"mode": mode, "node_count": node_count}}
+    plan["editorial_treatment"] = normalized
+    return normalized
+
+
 def validate_scene_integrity(plan: dict[str, Any]) -> dict[str, Any]:
     raw = plan.get("scene_integrity")
     if not isinstance(raw, dict):
@@ -297,15 +343,15 @@ def resolve_colour_plan(plan: dict[str, Any], role: str, scene_integrity: dict[s
     if raw is not None:
         raise ValueError("colour_plan must be an object")
 
-    if role == "cover" and scene_integrity["mode"] == "representational":
+    if role == "cover":
         raw = {
-            "mode": "brand_green_subject_fill",
+            "mode": "brand_green_accent",
             "local_colours": [{
-                "target": "one or two connected local regions of the cover's primary carrier",
+                "target": "the plan-declared selection field around the sole highlighted cover-title unit",
                 "colour_family": "brand green",
-                "rationale": "representational covers prioritize one translucent dry-brush subject fill",
+                "rationale": "cover green is reserved for the single editorial title emphasis",
             }],
-            "limits": {"max_local_colours": 1, "gradients": "forbidden", "coverage": "primary_subject_partial_fill"},
+            "limits": {"max_local_colours": 1, "gradients": "forbidden", "coverage": "small_detail_only"},
         }
     else:
         raw = {
@@ -331,6 +377,8 @@ def validate_colour_plan(plan: dict[str, Any], role: str, scene_integrity: dict[
     expected_coverage = "primary_subject_partial_fill" if mode == "brand_green_subject_fill" else "small_detail_only"
     if not isinstance(limits, dict) or limits.get("max_local_colours") != 1 or limits.get("gradients") != "forbidden" or limits.get("coverage") != expected_coverage:
         raise ValueError(f"colour_plan limits require max_local_colours 1, gradients forbidden, and coverage {expected_coverage}")
+    if role == "cover" and mode != "brand_green_accent":
+        raise ValueError("cover colour_plan must use brand_green_accent for its single title selection field")
     if mode == "brand_green_subject_fill" and scene_integrity["mode"] != "representational":
         raise ValueError("brand_green_subject_fill requires a representational scene_integrity")
     if mode == "monochrome_exception":
@@ -407,7 +455,7 @@ def validate_plan(plan: dict[str, Any], template: dict[str, Any], role: str, del
                 required_string(progression, key)
         elif field == "agenda_items":
             validate_agenda_items(plan)
-        elif field not in {"grammar_proof", "scene_integrity"}:
+        elif field not in {"grammar_proof", "scene_integrity", "editorial_treatment"}:
             required_string(plan, field)
 
     grammar = None
@@ -428,8 +476,12 @@ def validate_plan(plan: dict[str, Any], template: dict[str, Any], role: str, del
         if plan.get("source_mode") == "annotated_source":
             required_string(plan, "source_asset")
     scene_integrity = validate_scene_integrity(plan)
+    if role == "cover" and scene_integrity["mode"] != "abstract":
+        raise ValueError("cover requires abstract scene_integrity and no representational entities")
     validate_grammar_proof(plan, role)
     validate_colour_plan(plan, role, scene_integrity)
+    if role == "cover":
+        validate_editorial_treatment(plan)
     return validate_annotation_plan(plan, role, grammar, style)
 
 
@@ -439,6 +491,32 @@ def format_annotation_items(annotation_plan: dict[str, Any]) -> str:
         visible = f'render exactly "{item["content"].strip()}"' if item.get("content", "").strip() else "render no text"
         items.append(f'{item["type"]} targets {item["target"].strip()}; {visible}; source support: {item["source_support"].strip()}')
     return "\n".join(f"- {item}" for item in items)
+
+
+def format_editorial_treatment(plan: dict[str, Any]) -> str:
+    treatment = plan["editorial_treatment"]
+    title_units = treatment["title_units"]
+    if title_units:
+        title_instruction = "Render these title units in exactly this order; together they are the single exact title:\n" + "\n".join(
+            (
+                f'- "{item["text"]}" inside the sole pale brand-green selection field with a thin brand-green outline; keep its characters deep ink'
+                if item["emphasis"] == "selection_field"
+                else f'- "{item["text"]}" in deep ink with no colour field'
+            )
+            for item in title_units
+        )
+    else:
+        title_instruction = "No title units are declared. Render the exact title as one uniform typographic unit."
+
+    trace = treatment["trace"]
+    if trace["mode"] == "quiet_curve":
+        trace_instruction = (
+            f'Render exactly one quiet hairline curve with {trace["node_count"]} small dot node(s), '
+            "only in non-title whitespace; it has no text, arrowhead, direction, metric, relation, or claim."
+        )
+    else:
+        trace_instruction = "Render no quiet trace or dot nodes."
+    return f"{title_instruction}\n{trace_instruction}"
 
 
 def build_context(plan: dict[str, Any], dimensions: dict[str, Any], role: str, delivery_mode: str, grammar: dict[str, Any] | None, annotation_plan: dict[str, Any], style: dict[str, Any]) -> dict[str, str]:
@@ -504,6 +582,7 @@ def build_context(plan: dict[str, Any], dimensions: dict[str, Any], role: str, d
             "cover_artwork_flow": cover["composition"]["artwork_flow"],
             "cover_visual_rhythm": cover["composition"]["visual_rhythm"]["purpose"],
             "cover_mandatory_avoid": natural_value(cover["mandatory_avoid"]),
+            "plan_editorial_treatment": format_editorial_treatment(plan),
             "style_expanded_guidance": "",
         })
         return context

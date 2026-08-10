@@ -54,22 +54,27 @@ This is the single, direct-text visual-style source for article visuals. The com
 <!-- smkt-style:cover -->
 ### Cover composition
 
-- Use one calm, continuous left-to-right composition with a low-weight entry and one resolved right-side focal area;
-- Let the right-side artwork carry most of the illustrative spatial area;
+- Use one calm, continuous left-to-right editorial-poster composition: a clean left title field and one resolved right-side focal area;
+- Let the right-side artwork carry most of the illustrative spatial area, with a diagonal growth from upper-right to lower-left or lower-right to upper-left when it helps the source promise;
 - Keep the title visually stronger and darker than the artwork;
-- A single cover carrier may hold one primary object and up to two source-supported related states or parts in a compact, irregular cluster; vary their scale, height, and spacing without becoming a scattered collage;
-- Do not use montage, scattered top-and-bottom composition, multiple preview panels, multiple paper props, decorative scenery, plants, animals, or people used only as filler.
+- The right-side carrier must turn the article's core judgment into one abstract editorial relationship. Use only density, interval, porosity, layering, dispersion, convergence, fracture, containment, or a non-directional curve to make up to two source-supported states perceptible;
+- Never render a recognizable person, animal, product, tool, vehicle, building, landscape, plant, body part, industry object, or any other representational entity; the cover is an abstract composition, not an illustration of its topic;
+- A sparse, nonessential edge of the right-side carrier may lightly enter the left whitespace, but never the title-safe field;
+- Do not use montage, scattered top-and-bottom composition, multiple preview panels, multiple paper props, decorative scenery, or any representational subject.
 
 ### Cover typography
 
-- Use a high-contrast Songti-like editorial serif, semibold, and brand green (#1A6B3A) for the cover title;
-- Keep the cover title left-aligned in a continuous white title field;
-- Do not add secondary typographic treatments, decorative labels, or ornamental text.
+- Use a high-contrast Songti-like editorial serif, semibold, and deep ink (#1A1A1A) for the cover title;
+- Keep the cover title left-aligned and vertically centered in its continuous white title field, with no more than two lines;
+- Use the required `editorial_treatment.title_units` to set two or three contiguous title units as an intentionally uneven but continuous title composition; their concatenation remains the exact H1 and they still occupy the same two-line title block;
+- Exactly one declared title unit uses a pale brand-green selection field with a thin green outline and up to two small terminal dots; its characters remain deep ink. It is the only brand-green area on the cover and is an editorial emphasis, never a text box, cursor, toolbar, or interface;
+- When a cover plan declares `editorial_treatment.trace.mode: quiet_curve`, use one hairline deep-ink or restrained-gray curve with the declared zero to two small dots only in non-title whitespace; it gives viewing rhythm, never direction, topology, a metric, an arrow, a label, or a claim;
+- Do not add secondary typographic treatments, decorative labels, ornamental text, or undeclared curves.
 
-### Cover object treatment
+### Cover abstract treatment
 
-- Keep the right-side hero primarily white inside loose fine ink contours, with restrained gray structure and at most one small green semantic accent; when `brand_green_subject_fill` is declared, use the shared partial primary-subject fill rule instead;
-- Do not use collage, faux-aged material, realistic fur or cardboard, product photography, glossy 3D, or cinematic lighting.
+- Keep the right-side abstract carrier primarily white with loose fine deep-ink and restrained-gray marks; use no brand green in the carrier;
+- Do not use collage, faux-aged material, product photography, glossy 3D, cinematic lighting, or any outline that resolves into a recognizable real-world thing.
 <!-- /smkt-style:cover -->
 
 ## Body visual language
@@ -77,11 +82,12 @@ This is the single, direct-text visual-style source for article visuals. The com
 <!-- smkt-style:body -->
 ### Body composition
 
-- Use one calm, asymmetric semantic object cluster with 55–68% quiet space;
+- Use one calm, asymmetric semantic object cluster with 68–78% quiet space;
 - Use one primary object plus two to four source-supported related objects, states, or parts; every element must map to a visible proof, annotation, or source constraint;
 - Make their scale, spacing, and vertical placement an intentional irregular object-cluster rhythm; use uneven, non-grid placement rather than a row, mirrored pair, card wall, or equal-weight constellation;
 - Let one meaningful near-overlap, unequal gap, or partial crop create tension inside the cluster; preserve enough separation that each source relationship remains readable;
-- Keep the artwork within 64% of the content-stage width and 62% of its height, with generous outer white space and no edge-to-edge hero;
+- Keep the full artwork cluster within 44% of the content-stage width and 44% of its height. Treat it as a small editorial vignette: leave a clear white-paper margin on all four sides, and do not let any one object occupy more than two thirds of the cluster;
+- When detail would require enlarging the main object, simplify it or split the explanation into another page; never enlarge one cutaway object to fill the lower content stage;
 - Do not use unrelated decoration, oversized objects, repeated cards, summary tables, dashboard layouts, or a separate narrative scene.
 
 ### Body typography
