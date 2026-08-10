@@ -14,7 +14,7 @@ from typing import Any
 from style_contract import load_style_data
 
 
-COMPILER_VERSION = 13
+COMPILER_VERSION = 14
 TEMPLATE_FILE = Path(__file__).resolve().parent.parent / "references" / "prompt-templates.md"
 GRAMMAR_FILE = Path(__file__).resolve().parent.parent / "references" / "visual-grammar.md"
 TEMPLATE_CONTRACT_PATTERN = re.compile(
@@ -95,6 +95,42 @@ def sequence_blocks(sequence: dict[str, Any], field: str, key: str | None = None
         label = f"{field}.{key}" if key is not None else field
         raise ValueError(f"template block_sequence.{label} must be a non-empty block list")
     return value
+
+
+def omit_style_subsections(markdown: str, headings: tuple[str, ...]) -> str:
+    """Remove template-covered style subsections from this page's Prompt projection only."""
+    projected = markdown
+    for heading in headings:
+        pattern = re.compile(rf"^### {re.escape(heading)}\n.*?(?=^### |\Z)", re.MULTILINE | re.DOTALL)
+        projected, removed = pattern.subn("", projected)
+        if removed != 1:
+            raise ValueError(f"style projection requires exactly one subsection: {heading}")
+    return projected.strip()
+
+
+def project_style_prompt(style: dict[str, Any], role: str, annotation_plan: dict[str, Any]) -> tuple[str, list[str]]:
+    """Project complete style truth once per page, without re-emitting template-owned rules."""
+    sections = style["sections"]
+    parts = [sections["shared"]]
+    deduplicated: list[str] = []
+
+    if role == "cover":
+        # Cover templates and page colour projection already carry every cover-specific rule.
+        deduplicated = [
+            "cover:Cover composition",
+            "cover:Cover typography",
+            "cover:Cover abstract treatment",
+        ]
+    elif role == "body":
+        parts.append(omit_style_subsections(sections["body"], ("Body composition",)))
+        deduplicated.append("body:Body composition")
+        if annotation_plan["mode"] != "none":
+            parts.append(omit_style_subsections(sections["annotation"], ("Visible text",)))
+            deduplicated.append("annotation:Visible text")
+    else:
+        parts.append(sections[role])
+
+    return "\n\n".join(part for part in parts if part), deduplicated
 
 
 def load_prompt_templates() -> tuple[dict[str, dict[str, Any]], dict[str, str]]:
@@ -672,7 +708,7 @@ def format_page_typography(plan: dict[str, Any], role: str, annotation_plan: dic
     return "Visible typography, stated here once: " + " ".join(lines)
 
 
-def build_context(plan: dict[str, Any], dimensions: dict[str, Any], role: str, delivery_mode: str, grammar: dict[str, Any] | None, annotation_plan: dict[str, Any], style: dict[str, Any], layout_variant: str | None) -> dict[str, str]:
+def build_context(plan: dict[str, Any], dimensions: dict[str, Any], role: str, delivery_mode: str, grammar: dict[str, Any] | None, annotation_plan: dict[str, Any], style: dict[str, Any], layout_variant: str | None) -> tuple[dict[str, str], list[str]]:
     canvas = dimensions["canvas"]
     output = canvas["output_contract"]
     logo = dimensions["logo"]
@@ -681,6 +717,7 @@ def build_context(plan: dict[str, Any], dimensions: dict[str, Any], role: str, d
     materials = dimensions["materials"]
     linework = dimensions["linework"]
     series = dimensions["series"]
+    style_page_prompt, deduplicated_style_sections = project_style_prompt(style, role, annotation_plan)
     context = {
         "canvas_width": str(output["width_px"]),
         "canvas_height": str(output["height_px"]),
@@ -713,13 +750,7 @@ def build_context(plan: dict[str, Any], dimensions: dict[str, Any], role: str, d
         "plan_annotation_items": format_annotation_items(annotation_plan),
         "page_typography": format_page_typography(plan, role, annotation_plan, style["presentation_typography"]),
         "style_full_diagnostic": style["diagnostic_markdown"],
-        "style_page_prompt": "\n\n".join(
-            part for part in (
-                style["sections"]["shared"],
-                style["sections"][role],
-                style["sections"]["annotation"] if role == "body" and annotation_plan["mode"] != "none" else "",
-            ) if part
-        ),
+        "style_page_prompt": style_page_prompt,
     }
     if role == "cover":
         cover = dimensions["cover"]
@@ -736,7 +767,7 @@ def build_context(plan: dict[str, Any], dimensions: dict[str, Any], role: str, d
             "plan_editorial_treatment": format_editorial_treatment(plan),
             "style_expanded_guidance": "",
         })
-        return context
+        return context, deduplicated_style_sections
 
     if role == "agenda":
         assert layout_variant is not None
@@ -746,7 +777,7 @@ def build_context(plan: dict[str, Any], dimensions: dict[str, Any], role: str, d
             "plan_agenda_carrier": format_agenda_carrier(plan, layout_variant),
             "style_expanded_guidance": "",
         })
-        return context
+        return context, deduplicated_style_sections
 
     if role == "closing":
         context.update({
@@ -780,7 +811,7 @@ def build_context(plan: dict[str, Any], dimensions: dict[str, Any], role: str, d
         "plan_source_asset": str(plan.get("source_asset", "")),
         "style_expanded_guidance": "",
     })
-    return context
+    return context, deduplicated_style_sections
 
 
 def render_block(name: str, blocks: dict[str, str], context: dict[str, str]) -> str:
@@ -795,7 +826,7 @@ def render_block(name: str, blocks: dict[str, str], context: dict[str, str]) -> 
     return rendered
 
 
-def compile_prompt(page: dict[str, Any], style: dict[str, Any], delivery_mode: str) -> tuple[str, str, list[str], str]:
+def compile_prompt(page: dict[str, Any], style: dict[str, Any], delivery_mode: str) -> tuple[str, str, list[str], str, list[str]]:
     plan = page["plan"]
     role = ROLE_ALIASES[page["role"]]
     template_id = f"{role}-v1"
@@ -813,7 +844,7 @@ def compile_prompt(page: dict[str, Any], style: dict[str, Any], delivery_mode: s
     annotation_plan = validate_plan(plan, template, role, delivery_mode, grammars, style)
     layout_variant = resolve_layout_variant(plan, role, template)
     grammar = grammars[plan["grammar"]] if role == "body" else None
-    context = build_context(plan, style["dimensions"], role, delivery_mode, grammar, annotation_plan, style, layout_variant)
+    context, deduplicated_style_sections = build_context(plan, style["dimensions"], role, delivery_mode, grammar, annotation_plan, style, layout_variant)
     projection_mode = page.get("prompt_projection", "default")
     if projection_mode not in PROJECTION_MODES:
         raise ValueError("prompt_projection must be default, expanded, or full_diagnostic")
@@ -844,7 +875,7 @@ def compile_prompt(page: dict[str, Any], style: dict[str, Any], delivery_mode: s
     elif layout_variant is not None:
         included_rules.append(f"layout:{layout_variant}")
     included_rules.append(f"projection:{projection_mode}")
-    return "\n\n".join(render_block(name, blocks, context) for name in block_names), template_id, included_rules, projection_mode
+    return "\n\n".join(render_block(name, blocks, context) for name in block_names), template_id, included_rules, projection_mode, deduplicated_style_sections
 
 
 def parse_arguments(arguments: list[str]) -> argparse.Namespace:
@@ -860,7 +891,7 @@ def main(arguments: list[str]) -> int:
     manifest, page = load_page(parsed.manifest, parsed.image_id)
     style = load_style_data()
     try:
-        prompt_text, template_id, included_rules, projection_mode = compile_prompt(page, style, manifest["delivery_mode"])
+        prompt_text, template_id, included_rules, projection_mode, deduplicated_style_sections = compile_prompt(page, style, manifest["delivery_mode"])
     except ValueError as error:
         raise SystemExit(f"cannot compile page Prompt: {page['id']}: {error}") from error
     if parsed.dry_run:
@@ -872,6 +903,7 @@ def main(arguments: list[str]) -> int:
         "style_source": "assets/simplemkt-editorial-style.md",
         "grammar_source": "references/visual-grammar.md" if ROLE_ALIASES[page["role"]] == "body" else None,
         "included_rules": included_rules, "text": prompt_text,
+        "deduplicated_style_sections": deduplicated_style_sections,
     }
     page["status"] = "prompt_ready"
     write_json_atomically(parsed.manifest, manifest)

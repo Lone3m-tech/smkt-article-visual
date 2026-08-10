@@ -249,7 +249,7 @@ Set `prompt_projection` per page before compilation:
 | `expanded` | `default` plus every relevant natural-language style explanation selected by the style source | Strengthen an unstable style render |
 | `full_diagnostic` | `default` plus the entire style Markdown as invisible guidance | Test and compare only; never the normal production default |
 
-The compiler stores the resolved choice at `page.prompt.projection_mode`; it never changes the page plan.
+The compiler stores the resolved choice at `page.prompt.projection_mode`; it never changes the page plan. `page.prompt.deduplicated_style_sections` records any role-style subsections omitted only because an equivalent template or page projection already emits their rule. It is a trace of final-Prompt de-duplication, never a deletion from the canonical style source.
 
 ## Per-page lifecycle
 

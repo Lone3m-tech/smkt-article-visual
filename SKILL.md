@@ -131,7 +131,7 @@ python3 scripts/compile_page_prompt.py \
   --image-id <image-id>
 ```
 
-The compiler validates the page and writes its exact `prompt`; do not hand-write, shorten, or override `page.prompt.text`.
+The compiler validates the page and writes its exact `prompt`; do not hand-write, shorten, or override `page.prompt.text`. It may remove a role-style subsection only when an equivalent template or page projection already emits that rule; `page.prompt.deduplicated_style_sections` records each such mechanical de-duplication. The canonical style source remains complete.
 
 ### Delivery layout contract
 
