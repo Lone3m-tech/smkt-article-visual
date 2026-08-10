@@ -32,7 +32,7 @@
 
 | 产品亮点 | 落到实际使用中 |
 | --- | --- |
-| **先判断，再出图** | 先找真正的理解卡点，选择一个主图法，并明确哪些原文细节必须在图中保留，再开始生成。 |
+| **先判断，再出图** | 先找真正的理解卡点，选择一个主图法，并只在需要避免误读时声明标签、引线、连接线、方向线或备注，再开始生成。 |
 | **一套图片系统，两种交付策略** | `article_package` 服务局部阅读理解；`presentation_frames` 把经过筛选的原文叙事切片组织成连续讲述。 |
 | **图片参与解释，不只是装饰** | 用统一的编辑图语言，把原文中的对象、动作、状态、位置和关系可视化。一张内容图只回答一个核心问题，不填充正文旁的空白。 |
 | **可用，也可复盘** | 图片落在确认过的段落锚点或既定讲述顺序；Prompt、生成文件与交付状态记录在同一份 manifest；Logo 自动检测后稳定落位，QA 只报告不自动重做。 |
@@ -93,9 +93,9 @@ enable_qa: false
 | --- | --- | --- |
 | `article_package` | 默认模式；源文必须有 H1。 | 在 H1 后插入封面，在每个已批准的段落锚点后插入一次内容图；不改写正文。 |
 | `presentation_frames` | 只在用户明确要求演示、slides、deck 或 PPT 时使用；没有 H1 时提供 `presentation_title`。 | 保存封面和按叙事顺序排列的讲述图；源文保持不变。 |
-| `plan` / `generate` / `qa` | 默认 `plan`；`generate` 复用已就绪的计划；`qa` 只报告。 | 阶段依次写入同一份 manifest，不另建 plan 或 run 文件。 |
+| `plan` / `generate` / `qa` | 默认 `plan`；`generate` 按页编译 Prompt 并逐张生成；`qa` 检查已有生成图。 | 计划、图法、可选编码、实际 Prompt、生成、QA 与交付状态依次写入同一份 manifest，不另建 plan 或 run 文件。 |
 
-Logo 无需配置：终处理脚本只检测 `assets/logo/` 中、且与样式契约同名的普通 PNG；找到便叠加，缺失或为符号链接便跳过。模型不得绘制 Logo、品牌名或水印。`enable_qa` 默认关闭；打开后只报告，不会自动重画、改 Prompt 或改写原文。
+Logo 无需配置：终处理脚本只检测 `assets/logo/` 中、且与样式契约同名的普通 PNG；找到便叠加，缺失或为符号链接便跳过。模型不得绘制 Logo、品牌名或水印。`enable_qa` 默认关闭；关闭时生成图直接进入终处理与落位，开启时只有通过 QA 的图片才会打 Logo 并落位。QA 不会自动重画、改 Prompt 或改写原文。
 
 ![从 Markdown 和素材进入 manifest，再分别落到文章锚点或讲述顺序的工作流](examples/readme-visuals/how-it-works.png)
 
@@ -103,7 +103,7 @@ Logo 无需配置：终处理脚本只检测 `assets/logo/` 中、且与样式�
 
 - 从原文已经存在的机制、流程、反馈、比较、边界、层级或论证中，选择值得用图压缩的理解障碍。
 - 为封面确定一个原文支持的承诺；封面标题逐字使用 H1 或明确给出的 `presentation_title`。
-- 为每张内容图写明读者问题、一个核心判断、必须呈现的关系和一种主图法。
+- 为每张内容图写明读者卡点、一个核心判断、必须呈现的关系和一种主图法；只有必要时再为标签、引线、连接线、方向线或备注写明原文依据。
 - 以一份 manifest 保留计划、实际 Prompt、生成文件、Logo、文章落点或演示顺序及 QA 状态。
 - 将真实截图、论文图、数据图或 UI 图作为用户提供素材处理，而不把生成插图伪装成证据。
 
@@ -164,7 +164,7 @@ Skill 的可用性来自明确的运行契约，而不是对视觉效果的泛�
 | 连续谱（`continuum`） | ![连续谱图法：非时间的渐进位置](examples/visual-grammar/continuum.png) |
 | 层叠（`layer_stack`） | ![层叠图法：系统层次](examples/visual-grammar/layer_stack.png) |
 
-运行字段、Prompt 编译、Logo 终处理和 QA 条件以 [SKILL.md](SKILL.md) 为准。
+运行字段与页面生命周期见 [references/manifest-contract.md](references/manifest-contract.md)；Prompt 编译、Logo 终处理和 QA 条件以 [SKILL.md](SKILL.md) 为准。默认 Prompt 按页投影共享风格、身份、图法与编码；`expanded` 用于加强相关风格语言，`full_diagnostic` 只用于对照测试。
 
 ## 依赖与限制
 

@@ -9,8 +9,9 @@ import os
 import sys
 from pathlib import Path
 
+from style_contract import load_style_data, style_path
 
-STYLE_FILE = Path(__file__).resolve().parent.parent / "assets" / "simplemkt-editorial-style.json"
+STYLE_FILE = style_path()
 LOGO_DIRECTORY = STYLE_FILE.parent / "logo"
 
 
@@ -35,8 +36,8 @@ def open_image(path: Path):
 
 def load_contract() -> dict[str, object]:
     try:
-        static_style = json.loads(STYLE_FILE.read_text(encoding="utf-8"))
-        if static_style["schema_version"] != 2:
+        static_style = load_style_data()
+        if static_style["schema_version"] != 3:
             raise ValueError("unsupported style schema version")
         dimensions = static_style["dimensions"]
         canvas = dimensions["canvas"]["output_contract"]
@@ -175,8 +176,8 @@ def write_json_atomically(path: Path, payload: dict[str, object]) -> None:
 def load_manifest_page(manifest_path: Path, image_id: str) -> tuple[dict[str, object], dict[str, object]]:
     try:
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-        if manifest["schema_version"] != 6 or not isinstance(manifest["pages"], list):
-            raise ValueError("manifest requires schema 6 and pages[]")
+        if manifest["schema_version"] not in {6, 7, 8, 9} or not isinstance(manifest["pages"], list):
+            raise ValueError("manifest requires schema 6, 7, 8, or 9 and pages[]")
         pages = manifest["pages"]
         if not pages or any(not isinstance(item, dict) for item in pages):
             raise ValueError("manifest pages must be non-empty objects")
@@ -204,13 +205,21 @@ def load_manifest_page(manifest_path: Path, image_id: str) -> tuple[dict[str, ob
         if page.get("role") == "cover":
             if not isinstance(plan.get("title"), str) or not plan["title"]:
                 raise ValueError("cover requires an exact title")
-        elif page.get("role") == "body_figure":
+        elif page.get("role") in {"body", "body_figure"}:
             if not isinstance(plan.get("core_judgment"), str) or not plan["core_judgment"]:
-                raise ValueError(f"body figure requires core_judgment: {image_id}")
+                raise ValueError(f"body requires core_judgment: {image_id}")
             if not isinstance(plan.get("subtitle"), str) or not plan["subtitle"]:
-                raise ValueError(f"body figure requires subtitle: {image_id}")
+                raise ValueError(f"body requires subtitle: {image_id}")
+        elif page.get("role") == "agenda":
+            if not isinstance(plan.get("title"), str) or not plan["title"]:
+                raise ValueError("agenda requires an exact title")
+            if not isinstance(plan.get("agenda_items"), list) or not plan["agenda_items"]:
+                raise ValueError("agenda requires agenda_items")
+        elif page.get("role") == "closing":
+            if not isinstance(plan.get("closing_text"), str) or not plan["closing_text"]:
+                raise ValueError("closing requires closing_text")
         else:
-            raise ValueError(f"page requires role cover or body_figure: {image_id}")
+            raise ValueError(f"page requires role cover, body, agenda, or closing: {image_id}")
     except (KeyError, OSError, TypeError, ValueError, json.JSONDecodeError) as error:
         raise SystemExit(f"invalid page-centred manifest for finalization: {manifest_path}: {error}") from error
     return manifest, page

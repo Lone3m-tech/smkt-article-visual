@@ -32,7 +32,7 @@ Designed for Codex and Agents with image-generation capability.
 
 | Product strength | What it means in use |
 | --- | --- |
-| **Judge first, then generate** | Find the real comprehension obstacle, choose one primary grammar, and name the source details that must survive before generation begins. |
+| **Judge first, then generate** | Find the real comprehension obstacle, choose one primary grammar, and declare labels, leaders, connectors, directional lines, or notes only when they prevent a likely misreading. |
 | **One image system, two delivery strategies** | `article_package` supports local reading comprehension; `presentation_frames` turns selected narrative slices into a continuous explanation. |
 | **Images explain rather than decorate** | A unified editorial image language makes the source's objects, actions, states, positions, and relationships legible. One content image answers one core question; it does not fill empty space beside prose. |
 | **Usable and reviewable** | Images land at approved paragraph anchors or in an established narrative order; prompts, assets, and delivery state live in one manifest; Logo detection is automatic and QA reports without automatically reworking output. |
@@ -93,9 +93,9 @@ The input is accessible Markdown plus optional real source assets. The output is
 | --- | --- | --- |
 | `article_package` | Default; the source needs an H1. | Place the cover after the H1 and each approved figure once after its source anchor; do not rewrite the prose. |
 | `presentation_frames` | Use only for an explicit presentation, slides, deck, or PPT request; supply `presentation_title` if the source has no H1. | Store a cover and ordered narrative frames; leave the source unchanged. |
-| `plan` / `generate` / `qa` | `plan` is default; `generate` reuses a ready plan; `qa` reports only. | Update one manifest in sequence; do not create separate plan or run files. |
+| `plan` / `generate` / `qa` | `plan` is default; `generate` compiles a Prompt and generates one page at a time; `qa` inspects existing generated pages. | Write planning, grammar, optional encoding, actual Prompts, generation, QA, and delivery state to one manifest; do not create separate plan or run files. |
 
-Logo needs no setting. The finalizer detects only the regular PNG in `assets/logo/` whose name matches the style contract: it applies that asset when present and skips it when missing or symlinked. The model must not render a Logo, brand name, or watermark. `enable_qa` is off by default. Enabling it reports findings but never redraws, rewrites prompts, or changes prose automatically.
+Logo needs no setting. The finalizer detects only the regular PNG in `assets/logo/` whose name matches the style contract: it applies that asset when present and skips it when missing or symlinked. The model must not render a Logo, brand name, or watermark. `enable_qa` is off by default: disabled QA sends generated images directly to finalization and placement; enabled QA permits only passing images to receive the Logo and placement. QA never redraws, rewrites prompts, or changes prose automatically.
 
 ![A workflow from Markdown and source material through a manifest to article anchors or narrative-frame order](examples/readme-visuals/how-it-works.png)
 
@@ -103,7 +103,7 @@ Logo needs no setting. The finalizer detects only the regular PNG in `assets/log
 
 - Find an explanation task in a source-supported mechanism, process, feedback loop, comparison, boundary, hierarchy, or argument.
 - Define one source-supported cover promise; reproduce the H1 or explicit `presentation_title` exactly as the cover title.
-- Specify one reader question, core judgment, required relationship, and primary grammar per content image.
+- Specify one reader block, core judgment, required relationship, and primary grammar per content image; when needed, record the source support for each label, leader, connector, directional line, or note.
 - Keep planning, actual prompts, generated files, Logo handling, placement or sequence, and QA state in one manifest.
 - Handle real screenshots, paper figures, data charts, or UI images as supplied source material instead of presenting generated illustration as evidence.
 
@@ -136,7 +136,7 @@ The product is useful because its runtime contract is explicit, not because it p
 - An accepted article image appears once at its approved anchor; multiple references stop for human resolution.
 - Generated work is editorial illustration. Real-source material must be supplied and recorded explicitly.
 
-Use [SKILL.md](SKILL.md) for runtime fields, prompt compilation, Logo finalization, and QA rules.
+Use [references/manifest-contract.md](references/manifest-contract.md) for page fields and lifecycle, and [SKILL.md](SKILL.md) for prompt compilation, Logo finalization, and QA rules. The default Prompt projects shared style, identity, grammar, and declared encoding per page; `expanded` strengthens relevant style language, while `full_diagnostic` is comparison-only.
 
 ## Visual grammar reference
 
