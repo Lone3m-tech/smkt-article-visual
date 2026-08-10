@@ -70,9 +70,8 @@ git clone --depth 1 https://github.com/Lone3m-tech/smkt-article-visual.git \
 已完成实际运行的宿主：
 
 - <img src="examples/readme-visual/codex-openai-wordmark.webp" alt="OpenAI Logo，代表 Codex" width="112"> **Codex**：已验证本地文件读写、页面级 Prompt 编译、图像生成与终处理。
-- <img src="examples/readme-visual/doubao-logo.png" alt="豆包 Logo" width="52"> **豆包**：已验证同一完整本地工作流。
 
-Logo 分别归 OpenAI 与豆包所有，仅用于识别已实测 Agent；不暗示背书或合作。
+Logo 归 OpenAI 所有，仅用于识别已实测 Agent；不暗示背书或合作。
 
 ## 4. 开始使用
 

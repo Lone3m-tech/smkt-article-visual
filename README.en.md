@@ -65,9 +65,8 @@ The following hosts have completed an actual run of this Skill. This support is 
 | Agent | Test status | Verified scope |
 | --- | --- | --- |
 | <img src="examples/readme-visual/codex-openai-wordmark.webp" alt="OpenAI logo representing Codex" width="128"><br>**Codex** | Tested | Can complete this Skill's local workflow. |
-| <img src="examples/readme-visual/doubao-logo.png" alt="Doubao logo" width="72"><br>**Doubao** | Tested | Can complete this Skill's local workflow. |
 
-The Logos belong to OpenAI and Doubao respectively and appear only to identify the tested Agents; they do not imply endorsement or partnership.
+The logo belongs to OpenAI and appears only to identify the tested Agent; it does not imply endorsement or partnership.
 
 ## Start
 
