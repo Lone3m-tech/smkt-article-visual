@@ -1,3 +1,5 @@
+![13 种正文图法与封面、目录、结尾版式组成的电影画幅总览](examples/readme-visual/visual-grammar-cinematic-poster.png)
+
 <div align="center">
 
 # smkt-article-visual
@@ -23,8 +25,6 @@
 **简体中文 | [English](README.en.md)**
 
 </div>
-
-![13 种正文图法与封面、目录、结尾版式组成的电影画幅总览](examples/readme-visual/visual-grammar-cinematic-poster.png)
 
 ## 为什么是这个 Skill
 
@@ -75,7 +75,7 @@ Logo 分别归 OpenAI 与豆包所有，仅用于识别已实测的对应 Agent�
 
 ## 开始使用
 
-把源 Markdown 和交付目标交给 Agent。默认先只做计划：
+把可访问的原始叙事和交付目标交给 Agent。Markdown 可直接作为来源；本地文档或已授权可读取的飞书文档，先整理为本地 Markdown 工作副本，再进入本 Skill。默认先只做计划：
 
 ```yaml
 source_path: ./article.md
@@ -83,6 +83,8 @@ delivery_mode: article_package
 mode: plan
 existing_assets: []
 ```
+
+`source_path` 始终指向执行时使用的本地 Markdown 工作副本。原始来源可以是 Word / Docs 导出文件或飞书文档；转换只为保留可追溯的正文、H1 与段落锚点，不得改写原意或回写远端文档。
 
 例如：
 
@@ -101,22 +103,17 @@ enable_qa: false
 
 一次合格运行不是“生成了几张好看的图”，而是同时满足：每张正文图只解释一个原文支持的关系；遮住标题后，读者仍能从对象、位置与必要标注读出关系；接受的图片只落在对应锚点一次，且原文没有被改写。
 
-## 内置完整示例
-
-[`examples/demo-article/article.md`](examples/demo-article/article.md) 是一篇已完成的 `article_package` 示例：它从“清洗后的运动鞋不宜直接贴近暖气烘干”这篇短文中，选出一个对比关系与一个流程关系，生成封面和两张正文解释图。该示例的 manifest 为 schema 9，三页均已 `placed`；它展示包内成果形态，不构成护理建议的验证。
-
-| 原文中的理解关系 | 选择的图法 | 结果 |
-| --- | --- | --- |
-| 表面已经干燥，并不代表整双鞋已适合穿着。 | `comparison` | ![内置示例：外干不等于内干](examples/demo-article/assets/image/outer-dry-inner-wet.png) |
-| 先打开结构、吸除水分，再保持通风。 | `flow` | ![内置示例：打开、吸水、再通风](examples/demo-article/assets/image/open-absorb-ventilate.png) |
+## 内置示例
 
 ![内置示例封面：为什么清洗后的运动鞋不宜直接贴近暖气烘干？](examples/demo-article/assets/image/cover.png)
+
+[《为什么清洗后的运动鞋不宜直接贴近暖气烘干？》](examples/demo-article/article.md)
 
 ## 如何工作
 
 本 README 的开头海报、正文展示图、已验证 Agent 标识与配套 manifest 集中在 [`examples/readme-visual/`](examples/readme-visual/)；它们是文档演示资产，不是使用本 Skill 时生成的 `assets/image/` 交付物。
 
-输入是一份可访问的 Markdown 叙事和可选的真实已有素材；输出是封面、必要的解释图和一个 `assets/image/manifest.json`。文章模式写入文章根目录，演示模式写入 `presentation_output_root`；Skill 自带的图法参考则固定在 [`examples/visual-grammar/`](examples/visual-grammar/)，不属于某次运行的交付物。
+输入可以是可访问的 Markdown、可导出的本地文档，或已授权可读取的飞书文档，外加可选的真实已有素材。非 Markdown 来源先保留为本地 Markdown 工作副本，再用于页面锚点和 `source_path`；输出是封面、必要的解释图和一个 `assets/image/manifest.json`。文章模式写入文章根目录，演示模式写入 `presentation_output_root`；Skill 自带的图法参考则固定在 [`examples/visual-grammar/`](examples/visual-grammar/)，不属于某次运行的交付物。
 
 | 模式 | 默认与输入要求 | 交付边界 |
 | --- | --- | --- |

@@ -1,6 +1,6 @@
 ---
 name: smkt-article-visual
-description: "Turn a finished or near-finished Markdown narrative—an article, talk, report, proposal, or workshop outline—into unified explanatory images, optionally adapting transferable high-level visual direction from a user-supplied reference without reproducing its distinctive content. Use when the request explicitly asks for 文章配图, 文章视觉包, 文章封面, 正文解释图, or 连续讲述图."
+description: "Turn a finished or near-finished narrative—Markdown, a local document export, or an authorized readable Feishu/Lark document normalized into local Markdown—into unified explanatory images, optionally adapting transferable high-level visual direction from a user-supplied reference without reproducing its distinctive content. Use when the request explicitly asks for 文章配图, 文章视觉包, 文章封面, 正文解释图, or 连续讲述图."
 ---
 
 # smkt-article-visual
@@ -9,6 +9,7 @@ description: "Turn a finished or near-finished Markdown narrative—an article, 
 
 ```yaml
 source_path: ./source.md
+source_origin: # optional original document path or authorized Feishu/Lark URL; provenance only
 delivery_mode: article_package | presentation_frames
 mode: plan | generate | qa
 presentation_title:
@@ -31,6 +32,7 @@ style_direction:          # optional concise rendering direction that applies to
 
 ## Boundaries
 
+- Accept Markdown directly. For a local document export or an authorized readable Feishu/Lark document, first make a local Markdown working copy that preserves the source meaning, H1, and paragraph structure. `source_path`, source anchors, and `manifest.json` always point to that working copy; do not write back to the original document or remote service.
 - Keep source prose unchanged. In `article_package`, insert only accepted image Markdown; `presentation_frames` never edits source prose.
 - Generate with the host `image_gen` capability. Do not redraw generated artwork with another renderer. The packaged finalizer may add the Logo only.
 - Generated illustrations are explanatory artwork, never authentic screenshots, source images, or factual evidence.
@@ -44,7 +46,7 @@ Use [references/manifest-contract.md](references/manifest-contract.md) as the so
 
 ### 1. Plan the image system
 
-Read the article first. For every candidate body page, first copy one exact key source sentence (or the smallest contiguous source range that preserves one relationship) into `source_support`. This sentence is the page's semantic anchor: do not begin with a subject list, a desired scene, or a vague topic heading.
+Read the local Markdown working copy first. For every candidate body page, first copy one exact key source sentence (or the smallest contiguous source range that preserves one relationship) into `source_support`. This sentence is the page's semantic anchor: do not begin with a subject list, a desired scene, or a vague topic heading.
 
 Before selecting a grammar, make one explanation contract from that support:
 

@@ -71,7 +71,7 @@ The Logos belong to OpenAI and Doubao respectively and appear only to identify t
 
 ## Start
 
-Give the Agent the source Markdown and delivery goal. Start in planning mode:
+Give the Agent an accessible narrative and delivery goal. Markdown can be used directly; a local document export or an authorized readable Feishu/Lark document must first be normalized into a local Markdown working copy. Start in planning mode:
 
 ```yaml
 source_path: ./article.md
@@ -79,6 +79,8 @@ delivery_mode: article_package
 mode: plan
 existing_assets: []
 ```
+
+`source_path` always points to the local Markdown working copy used for execution. The original source may be a Word / Docs export or a Feishu/Lark document; normalization preserves the traceable prose, H1, and paragraph anchors, does not rewrite meaning, and never writes back to the remote document.
 
 Example request:
 
@@ -97,22 +99,17 @@ enable_qa: false
 
 A successful run is not simply a set of attractive images. Each body page explains one source-supported relationship; the relationship remains readable from objects, position, and necessary annotations with the title hidden; and every accepted image is placed once at its approved anchor without rewriting the prose.
 
-## Complete bundled example
-
-[`examples/demo-article/article.md`](examples/demo-article/article.md) is a completed `article_package` example. From a short article about why freshly cleaned sneakers should not be dried against a radiator, it selects one comparison and one flow relationship, then produces a cover and two explanatory body images. Its schema-9 manifest records all three pages as `placed`; it demonstrates the package's output shape, not shoe-care advice.
-
-| Reader relationship in the source | Selected grammar | Result |
-| --- | --- | --- |
-| A dry surface does not mean the whole shoe is ready to wear. | `comparison` | ![Bundled example: dry outside is not dry inside](examples/demo-article/assets/image/outer-dry-inner-wet.png) |
-| Open the structure, absorb water, then maintain ventilation. | `flow` | ![Bundled example: open, absorb, ventilate](examples/demo-article/assets/image/open-absorb-ventilate.png) |
+## Bundled example
 
 ![Bundled example cover: Why should freshly cleaned sneakers not be dried directly against a radiator?](examples/demo-article/assets/image/cover.png)
+
+[“Why should freshly cleaned sneakers not be dried directly against a radiator?”](examples/demo-article/article.md)
 
 ## How it works
 
 The body visuals, tested-Agent marks, and companion manifest used by this README live in [`examples/readme-visual/`](examples/readme-visual/). They are documentation display assets, not `assets/image/` output from a Skill run.
 
-The input is accessible Markdown plus optional real source assets. The output is a cover, necessary explanatory images, and `assets/image/manifest.json`. Article mode writes at the article root, while presentation mode writes at `presentation_output_root`; the Skill's static grammar gallery lives in [`examples/visual-grammar/`](examples/visual-grammar/) and is not output from an individual run.
+Input can be accessible Markdown, an exportable local document, or an authorized readable Feishu/Lark document, plus optional real source assets. Normalize non-Markdown sources into a local Markdown working copy before using its anchors and `source_path`. The output is a cover, necessary explanatory images, and `assets/image/manifest.json`. Article mode writes at the article root, while presentation mode writes at `presentation_output_root`; the Skill's static grammar gallery lives in [`examples/visual-grammar/`](examples/visual-grammar/) and is not output from an individual run.
 
 | Mode | Default and input condition | Delivery boundary |
 | --- | --- | --- |
