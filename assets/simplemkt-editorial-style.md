@@ -2,6 +2,19 @@
 
 This is the single, direct-text visual-style source for article visuals. The compiler injects **shared + page role**, and adds **annotation** only when the page has a non-empty annotation plan.
 
+<!-- smkt-presentation-typography -->
+| role | family | weight | color | size_px | line_height_px | max_lines | alignment |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| cover_title | 简宋衬线体 | semibold | #1A1A1A | 64 | 78 | 2 | local |
+| body_title | 简宋衬线体 | semibold | #1A6B3A | 48 | 60 | 1 | center |
+| body_subtitle | 简宋衬线体 | regular | #6B6B6B | 28 | 36 | 1 | center |
+| agenda_title | 简宋衬线体 | semibold | #1A6B3A | 48 | 60 | 1 | local |
+| agenda_item | 简宋衬线体 | regular | #1A1A1A | 28 | 36 | 1 | local |
+| closing_message | 简宋衬线体 | semibold | #1A6B3A | 52 | 64 | 1 | local |
+| label | 微软雅黑（细） | regular | #515151 | 22 | 28 | 1 | local |
+| note | 微软雅黑（细） | regular italic | #6B6B6B | 17 | 23 | 1 | local |
+<!-- /smkt-presentation-typography -->
+
 ## Shared visual language
 
 <!-- smkt-style:shared -->
@@ -54,26 +67,25 @@ This is the single, direct-text visual-style source for article visuals. The com
 <!-- smkt-style:cover -->
 ### Cover composition
 
-- Use one calm, continuous left-to-right editorial-poster composition: a clean left title field and one resolved right-side focal area;
-- Let the right-side artwork carry most of the illustrative spatial area, with a diagonal growth from upper-right to lower-left or lower-right to upper-left when it helps the source promise;
+- Apply the selected `layout_variant` as the cover's only geometry decision; it may vary title placement and abstract-carrier balance, but may not change the exact title, abstract-only scene integrity, or single-carrier principle;
+- Keep the title in one continuous pure-white safe field and the abstract carrier in a separate non-title field; never let either invade the Logo reserve;
 - Keep the title visually stronger and darker than the artwork;
-- The right-side carrier must turn the article's core judgment into one abstract editorial relationship. Use only density, interval, porosity, layering, dispersion, convergence, fracture, containment, or a non-directional curve to make up to two source-supported states perceptible;
+- The selected carrier must turn the article's core judgment into one abstract editorial relationship. Use only density, interval, porosity, layering, dispersion, convergence, fracture, containment, or a non-directional curve to make up to two source-supported states perceptible;
 - Never render a recognizable person, animal, product, tool, vehicle, building, landscape, plant, body part, industry object, or any other representational entity; the cover is an abstract composition, not an illustration of its topic;
-- A sparse, nonessential edge of the right-side carrier may lightly enter the left whitespace, but never the title-safe field;
+- A sparse, nonessential edge of the carrier may lightly enter unused whitespace, but never the title-safe field;
 - Do not use montage, scattered top-and-bottom composition, multiple preview panels, multiple paper props, decorative scenery, or any representational subject.
 
 ### Cover typography
 
-- Use a high-contrast Songti-like editorial serif, semibold, and deep ink (#1A1A1A) for the cover title;
-- Keep the cover title left-aligned and vertically centered in its continuous white title field, with no more than two lines;
+- Let the selected layout variant determine the cover title's alignment and placement inside its continuous white title field; keep it to no more than two lines;
 - Use the required `editorial_treatment.title_units` to set two or three contiguous title units as an intentionally uneven but continuous title composition; their concatenation remains the exact H1 and they still occupy the same two-line title block;
-- Exactly one declared title unit uses a pale brand-green selection field with a thin green outline and up to two small terminal dots; its characters remain deep ink. It is the only brand-green area on the cover and is an editorial emphasis, never a text box, cursor, toolbar, or interface;
+- Exactly one declared title unit uses a pale brand-green selection field with a thin green outline and up to two small terminal dots; its characters remain deep ink. It is the title-level brand-green emphasis, never a text box, cursor, toolbar, or interface;
 - When a cover plan declares `editorial_treatment.trace.mode: quiet_curve`, use one hairline deep-ink or restrained-gray curve with the declared zero to two small dots only in non-title whitespace; it gives viewing rhythm, never direction, topology, a metric, an arrow, a label, or a claim;
 - Do not add secondary typographic treatments, decorative labels, ornamental text, or undeclared curves.
 
 ### Cover abstract treatment
 
-- Keep the right-side abstract carrier primarily white with loose fine deep-ink and restrained-gray marks; use no brand green in the carrier;
+- Keep the selected abstract carrier primarily white with loose fine deep-ink and restrained-gray marks; allow one separate, low-saturation brand-green dry-brush accent or short path within at most 3% of the carrier area. It must not become a second title field, a large fill, a green contour system, or an interface element;
 - Do not use collage, faux-aged material, product photography, glossy 3D, cinematic lighting, or any outline that resolves into a recognizable real-world thing.
 <!-- /smkt-style:cover -->
 
@@ -90,13 +102,10 @@ This is the single, direct-text visual-style source for article visuals. The com
 - When detail would require enlarging the main object, simplify it or split the explanation into another page; never enlarge one cutaway object to fill the lower content stage;
 - Do not use unrelated decoration, oversized objects, repeated cards, summary tables, dashboard layouts, or a separate narrative scene.
 
-### Body typography
-
-- When a page renders a title and subtitle, use a high-contrast Songti-like editorial serif, semibold, and brand green (#1A6B3A) for the core judgment;
-- When a page renders a title and subtitle, use regular neutral gray (#6B6B6B) for the subtitle;
-- When a page renders a title and subtitle, keep the core judgment and subtitle centered as one typographic block;
+- Keep the core judgment and subtitle centered as one typographic block; labels and notes are a separate local annotation hierarchy;
+- Keep label and note text compact: label above note when they share a target, with the note visibly subordinate;
 - Keep the title region free of artwork, frame, and divider;
-- When declared in the annotation plan, use dark-gray, medium-weight structural labels; restrained gray-green, regular labels; and small, italic, gray disclosure notes.
+- Do not apply this body scale to the cover, agenda, or closing roles.
 
 ### Body visual exclusions
 
@@ -110,14 +119,16 @@ This is the single, direct-text visual-style source for article visuals. The com
 <!-- smkt-style:agenda -->
 ### Agenda composition
 
-- Use one calm, centered agenda title and a single ordered vertical sequence of three to five short items;
+- Apply the selected `layout_variant` as the agenda's only geometry decision; it may vary the title and sequence placement, but must retain one ordered sequence of three to five short exact items;
 - Keep every agenda item compact, evenly separated, and clearly subordinate to the title;
-- Use one small abstract navigation mark only when it supports the sequence; do not add cards, badges, decorative arrows, or unrelated illustrations.
+- When a page declares `agenda_carrier`, use it only with `centered_list`: render exactly one low-density abstract navigation rhythm in the lower-right whitespace, within 18% of the canvas, subordinate to the title and sequence;
+- An agenda carrier is never a recognizable entity, object, scene, plant, animal, vehicle, building, landscape, body part, industry symbol, card, badge, or decorative arrow;
+- When no `agenda_carrier` is declared, use at most one small quiet abstract navigation mark; do not add cards, badges, decorative arrows, or unrelated illustrations.
 
 ### Agenda typography
 
 - Render only the exact title and exact agenda item titles declared by the page plan;
-- Use restrained gray numbering and deep-ink or brand-green title emphasis; do not use hand-lettering, paragraph copy, or extra labels.
+- Do not use hand-lettering, paragraph copy, or extra labels.
 <!-- /smkt-style:agenda -->
 
 ## Closing visual language
@@ -125,12 +136,15 @@ This is the single, direct-text visual-style source for article visuals. The com
 <!-- smkt-style:closing -->
 ### Closing composition
 
-- Use one calm, centered standard closing message with generous white space and, at most, one small quiet end mark;
+- `editorial_signoff` places the closing message in the upper-left title-safe field and renders exactly one tiny non-semantic dry-ink end mark in lower-right non-Logo whitespace; it never uses a carrier;
+- `baseline_signoff` places the closing message in the lower-left safe field and anchors it with exactly one short, broken, low-contrast dry-ink baseline beneath it; it never uses a carrier, end mark, frame, arrow, or extra graphic;
+- `echo_signoff` centers the closing message and requires exactly one low-density abstract `closing_carrier` echo in lower-right whitespace. Keep it within 18% of the canvas, subordinate to the message, and use only density, interval, porosity, layering, dispersion, convergence, fracture, containment, or a non-directional curve;
+- A closing carrier is never a recognizable entity, object, scene, plant, animal, vehicle, building, landscape, body part, or industry symbol;
 - Do not repeat the cover, summarize the article, add a call to action, or introduce any factual claim.
 
 ### Closing typography
 
-- Render only the exact closing message declared by the page plan, once, in high-contrast Songti-like editorial serif with restrained brand-green emphasis;
+- Render only the exact closing message declared by the page plan, once;
 - Do not add a subtitle, secondary text, decorative label, or ornamental typography.
 <!-- /smkt-style:closing -->
 
@@ -139,12 +153,14 @@ This is the single, direct-text visual-style source for article visuals. The com
 <!-- smkt-style:annotation -->
 ### Visible text
 
-- Render only the exact labels or notes declared by this page’s annotation plan.
+- Render only the exact labels or notes declared by this page’s annotation plan, each exactly once.
+- When a label and note share the same target, render the label as the compact judgment and the note directly beneath it as one smaller, lighter gray line; they remain one callout, not two captions.
 
 ### Attachment
 
 - Use adjacent short labels, local leaders, and low-contrast gray hairlines;
 - Attach every label or note to its target;
+- A paired label and note share one leader; do not add a second leader, frame, card, or badge for the note;
 - Keep every annotation subordinate to the illustrated relation.
 
 ### Green relation line

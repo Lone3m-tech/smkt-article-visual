@@ -27,6 +27,7 @@ Do not create top-level `plan`, `style`, `generate`, `logo`, `layout`, `placemen
     "source_support": "article H1",
     "intent": "establish the article's reading promise",
     "title": "exact source H1",
+    "layout_variant": "text_left_carrier_right",
     "core_promise": "...",
     "primary_carrier": "one abstract relationship carrier, never an entity or industry object",
     "visual_direction": "restrained_abstract_composition",
@@ -40,18 +41,20 @@ Do not create top-level `plan`, `style`, `generate`, `logo`, `layout`, `placemen
       ],
       "trace": {"mode": "none | quiet_curve", "node_count": 0}
     },
-    "colour_plan": {"mode": "brand_green_accent", "local_colours": [{"target": "the sole declared title selection field", "colour_family": "brand green", "rationale": "editorial title emphasis"}], "limits": {"max_local_colours": 1, "gradients": "forbidden", "coverage": "small_detail_only"}},
+    "colour_plan": {"mode": "brand_green_accent", "local_colours": [{"target": "the declared title selection field and one tiny abstract-carrier dry-brush accent", "colour_family": "brand green", "rationale": "editorial title emphasis with quiet carrier continuity"}], "limits": {"max_local_colours": 1, "gradients": "forbidden", "coverage": "small_detail_only"}},
     "scene_integrity": {"mode": "abstract", "rationale": "cover expresses the source promise through abstract spatial relationships only"},
     "annotation_plan": {"mode": "none", "items": [], "limits": {"max_items": 0, "max_text_items": 0}}
   }
 }
 ```
 
-`editorial_treatment` is required. `title_units` contains two or three ordered, contiguous strings whose exact concatenation equals `title`; each uses `none` or `selection_field`, and exactly one unit uses `selection_field`. All title characters remain deep ink; the sole selection field is the only brand-green area on the cover. `trace.mode` is `none` or `quiet_curve`; `node_count` is 0–2 and must be 0 when the mode is `none`. The trace carries no text, arrow, metric, relation, direction, source fact, or claim.
+`editorial_treatment` is required. `title_units` contains two or three ordered, contiguous strings whose exact concatenation equals `title`; each uses `none` or `selection_field`, and exactly one unit uses `selection_field`. All title characters remain deep ink; the selection field is the title-level brand-green emphasis, while the carrier may use one separate low-saturation dry-brush accent within at most 3% of its area. `trace.mode` is `none` or `quiet_curve`; `node_count` is 0–2 and must be 0 when the mode is `none`. The trace carries no text, arrow, metric, relation, direction, source fact, or claim.
 
 Every cover requires `scene_integrity.mode: abstract`. Its `primary_carrier`, `visual_progression`, and `must_show` may describe only abstract spatial relationships—such as density, interval, porosity, layering, dispersion, convergence, fracture, containment, or a non-directional curve—not a recognizable entity, object, scene, or industry symbol.
 
 The cover never chooses a body grammar and never uses labels, leaders, connectors, directional lines, or notes.
+
+`layout_variant` is optional for compatibility but should be selected explicitly for every new presentation cover. Valid cover values are `text_left_carrier_right`, `text_right_carrier_left`, `text_top_carrier_bottom`, and `text_centered`; omission resolves to `text_left_carrier_right`. The first three define a directional text/carrier split. `text_centered` centers the title and permits only a visibly secondary peripheral abstract echo, never a distinct carrier field.
 
 ## Presentation-only orientation and closing pages
 
@@ -69,11 +72,17 @@ The cover never chooses a body grammar and never uses labels, leaders, connector
     "source_support": "ordered planned presentation beats",
     "intent": "orient the audience to the presentation sequence",
     "title": "目录",
+    "layout_variant": "centered_list",
     "agenda_items": [
       {"title": "first planned beat", "source_support": "matching planned body beat"},
       {"title": "second planned beat", "source_support": "matching planned body beat"},
       {"title": "third planned beat", "source_support": "matching planned body beat"}
     ],
+    "agenda_carrier": {
+      "mode": "abstract_navigation",
+      "description": "three uneven-density abstract clusters arranged along one quiet vertical rhythm",
+      "placement": "lower_right"
+    },
     "must_show": ["three to five ordered agenda items"],
     "must_not_imply": ["an unplanned section or claim"],
     "scene_integrity": {"mode": "abstract", "rationale": "a small navigation mark may support the ordered sequence"},
@@ -83,6 +92,10 @@ The cover never chooses a body grammar and never uses labels, leaders, connector
 ```
 
 `agenda_items` contains three to five uniquely titled, ordered entries. Each entry names an already planned presentation beat or source section and records that support. The agenda follows the cover and precedes the first body page.
+
+`layout_variant` is optional for compatibility but should be selected explicitly for every new presentation agenda. Valid agenda values are `centered_list`, `split_list`, `vertical_rail`, and `stepped_list`; omission resolves to `centered_list`. An `agenda_carrier` is allowed only with `centered_list`.
+
+`agenda_carrier` is optional. When present, it uses only `mode: abstract_navigation`, a non-empty abstract `description`, and `placement: lower_right`. It is one low-density abstract rhythm of the already declared ordered beats; it may not render a recognizable entity, scene, source claim, body grammar, card, badge, or decorative arrow. Omit it for an intentionally unadorned agenda.
 
 ### Closing page
 
@@ -94,6 +107,7 @@ The cover never chooses a body grammar and never uses labels, leaders, connector
   "prompt_projection": "default",
   "plan": {
     "closing_text": "谢谢观看",
+    "layout_variant": "editorial_signoff",
     "must_show": ["one standard closing message"],
     "must_not_imply": ["a new factual claim, summary, promise, or call to action"],
     "scene_integrity": {"mode": "abstract", "rationale": "a quiet standard closing requires no embodied subject"},
@@ -103,6 +117,11 @@ The cover never chooses a body grammar and never uses labels, leaders, connector
 ```
 
 `closing_text` defaults to `谢谢观看` unless the presentation request supplies a replacement. A closing follows the final body page and is standard presentation chrome, not a source claim or a body grammar.
+
+`layout_variant` is optional for compatibility but should be selected explicitly for every new presentation closing. Valid closing values are `editorial_signoff`, `baseline_signoff`, and `echo_signoff`; omission resolves to `editorial_signoff`.
+- `editorial_signoff` is an upper-left editorial signoff: it forbids `closing_carrier` and allows exactly one tiny non-semantic lower-right end mark.
+- `baseline_signoff` is a lower-left formal signoff: it forbids `closing_carrier` and uses exactly one short broken low-contrast baseline beneath the message, with no end mark, frame, arrow, or additional graphic.
+- `echo_signoff` requires `closing_carrier`. It uses only `mode: abstract_echo`, a non-empty abstract `description`, and `placement: lower_right`; it is one low-density visual echo of the already planned cover carrier and may not render a recognizable entity, scene, source claim, summary, promise, or call to action.
 
 ## Body page
 
@@ -137,13 +156,13 @@ The cover never chooses a body grammar and never uses labels, leaders, connector
           "source_support": "the supporting source fact"
         }
       ],
-      "limits": {"max_items": 3, "max_text_items": 3}
+      "limits": {"max_items": 4, "max_text_items": 4}
     }
   }
 }
 ```
 
-Every body plan must explicitly declare `annotation_plan`. Its required shape, item types, and limits are defined above; the compiler validates its conditional values against the selected grammar and style maxima.
+Every body plan must explicitly declare `annotation_plan`. Its required shape, item types, and limits are defined above; the compiler validates its conditional values against the selected grammar and style maxima. A `label` may be paired with a `note` on the same `target`: the label is the short judgment, while the note is one short source-supported mechanism, condition, or scope. Use no more than two paired notes per body page; they share one leader and are rendered as a single two-level callout, never as a card or detached caption. Every declared visible label or note is rendered exactly once, even when its target groups several source-supported objects or regions.
 
 ### Semantic proof contract
 

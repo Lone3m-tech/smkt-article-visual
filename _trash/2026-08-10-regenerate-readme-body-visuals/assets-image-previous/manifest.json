@@ -1,0 +1,325 @@
+{
+  "schema_version": 9,
+  "source_path": "README.md",
+  "delivery_mode": "article_package",
+  "pages": [
+    {
+      "id": "why-this-skill",
+      "role": "body",
+      "status": "placed",
+      "generation": {
+        "status": "generated",
+        "candidate_file": "assets/image/why-this-skill.candidate.png"
+      },
+      "qa": {
+        "status": "qa_skipped"
+      },
+      "placement": {
+        "status": "placed",
+        "markdown_reference": "![对比：孤立图片请求与把来源支持、读者卡点、图法和落位连接在一起的页面 manifest](assets/image/why-this-skill.png)",
+        "after_source_anchor": "前者的语义判断留给人手工补齐，后者把来源支持、读者卡点、图法、可见证据与落位记录在同一份页面 manifest 中。"
+      },
+      "prompt_projection": "default",
+      "plan": {
+        "source_support": "前者的语义判断留给人手工补齐，后者把来源支持、读者卡点、图法、可见证据与落位记录在同一份页面 manifest 中。",
+        "intent": "show why a source-supported relationship plan differs from a picture-only prompt",
+        "source_anchor": "前者的语义判断留给人手工补齐，后者把来源支持、读者卡点、图法、可见证据与落位记录在同一份页面 manifest 中。",
+        "reader_block": "A reader should see that the Skill packages the meaning relationship, not merely the requested image.",
+        "source_relation": "A picture-only prompt leaves the semantic decision outside the artifact, while the Skill connects source support, reader block, grammar proof, and placement in one manifest.",
+        "core_judgment": "先判断关系，再生成画面",
+        "subtitle": "普通 Prompt 与关系驱动交付的区别",
+        "render_text": false,
+        "grammar": "comparison",
+        "visual_solution": "A small left loose paper sheet carries only one isolated abstract mark with no attached source anchor or placement relation; a distinct right page-shaped manifest has four visibly connected, unevenly placed abstract semantic marks for source support, reader block, visual grammar, and placement.",
+        "must_show": [
+          "The left alternative is a lone sheet with one isolated abstract mark and no visible connection to source support or placement.",
+          "The right alternative visibly connects source support, reader block, visual grammar, and placement to one manifest page.",
+          "The two alternatives remain structurally different when their labels are hidden."
+        ],
+        "must_not_imply": [
+          "that ordinary image prompting is invalid",
+          "that the manifest supplies facts absent from the source",
+          "that this is a software interface or screenshot"
+        ],
+        "comparison_basis": [
+          "The picture-only alternative is disconnected from source support and placement.",
+          "The Skill alternative visibly joins source support, reader block, grammar proof, and placement in one page manifest."
+        ],
+        "colour_plan": {
+          "mode": "brand_green_accent",
+          "local_colours": [
+            {
+              "target": "the single connection entering the manifest page",
+              "colour_family": "brand green",
+              "rationale": "emphasize the source-supported relation without treating it as a product colour"
+            }
+          ],
+          "limits": {
+            "max_local_colours": 1,
+            "gradients": "forbidden",
+            "coverage": "small_detail_only"
+          }
+        },
+        "grammar_proof": {
+          "visible_evidence": [
+            "One alternative is a lone paper sheet with one isolated abstract mark and no attached relation marks.",
+            "The other alternative is a page form with four visibly connected semantic marks and a local placement mark.",
+            "The object boundary and connection difference remains visible without text."
+          ]
+        },
+        "scene_integrity": {
+          "mode": "abstract",
+          "rationale": "The page compares information structures rather than representing a real-world subject."
+        },
+        "annotation_plan": {
+          "mode": "none",
+          "items": [],
+          "limits": {
+            "max_items": 0,
+            "max_text_items": 0
+          }
+        }
+      },
+      "prompt": {
+        "status": "compiled",
+        "compiler_version": 13,
+        "template_id": "body-v1",
+        "projection_mode": "default",
+        "style_id": "simplemkt-editorial-direct-text",
+        "style_source": "assets/simplemkt-editorial-style.md",
+        "grammar_source": "references/visual-grammar.md",
+        "included_rules": [
+          "shared_prompt",
+          "body_prompt",
+          "grammar:comparison",
+          "projection:default"
+        ],
+        "text": "Create one finished image for a source-faithful editorial presentation.\n\nPriority: exact declared visible text; source meaning and exclusions; page-role layout; visual style.\n\nAll source notes and planning instructions are invisible guidance. Never render them as text.\n\nDo not add visible text, claims, logos, watermarks, interface elements, or decorative elements unless this page explicitly declares them.\n\nApply this page's visible typography exactly as stated here. Do not substitute, restate, or add another typography rule elsewhere in the image: This page renders no visible typography.\n\nEverything in this block is invisible semantic direction, never visible text. Do not render, quote, label, or paraphrase any wording from it: 前者的语义判断留给人手工补齐，后者把来源支持、读者卡点、图法、可见证据与落位记录在同一份页面 manifest 中。. The reader block is: A reader should see that the Skill packages the meaning relationship, not merely the requested image.. Preserve this source relationship: A picture-only prompt leaves the semantic decision outside the artifact, while the Skill connects source support, reader block, grammar proof, and placement in one manifest.. Make the source relationship legible through this visual solution: A small left loose paper sheet carries only one isolated abstract mark with no attached source anchor or placement relation; a distinct right page-shaped manifest has four visibly connected, unevenly placed abstract semantic marks for source support, reader block, visual grammar, and placement.. Show: The left alternative is a lone sheet with one isolated abstract mark and no visible connection to source support or placement.; The right alternative visibly connects source support, reader block, visual grammar, and placement to one manifest page.; The two alternatives remain structurally different when their labels are hidden.. The title and subtitle may orient the reader but never prove this relationship; its proof must remain in the content stage. Explicitly do not imply: that ordinary image prompting is invalid; that the manifest supplies facts absent from the source; that this is a software interface or screenshot.\n\nScene integrity is non-negotiable: Use an abstract non-embodied composition only: The page compares information structures rather than representing a real-world subject...\n\nUse comparison as the one dominant visual grammar, never a second grammar. Its required topology is: Make two or more source-supported alternatives visibly different even when labels are hidden; at least one difference must be object, position, connection, sequence, or boundary.. It must visibly prove: two or more alternatives; visible structural difference. Generic symbols, anonymous nodes, or arrows alone do not prove the source relationship: every non-self-evident source step or term must be identified by the exact short label or note declared in this page's annotation plan. Do not substitute: single-process diagram; name-only comparison; generic chart.\n\nMake this selected grammar visibly provable in the finished image through these reader-visible facts: One alternative is a lone paper sheet with one isolated abstract mark and no attached relation marks.; The other alternative is a page form with four visibly connected semantic marks and a local placement mark.; The object boundary and connection difference remains visible without text.. Each proof must be visible in the content stage itself, not supplied only by the title or subtitle. Do not let one generic illustrative scene substitute for this evidence.\n\nMake these source-supported comparison differences visibly distinct in objects, positions, connections, sequence, or boundaries: The picture-only alternative is disconnected from source support and placement.; The Skill alternative visibly joins source support, reader block, grammar proof, and placement in one page manifest..\n\nThe page annotation plan is none. Use this only because every required source relationship is self-evident from its depicted object and position. Inside the content stage, add no local labels, leaders, connectors, directional lines, or notes beyond the source-derived visual relationship itself.\n\nCreate a single titleless explanatory body image. Render no title or subtitle. Render only the exact labels or notes declared by this page's annotation plan; if its mode is none, render no text.\n\nKeep all semantic elements inside one calm, asymmetric content cluster with 68–78% quiet space, no more than 4 semantic groups, and 0–3 supporting elements. Treat this as a hard layout constraint, not a preference: the full drawn cluster is a small editorial vignette surrounded by white paper. Vary the related objects' scale, spacing, and vertical placement; do not arrange them as an even row, mirrored pair, grid, card wall, or unrelated decorative collage. The drawn cluster occupies at most 44% of the content-stage width and 44% of its height. Use a small hero scale: scale down objects instead of enlarging one central object to explain internal detail; do not let a cutaway, product, person, or other primary object fill the lower content stage, reach the stage edges, or occupy more than two thirds of the cluster. Keep any declared labels and explanations local and subordinate. Split the page instead of adding competing structures when the relationship cannot remain legible. Do not use edge-to-edge hero; oversized object; lower-stage fill; large cutaway hero or dashboard; card wall; unrelated scenery; logo reserve content.\n\nApply this direct production style prompt exactly. Follow the page-specific colour direction as an additional constraint:\n\n### Form and line\n\n- Draw recognizable people, animals, food, plants, products, natural materials, and other real-world entities as small, characterful iconic hand-drawn ink forms;\n- When a source-required person, animal, or embodied object appears, use one readable asymmetric posture, gaze, or action direction to make its source-supported state or role clear; do not add a second decorative actor or an unsupported gesture;\n- Give every primary real-world object one memorable, source-compatible signature feature—an opening, bend, lift, loose edge, overlap, or weight shift—rather than presenting it as a neutral specimen;\n- Retain only selectively observed details that make a real-world object recognizable and characterful; omit the rest instead of fully specifying the product, but do not impose a fixed part or plane count;\n- Prefer frontal, profile, lightly oblique, or flat cutaway views; allow shallow front/back overlap, tilt, visible edge thickness, and a deliberately short, broad, skewed, or mildly off-balance silhouette, but never correct them into precise perspective;\n- Let related source-supported objects or states lean, overlap, open, crop, or sit at unequal heights when that preserves their relationship; do not present them as evenly spaced inventory;\n- Omit seams, mesh, mechanical construction, realistic material detail, and precise foreshortening only when they do not carry the object's recognizable observed character or the source relationship;\n- Use predominantly fine, visibly variable, occasionally broken deep-ink contours with sparse marks and generous white space; allow one or two short, imperfect retraced strokes where an observed edge, fold, lace, opening, or overlap deserves attention;\n- Let line weight gather and release naturally around those observed details; leave one or two intentional open joins or dry breaks rather than closing and smoothing every contour;\n- Use loose fine-to-medium deep-ink contours with modest pressure variation, slight wobble, occasional retracing, open joins, and imperfect turns; never derive them from perfect geometry or resolve the object as a polished product drawing;\n- Keep structural connectors hairline-thin, calm, and low-contrast gray, except one declared local brand-green relation line;\n- Never use line weight to encode hierarchy;\n- Do not use a thick arrow, thick green route, double-weight connector, mixed connector widths, dense engraving, woodcut texture, scientific-plate or technical pen linework, dense crosshatching, repeated parallel shading, uniform vector contour, or marker-like cartoon border.\n\n### Fill and colour\n\n- Use pure white, deep ink, restrained gray (#7E8581, #6B6B6B, #8C8C8C), and one small concentrated brand-green (#1A6B3A) semantic accent as the default palette;\n- Use very light local dry-brush or wax-pencil fills that deliberately leave paper visible;\n- Keep each local fill loose, partially open, and beneath the ink contour;\n- Treat every local colour as one loose directional hand gesture in a selected local region, entering unevenly and stopping early; it may cross an internal structural line but stays inside the outer silhouette, and never becomes tidy area colouring, technical highlighting, shadow, or material description;\n- Establish visual focus through expressive contour, intentional whitespace, one declared local-colour fill, or one declared partial primary-subject fill; restrained gray may support structure, sparse texture, or a shallow separation, never continuous tonal volume;\n- Use brand green only for one approved state, relationship, focus field, tiny object detail, short underline, or one source-supported local connector, directional arrow, or route; when `brand_green_subject_fill` is explicitly declared, use it instead on one primary subject only;\n- For a declared primary-subject fill, use one or two connected local regions of that one subject in translucent, uneven green dry-brush or wax-pencil strokes, with substantial white paper still visible and the black contour always dominant;\n- Do not use brand green as a real entity’s default body colour, contour, hatching, repeated connector system, ordinary label colour, large background block, or fully opaque object fill; do not add a green relation line, second green subject, or green decorative detail when a primary-subject fill is declared;\n- Use a non-brand colour only when the page explicitly declares one tiny secondary detail; never use it for an animal, box, product, or other main semantic object;\n- Use no large background colour field, solid-black anchor fill, fully opaque object body, gradient, reflection, airbrush, realistic material colour, gray wash, continuous tonal shading, or realistic colour modelling.\n\n### Surface and texture\n\n- Allow a small number of short, dry, direction-consistent wax-pencil or crayon strokes inside a declared local fill;\n- Let those strokes remain gestural and leave visible gaps of white paper; they may lightly suggest an edge turn or shallow separation, but never a continuous light source, curved tonal volume, or material finish;\n- Keep the surface neutral white and flat;\n- At most two quiet graphite or restrained-gray graphic punctuation marks may support the rhythm of otherwise empty space; they are never labels, symbols of a claim, extra objects, or decoration competing with the source relationship;\n- Do not use cream paper, beige or warm cast, weathering, stains, damage, faux-aged filter, ornamental collage, decorative retro motifs, cast shadow, ground shadow, studio lighting, glossy 3D, cinematic depth, photographic rendering, realistic fur, cardboard texture, pencil modelling, realistic anatomy, precise perspective, dense tonal volume, or light modelling.\n\n### Global visual exclusions\n\n- Do not render a polished product illustration: no commercial-product refinement, merchandising silhouette, catalogue-ready detailing, precision product-design drawing, corrected perspective, or product volume resolved through tonal gray;\n- Do not render landscape photography, realistic or photographic subjects, product-studio lighting, glossy 3D rendering, cinematic soft shadow, pale-green outer frame, tinted paper, warm colour cast, generic SVG, or wireframe treatment;\n- Do not add unrelated visual metaphor, large shaded illustration, multiple detached paper objects, or magnifying-glass/clipboard/folded-page combinations.\n\n### Body composition\n\n- Use one calm, asymmetric semantic object cluster with 68–78% quiet space;\n- Use one primary object plus two to four source-supported related objects, states, or parts; every element must map to a visible proof, annotation, or source constraint;\n- Make their scale, spacing, and vertical placement an intentional irregular object-cluster rhythm; use uneven, non-grid placement rather than a row, mirrored pair, card wall, or equal-weight constellation;\n- Let one meaningful near-overlap, unequal gap, or partial crop create tension inside the cluster; preserve enough separation that each source relationship remains readable;\n- Keep the full artwork cluster within 44% of the content-stage width and 44% of its height. Treat it as a small editorial vignette: leave a clear white-paper margin on all four sides, and do not let any one object occupy more than two thirds of the cluster;\n- When detail would require enlarging the main object, simplify it or split the explanation into another page; never enlarge one cutaway object to fill the lower content stage;\n- Do not use unrelated decoration, oversized objects, repeated cards, summary tables, dashboard layouts, or a separate narrative scene.\n\n- Keep the core judgment and subtitle centered as one typographic block; labels and notes are a separate local annotation hierarchy;\n- Keep label and note text compact: label above note when they share a target, with the note visibly subordinate;\n- Keep the title region free of artwork, frame, and divider;\n- Do not apply this body scale to the cover, agenda, or closing roles.\n\n### Body visual exclusions\n\n- Do not use landscape, trees, plants, animals, people, or architecture as filler;\n- Do not use unsupported visual noise such as generic dashboards, analytics-panel styling, placeholders, dashed boxes, frames, or badges;\n- Do not use photography, realistic texture, studio lighting, glossy 3D, or cinematic shading.\n\nPage-specific colour direction: the single connection entering the manifest page: one tiny flat brand green accent detail only, justified by emphasize the source-supported relation without treating it as a product colour; keep it visually minor, never a hero or main-object fill; use no gradients and no more than one local colour.\n\nCreate one finished 1200 by 675 16:9 editorial image on an opaque flat pure-white #FFFFFF canvas. Keep the upper-right Logo reserve completely clear of title; subtitle; label; essential diagram content. Render no Logo, wordmark, brand name, seal, signature, or watermark; the packaged transparent Logo is applied only after generation.\n\nCoordinates, dimensions, and layout metadata are internal guidance. Never render them as image content."
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "assets/image/why-this-skill.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      }
+    },
+    {
+      "id": "how-it-works",
+      "role": "body",
+      "status": "placed",
+      "generation": {
+        "status": "generated",
+        "candidate_file": "assets/image/how-it-works.candidate.png"
+      },
+      "qa": {
+        "status": "qa_skipped"
+      },
+      "placement": {
+        "status": "placed",
+        "markdown_reference": "![流程：从计划到页面级 Prompt，再到已有生成图的 QA](assets/image/how-it-works.png)",
+        "after_source_anchor": "默认 `plan`；`generate` 按页编译 Prompt 并逐张生成；`qa` 检查已有生成图。"
+      },
+      "prompt_projection": "default",
+      "plan": {
+        "source_support": "默认 `plan`；`generate` 按页编译 Prompt 并逐张生成；`qa` 检查已有生成图。",
+        "intent": "make the ordered compile-and-deliver sequence visible",
+        "source_anchor": "默认 `plan`；`generate` 按页编译 Prompt 并逐张生成；`qa` 检查已有生成图。",
+        "reader_block": "A reader should see that planning, page-level Prompt generation, and QA are ordered stages rather than interchangeable steps.",
+        "source_relation": "The workflow moves from planning to page-level Prompt generation and then to QA of existing generated images.",
+        "core_judgment": "从叙事到可落位的视觉包",
+        "subtitle": "每一步都保留在同一份页面 manifest 中",
+        "render_text": false,
+        "grammar": "flow",
+        "visual_solution": "Three small, uneven paper-state forms move left to right: a source-supported plan, a compiled page Prompt, and an existing generated image under QA; one thin directional route passes through all three.",
+        "must_show": [
+          "Three ordered states run from planning to page-level Prompt to finalized placement.",
+          "A single thin route visibly connects the states in one direction.",
+          "The last state visibly inspects an already generated image rather than creating a new image."
+        ],
+        "must_not_imply": [
+          "that QA is automatically enabled or automatically redraws images",
+          "that the workflow rewrites the source prose",
+          "that a separate plan or run file is created"
+        ],
+        "colour_plan": {
+          "mode": "brand_green_accent",
+          "local_colours": [
+            {
+              "target": "the one directional route from plan to delivery",
+              "colour_family": "brand green",
+              "rationale": "make the source-supported ordered transition legible"
+            }
+          ],
+          "limits": {
+            "max_local_colours": 1,
+            "gradients": "forbidden",
+            "coverage": "small_detail_only"
+          }
+        },
+        "grammar_proof": {
+          "visible_evidence": [
+            "Three distinct page states appear in one left-to-right order.",
+            "One thin directional route connects the first state to the second and then the third.",
+            "The final state visibly inspects an existing image, distinguishing QA from generation."
+          ]
+        },
+        "scene_integrity": {
+          "mode": "abstract",
+          "rationale": "The page visualizes an information workflow with abstract page states, not a real-world scene."
+        },
+        "annotation_plan": {
+          "mode": "required",
+          "items": [
+            {
+              "type": "label",
+              "target": "left plan state",
+              "content": "计划 → 编译 → QA",
+              "source_support": "默认 `plan`"
+            },
+            {
+              "type": "directional_line",
+              "target": "ordered route through the three states",
+              "content": "",
+              "source_support": "默认 `plan`；`generate` 按页编译 Prompt 并逐张生成；`qa` 检查已有生成图。"
+            }
+          ],
+          "limits": {
+            "max_items": 2,
+            "max_text_items": 1
+          }
+        }
+      },
+      "prompt": {
+        "status": "compiled",
+        "compiler_version": 13,
+        "template_id": "body-v1",
+        "projection_mode": "default",
+        "style_id": "simplemkt-editorial-direct-text",
+        "style_source": "assets/simplemkt-editorial-style.md",
+        "grammar_source": "references/visual-grammar.md",
+        "included_rules": [
+          "shared_prompt",
+          "body_prompt",
+          "grammar:flow",
+          "annotation",
+          "projection:default"
+        ],
+        "text": "Create one finished image for a source-faithful editorial presentation.\n\nPriority: exact declared visible text; source meaning and exclusions; page-role layout; visual style.\n\nAll source notes and planning instructions are invisible guidance. Never render them as text.\n\nDo not add visible text, claims, logos, watermarks, interface elements, or decorative elements unless this page explicitly declares them.\n\nApply this page's visible typography exactly as stated here. Do not substitute, restate, or add another typography rule elsewhere in the image: Visible typography, stated here once: Label and note: 微软雅黑（细）; label uses regular, #515151, 22px size with 28px line height, at most 1 line. Note uses regular italic, #6B6B6B, 17px size with 23px line height, at most 1 line.\n\nEverything in this block is invisible semantic direction, never visible text. Do not render, quote, label, or paraphrase any wording from it: 默认 `plan`；`generate` 按页编译 Prompt 并逐张生成；`qa` 检查已有生成图。. The reader block is: A reader should see that planning, page-level Prompt generation, and QA are ordered stages rather than interchangeable steps.. Preserve this source relationship: The workflow moves from planning to page-level Prompt generation and then to QA of existing generated images.. Make the source relationship legible through this visual solution: Three small, uneven paper-state forms move left to right: a source-supported plan, a compiled page Prompt, and an existing generated image under QA; one thin directional route passes through all three.. Show: Three ordered states run from planning to page-level Prompt to finalized placement.; A single thin route visibly connects the states in one direction.; The last state visibly inspects an already generated image rather than creating a new image.. The title and subtitle may orient the reader but never prove this relationship; its proof must remain in the content stage. Explicitly do not imply: that QA is automatically enabled or automatically redraws images; that the workflow rewrites the source prose; that a separate plan or run file is created.\n\nScene integrity is non-negotiable: Use an abstract non-embodied composition only: The page visualizes an information workflow with abstract page states, not a real-world scene...\n\nUse flow as the one dominant visual grammar, never a second grammar. Its required topology is: Make the source-supported ordered steps, state changes, or input-to-output movement legible in one direction; do not imply an ongoing feedback cycle.. It must visibly prove: ordered states or steps; source-supported transition. Generic symbols, anonymous nodes, or arrows alone do not prove the source relationship: every non-self-evident source step or term must be identified by the exact short label or note declared in this page's annotation plan. Do not substitute: loop; timeline without real time; parallel concept map.\n\nMake this selected grammar visibly provable in the finished image through these reader-visible facts: Three distinct page states appear in one left-to-right order.; One thin directional route connects the first state to the second and then the third.; The final state visibly inspects an existing image, distinguishing QA from generation.. Each proof must be visible in the content stage itself, not supplied only by the title or subtitle. Do not let one generic illustrative scene substitute for this evidence.\n\nApply only this page's declared information encoding:\n- label targets left plan state; render exactly once \"计划 → 编译 → QA\"; source support: 默认 `plan`\n- directional_line targets ordered route through the three states; render no text; source support: 默认 `plan`；`generate` 按页编译 Prompt 并逐张生成；`qa` 检查已有生成图。\nRender every declared visible label or note exactly once, even if its target groups multiple objects or regions. When a declared `label` and `note` have the same target, render them as one two-level callout: the exact label first, then the exact note directly beneath it in the declared note role. They share one local leader; never place either in a card, caption block, or separate detached text area. Its visual language is: Use quiet thin gray leaders and labels; one declared green relation line may be used. Render only the exact visible label or note content declared by the page plan. Annotations are subordinate to the relationship and never decorative. Do not add any annotation not declared here.\n\nCreate a single titleless explanatory body image. Render no title or subtitle. Render only the exact labels or notes declared by this page's annotation plan; if its mode is none, render no text.\n\nKeep all semantic elements inside one calm, asymmetric content cluster with 68–78% quiet space, no more than 4 semantic groups, and 0–3 supporting elements. Treat this as a hard layout constraint, not a preference: the full drawn cluster is a small editorial vignette surrounded by white paper. Vary the related objects' scale, spacing, and vertical placement; do not arrange them as an even row, mirrored pair, grid, card wall, or unrelated decorative collage. The drawn cluster occupies at most 44% of the content-stage width and 44% of its height. Use a small hero scale: scale down objects instead of enlarging one central object to explain internal detail; do not let a cutaway, product, person, or other primary object fill the lower content stage, reach the stage edges, or occupy more than two thirds of the cluster. Keep any declared labels and explanations local and subordinate. Split the page instead of adding competing structures when the relationship cannot remain legible. Do not use edge-to-edge hero; oversized object; lower-stage fill; large cutaway hero or dashboard; card wall; unrelated scenery; logo reserve content.\n\nApply this direct production style prompt exactly. Follow the page-specific colour direction as an additional constraint:\n\n### Form and line\n\n- Draw recognizable people, animals, food, plants, products, natural materials, and other real-world entities as small, characterful iconic hand-drawn ink forms;\n- When a source-required person, animal, or embodied object appears, use one readable asymmetric posture, gaze, or action direction to make its source-supported state or role clear; do not add a second decorative actor or an unsupported gesture;\n- Give every primary real-world object one memorable, source-compatible signature feature—an opening, bend, lift, loose edge, overlap, or weight shift—rather than presenting it as a neutral specimen;\n- Retain only selectively observed details that make a real-world object recognizable and characterful; omit the rest instead of fully specifying the product, but do not impose a fixed part or plane count;\n- Prefer frontal, profile, lightly oblique, or flat cutaway views; allow shallow front/back overlap, tilt, visible edge thickness, and a deliberately short, broad, skewed, or mildly off-balance silhouette, but never correct them into precise perspective;\n- Let related source-supported objects or states lean, overlap, open, crop, or sit at unequal heights when that preserves their relationship; do not present them as evenly spaced inventory;\n- Omit seams, mesh, mechanical construction, realistic material detail, and precise foreshortening only when they do not carry the object's recognizable observed character or the source relationship;\n- Use predominantly fine, visibly variable, occasionally broken deep-ink contours with sparse marks and generous white space; allow one or two short, imperfect retraced strokes where an observed edge, fold, lace, opening, or overlap deserves attention;\n- Let line weight gather and release naturally around those observed details; leave one or two intentional open joins or dry breaks rather than closing and smoothing every contour;\n- Use loose fine-to-medium deep-ink contours with modest pressure variation, slight wobble, occasional retracing, open joins, and imperfect turns; never derive them from perfect geometry or resolve the object as a polished product drawing;\n- Keep structural connectors hairline-thin, calm, and low-contrast gray, except one declared local brand-green relation line;\n- Never use line weight to encode hierarchy;\n- Do not use a thick arrow, thick green route, double-weight connector, mixed connector widths, dense engraving, woodcut texture, scientific-plate or technical pen linework, dense crosshatching, repeated parallel shading, uniform vector contour, or marker-like cartoon border.\n\n### Fill and colour\n\n- Use pure white, deep ink, restrained gray (#7E8581, #6B6B6B, #8C8C8C), and one small concentrated brand-green (#1A6B3A) semantic accent as the default palette;\n- Use very light local dry-brush or wax-pencil fills that deliberately leave paper visible;\n- Keep each local fill loose, partially open, and beneath the ink contour;\n- Treat every local colour as one loose directional hand gesture in a selected local region, entering unevenly and stopping early; it may cross an internal structural line but stays inside the outer silhouette, and never becomes tidy area colouring, technical highlighting, shadow, or material description;\n- Establish visual focus through expressive contour, intentional whitespace, one declared local-colour fill, or one declared partial primary-subject fill; restrained gray may support structure, sparse texture, or a shallow separation, never continuous tonal volume;\n- Use brand green only for one approved state, relationship, focus field, tiny object detail, short underline, or one source-supported local connector, directional arrow, or route; when `brand_green_subject_fill` is explicitly declared, use it instead on one primary subject only;\n- For a declared primary-subject fill, use one or two connected local regions of that one subject in translucent, uneven green dry-brush or wax-pencil strokes, with substantial white paper still visible and the black contour always dominant;\n- Do not use brand green as a real entity’s default body colour, contour, hatching, repeated connector system, ordinary label colour, large background block, or fully opaque object fill; do not add a green relation line, second green subject, or green decorative detail when a primary-subject fill is declared;\n- Use a non-brand colour only when the page explicitly declares one tiny secondary detail; never use it for an animal, box, product, or other main semantic object;\n- Use no large background colour field, solid-black anchor fill, fully opaque object body, gradient, reflection, airbrush, realistic material colour, gray wash, continuous tonal shading, or realistic colour modelling.\n\n### Surface and texture\n\n- Allow a small number of short, dry, direction-consistent wax-pencil or crayon strokes inside a declared local fill;\n- Let those strokes remain gestural and leave visible gaps of white paper; they may lightly suggest an edge turn or shallow separation, but never a continuous light source, curved tonal volume, or material finish;\n- Keep the surface neutral white and flat;\n- At most two quiet graphite or restrained-gray graphic punctuation marks may support the rhythm of otherwise empty space; they are never labels, symbols of a claim, extra objects, or decoration competing with the source relationship;\n- Do not use cream paper, beige or warm cast, weathering, stains, damage, faux-aged filter, ornamental collage, decorative retro motifs, cast shadow, ground shadow, studio lighting, glossy 3D, cinematic depth, photographic rendering, realistic fur, cardboard texture, pencil modelling, realistic anatomy, precise perspective, dense tonal volume, or light modelling.\n\n### Global visual exclusions\n\n- Do not render a polished product illustration: no commercial-product refinement, merchandising silhouette, catalogue-ready detailing, precision product-design drawing, corrected perspective, or product volume resolved through tonal gray;\n- Do not render landscape photography, realistic or photographic subjects, product-studio lighting, glossy 3D rendering, cinematic soft shadow, pale-green outer frame, tinted paper, warm colour cast, generic SVG, or wireframe treatment;\n- Do not add unrelated visual metaphor, large shaded illustration, multiple detached paper objects, or magnifying-glass/clipboard/folded-page combinations.\n\n### Body composition\n\n- Use one calm, asymmetric semantic object cluster with 68–78% quiet space;\n- Use one primary object plus two to four source-supported related objects, states, or parts; every element must map to a visible proof, annotation, or source constraint;\n- Make their scale, spacing, and vertical placement an intentional irregular object-cluster rhythm; use uneven, non-grid placement rather than a row, mirrored pair, card wall, or equal-weight constellation;\n- Let one meaningful near-overlap, unequal gap, or partial crop create tension inside the cluster; preserve enough separation that each source relationship remains readable;\n- Keep the full artwork cluster within 44% of the content-stage width and 44% of its height. Treat it as a small editorial vignette: leave a clear white-paper margin on all four sides, and do not let any one object occupy more than two thirds of the cluster;\n- When detail would require enlarging the main object, simplify it or split the explanation into another page; never enlarge one cutaway object to fill the lower content stage;\n- Do not use unrelated decoration, oversized objects, repeated cards, summary tables, dashboard layouts, or a separate narrative scene.\n\n- Keep the core judgment and subtitle centered as one typographic block; labels and notes are a separate local annotation hierarchy;\n- Keep label and note text compact: label above note when they share a target, with the note visibly subordinate;\n- Keep the title region free of artwork, frame, and divider;\n- Do not apply this body scale to the cover, agenda, or closing roles.\n\n### Body visual exclusions\n\n- Do not use landscape, trees, plants, animals, people, or architecture as filler;\n- Do not use unsupported visual noise such as generic dashboards, analytics-panel styling, placeholders, dashed boxes, frames, or badges;\n- Do not use photography, realistic texture, studio lighting, glossy 3D, or cinematic shading.\n\n### Visible text\n\n- Render only the exact labels or notes declared by this page’s annotation plan, each exactly once.\n- When a label and note share the same target, render the label as the compact judgment and the note directly beneath it as one smaller, lighter gray line; they remain one callout, not two captions.\n\n### Attachment\n\n- Use adjacent short labels, local leaders, and low-contrast gray hairlines;\n- Attach every label or note to its target;\n- A paired label and note share one leader; do not add a second leader, frame, card, or badge for the note;\n- Keep every annotation subordinate to the illustrated relation.\n\n### Green relation line\n\n- Allow one equally thin, local brand-green connector, directional line, arrow, or route only when the page declares one source-supported key relationship;\n- Keep all other structural lines gray.\n\n### Annotation exclusions\n\n- Treat annotations as meaning-bearing encoding, never decoration;\n- Do not add detached captions, decorative arrows, badges, extra labels, source-support wording, field names, coordinates, colour codes, limits, or planning metadata.\n\nPage-specific colour direction: the one directional route from plan to delivery: one tiny flat brand green accent detail only, justified by make the source-supported ordered transition legible; keep it visually minor, never a hero or main-object fill; use no gradients and no more than one local colour.\n\nCreate one finished 1200 by 675 16:9 editorial image on an opaque flat pure-white #FFFFFF canvas. Keep the upper-right Logo reserve completely clear of title; subtitle; label; essential diagram content. Render no Logo, wordmark, brand name, seal, signature, or watermark; the packaged transparent Logo is applied only after generation.\n\nCoordinates, dimensions, and layout metadata are internal guidance. Never render them as image content."
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "assets/image/how-it-works.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      }
+    },
+    {
+      "id": "where-it-helps",
+      "role": "body",
+      "status": "placed",
+      "generation": {
+        "status": "generated",
+        "candidate_file": "assets/image/where-it-helps.candidate.png"
+      },
+      "qa": {
+        "status": "qa_skipped"
+      },
+      "placement": {
+        "status": "placed",
+        "markdown_reference": "![层级：一份既有叙事关系分出文章包、连续讲述和解释页三类任务](assets/image/where-it-helps.png)",
+        "after_source_anchor": "| 长文作者或内容团队 | 有封面和段落锚点解释图的文章包 | 将读者需要自行消化的关系变成可见判断，而不重写文章。 |\n| 策略、咨询或研究人员 | 用于分享与提案的连续讲述画面 | 让方案差异、机制和边界脱离口头补充，也不把交付伪装成可编辑 PPTX。 |\n| 培训者与工作坊组织者 | 跟随讲述节奏的解释页 | 将抽象步骤、反馈或层级关系变成可跟随的视觉结构。 |"
+      },
+      "prompt_projection": "default",
+      "plan": {
+        "source_support": "| 长文作者或内容团队 | 有封面和段落锚点解释图的文章包 | 将读者需要自行消化的关系变成可见判断，而不重写文章。 |\n| 策略、咨询或研究人员 | 用于分享与提案的连续讲述画面 | 让方案差异、机制和边界脱离口头补充，也不把交付伪装成可编辑 PPTX。 |\n| 培训者与工作坊组织者 | 跟随讲述节奏的解释页 | 将抽象步骤、反馈或层级关系变成可跟随的视觉结构。 |",
+        "intent": "show the three task categories that the Skill serves",
+        "source_anchor": "| 长文作者或内容团队 | 有封面和段落锚点解释图的文章包 | 将读者需要自行消化的关系变成可见判断，而不重写文章。 |\n| 策略、咨询或研究人员 | 用于分享与提案的连续讲述画面 | 让方案差异、机制和边界脱离口头补充，也不把交付伪装成可编辑 PPTX。 |\n| 培训者与工作坊组织者 | 跟随讲述节奏的解释页 | 将抽象步骤、反馈或层级关系变成可跟随的视觉结构。 |",
+        "reader_block": "A reader should see that the same relationship-to-visual workflow branches into three task-specific delivery contexts.",
+        "source_relation": "One shared visual workflow serves three distinct user-task categories: article packages, continuous presentations, and explanatory pages for training.",
+        "core_judgment": "同一 Skill，服务三类叙事任务",
+        "subtitle": "文章、连续讲述与解释页由不同任务带入",
+        "render_text": false,
+        "grammar": "hierarchy",
+        "visual_solution": "One small shared source-narrative node sits above three uneven lower branches: an article package with a cover and anchor mark, a continuous sequence of three linked frames, and one explanatory page with a simple process mark. The branches are visibly subordinate to the shared node, not a timeline.",
+        "must_show": [
+          "One shared source-narrative parent node sits above three visibly subordinate task branches.",
+          "The three branches have different output structures: an anchored article package, a continuous presentation sequence, and an explanatory training page.",
+          "The branching remains a parent-child classification rather than an ordered process."
+        ],
+        "must_not_imply": [
+          "that the three uses occur in sequence",
+          "that the Skill produces editable PPTX files",
+          "that the Skill rewrites articles or replaces training content"
+        ],
+        "colour_plan": {
+          "mode": "brand_green_accent",
+          "local_colours": [
+            {
+              "target": "the shared source-narrative parent node",
+              "colour_family": "brand green",
+              "rationale": "identify the common relationship source across the three categories"
+            }
+          ],
+          "limits": {
+            "max_local_colours": 1,
+            "gradients": "forbidden",
+            "coverage": "small_detail_only"
+          }
+        },
+        "grammar_proof": {
+          "visible_evidence": [
+            "A single upper parent node connects downward to three lower branches.",
+            "Each branch has a visibly different source-supported delivery structure.",
+            "There are no arrowheads or stage order cues, preserving classification rather than sequence."
+          ]
+        },
+        "scene_integrity": {
+          "mode": "abstract",
+          "rationale": "The page classifies task and delivery structures without representing people or literal industries."
+        },
+        "annotation_plan": {
+          "mode": "none",
+          "items": [],
+          "limits": {
+            "max_items": 0,
+            "max_text_items": 0
+          }
+        }
+      },
+      "prompt": {
+        "status": "compiled",
+        "compiler_version": 13,
+        "template_id": "body-v1",
+        "projection_mode": "default",
+        "style_id": "simplemkt-editorial-direct-text",
+        "style_source": "assets/simplemkt-editorial-style.md",
+        "grammar_source": "references/visual-grammar.md",
+        "included_rules": [
+          "shared_prompt",
+          "body_prompt",
+          "grammar:hierarchy",
+          "projection:default"
+        ],
+        "text": "Create one finished image for a source-faithful editorial presentation.\n\nPriority: exact declared visible text; source meaning and exclusions; page-role layout; visual style.\n\nAll source notes and planning instructions are invisible guidance. Never render them as text.\n\nDo not add visible text, claims, logos, watermarks, interface elements, or decorative elements unless this page explicitly declares them.\n\nApply this page's visible typography exactly as stated here. Do not substitute, restate, or add another typography rule elsewhere in the image: This page renders no visible typography.\n\nEverything in this block is invisible semantic direction, never visible text. Do not render, quote, label, or paraphrase any wording from it: | 长文作者或内容团队 | 有封面和段落锚点解释图的文章包 | 将读者需要自行消化的关系变成可见判断，而不重写文章。 |\n| 策略、咨询或研究人员 | 用于分享与提案的连续讲述画面 | 让方案差异、机制和边界脱离口头补充，也不把交付伪装成可编辑 PPTX。 |\n| 培训者与工作坊组织者 | 跟随讲述节奏的解释页 | 将抽象步骤、反馈或层级关系变成可跟随的视觉结构。 |. The reader block is: A reader should see that the same relationship-to-visual workflow branches into three task-specific delivery contexts.. Preserve this source relationship: One shared visual workflow serves three distinct user-task categories: article packages, continuous presentations, and explanatory pages for training.. Make the source relationship legible through this visual solution: One small shared source-narrative node sits above three uneven lower branches: an article package with a cover and anchor mark, a continuous sequence of three linked frames, and one explanatory page with a simple process mark. The branches are visibly subordinate to the shared node, not a timeline.. Show: One shared source-narrative parent node sits above three visibly subordinate task branches.; The three branches have different output structures: an anchored article package, a continuous presentation sequence, and an explanatory training page.; The branching remains a parent-child classification rather than an ordered process.. The title and subtitle may orient the reader but never prove this relationship; its proof must remain in the content stage. Explicitly do not imply: that the three uses occur in sequence; that the Skill produces editable PPTX files; that the Skill rewrites articles or replaces training content.\n\nScene integrity is non-negotiable: Use an abstract non-embodied composition only: The page classifies task and delivery structures without representing people or literal industries...\n\nUse hierarchy as the one dominant visual grammar, never a second grammar. Its required topology is: Make the source-supported parent-child, whole-part, or category-subcategory levels visibly distinct; do not turn the structure into conditions or a time sequence.. It must visibly prove: levels; containment or parent-child relation. Generic symbols, anonymous nodes, or arrows alone do not prove the source relationship: every non-self-evident source step or term must be identified by the exact short label or note declared in this page's annotation plan. Do not substitute: decision tree; timeline; architecture.\n\nMake this selected grammar visibly provable in the finished image through these reader-visible facts: A single upper parent node connects downward to three lower branches.; Each branch has a visibly different source-supported delivery structure.; There are no arrowheads or stage order cues, preserving classification rather than sequence.. Each proof must be visible in the content stage itself, not supplied only by the title or subtitle. Do not let one generic illustrative scene substitute for this evidence.\n\nThe page annotation plan is none. Use this only because every required source relationship is self-evident from its depicted object and position. Inside the content stage, add no local labels, leaders, connectors, directional lines, or notes beyond the source-derived visual relationship itself.\n\nCreate a single titleless explanatory body image. Render no title or subtitle. Render only the exact labels or notes declared by this page's annotation plan; if its mode is none, render no text.\n\nKeep all semantic elements inside one calm, asymmetric content cluster with 68–78% quiet space, no more than 4 semantic groups, and 0–3 supporting elements. Treat this as a hard layout constraint, not a preference: the full drawn cluster is a small editorial vignette surrounded by white paper. Vary the related objects' scale, spacing, and vertical placement; do not arrange them as an even row, mirrored pair, grid, card wall, or unrelated decorative collage. The drawn cluster occupies at most 44% of the content-stage width and 44% of its height. Use a small hero scale: scale down objects instead of enlarging one central object to explain internal detail; do not let a cutaway, product, person, or other primary object fill the lower content stage, reach the stage edges, or occupy more than two thirds of the cluster. Keep any declared labels and explanations local and subordinate. Split the page instead of adding competing structures when the relationship cannot remain legible. Do not use edge-to-edge hero; oversized object; lower-stage fill; large cutaway hero or dashboard; card wall; unrelated scenery; logo reserve content.\n\nApply this direct production style prompt exactly. Follow the page-specific colour direction as an additional constraint:\n\n### Form and line\n\n- Draw recognizable people, animals, food, plants, products, natural materials, and other real-world entities as small, characterful iconic hand-drawn ink forms;\n- When a source-required person, animal, or embodied object appears, use one readable asymmetric posture, gaze, or action direction to make its source-supported state or role clear; do not add a second decorative actor or an unsupported gesture;\n- Give every primary real-world object one memorable, source-compatible signature feature—an opening, bend, lift, loose edge, overlap, or weight shift—rather than presenting it as a neutral specimen;\n- Retain only selectively observed details that make a real-world object recognizable and characterful; omit the rest instead of fully specifying the product, but do not impose a fixed part or plane count;\n- Prefer frontal, profile, lightly oblique, or flat cutaway views; allow shallow front/back overlap, tilt, visible edge thickness, and a deliberately short, broad, skewed, or mildly off-balance silhouette, but never correct them into precise perspective;\n- Let related source-supported objects or states lean, overlap, open, crop, or sit at unequal heights when that preserves their relationship; do not present them as evenly spaced inventory;\n- Omit seams, mesh, mechanical construction, realistic material detail, and precise foreshortening only when they do not carry the object's recognizable observed character or the source relationship;\n- Use predominantly fine, visibly variable, occasionally broken deep-ink contours with sparse marks and generous white space; allow one or two short, imperfect retraced strokes where an observed edge, fold, lace, opening, or overlap deserves attention;\n- Let line weight gather and release naturally around those observed details; leave one or two intentional open joins or dry breaks rather than closing and smoothing every contour;\n- Use loose fine-to-medium deep-ink contours with modest pressure variation, slight wobble, occasional retracing, open joins, and imperfect turns; never derive them from perfect geometry or resolve the object as a polished product drawing;\n- Keep structural connectors hairline-thin, calm, and low-contrast gray, except one declared local brand-green relation line;\n- Never use line weight to encode hierarchy;\n- Do not use a thick arrow, thick green route, double-weight connector, mixed connector widths, dense engraving, woodcut texture, scientific-plate or technical pen linework, dense crosshatching, repeated parallel shading, uniform vector contour, or marker-like cartoon border.\n\n### Fill and colour\n\n- Use pure white, deep ink, restrained gray (#7E8581, #6B6B6B, #8C8C8C), and one small concentrated brand-green (#1A6B3A) semantic accent as the default palette;\n- Use very light local dry-brush or wax-pencil fills that deliberately leave paper visible;\n- Keep each local fill loose, partially open, and beneath the ink contour;\n- Treat every local colour as one loose directional hand gesture in a selected local region, entering unevenly and stopping early; it may cross an internal structural line but stays inside the outer silhouette, and never becomes tidy area colouring, technical highlighting, shadow, or material description;\n- Establish visual focus through expressive contour, intentional whitespace, one declared local-colour fill, or one declared partial primary-subject fill; restrained gray may support structure, sparse texture, or a shallow separation, never continuous tonal volume;\n- Use brand green only for one approved state, relationship, focus field, tiny object detail, short underline, or one source-supported local connector, directional arrow, or route; when `brand_green_subject_fill` is explicitly declared, use it instead on one primary subject only;\n- For a declared primary-subject fill, use one or two connected local regions of that one subject in translucent, uneven green dry-brush or wax-pencil strokes, with substantial white paper still visible and the black contour always dominant;\n- Do not use brand green as a real entity’s default body colour, contour, hatching, repeated connector system, ordinary label colour, large background block, or fully opaque object fill; do not add a green relation line, second green subject, or green decorative detail when a primary-subject fill is declared;\n- Use a non-brand colour only when the page explicitly declares one tiny secondary detail; never use it for an animal, box, product, or other main semantic object;\n- Use no large background colour field, solid-black anchor fill, fully opaque object body, gradient, reflection, airbrush, realistic material colour, gray wash, continuous tonal shading, or realistic colour modelling.\n\n### Surface and texture\n\n- Allow a small number of short, dry, direction-consistent wax-pencil or crayon strokes inside a declared local fill;\n- Let those strokes remain gestural and leave visible gaps of white paper; they may lightly suggest an edge turn or shallow separation, but never a continuous light source, curved tonal volume, or material finish;\n- Keep the surface neutral white and flat;\n- At most two quiet graphite or restrained-gray graphic punctuation marks may support the rhythm of otherwise empty space; they are never labels, symbols of a claim, extra objects, or decoration competing with the source relationship;\n- Do not use cream paper, beige or warm cast, weathering, stains, damage, faux-aged filter, ornamental collage, decorative retro motifs, cast shadow, ground shadow, studio lighting, glossy 3D, cinematic depth, photographic rendering, realistic fur, cardboard texture, pencil modelling, realistic anatomy, precise perspective, dense tonal volume, or light modelling.\n\n### Global visual exclusions\n\n- Do not render a polished product illustration: no commercial-product refinement, merchandising silhouette, catalogue-ready detailing, precision product-design drawing, corrected perspective, or product volume resolved through tonal gray;\n- Do not render landscape photography, realistic or photographic subjects, product-studio lighting, glossy 3D rendering, cinematic soft shadow, pale-green outer frame, tinted paper, warm colour cast, generic SVG, or wireframe treatment;\n- Do not add unrelated visual metaphor, large shaded illustration, multiple detached paper objects, or magnifying-glass/clipboard/folded-page combinations.\n\n### Body composition\n\n- Use one calm, asymmetric semantic object cluster with 68–78% quiet space;\n- Use one primary object plus two to four source-supported related objects, states, or parts; every element must map to a visible proof, annotation, or source constraint;\n- Make their scale, spacing, and vertical placement an intentional irregular object-cluster rhythm; use uneven, non-grid placement rather than a row, mirrored pair, card wall, or equal-weight constellation;\n- Let one meaningful near-overlap, unequal gap, or partial crop create tension inside the cluster; preserve enough separation that each source relationship remains readable;\n- Keep the full artwork cluster within 44% of the content-stage width and 44% of its height. Treat it as a small editorial vignette: leave a clear white-paper margin on all four sides, and do not let any one object occupy more than two thirds of the cluster;\n- When detail would require enlarging the main object, simplify it or split the explanation into another page; never enlarge one cutaway object to fill the lower content stage;\n- Do not use unrelated decoration, oversized objects, repeated cards, summary tables, dashboard layouts, or a separate narrative scene.\n\n- Keep the core judgment and subtitle centered as one typographic block; labels and notes are a separate local annotation hierarchy;\n- Keep label and note text compact: label above note when they share a target, with the note visibly subordinate;\n- Keep the title region free of artwork, frame, and divider;\n- Do not apply this body scale to the cover, agenda, or closing roles.\n\n### Body visual exclusions\n\n- Do not use landscape, trees, plants, animals, people, or architecture as filler;\n- Do not use unsupported visual noise such as generic dashboards, analytics-panel styling, placeholders, dashed boxes, frames, or badges;\n- Do not use photography, realistic texture, studio lighting, glossy 3D, or cinematic shading.\n\nPage-specific colour direction: the shared source-narrative parent node: one tiny flat brand green accent detail only, justified by identify the common relationship source across the three categories; keep it visually minor, never a hero or main-object fill; use no gradients and no more than one local colour.\n\nCreate one finished 1200 by 675 16:9 editorial image on an opaque flat pure-white #FFFFFF canvas. Keep the upper-right Logo reserve completely clear of title; subtitle; label; essential diagram content. Render no Logo, wordmark, brand name, seal, signature, or watermark; the packaged transparent Logo is applied only after generation.\n\nCoordinates, dimensions, and layout metadata are internal guidance. Never render them as image content."
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "assets/image/where-it-helps.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      }
+    }
+  ]
+}

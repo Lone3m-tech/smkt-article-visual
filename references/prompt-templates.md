@@ -10,8 +10,16 @@ This file is the executable wording source for every compiled Prompt. The compil
   "role": "cover",
   "required_plan": ["source_support", "intent", "title", "core_promise", "primary_carrier", "visual_direction", "visual_progression", "must_show", "must_not_imply", "editorial_treatment", "scene_integrity"],
   "style_sections": ["shared", "cover"],
+  "default_layout_variant": "text_left_carrier_right",
   "block_sequence": {
-    "base": ["cover-identity-v1", "cover-editorial-treatment-v1", "cover-semantics-v1", "scene-integrity-v1", "cover-no-annotation-v1", "shared-editorial-v1"],
+    "base": ["production-frame-v1", "visible-typography-v1", "cover-identity-v1", "cover-editorial-treatment-v1", "cover-semantics-v1", "scene-integrity-v1", "cover-no-annotation-v1"],
+    "layout_variant": {
+      "text_left_carrier_right": ["cover-layout-text-left-carrier-right-v1"],
+      "text_right_carrier_left": ["cover-layout-text-right-carrier-left-v1"],
+      "text_top_carrier_bottom": ["cover-layout-text-top-carrier-bottom-v1"],
+      "text_centered": ["cover-layout-text-centered-v1"]
+    },
+    "tail": ["shared-editorial-v1"],
     "projection": {
       "default": [],
       "expanded": ["expanded-style-v1"],
@@ -29,7 +37,7 @@ This file is the executable wording source for every compiled Prompt. The compil
   "required_plan": ["source_support", "intent", "reader_block", "source_relation", "core_judgment", "subtitle", "grammar", "visual_solution", "must_show", "must_not_imply", "grammar_proof", "scene_integrity"],
   "style_sections": ["shared", "annotation", "body"],
   "block_sequence": {
-    "base": ["body-semantics-v1", "scene-integrity-v1", "body-grammar-v1", "grammar-proof-v1"],
+    "base": ["production-frame-v1", "visible-typography-v1", "body-semantics-v1", "scene-integrity-v1", "body-grammar-v1", "grammar-proof-v1"],
     "grammar": {"comparison": ["comparison-v1"]},
     "source_mode": {"annotated_source": ["annotated-source-v1"]},
     "annotation": {"none": ["annotation-none-v1"], "present": ["annotation-plan-v1"]},
@@ -51,8 +59,16 @@ This file is the executable wording source for every compiled Prompt. The compil
   "role": "agenda",
   "required_plan": ["source_support", "intent", "title", "agenda_items", "must_show", "must_not_imply", "scene_integrity"],
   "style_sections": ["shared", "agenda"],
+  "default_layout_variant": "centered_list",
   "block_sequence": {
-    "base": ["agenda-semantics-v1", "scene-integrity-v1", "agenda-identity-v1", "shared-editorial-v1"],
+    "base": ["production-frame-v1", "visible-typography-v1", "agenda-semantics-v1", "scene-integrity-v1", "agenda-identity-v1"],
+    "layout_variant": {
+      "centered_list": ["agenda-layout-centered-list-v1"],
+      "split_list": ["agenda-layout-split-list-v1"],
+      "vertical_rail": ["agenda-layout-vertical-rail-v1"],
+      "stepped_list": ["agenda-layout-stepped-list-v1"]
+    },
+    "tail": ["shared-editorial-v1"],
     "projection": {
       "default": [],
       "expanded": ["expanded-style-v1"],
@@ -69,8 +85,15 @@ This file is the executable wording source for every compiled Prompt. The compil
   "role": "closing",
   "required_plan": ["closing_text", "must_show", "must_not_imply", "scene_integrity"],
   "style_sections": ["shared", "closing"],
+  "default_layout_variant": "editorial_signoff",
   "block_sequence": {
-    "base": ["scene-integrity-v1", "closing-identity-v1", "shared-editorial-v1"],
+    "base": ["production-frame-v1", "visible-typography-v1", "scene-integrity-v1", "closing-identity-v1"],
+    "layout_variant": {
+      "editorial_signoff": ["closing-layout-editorial-signoff-v1"],
+      "baseline_signoff": ["closing-layout-baseline-signoff-v1"],
+      "echo_signoff": ["closing-layout-echo-signoff-v1"]
+    },
+    "tail": ["shared-editorial-v1"],
     "projection": {
       "default": [],
       "expanded": ["expanded-style-v1"],
@@ -82,6 +105,22 @@ This file is the executable wording source for every compiled Prompt. The compil
 ```
 
 ## Executable Prompt blocks
+
+<!-- smkt-prompt-block:production-frame-v1 -->
+```text
+Create one finished image for a source-faithful editorial presentation.
+
+Priority: exact declared visible text; source meaning and exclusions; page-role layout; visual style.
+
+All source notes and planning instructions are invisible guidance. Never render them as text.
+
+Do not add visible text, claims, logos, watermarks, interface elements, or decorative elements unless this page explicitly declares them.
+```
+
+<!-- smkt-prompt-block:visible-typography-v1 -->
+```text
+Apply this page's visible typography exactly as stated here. Do not substitute, restate, or add another typography rule elsewhere in the image: {{page_typography}}
+```
 
 ### A. Source semantics and non-misrepresentation
 
@@ -141,42 +180,101 @@ The page annotation plan is none. Use this only because every required source re
 ```text
 Apply only this page's declared information encoding:
 {{plan_annotation_items}}
-Its visual language is: {{annotation_appearance}} {{annotation_text}} {{annotation_restraint}} Do not add any annotation not declared here.
+Render every declared visible label or note exactly once, even if its target groups multiple objects or regions. When a declared `label` and `note` have the same target, render them as one two-level callout: the exact label first, then the exact note directly beneath it in the declared note role. They share one local leader; never place either in a card, caption block, or separate detached text area. Its visual language is: {{annotation_appearance}} {{annotation_text}} {{annotation_restraint}} Do not add any annotation not declared here.
 ```
 
 ### C. Page identity
 
 <!-- smkt-prompt-block:cover-identity-v1 -->
 ```text
-Create a single cover image. The only visible text anywhere in the image is exactly: {{plan_title}}. Render it exactly once, with no subtitle or other text, in {{cover_title_color}}, {{cover_title_family}}, {{cover_title_weight}}, left aligned in a continuous pure-white title-safe zone occupying the left 40% of the canvas. Keep it to at most two lines with only readability-driven wrapping, and vertically center the complete title block in that left field. This instruction overrides every non-title sentence elsewhere in the Prompt. The title is the strongest visual element; never place artwork in its safe zone.
+Create a single cover image. The only visible text anywhere in the image is exactly: {{plan_title}}. Render it exactly once, with no subtitle or other text, with only readability-driven wrapping. The selected cover layout variant alone decides its placement. This instruction overrides every non-title sentence elsewhere in the Prompt. The title is the strongest visual element; never place artwork in its safe zone.
 
-Use {{plan_visual_direction}} as the cover direction. Build one continuous left-to-right reading movement from the title side toward a right-side resolution. Begin outside the title zone with this low-weight, source-derived entry: {{plan_progression_entry}}. Develop the same carrier as: {{plan_progression_development}}. Resolve it as: {{plan_progression_resolution}}. Keep the semantic illustration primarily in the right 55% of the canvas. Its low-density, nonessential edge may extend into the remaining left whitespace by no more than 20% of the illustration area, but never into the title-safe zone. Follow the cover flow and rhythm: {{cover_artwork_flow}} {{cover_visual_rhythm}}.
+Use {{plan_visual_direction}} as the cover direction. Begin with this low-weight, source-derived entry: {{plan_progression_entry}}. Develop the same carrier as: {{plan_progression_development}}. Resolve it as: {{plan_progression_resolution}}. Follow the cover flow and rhythm: {{cover_artwork_flow}} {{cover_visual_rhythm}}.
 
-Use one source-derived abstract editorial metaphor rather than a body diagram, data preview, card wall, collage, or representational illustration. The right-side carrier may make one relationship and up to two source-supported states visible only through density, interval, porosity, layering, dispersion, convergence, fracture, containment, or a non-directional curve. Never render a recognizable person, animal, product, tool, vehicle, building, landscape, plant, body part, or industry object. Do not use {{cover_mandatory_avoid}}.
+Use one source-derived abstract editorial metaphor rather than a body diagram, data preview, card wall, collage, or representational illustration. The selected carrier may make one relationship and up to two source-supported states visible only through density, interval, porosity, layering, dispersion, convergence, fracture, containment, or a non-directional curve. Never render a recognizable person, animal, product, tool, vehicle, building, landscape, plant, body part, or industry object. Do not use {{cover_mandatory_avoid}}.
 ```
 
 <!-- smkt-prompt-block:cover-editorial-treatment-v1 -->
 ```text
 Apply this required cover editorial treatment:
 {{plan_editorial_treatment}}
-All non-highlighted title characters are deep ink. The sole declared selection field is the only brand-green area anywhere on the cover. This treatment may change the rhythm of the one exact title, but must never add, omit, reorder, paraphrase, or duplicate title characters. It is not a body annotation system, interface, diagram, or source claim.
+All non-highlighted title characters are deep ink. The declared selection field is the title-level brand-green emphasis; any separate carrier accent is governed only by the cover visual style. This treatment may change the rhythm of the one exact title, but must never add, omit, reorder, paraphrase, or duplicate title characters. It is not a body annotation system, interface, diagram, or source claim.
+```
+
+<!-- smkt-prompt-block:cover-layout-text-left-carrier-right-v1 -->
+```text
+Use the text-left/carrier-right layout: left-align the exact title as one two-line block, vertically centered, in a continuous pure-white title-safe field that begins at the left safe margin and expands horizontally as the title requires. Keep the whole title-safe field clear, within the page safe margins and clear of the Logo reserve. Build one continuous abstract carrier on the right, with most visual mass held in the right half. The carrier may enter only unused whitespace and must yield to the complete adaptive title-safe field.
+```
+
+<!-- smkt-prompt-block:cover-layout-text-right-carrier-left-v1 -->
+```text
+Use the text-right/carrier-left layout: right-align the exact title as one two-line block, vertically centered, in a continuous pure-white title-safe field that ends at the right safe margin and expands leftward as the title requires. Keep the whole title-safe field clear, within the page safe margins and clear of the Logo reserve. Build one continuous abstract carrier on the left, with most visual mass held in the left half. The carrier may enter only unused whitespace and must yield to the complete adaptive title-safe field.
+```
+
+<!-- smkt-prompt-block:cover-layout-text-top-carrier-bottom-v1 -->
+```text
+Use the text-top/carrier-bottom layout: left-align the exact title as one two-line block in the upper third, not near the top edge, in a continuous pure-white title-safe band that expands horizontally as the title requires. Keep the whole band within the page safe margins and clear of the Logo reserve. Build one continuous abstract carrier below the title, with its visual mass held in the lower half. The carrier must yield to the complete adaptive title-safe band.
+```
+
+<!-- smkt-prompt-block:cover-layout-text-centered-v1 -->
+```text
+Use the text-centered layout: center the exact title as one two-line block both horizontally and vertically, in a continuous pure-white title-safe field that expands horizontally as the title requires. Keep the whole field within the page safe margins and clear of the Logo reserve. Do not create a distinct left, right, top, or bottom carrier; any abstract marks are only a very low-density peripheral echo, visibly secondary to the centered title and never inside its title-safe field.
 ```
 
 <!-- smkt-prompt-block:agenda-identity-v1 -->
 ```text
-Create a single presentation agenda image. Render exactly once as the centered agenda title: {{plan_title}}. Render exactly these numbered agenda items in this order, with no added, omitted, or paraphrased item:
+Create a single presentation agenda image. Render exactly once as the agenda title: {{plan_title}}. Render exactly these numbered agenda items in this order, with no added, omitted, or paraphrased item:
 {{plan_agenda_items}}
 Do not render a subtitle, paragraph copy, source excerpt, or extra text.
+
+{{plan_agenda_carrier}}
+```
+
+<!-- smkt-prompt-block:agenda-layout-centered-list-v1 -->
+```text
+Use the centered-list layout: center the title above one compact, evenly spaced vertical sequence of the exact numbered items. Keep the sequence narrow, calm, and clearly subordinate to the title.
+```
+
+<!-- smkt-prompt-block:agenda-layout-split-list-v1 -->
+```text
+Use the split-list layout: place the title as one calm left-side typographic anchor. Place the exact numbered items as one compact, evenly spaced vertical sequence in the right-side reading field. Keep the two fields visually connected by white space, not by a card, divider, or arrow.
+```
+
+<!-- smkt-prompt-block:agenda-layout-vertical-rail-v1 -->
+```text
+Use the vertical-rail layout: place the title in the upper-left field. Arrange the exact numbered items as three to five ordered anchors beside one thin quiet vertical rail in the central-to-right reading field. The rail has no arrowhead, label, metric, or claim; it is the only visual organizer of the sequence.
+```
+
+<!-- smkt-prompt-block:agenda-layout-stepped-list-v1 -->
+```text
+Use the stepped-list layout: place the title in the upper-left field. Set the exact numbered items as three to five compact steps progressing through a gentle descending diagonal. Use spacing and baseline shifts only to make the order legible; do not use an arrow, card, badge, or separate illustration.
 ```
 
 <!-- smkt-prompt-block:closing-identity-v1 -->
 ```text
-Create a single standard presentation closing image. The only visible text anywhere in the image is exactly: {{plan_closing_text}}. Render it exactly once, centered, with no subtitle, call to action, source excerpt, or other text.
+Create a single standard presentation closing image. The only visible text anywhere in the image is exactly: {{plan_closing_text}}. Render it exactly once, with no subtitle, call to action, source excerpt, or other text. The selected closing layout variant alone decides its placement.
+
+{{plan_closing_carrier}}
+```
+
+<!-- smkt-prompt-block:closing-layout-editorial-signoff-v1 -->
+```text
+Use the editorial-signoff layout: place the closing message once as a calm compact block in the upper-left title-safe field. Render exactly one tiny non-semantic dry-ink end mark in lower-right non-Logo whitespace; it has no carrier, text, arrow, metric, or claim. Preserve a broad quiet field through the rest of the page.
+```
+
+<!-- smkt-prompt-block:closing-layout-baseline-signoff-v1 -->
+```text
+Use the baseline-signoff layout: place the closing message once in the lower-left safe field and anchor it with exactly one short, broken, low-contrast dry-ink baseline beneath it. The baseline is horizontal, non-directional, and visibly incomplete; it is not an underline, carrier, end mark, frame, arrow, metric, or claim. Render no other mark or graphic.
+```
+
+<!-- smkt-prompt-block:closing-layout-echo-signoff-v1 -->
+```text
+Use the echo-signoff layout: center the closing message with generous white space and place the one required low-density abstract carrier in lower-right whitespace. Do not add another end mark.
 ```
 
 <!-- smkt-prompt-block:body-title-v1 -->
 ```text
-Create a single explanatory body image. Render exactly once in the pure-white upper title region: {{plan_core_judgment}}. Use the core-title role: {{body_title_family}}, {{body_core_weight}}, {{body_core_color}}, at most {{body_core_max_lines}} line, {{body_core_alignment}} aligned around the title-region center at x={{body_title_center_x}}; never left or right align it. Render exactly once directly below it: {{plan_subtitle}}. Use the subtitle role: {{body_subtitle_weight}}, {{body_subtitle_color}}, at most {{body_subtitle_max_lines}} line, {{body_subtitle_alignment}} aligned around that same center; never left or right align it. Treat the two lines as one centered text block. Keep this title region free of artwork, frame, and divider.
+Create a single explanatory body image. Render exactly once in the pure-white upper title region: {{plan_core_judgment}}, centered around the title-region center at x={{body_title_center_x}}; never left or right align it. Render exactly once directly below it: {{plan_subtitle}}, centered around that same center; never left or right align it. Treat the two lines as one centered text block. Keep this title region free of artwork, frame, and divider.
 ```
 
 <!-- smkt-prompt-block:body-titleless-v1 -->

@@ -103,9 +103,13 @@ Let the manifest contract define fields, encoding limits, projection mode, and l
 
 - Keep `cover`, `body`, and `agenda` source-faithful: do not add causality, sequence, priority, containment, data, or conclusions absent from their declared support. `closing` may use only its standard closing text and must not add a source claim, summary, promise, or call to action.
 - Explicitly declare `annotation_plan` for every body page. Use it for any source-supported relationship that objects alone cannot show; choose `mode: none` only when every required relationship remains legible without words.
+- When a label needs a short explanation, declare a `note` for the same `target`: the label names the judgment and the note states one source-supported mechanism, condition, or scope. Use at most two such label-note clusters per body page; the note is one short line, shares the label's leader, and never becomes a card, caption block, or second argument.
 - When `colour_plan` is omitted, use `brand_green_accent`. A cover reserves that single accent for its required title selection field; it never uses `brand_green_subject_fill`. An explicit existing `colour_plan` remains the page-level override within this rule. It never changes a selected grammar or adds gradients.
 - Every cover uses `scene_integrity.mode: abstract`: its right-side carrier may express only source-supported abstract relationships such as density, interval, porosity, layering, dispersion, convergence, fracture, containment, or a non-directional curve. Never plan or render a recognizable entity, product, object, scene, industry symbol, or body part.
-- Every cover requires `editorial_treatment`: split the exact H1 into two or three contiguous title units, set exactly one to `selection_field`, and keep every title character deep ink. The selection field is the sole brand-green cover area.
+- Every cover requires `editorial_treatment`: split the exact H1 into two or three contiguous title units, set exactly one to `selection_field`, and keep every title character deep ink. The selection field is the title-level brand-green emphasis; the abstract carrier may use only one separate tiny low-saturation brand-green dry-brush accent.
+- For every presentation `cover`, `agenda`, and `closing`, select one explicit role-allowed `layout_variant` during planning. It changes only placement, whitespace, and visual balance; it never changes exact visible text, source support, scene integrity, page identity, shared style, or delivery rules. Existing plans without the field retain their role default.
+- A presentation `agenda` may declare an optional `agenda_carrier` as one low-density abstract navigation rhythm derived from its already planned beats. It is orientation only: never an entity, scene, source claim, body grammar, card, badge, or decorative arrow. Omit it when an unadorned agenda is the intended result.
+- A presentation `closing` chooses exactly one mutually exclusive treatment: `editorial_signoff` is an upper-left editorial closing with one tiny non-semantic lower-right end mark and no carrier; `baseline_signoff` is a lower-left formal closing anchored by one short broken baseline and no other mark or carrier; `echo_signoff` is a centered closing with one required low-density `closing_carrier` echoing the cover. A closing carrier is visual continuity only: never an entity, a scene, a source claim, a summary, or a call to action.
 - For every representational page, use the existing `visual_solution` to state selectively observed details, a frontal/profile/lightly-oblique or flat-cutaway view with only shallow spatial cues, an allowable short/broad/skewed silhouette, one source-compatible memorable feature, one posture relation (tilt, opening, overlap, crop, or weight shift), one local directional fill gesture when colour is used, and an irregular cluster rhythm for its source-supported related objects. Do not put visual style in `must_show`.
 - For every page, write `scene_integrity`: use `representational` for a person, animal, object, or embodied action; otherwise use `abstract` with a rationale. For representational pages, declare subject count, object continuity, required occlusion, and forbidden detached or duplicated parts. Split incompatible simultaneous actions into separate pages.
 - For `article_package`, place each accepted body page at its source anchor. For `presentation_frames`, retain source prose and use narrative-frame sequencing.
@@ -146,13 +150,15 @@ When `enable_qa: true` or `mode: qa`, inspect each generated page before any Log
 
 A failed page never reaches Logo finalization or placement. `mode: qa` checks existing generated pages and finalizes only pages that pass.
 
-### Visual QA acceptance
+### Coarse QA acceptance
 
-- 语义：检查 `source_support`、`must_not_imply`、`grammar_proof`；遮住标题后，所有非自明关系仍能通过对象、标签、备注及其连接读出。
-- 文字与交付：检查所有声明的可见文字是否准确、纯白画布、Logo 留白，以及没有模型生成的 Logo、品牌名、签名、水印、外框或标题分隔线。
-- 完整性：检查 `scene_integrity`；拒绝断肢、重复主体、不可能遮挡和无法完成的动作。
+QA is an optional hard-failure gate, not a design review. When enabled, reject a page only when one of these is clearly true:
 
-色彩分配、排版处理、构图比例、笔触与表面细节，以及参考图的高层画法迁移，属于 Plan 与 Prompt 的引导，不作为独立 QA 拦截项；只有当它们造成上述语义、文字与交付或完整性失败时，才记录为 QA 问题。
+- 核心关系缺失、画反，或出现与来源直接矛盾的新主张。
+- 出现模型擅自生成的来源文字、Logo、品牌名、签名或水印，或必要文字已无法阅读。
+- 人物、动物或物体页出现明显断肢、重复主体、无法成立的遮挡或动作。
+
+Do not QA visual style, line character, whitespace, colour, layout balance, fine annotation accuracy, Logo-reserve measurements, or every individual `must_show` / `grammar_proof` item. The finalizer, not QA, normalizes the delivery PNG. If no hard failure is obvious, pass the page; when `enable_qa: false`, record `qa_skipped` and proceed directly to finalization and placement.
 
 ### 4. Deliver accepted pages
 

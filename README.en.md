@@ -1,17 +1,13 @@
-<p align="center">
-  <img src="examples/readme-visuals/readme-banner.png" alt="A titleless banner that turns a Markdown narrative into an explanatory visual system" width="100%">
-</p>
-
 <div align="center">
 
 # smkt-article-visual
 
-**Turn key judgments in a narrative into images people can understand at a glance and continue explaining with.**
+**Turn the relationships already present in a narrative into a visual package that can be reviewed, placed, and used for a continuous explanation.**
 
 </div>
 
 <p align="justify">
-Turn structured narratives—articles, talks, reports, proposals, and workshop outlines—into a coherent cover and content-image system. It does not start from an isolated visual prompt: it first compiles the source meaning into image decisions, selects an appropriate grammar, and delivers a traceable image package in SimpleMkt editorial style. <code>article_package</code> places content images where readers need them; <code>presentation_frames</code> uses the same image system to organize a continuous presentation.
+It does not write the article or add decorative filler. It compiles relationships already present in articles, talks, reports, proposals, and workshop outlines into reviewable image decisions, then delivers a coherent cover and content-image system. <code>article_package</code> places explanatory images where readers need them; <code>presentation_frames</code> turns the same decisions into a continuous explanation.
 </p>
 
 <div align="center">
@@ -20,7 +16,7 @@ Designed for Codex and Agents with image-generation capability.
 
 [SimpleMkt](https://simplemkt.cc) · [X](https://x.com/AlchemistZhou) · [Xiaohongshu](https://www.xiaohongshu.com/user/profile/65a0ecb4000000002201219c) · [Douyin](https://www.douyin.com/user/MS4wLjABAAAArV0uXvsSYl6pD-p5nr-5OFlZED5cEUnb7r2K6j9u4tA)
 
-[Official repository](https://github.com/Lone3m-tech/smkt-article-visual) · [Current published identity v0.7.0 (installation verification pending)](https://github.com/Lone3m-tech/smkt-article-visual/releases/tag/v0.7.0)
+[Official repository](https://github.com/Lone3m-tech/smkt-article-visual) · [View releases](https://github.com/Lone3m-tech/smkt-article-visual/releases)
 
 [View the 13 visual-grammar demos](#visual-grammar-reference) · [View the Skill runtime contract](SKILL.md)
 
@@ -30,18 +26,19 @@ Designed for Codex and Agents with image-generation capability.
 
 ## Why this Skill
 
+A normal image prompt answers “make me an image.” This Skill answers “what should a reader understand from this passage, and how should that relationship become visible?” The former leaves semantic decisions to manual work; the latter records source support, reader block, grammar, visible proof, and placement in one page-centred manifest.
+
 | Product strength | What it means in use |
 | --- | --- |
-| **Judge first, then generate** | Find the real comprehension obstacle, choose one primary grammar, and declare labels, leaders, connectors, directional lines, or notes only when they prevent a likely misreading. |
-| **One image system, two delivery strategies** | `article_package` supports local reading comprehension; `presentation_frames` turns selected narrative slices into a continuous explanation. |
-| **Images explain rather than decorate** | A unified editorial image language makes the source's objects, actions, states, positions, and relationships legible. One content image answers one core question; it does not fill empty space beside prose. |
-| **Usable and reviewable** | Images land at approved paragraph anchors or in an established narrative order; prompts, assets, and delivery state live in one manifest; Logo detection is automatic and QA reports without automatically reworking output. |
+| **Relationship before image** | Find the comprehension obstacle before selecting one primary grammar and declaring a body page's `annotation_plan`; do not generate an image first and invent its explanation afterward. |
+| **Two delivery strategies** | `article_package` supports local reading comprehension; `presentation_frames` turns selected narrative slices into a continuous explanation. |
+| **Reviewable delivery** | Prompts, generated assets, Logo handling, placement, and QA state live in one manifest; the model does not fabricate source evidence, and QA never rewrites prose or reworks output automatically. |
 
 The shared purpose is simple: reduce cognitive load for readers or audiences, so the creator can communicate what is already present in the narrative more clearly.
 
 ## Install
 
-These are public candidate installation paths. The isolated installation receipt covers `npx skills add --copy` and direct Git cloning at v0.5.0; do not describe v0.7.0 as an installation-verified release until that isolated check has been rerun.
+These are public candidate installation paths for Codex. A successful installation only means the files are in place; completing the workflow still depends on the host's local-file permissions, image-generation capability, and the dependencies below.
 
 ```bash
 npx skills add Lone3m-tech/smkt-article-visual \
@@ -60,6 +57,17 @@ git clone --depth 1 https://github.com/Lone3m-tech/smkt-article-visual.git \
 ```
 
 Remove `--global` for a project installation. Another Agent host can complete the workflow only when it can read and write local files, invoke an equivalent image-generation capability, and satisfy the dependencies below; this README does not claim universal host compatibility.
+
+## Verified Agent hosts
+
+The following hosts have completed an actual run of this Skill. This support is limited to local file access, page-level Prompt compilation, image generation, and finalization; it does not imply co-publication, partnership, or compatibility with untested hosts.
+
+| Agent | Test status | Verified scope |
+| --- | --- | --- |
+| <img src="examples/readme-visual/codex-openai-wordmark.webp" alt="OpenAI logo representing Codex" width="128"><br>**Codex** | Tested | Can complete this Skill's local workflow. |
+| <img src="examples/readme-visual/doubao-logo.png" alt="Doubao logo" width="72"><br>**Doubao** | Tested | Can complete this Skill's local workflow. |
+
+The Logos belong to OpenAI and Doubao respectively and appear only to identify the tested Agents; they do not imply endorsement or partnership.
 
 ## Start
 
@@ -85,40 +93,80 @@ mode: generate
 enable_qa: false
 ```
 
+### Minimum success criteria
+
+A successful run is not simply a set of attractive images. Each body page explains one source-supported relationship; the relationship remains readable from objects, position, and necessary annotations with the title hidden; and every accepted image is placed once at its approved anchor without rewriting the prose.
+
+## Complete bundled example
+
+[`examples/demo-article/article.md`](examples/demo-article/article.md) is a completed `article_package` example. From a short article about why freshly cleaned sneakers should not be dried against a radiator, it selects one comparison and one flow relationship, then produces a cover and two explanatory body images. Its schema-9 manifest records all three pages as `placed`; it demonstrates the package's output shape, not shoe-care advice.
+
+| Reader relationship in the source | Selected grammar | Result |
+| --- | --- | --- |
+| A dry surface does not mean the whole shoe is ready to wear. | `comparison` | ![Bundled example: dry outside is not dry inside](examples/demo-article/assets/image/outer-dry-inner-wet.png) |
+| Open the structure, absorb water, then maintain ventilation. | `flow` | ![Bundled example: open, absorb, ventilate](examples/demo-article/assets/image/open-absorb-ventilate.png) |
+
+![Bundled example cover: Why should freshly cleaned sneakers not be dried directly against a radiator?](examples/demo-article/assets/image/cover.png)
+
 ## How it works
 
-The input is accessible Markdown plus optional real source assets. The output is a cover, necessary explanatory images, and `assets/image/manifest.json`.
+The body visuals, tested-Agent marks, and companion manifest used by this README live in [`examples/readme-visual/`](examples/readme-visual/). They are documentation display assets, not `assets/image/` output from a Skill run.
+
+The input is accessible Markdown plus optional real source assets. The output is a cover, necessary explanatory images, and `assets/image/manifest.json`. Article mode writes at the article root, while presentation mode writes at `presentation_output_root`; the Skill's static grammar gallery lives in [`examples/visual-grammar/`](examples/visual-grammar/) and is not output from an individual run.
 
 | Mode | Default and input condition | Delivery boundary |
 | --- | --- | --- |
 | `article_package` | Default; the source needs an H1. | Place the cover after the H1 and each approved figure once after its source anchor; do not rewrite the prose. |
 | `presentation_frames` | Use only for an explicit presentation, slides, deck, or PPT request; supply `presentation_title` if the source has no H1. | Store a cover and ordered narrative frames; leave the source unchanged. |
-| `plan` / `generate` / `qa` | `plan` is default; `generate` compiles a Prompt and generates one page at a time; `qa` inspects existing generated pages. | Write planning, grammar, optional encoding, actual Prompts, generation, QA, and delivery state to one manifest; do not create separate plan or run files. |
+| `plan` / `generate` / `qa` | `plan` is default; `generate` compiles a Prompt and generates one page at a time; `qa` inspects existing generated pages. | Write planning, grammar, each body page's `annotation_plan`, actual Prompts, generation, QA, and delivery state to one manifest; do not create separate plan or run files. |
+
+There are only four page identities: `cover` establishes a reading promise; `body` explains one source-supported relationship; `agenda` exists only in `presentation_frames` to orient three or more body beats; and `closing` is the standard presentation signoff. A cover is not a body grammar, and neither `agenda` nor `closing` carries a new source claim.
 
 Logo needs no setting. The finalizer detects only the regular PNG in `assets/logo/` whose name matches the style contract: it applies that asset when present and skips it when missing or symlinked. The model must not render a Logo, brand name, or watermark. `enable_qa` is off by default: disabled QA sends generated images directly to finalization and placement; enabled QA permits only passing images to receive the Logo and placement. QA never redraws, rewrites prompts, or changes prose automatically.
 
-![A workflow from Markdown and source material through a manifest to article anchors or narrative-frame order](examples/readme-visuals/how-it-works.png)
+## Demo: presentation layouts
 
-## What it does
+These layout demos show only page identity and whitespace organization for `presentation_frames`; they do not carry article facts. A real page is still compiled from planned source support, exact visible text, and the selected `layout_variant`.
 
-- Find an explanation task in a source-supported mechanism, process, feedback loop, comparison, boundary, hierarchy, or argument.
-- Define one source-supported cover promise; reproduce the H1 or explicit `presentation_title` exactly as the cover title.
-- Specify one reader block, core judgment, required relationship, and primary grammar per content image; when needed, record the source support for each label, leader, connector, directional line, or note.
-- Keep planning, actual prompts, generated files, Logo handling, placement or sequence, and QA state in one manifest.
-- Handle real screenshots, paper figures, data charts, or UI images as supplied source material instead of presenting generated illustration as evidence.
+### Cover
 
-Grammar makes a source relationship legible; it never adds data, causality, or conclusions. Read [references/visual-grammar.md](references/visual-grammar.md) for selection rules.
+| `text_left_carrier_right` | `text_right_carrier_left` |
+| --- | --- |
+| ![Cover: left title with right abstract carrier](examples/demo-cover/text-left-carrier-right.png) | ![Cover: right title with left abstract carrier](examples/demo-cover/text-right-carrier-left.png) |
+
+| `text_top_carrier_bottom` | `text_centered` |
+| --- | --- |
+| ![Cover: top title with bottom abstract carrier](examples/demo-cover/text-top-carrier-bottom.png) | ![Cover: centered title with low-density peripheral echo](examples/demo-cover/text-centered.png) |
+
+### Agenda
+
+| `centered_list` | `split_list` |
+| --- | --- |
+| ![Agenda: centered list](examples/demo-agenda/centered-list.png) | ![Agenda: split list](examples/demo-agenda/split-list.png) |
+
+| `vertical_rail` | `stepped_list` |
+| --- | --- |
+| ![Agenda: vertical rail](examples/demo-agenda/vertical-rail.png) | ![Agenda: stepped list](examples/demo-agenda/stepped-list.png) |
+
+### Closing
+
+| `editorial_signoff` | `baseline_signoff` | `echo_signoff` |
+| --- | --- | --- |
+| ![Closing: editorial signoff](examples/demo-closing/editorial-signoff.png) | ![Closing: baseline signoff](examples/demo-closing/baseline-signoff.png) | ![Closing: echo signoff](examples/demo-closing/echo-signoff.png) |
+
+## Controlled boundaries
+
+- Each body page explains one source-supported relationship; a grammar cannot add data, causality, or conclusions.
+- A `comparison` needs visibly different structure; real screenshots, paper figures, data charts, and UI images are handled only as explicitly supplied source assets.
+- An accepted article image appears once at its approved anchor. Detailed selection, Prompt-compilation, and QA contracts live in [references/visual-grammar.md](references/visual-grammar.md), [references/manifest-contract.md](references/manifest-contract.md), and [SKILL.md](SKILL.md).
 
 ## Where it helps
 
-- An H1-led article or research report needing a cover and explanatory figures at real reading obstacles.
-- A talk or keynote needing a continuous visual explanation of its key mechanism.
-- A consulting proposal needing a clearer option, comparison, or decision boundary without producing an editable PPTX.
-- A teaching or workshop outline that needs an abstract relationship turned into a followable visual.
-
-## Who it is for
-
-Creators, content teams, consultants, researchers, and educators who already have an argument and need readers or audiences to understand its relationships sooner.
+| User and task | Output | Why it fits |
+| --- | --- | --- |
+| Long-form writers and content teams | An article package with a cover and explanatory images at source anchors | It turns relationships the reader would otherwise have to infer into visible judgments without rewriting the article. |
+| Strategy, consulting, and research practitioners | Narrative frames for a talk or proposal | It makes differences, mechanisms, and boundaries legible beyond spoken explanation without pretending to be an editable PPTX. |
+| Trainers and workshop facilitators | Explanation pages that follow a teaching sequence | It turns abstract steps, feedback, or hierarchy into a visual structure an audience can follow. |
 
 ## Who it is not for
 
@@ -127,20 +175,9 @@ Creators, content teams, consultants, researchers, and educators who already hav
 - A complete deck, editable PPTX, or presentation-software implementation.
 - Fabricated screenshots, source images, data, or unlicensed third-party material.
 
-## Core capabilities
+## Demo: body visual grammars
 
-The product is useful because its runtime contract is explicit, not because it promises a universal visual result:
-
-- A content image answers one primary question with one primary grammar. It does not create dashboards, card walls, data panels, or unsupported charts.
-- A `comparison` needs source-supported, visible left/right differences beyond labels.
-- An accepted article image appears once at its approved anchor; multiple references stop for human resolution.
-- Generated work is editorial illustration. Real-source material must be supplied and recorded explicitly.
-
-Use [references/manifest-contract.md](references/manifest-contract.md) for page fields and lifecycle, and [SKILL.md](SKILL.md) for prompt compilation, Logo finalization, and QA rules. The default Prompt projects shared style, identity, grammar, and declared encoding per page; `expanded` strengthens relevant style language, while `full_diagnostic` is comparison-only.
-
-## Visual grammar reference
-
-These 13 images show only the structural relationship each grammar is designed to organize. They are not facts or data; a real delivery must still be determined by source support, the reader question, and `must_show`.
+These 13 body-page images show only the structural relationship each grammar is designed to organize. Their files live in [`examples/visual-grammar/`](examples/visual-grammar/); they are not facts or data. A real delivery must still be determined by source support, the reader question, and `must_show`.
 
 | Grammar | Reference |
 | --- | --- |
@@ -163,8 +200,8 @@ These 13 images show only the structural relationship each grammar is designed t
 - Requires an Agent host with local file read/write access and `image_gen` or an equivalent capability.
 - Logo finalization requires Python 3.10+ and Pillow from [`scripts/requirements.txt`](scripts/requirements.txt). The Skill does not install dependencies or repair generated work with another renderer.
 - Successful installation alone does not prove end-to-end image behavior; that depends on the host image capability.
-- The current public package has no reproducible end-to-end Demo aligned to the latest schema 5 contract. Historic examples and presentation images are therefore not offered as current proof.
-- The latest isolated product test completed functional checks but remains `blocked` because its retained trace exposes a host-internal generated-image path. Until that leakage is resolved, it is not evidence of complete cross-host or end-to-end acceptance.
+- The package includes an `examples/demo-article/` outcome example aligned to the current manifest contract. It demonstrates input, page planning, and image-delivery shape; it does not replace isolated cross-host verification.
+- The latest isolated product test remains `blocked` because its retained trace exposes a host-internal generated-image path. Until that issue is resolved, it is not evidence of complete cross-host or end-to-end acceptance.
 - Each user remains responsible for input rights, third-party image-model terms, and redistribution permission.
 
 ## License

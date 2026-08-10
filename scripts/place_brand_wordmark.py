@@ -44,9 +44,6 @@ def load_contract() -> dict[str, object]:
         logo = dimensions["logo"]
         wordmark = logo["wordmark"]
         reserve = logo["reserve"]
-        cover_layout = dimensions["cover"]["layout"]
-        cover_title = cover_layout["title_safe_zone"]
-        cover_type = cover_layout["title"]
         body_layout = dimensions["content_image"]["layout"]
         body_title = body_layout["title_region"]
         body_stage = body_layout["content_stage"]
@@ -58,20 +55,6 @@ def load_contract() -> dict[str, object]:
             "wordmark_top_left": (wordmark["x"], wordmark["y"]),
             "reserve_top_left": (reserve["x"], reserve["y"]),
             "reserve_size": (reserve["width"], reserve["height"]),
-            "cover_title": {
-                "x_min": cover_title["x_min"],
-                "x_max": cover_title["x_max"],
-                "y_min": cover_title["y_min"],
-                "y_max": cover_title["y_max"],
-                "center_x": cover_title["center_x"],
-                "center_y": cover_title["center_y"],
-                "fill": cover_title["fill"],
-                "size_px": cover_type["size_px"],
-                "line_height_px": cover_type["line_height_px"],
-                "max_lines": cover_type["max_lines"],
-                "max_width_px": cover_type["max_width_px"],
-                "color": cover_type["color"],
-            },
             "body_title_region": {
                 "x_min": body_title["x_min"],
                 "x_max": body_title["x_max"],
@@ -101,16 +84,6 @@ def load_contract() -> dict[str, object]:
         *contract["wordmark_top_left"],
         *contract["reserve_top_left"],
         *contract["reserve_size"],
-        contract["cover_title"]["x_min"],
-        contract["cover_title"]["x_max"],
-        contract["cover_title"]["y_min"],
-        contract["cover_title"]["y_max"],
-        contract["cover_title"]["center_x"],
-        contract["cover_title"]["center_y"],
-        contract["cover_title"]["size_px"],
-        contract["cover_title"]["line_height_px"],
-        contract["cover_title"]["max_lines"],
-        contract["cover_title"]["max_width_px"],
         *contract["body_title_region"].values(),
         *contract["body_content_stage"].values(),
         *contract["body_white_space"].values(),
@@ -119,12 +92,6 @@ def load_contract() -> dict[str, object]:
         not all(isinstance(value, int) and not isinstance(value, bool) for value in integers)
         or contract["canvas"][0] <= 0
         or contract["canvas"][1] <= 0
-        or contract["cover_title"]["x_min"] < 0
-        or contract["cover_title"]["x_max"] > contract["canvas"][0]
-        or contract["cover_title"]["y_min"] < 0
-        or contract["cover_title"]["y_max"] > contract["canvas"][1]
-        or contract["cover_title"]["max_lines"] < 1
-        or contract["cover_title"]["max_width_px"] > contract["cover_title"]["x_max"] - contract["cover_title"]["x_min"]
         or contract["body_title_region"]["y_max"] > contract["body_content_stage"]["y_min"]
         or contract["body_content_stage"]["x_min"] < 0
         or contract["body_content_stage"]["x_max"] > contract["canvas"][0]
@@ -150,7 +117,6 @@ def printable_contract(contract: dict[str, object]) -> dict[str, object]:
             "width": contract["reserve_size"][0],
             "height": contract["reserve_size"][1],
         },
-        "cover_title_safe_zone": contract["cover_title"],
         "body_title_region": contract["body_title_region"],
         "body_content_stage": contract["body_content_stage"],
         "body_white_space": contract["body_white_space"],

@@ -13,6 +13,14 @@ SECTION_PATTERN = re.compile(
     r"<!--\s*smkt-style:(?P<name>[a-z_]+)\s*-->\s*(?P<payload>.*?)\s*<!--\s*/smkt-style:\1\s*-->",
     re.DOTALL,
 )
+PRESENTATION_TYPOGRAPHY_PATTERN = re.compile(
+    r"<!--\s*smkt-presentation-typography\s*-->\s*(?P<table>.*?)\s*<!--\s*/smkt-presentation-typography\s*-->",
+    re.DOTALL,
+)
+PRESENTATION_TYPOGRAPHY_COLUMNS = ("role", "family", "weight", "color", "size_px", "line_height_px", "max_lines", "alignment")
+PRESENTATION_TYPOGRAPHY_ROLES = {
+    "cover_title", "body_title", "body_subtitle", "agenda_title", "agenda_item", "closing_message", "label", "note",
+}
 
 
 def style_path() -> Path:
@@ -29,6 +37,47 @@ def resolve_path(dimensions: dict[str, Any], dotted_path: str) -> Any:
     return value
 
 
+def load_presentation_typography(markdown: str) -> dict[str, dict[str, Any]]:
+    """Parse the Markdown-owned presentation type system without defining visual values here."""
+    match = PRESENTATION_TYPOGRAPHY_PATTERN.search(markdown)
+    if not match:
+        raise ValueError("style file requires one smkt-presentation-typography table")
+    rows = [
+        [cell.strip() for cell in line.strip().strip("|").split("|")]
+        for line in match.group("table").splitlines()
+        if line.strip().startswith("|")
+    ]
+    if len(rows) < 3 or tuple(rows[0]) != PRESENTATION_TYPOGRAPHY_COLUMNS:
+        raise ValueError("presentation typography table requires the canonical columns")
+    data_rows = [
+        row for row in rows[1:]
+        if not all(re.fullmatch(r":?-{3,}:?", cell) for cell in row)
+    ]
+    if any(len(row) != len(PRESENTATION_TYPOGRAPHY_COLUMNS) for row in data_rows):
+        raise ValueError("presentation typography table rows must match the canonical columns")
+
+    typography: dict[str, dict[str, Any]] = {}
+    for row in data_rows:
+        item = dict(zip(PRESENTATION_TYPOGRAPHY_COLUMNS, row, strict=True))
+        role = item.pop("role")
+        if role in typography or role not in PRESENTATION_TYPOGRAPHY_ROLES:
+            raise ValueError("presentation typography table requires each canonical role exactly once")
+        try:
+            item["size_px"] = int(item["size_px"])
+            item["line_height_px"] = int(item["line_height_px"])
+            item["max_lines"] = int(item["max_lines"])
+        except ValueError as error:
+            raise ValueError(f"presentation typography role {role} has a non-integer size or line limit") from error
+        if not all(isinstance(item[field], str) and item[field].strip() for field in ("family", "weight", "color", "alignment")):
+            raise ValueError(f"presentation typography role {role} has an empty visual field")
+        if item["size_px"] <= 0 or item["line_height_px"] < item["size_px"] or item["max_lines"] < 1:
+            raise ValueError(f"presentation typography role {role} has an invalid size, line height, or line limit")
+        typography[role] = item
+    if set(typography) != PRESENTATION_TYPOGRAPHY_ROLES:
+        raise ValueError("presentation typography table requires every declared page role")
+    return typography
+
+
 def fixed_dimensions() -> dict[str, Any]:
     """Mechanical layout data belongs to the renderer, not the style prompt."""
     return {
@@ -42,11 +91,6 @@ def fixed_dimensions() -> dict[str, Any]:
             "wordmark": {"x": 1062, "y": 27, "width": 96, "height": 32},
             "reserve": {"x": 1056, "y": 0, "width": 144, "height": 60},
             "prompt_avoid_in_reserve": ["title", "subtitle", "label", "essential diagram content"],
-        },
-        "typography": {
-            "chinese_family": "high-contrast Songti-like editorial serif",
-            "core_judgment": {"weight": "semibold", "color": "#1A6B3A", "max_lines": 1, "alignment": "center"},
-            "subtitle": {"weight": "regular", "color": "#6B6B6B", "max_lines": 1, "alignment": "center"},
         },
         "color_system": {"semantic_layer": {"brand_color": "#1A6B3A"}},
         "visual_language": {
@@ -67,10 +111,6 @@ def fixed_dimensions() -> dict[str, Any]:
             "maximum_items": 4, "maximum_text_items": 4,
         },
         "cover": {
-            "layout": {
-                "title_safe_zone": {"x_min": 72, "x_max": 852, "y_min": 250, "y_max": 414, "center_x": 462, "center_y": 337, "fill": "#FFFFFF"},
-                "title": {"family": "high-contrast Songti-like editorial serif", "weight": "semibold", "color": "#1A1A1A", "max_lines": 2, "size_px": 64, "line_height_px": 78, "max_width_px": 780},
-            },
             "composition": {"artwork_flow": "one continuous source-derived abstract relationship moves from the title side to one right-side resolution", "visual_rhythm": {"purpose": "quiet entry, measured development, and one resolved focal area"}},
             "mandatory_avoid": ["body diagram", "collage", "logo reserve content", "recognizable entity", "representational illustration"],
         },
@@ -98,6 +138,7 @@ def load_style_data() -> dict[str, Any]:
         required = {"shared", "cover", "body", "agenda", "closing", "annotation"}
         if set(sections) != required or any(not sections[name] for name in required):
             raise ValueError("style file requires exactly shared, cover, body, agenda, closing, and annotation direct-text sections")
+        presentation_typography = load_presentation_typography(markdown)
         return {
             "schema_version": 3,
             "style_id": "simplemkt-editorial-direct-text",
@@ -107,8 +148,10 @@ def load_style_data() -> dict[str, Any]:
                 "agenda": ["agenda_prompt"], "closing": ["closing_prompt"],
             },
             "sections": sections,
+            "presentation_typography": presentation_typography,
             "dimensions": fixed_dimensions(),
             "raw_markdown": markdown,
+            "diagnostic_markdown": PRESENTATION_TYPOGRAPHY_PATTERN.sub("", markdown).strip(),
         }
     except (OSError, ValueError) as error:
         raise SystemExit(f"invalid direct-text editorial style: {STYLE_MARKDOWN}: {error}") from error

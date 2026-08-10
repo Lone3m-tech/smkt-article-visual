@@ -14,7 +14,7 @@ from typing import Any
 from style_contract import load_style_data
 
 
-COMPILER_VERSION = 11
+COMPILER_VERSION = 13
 TEMPLATE_FILE = Path(__file__).resolve().parent.parent / "references" / "prompt-templates.md"
 GRAMMAR_FILE = Path(__file__).resolve().parent.parent / "references" / "visual-grammar.md"
 TEMPLATE_CONTRACT_PATTERN = re.compile(
@@ -211,18 +211,29 @@ def validate_annotation_plan(plan: dict[str, Any], role: str, grammar: dict[str,
         raise ValueError("annotation_plan has more items than max_items")
 
     allowed_by_grammar = set(grammar["recommended_encodings"])
+    paired_label_targets = {
+        item["target"].strip()
+        for item in normalized["items"]
+        if isinstance(item, dict)
+        and item.get("type") == "label"
+        and isinstance(item.get("target"), str)
+        and item["target"].strip()
+    }
     text_items = 0
+    note_items = 0
     for item in normalized["items"]:
         if not isinstance(item, dict):
             raise ValueError("annotation_plan items must be objects")
         annotation_type = item.get("type")
         if annotation_type not in ANNOTATION_TYPES or annotation_type not in annotation_style["allowed_types"]:
             raise ValueError("annotation_plan item has unsupported type")
-        if annotation_type not in allowed_by_grammar:
+        required_string(item, "target")
+        if annotation_type not in allowed_by_grammar and not (
+            annotation_type == "note" and item["target"].strip() in paired_label_targets
+        ):
             raise ValueError(f"annotation type {annotation_type} is not recommended by the selected grammar")
         if annotation_type == "directional_line" and not grammar["directional_line_allowed"]:
             raise ValueError("selected grammar does not allow directional_line")
-        required_string(item, "target")
         required_string(item, "source_support")
         content = item.get("content", "")
         if not isinstance(content, str):
@@ -231,8 +242,12 @@ def validate_annotation_plan(plan: dict[str, Any], role: str, grammar: dict[str,
             raise ValueError(f"annotation type {annotation_type} requires content")
         if content.strip():
             text_items += 1
+        if annotation_type == "note":
+            note_items += 1
     if text_items > max_text_items:
         raise ValueError("annotation_plan has more text items than max_text_items")
+    if note_items > 2:
+        raise ValueError("annotation_plan permits at most two note items per body page")
     if grammar and grammar["topology_prompt"].startswith("Make the source-supported ordered steps") and not any(
         item["type"] in {"label", "note"} for item in normalized["items"]
     ):
@@ -306,6 +321,39 @@ def validate_scene_integrity(plan: dict[str, Any]) -> dict[str, Any]:
     return raw
 
 
+def validate_closing_carrier(plan: dict[str, Any]) -> None:
+    layout_variant = plan.get("layout_variant", "editorial_signoff")
+    raw = plan.get("closing_carrier")
+    if layout_variant in {"editorial_signoff", "baseline_signoff"}:
+        if raw is not None:
+            raise ValueError(f"{layout_variant} forbids closing_carrier")
+        return
+    if layout_variant == "echo_signoff" and raw is None:
+        raise ValueError("echo_signoff requires closing_carrier")
+    if raw is None:
+        return
+    if not isinstance(raw, dict):
+        raise ValueError("closing_carrier must be an object when declared")
+    if raw.get("mode") != "abstract_echo":
+        raise ValueError("closing_carrier.mode must be abstract_echo")
+    required_string(raw, "description")
+    if raw.get("placement") != "lower_right":
+        raise ValueError("closing_carrier.placement must be lower_right")
+
+
+def validate_agenda_carrier(plan: dict[str, Any]) -> None:
+    raw = plan.get("agenda_carrier")
+    if raw is None:
+        return
+    if not isinstance(raw, dict):
+        raise ValueError("agenda_carrier must be an object when declared")
+    if raw.get("mode") != "abstract_navigation":
+        raise ValueError("agenda_carrier.mode must be abstract_navigation")
+    required_string(raw, "description")
+    if raw.get("placement") != "lower_right":
+        raise ValueError("agenda_carrier.placement must be lower_right")
+
+
 def validate_grammar_proof(plan: dict[str, Any], role: str) -> None:
     if role != "body":
         return
@@ -347,9 +395,9 @@ def resolve_colour_plan(plan: dict[str, Any], role: str, scene_integrity: dict[s
         raw = {
             "mode": "brand_green_accent",
             "local_colours": [{
-                "target": "the plan-declared selection field around the sole highlighted cover-title unit",
+                "target": "the plan-declared title selection field and one tiny low-saturation accent in the abstract carrier",
                 "colour_family": "brand green",
-                "rationale": "cover green is reserved for the single editorial title emphasis",
+                "rationale": "the title emphasis and carrier accent create restrained cover-level brand continuity",
             }],
             "limits": {"max_local_colours": 1, "gradients": "forbidden", "coverage": "small_detail_only"},
         }
@@ -378,7 +426,7 @@ def validate_colour_plan(plan: dict[str, Any], role: str, scene_integrity: dict[
     if not isinstance(limits, dict) or limits.get("max_local_colours") != 1 or limits.get("gradients") != "forbidden" or limits.get("coverage") != expected_coverage:
         raise ValueError(f"colour_plan limits require max_local_colours 1, gradients forbidden, and coverage {expected_coverage}")
     if role == "cover" and mode != "brand_green_accent":
-        raise ValueError("cover colour_plan must use brand_green_accent for its single title selection field")
+        raise ValueError("cover colour_plan must use brand_green_accent for its title selection field and one minor carrier accent")
     if mode == "brand_green_subject_fill" and scene_integrity["mode"] != "representational":
         raise ValueError("brand_green_subject_fill requires a representational scene_integrity")
     if mode == "monochrome_exception":
@@ -411,6 +459,12 @@ def format_colour_plan(plan: dict[str, Any]) -> str:
             f'as one translucent uneven dry-brush or wax-pencil gesture with substantial white paper visible, justified by {item["rationale"].strip()}. '
             "Keep the deep-ink contour dominant. Do not follow interior seams or material boundaries; use no green relation line, second green subject, secondary green detail, opaque fill, gradient, shadow, or material rendering."
         )
+    if "editorial_treatment" in plan:
+        item = raw["local_colours"][0]
+        return (
+            f'{item["target"].strip()}: use one brand-green title selection field and one separate low-saturation dry-brush accent or short path '
+            "within at most 3% of the abstract carrier area. Keep both visually minor; do not add a second title field, a large fill, a green contour system, a gradient, or an interface element."
+        )
     evidence_key = "source_support" if raw["mode"] == "source_factual" else "rationale"
     values = [
         f'{item["target"].strip()}: one tiny flat {item["colour_family"].strip()} accent detail only, justified by {item[evidence_key].strip()}'
@@ -439,6 +493,45 @@ def format_agenda_items(plan: dict[str, Any]) -> str:
         f'{index}. "{item["title"].strip()}"'
         for index, item in enumerate(plan["agenda_items"], start=1)
     )
+
+
+def format_agenda_carrier(plan: dict[str, Any], layout_variant: str) -> str:
+    raw = plan.get("agenda_carrier")
+    if raw is None:
+        if layout_variant != "centered_list":
+            return (
+                "Use no separate ornamental carrier; the selected agenda layout is the only visual organizer. "
+                "Never render a recognizable entity, object, scene, card, badge, or decorative arrow."
+            )
+        return (
+            "Use no visual carrier beyond at most one small quiet abstract navigation mark. "
+            "Never render a recognizable entity, object, scene, card, badge, or decorative arrow."
+        )
+    return (
+        "Render exactly one low-density abstract navigation rhythm in the lower-right whitespace, occupying no more than 18% of the canvas. "
+        f"Its only visual direction is: {raw['description'].strip()}. "
+        "Use exactly three unequal density clusters and at most one hairline non-directional curve. "
+        "Never render a recognizable entity, object, scene, plant, animal, vehicle, building, landscape, body part, industry symbol, source claim, body grammar, card, badge, decorative arrow, or extra visible text."
+    )
+
+
+def resolve_layout_variant(plan: dict[str, Any], role: str, template: dict[str, Any]) -> str | None:
+    if role == "body":
+        if "layout_variant" in plan:
+            raise ValueError("body does not support layout_variant; use its selected visual grammar")
+        return None
+    variants = template["block_sequence"].get("layout_variant")
+    default = template.get("default_layout_variant")
+    if not isinstance(variants, dict) or not variants or not isinstance(default, str) or default not in variants:
+        raise ValueError(f"{role} template requires a valid layout_variant mapping and default")
+    raw = plan.get("layout_variant", default)
+    if not isinstance(raw, str) or not raw:
+        raise ValueError(f"{role} layout_variant must be a non-empty string when declared")
+    if raw not in variants:
+        raise ValueError(f"{role} layout_variant is unsupported: {raw}")
+    if role == "agenda" and plan.get("agenda_carrier") is not None and raw != "centered_list":
+        raise ValueError("agenda_carrier is available only with layout_variant centered_list")
+    return raw
 
 
 def validate_plan(plan: dict[str, Any], template: dict[str, Any], role: str, delivery_mode: str, grammars: dict[str, dict[str, Any]], style: dict[str, Any]) -> dict[str, Any]:
@@ -478,6 +571,10 @@ def validate_plan(plan: dict[str, Any], template: dict[str, Any], role: str, del
     scene_integrity = validate_scene_integrity(plan)
     if role == "cover" and scene_integrity["mode"] != "abstract":
         raise ValueError("cover requires abstract scene_integrity and no representational entities")
+    if role == "closing":
+        validate_closing_carrier(plan)
+    if role == "agenda":
+        validate_agenda_carrier(plan)
     validate_grammar_proof(plan, role)
     validate_colour_plan(plan, role, scene_integrity)
     if role == "cover":
@@ -487,9 +584,18 @@ def validate_plan(plan: dict[str, Any], template: dict[str, Any], role: str, del
 
 def format_annotation_items(annotation_plan: dict[str, Any]) -> str:
     items: list[str] = []
+    label_targets: set[str] = set()
+    note_targets: set[str] = set()
     for item in annotation_plan["items"]:
-        visible = f'render exactly "{item["content"].strip()}"' if item.get("content", "").strip() else "render no text"
-        items.append(f'{item["type"]} targets {item["target"].strip()}; {visible}; source support: {item["source_support"].strip()}')
+        target = item["target"].strip()
+        if item["type"] == "label":
+            label_targets.add(target)
+        elif item["type"] == "note":
+            note_targets.add(target)
+        visible = f'render exactly once "{item["content"].strip()}"' if item.get("content", "").strip() else "render no text"
+        items.append(f'{item["type"]} targets {target}; {visible}; source support: {item["source_support"].strip()}')
+    for target in sorted(label_targets & note_targets):
+        items.append(f'label and note sharing target {target} form one two-level callout with one shared leader; place the note directly beneath the label in smaller lighter-gray text')
     return "\n".join(f"- {item}" for item in items)
 
 
@@ -519,7 +625,54 @@ def format_editorial_treatment(plan: dict[str, Any]) -> str:
     return f"{title_instruction}\n{trace_instruction}"
 
 
-def build_context(plan: dict[str, Any], dimensions: dict[str, Any], role: str, delivery_mode: str, grammar: dict[str, Any] | None, annotation_plan: dict[str, Any], style: dict[str, Any]) -> dict[str, str]:
+def format_closing_carrier(plan: dict[str, Any]) -> str:
+    raw = plan.get("closing_carrier")
+    if raw is None:
+        return (
+            "Render no abstract carrier. The selected closing layout alone controls whether a single end mark is allowed. "
+            "Never render a recognizable entity, object, scene, plant, animal, vehicle, building, landscape, or body part."
+        )
+    return (
+        "Render exactly one low-density abstract echo in the lower-right whitespace, occupying no more than 18% of the canvas. "
+        f"Its only visual direction is: {raw['description'].strip()}. "
+        "Use only density, interval, porosity, layering, dispersion, convergence, fracture, containment, or a non-directional curve. "
+        "Never render a recognizable entity, object, scene, plant, animal, vehicle, building, landscape, body part, industry symbol, source claim, summary, promise, or call to action."
+    )
+
+
+def format_page_typography(plan: dict[str, Any], role: str, annotation_plan: dict[str, Any], typography: dict[str, dict[str, Any]]) -> str:
+    """Project the one Markdown-owned type system once for the current page role."""
+    def metrics(key: str) -> str:
+        item = typography[key]
+        return (
+            f"{item['weight']}, {item['color']}, "
+            f"{item['size_px']}px size with {item['line_height_px']}px line height, "
+            f"at most {item['max_lines']} line."
+        )
+
+    if role == "cover":
+        item = typography["cover_title"]
+        lines = [f"Cover title: {item['family']}, {metrics('cover_title')}"]
+    elif role == "agenda":
+        family = typography["agenda_title"]["family"]
+        lines = [f"Agenda title and items: {family}; title uses {metrics('agenda_title')} Items use {metrics('agenda_item')}"]
+    elif role == "closing":
+        item = typography["closing_message"]
+        lines = [f"Closing message: {item['family']}, {metrics('closing_message')}"]
+    else:
+        lines = []
+        if plan.get("render_text") is not False:
+            family = typography["body_title"]["family"]
+            lines.append(f"Core judgment and subtitle: {family}; core judgment uses {metrics('body_title')} Subtitle uses {metrics('body_subtitle')}")
+        if annotation_plan["mode"] != "none":
+            family = typography["label"]["family"]
+            lines.append(f"Label and note: {family}; label uses {metrics('label')} Note uses {metrics('note')}")
+        if not lines:
+            return "This page renders no visible typography."
+    return "Visible typography, stated here once: " + " ".join(lines)
+
+
+def build_context(plan: dict[str, Any], dimensions: dict[str, Any], role: str, delivery_mode: str, grammar: dict[str, Any] | None, annotation_plan: dict[str, Any], style: dict[str, Any], layout_variant: str | None) -> dict[str, str]:
     canvas = dimensions["canvas"]
     output = canvas["output_contract"]
     logo = dimensions["logo"]
@@ -558,7 +711,8 @@ def build_context(plan: dict[str, Any], dimensions: dict[str, Any], role: str, d
         "annotation_text": dimensions["annotation"]["text"],
         "annotation_restraint": dimensions["annotation"]["restraint"],
         "plan_annotation_items": format_annotation_items(annotation_plan),
-        "style_full_diagnostic": style["raw_markdown"].strip(),
+        "page_typography": format_page_typography(plan, role, annotation_plan, style["presentation_typography"]),
+        "style_full_diagnostic": style["diagnostic_markdown"],
         "style_page_prompt": "\n\n".join(
             part for part in (
                 style["sections"]["shared"],
@@ -569,12 +723,9 @@ def build_context(plan: dict[str, Any], dimensions: dict[str, Any], role: str, d
     }
     if role == "cover":
         cover = dimensions["cover"]
-        title = cover["layout"]["title"]
         progression = plan["visual_progression"]
         context.update({
-            "plan_title": plan["title"], "cover_title_color": title["color"],
-            "cover_title_family": title["family"], "cover_title_weight": title["weight"],
-            "cover_title_max_lines": str(title["max_lines"]),
+            "plan_title": plan["title"],
             "plan_visual_direction": plan["visual_direction"].replace("_", " "),
             "plan_core_promise": plan["core_promise"], "plan_primary_carrier": plan["primary_carrier"],
             "plan_progression_entry": progression["entry"], "plan_progression_development": progression["development"],
@@ -588,9 +739,11 @@ def build_context(plan: dict[str, Any], dimensions: dict[str, Any], role: str, d
         return context
 
     if role == "agenda":
+        assert layout_variant is not None
         context.update({
             "plan_title": plan["title"],
             "plan_agenda_items": format_agenda_items(plan),
+            "plan_agenda_carrier": format_agenda_carrier(plan, layout_variant),
             "style_expanded_guidance": "",
         })
         return context
@@ -598,21 +751,14 @@ def build_context(plan: dict[str, Any], dimensions: dict[str, Any], role: str, d
     if role == "closing":
         context.update({
             "plan_closing_text": plan["closing_text"],
+            "plan_closing_carrier": format_closing_carrier(plan),
             "style_expanded_guidance": "",
         })
         return context
 
     body = dimensions["content_image"]
-    typography = dimensions["typography"]
-    core = typography["core_judgment"]
-    subtitle = typography["subtitle"]
     context.update({
         "plan_core_judgment": plan["core_judgment"], "plan_subtitle": plan["subtitle"],
-        "body_title_family": typography["chinese_family"], "body_core_weight": core["weight"],
-        "body_core_color": core["color"], "body_core_max_lines": str(core["max_lines"]),
-        "body_core_alignment": core["alignment"], "body_subtitle_weight": subtitle["weight"],
-        "body_subtitle_color": subtitle["color"], "body_subtitle_max_lines": str(subtitle["max_lines"]),
-        "body_subtitle_alignment": subtitle["alignment"],
         "body_title_center_x": str(body["layout"]["title_region"]["center_x"]),
         "grammar_name": plan["grammar"].replace("_", " "),
         "grammar_topology_prompt": grammar["topology_prompt"],
@@ -665,8 +811,9 @@ def compile_prompt(page: dict[str, Any], style: dict[str, Any], delivery_mode: s
     if template.get("role") != role or template.get("style_sections") != expected_sections:
         raise ValueError(f"template contract mismatch: {template_id}")
     annotation_plan = validate_plan(plan, template, role, delivery_mode, grammars, style)
+    layout_variant = resolve_layout_variant(plan, role, template)
     grammar = grammars[plan["grammar"]] if role == "body" else None
-    context = build_context(plan, style["dimensions"], role, delivery_mode, grammar, annotation_plan, style)
+    context = build_context(plan, style["dimensions"], role, delivery_mode, grammar, annotation_plan, style, layout_variant)
     projection_mode = page.get("prompt_projection", "default")
     if projection_mode not in PROJECTION_MODES:
         raise ValueError("prompt_projection must be default, expanded, or full_diagnostic")
@@ -682,6 +829,10 @@ def compile_prompt(page: dict[str, Any], style: dict[str, Any], delivery_mode: s
         text_key = "false" if plan.get("render_text") is False else "true"
         block_names += sequence_blocks(sequence, "render_text", text_key)
         block_names += sequence_blocks(sequence, "tail")
+    else:
+        assert layout_variant is not None
+        block_names += sequence_blocks(sequence, "layout_variant", layout_variant)
+        block_names += sequence_blocks(sequence, "tail")
     block_names += sequence_blocks(sequence, "projection", projection_mode, allow_empty=True)
     block_names += sequence_blocks(sequence, "delivery")
 
@@ -690,6 +841,8 @@ def compile_prompt(page: dict[str, Any], style: dict[str, Any], delivery_mode: s
         included_rules.append(f"grammar:{plan['grammar']}")
         if annotation_plan["mode"] != "none":
             included_rules.append("annotation")
+    elif layout_variant is not None:
+        included_rules.append(f"layout:{layout_variant}")
     included_rules.append(f"projection:{projection_mode}")
     return "\n\n".join(render_block(name, blocks, context) for name in block_names), template_id, included_rules, projection_mode
 

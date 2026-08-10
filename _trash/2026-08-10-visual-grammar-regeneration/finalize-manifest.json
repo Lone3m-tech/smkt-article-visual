@@ -1,0 +1,356 @@
+{
+  "schema_version": 9,
+  "pages": [
+    {
+      "id": "architecture",
+      "role": "body",
+      "status": "finalized",
+      "plan": {
+        "core_judgment": "Architecture visual grammar",
+        "subtitle": "demonstration"
+      },
+      "prompt": {
+        "status": "compiled",
+        "text": "visual grammar demonstration"
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "/Users/samelonemacbook/.codex/generated_images/019feb1c-3f93-7ae2-ac78-79069e3b8d80/exec-6245bde4-29e2-4af1-8b58-0c7484f8d2af.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "offer/skills/smkt-article-visual/examples/visual-grammar/architecture.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      }
+    },
+    {
+      "id": "hierarchy",
+      "role": "body",
+      "status": "finalized",
+      "plan": {
+        "core_judgment": "Hierarchy visual grammar",
+        "subtitle": "demonstration"
+      },
+      "prompt": {
+        "status": "compiled",
+        "text": "visual grammar demonstration"
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "/Users/samelonemacbook/.codex/generated_images/019feb1c-3f93-7ae2-ac78-79069e3b8d80/exec-bec74b56-0fdf-46a3-b3a2-34fbb7a6660a.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "offer/skills/smkt-article-visual/examples/visual-grammar/hierarchy.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      }
+    },
+    {
+      "id": "flow",
+      "role": "body",
+      "status": "finalized",
+      "plan": {
+        "core_judgment": "Flow visual grammar",
+        "subtitle": "demonstration"
+      },
+      "prompt": {
+        "status": "compiled",
+        "text": "visual grammar demonstration"
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "/Users/samelonemacbook/.codex/generated_images/019feb1c-3f93-7ae2-ac78-79069e3b8d80/exec-f9a4231d-05e0-4649-bf41-a30004977c20.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "offer/skills/smkt-article-visual/examples/visual-grammar/flow.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      }
+    },
+    {
+      "id": "loop",
+      "role": "body",
+      "status": "finalized",
+      "plan": {
+        "core_judgment": "Loop visual grammar",
+        "subtitle": "demonstration"
+      },
+      "prompt": {
+        "status": "compiled",
+        "text": "visual grammar demonstration"
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "/Users/samelonemacbook/.codex/generated_images/019feb1c-3f93-7ae2-ac78-79069e3b8d80/exec-d276c274-d1e8-453e-af4f-cc4c5fd0a0c3.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "offer/skills/smkt-article-visual/examples/visual-grammar/loop.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      }
+    },
+    {
+      "id": "decision_tree",
+      "role": "body",
+      "status": "finalized",
+      "plan": {
+        "core_judgment": "Decision tree visual grammar",
+        "subtitle": "demonstration"
+      },
+      "prompt": {
+        "status": "compiled",
+        "text": "visual grammar demonstration"
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "/Users/samelonemacbook/.codex/generated_images/019feb1c-3f93-7ae2-ac78-79069e3b8d80/exec-e62763f0-4619-472a-b3da-e96e6203c1de.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "offer/skills/smkt-article-visual/examples/visual-grammar/decision_tree.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      }
+    },
+    {
+      "id": "comparison",
+      "role": "body",
+      "status": "finalized",
+      "plan": {
+        "core_judgment": "Comparison visual grammar",
+        "subtitle": "demonstration"
+      },
+      "prompt": {
+        "status": "compiled",
+        "text": "visual grammar demonstration"
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "/Users/samelonemacbook/.codex/generated_images/019feb1c-3f93-7ae2-ac78-79069e3b8d80/exec-3a3c6844-b3e3-43c5-b026-8259ac3eb2ee.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "offer/skills/smkt-article-visual/examples/visual-grammar/comparison.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      }
+    },
+    {
+      "id": "matrix",
+      "role": "body",
+      "status": "finalized",
+      "plan": {
+        "core_judgment": "Matrix visual grammar",
+        "subtitle": "demonstration"
+      },
+      "prompt": {
+        "status": "compiled",
+        "text": "visual grammar demonstration"
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "/Users/samelonemacbook/.codex/generated_images/019feb1c-3f93-7ae2-ac78-79069e3b8d80/exec-5f3580c3-b2d4-4669-937b-46e90cc98c2d.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "offer/skills/smkt-article-visual/examples/visual-grammar/matrix.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      }
+    },
+    {
+      "id": "overlap_map",
+      "role": "body",
+      "status": "finalized",
+      "plan": {
+        "core_judgment": "Overlap map visual grammar",
+        "subtitle": "demonstration"
+      },
+      "prompt": {
+        "status": "compiled",
+        "text": "visual grammar demonstration"
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "/Users/samelonemacbook/.codex/generated_images/019feb1c-3f93-7ae2-ac78-79069e3b8d80/exec-ea467002-cf7c-4de7-8888-de58bad9b5a4.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "offer/skills/smkt-article-visual/examples/visual-grammar/overlap_map.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      }
+    },
+    {
+      "id": "boundary_map",
+      "role": "body",
+      "status": "finalized",
+      "plan": {
+        "core_judgment": "Boundary map visual grammar",
+        "subtitle": "demonstration"
+      },
+      "prompt": {
+        "status": "compiled",
+        "text": "visual grammar demonstration"
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "/Users/samelonemacbook/.codex/generated_images/019feb1c-3f93-7ae2-ac78-79069e3b8d80/exec-bbc1d634-3f15-4a0c-83e8-450baebc0432.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "offer/skills/smkt-article-visual/examples/visual-grammar/boundary_map.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      }
+    },
+    {
+      "id": "argument_map",
+      "role": "body",
+      "status": "finalized",
+      "plan": {
+        "core_judgment": "Argument map visual grammar",
+        "subtitle": "demonstration"
+      },
+      "prompt": {
+        "status": "compiled",
+        "text": "visual grammar demonstration"
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "/Users/samelonemacbook/.codex/generated_images/019feb1c-3f93-7ae2-ac78-79069e3b8d80/exec-8754be38-1775-43a0-99c5-055ec45f0369.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "offer/skills/smkt-article-visual/examples/visual-grammar/argument_map.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      }
+    },
+    {
+      "id": "timeline",
+      "role": "body",
+      "status": "finalized",
+      "plan": {
+        "core_judgment": "Timeline visual grammar",
+        "subtitle": "demonstration"
+      },
+      "prompt": {
+        "status": "compiled",
+        "text": "visual grammar demonstration"
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "/Users/samelonemacbook/.codex/generated_images/019feb1c-3f93-7ae2-ac78-79069e3b8d80/exec-a7ee6c52-7533-4a72-b928-294a1ea8ec14.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "offer/skills/smkt-article-visual/examples/visual-grammar/timeline.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      }
+    },
+    {
+      "id": "continuum",
+      "role": "body",
+      "status": "finalized",
+      "plan": {
+        "core_judgment": "Continuum visual grammar",
+        "subtitle": "demonstration"
+      },
+      "prompt": {
+        "status": "compiled",
+        "text": "visual grammar demonstration"
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "/Users/samelonemacbook/.codex/generated_images/019feb1c-3f93-7ae2-ac78-79069e3b8d80/exec-7d3cd885-9ca3-4333-a4dc-550153df2c92.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "offer/skills/smkt-article-visual/examples/visual-grammar/continuum.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      }
+    },
+    {
+      "id": "layer_stack",
+      "role": "body",
+      "status": "finalized",
+      "plan": {
+        "core_judgment": "Layer stack visual grammar",
+        "subtitle": "demonstration"
+      },
+      "prompt": {
+        "status": "compiled",
+        "text": "visual grammar demonstration"
+      },
+      "generation": {
+        "status": "generated",
+        "candidate_file": "/Users/samelonemacbook/.codex/generated_images/019feb1c-3f93-7ae2-ac78-79069e3b8d80/exec-c6f22464-32bc-4294-8007-12bc92fa0753.png"
+      },
+      "final": {
+        "status": "finalized",
+        "output_path": "offer/skills/smkt-article-visual/examples/visual-grammar/layer_stack.png",
+        "width_px": 1200,
+        "height_px": 675,
+        "logo": {
+          "enabled": true,
+          "status": "applied"
+        }
+      }
+    }
+  ]
+}
