@@ -226,6 +226,14 @@ enable_qa: false
 - 完整视觉效果依赖宿主的图像生成能力，不能仅凭安装成功推断。
 - 每次使用者仍须确保输入素材、第三方图像模型条款与再分发授权合规。
 
+## 喜欢上一版的风格？
+
+如果你更喜欢上一版的暖白纸张感与编辑插画处理，欢迎下载 [v0.7.0](https://github.com/Lone3m-tech/smkt-article-visual/releases/tag/v0.7.0)。
+
+<p align="center">
+  <img src="examples/readme-visual/v0.7-readme-banner.png" alt="smkt-article-visual v0.7.0 README 首图：从 Markdown 叙事提取关系并组织为解释图系统的无标题横幅" width="100%">
+</p>
+
 ## License
 
 [MIT License](LICENSE)
