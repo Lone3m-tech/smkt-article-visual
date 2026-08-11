@@ -10,7 +10,7 @@
 
 [SimpleMkt](https://simplemkt.cc) · [X](https://x.com/AlchemistZhou) · [小红书](https://www.xiaohongshu.com/user/profile/65a0ecb4000000002201219c) · [抖音](https://www.douyin.com/user/MS4wLjABAAAArV0uXvsSYl6pD-p5nr-5OFlZED5cEUnb7r2K6j9u4tA)
 
-[官方仓库](https://github.com/Lone3m-tech/smkt-article-visual) · [查看 Releases](https://github.com/Lone3m-tech/smkt-article-visual/releases) · [查看 13 种图法](#8-13-种正文图法) · [查看运行契约](SKILL.md)
+[官方仓库](https://github.com/Lone3m-tech/smkt-article-visual) · [当前发布 v0.8.1](https://github.com/Lone3m-tech/smkt-article-visual/releases/tag/v0.8.1) · [查看 Releases](https://github.com/Lone3m-tech/smkt-article-visual/releases) · [查看 13 种图法](#8-13-种正文图法) · [查看运行契约](SKILL.md)
 
 **简体中文 | [English](README.en.md)**
 
