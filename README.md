@@ -6,15 +6,7 @@
 
 **让重要判断，不再被做成普通 PPT。**
 
-把你已经想清楚、但对方还没看明白的判断，<br>
-做成真正讲得明白的 PPT。
-
-不是把大纲塞进条目、卡片和模板，<br>
-而是把机制、边界、取舍、路径与论证，<br>
-转化成观众更容易接住的视觉解释。
-
-从已有文章、报告、方案、讲稿或飞书文档出发；<br>
-不补造结论，也不让原意在视觉化时走偏。
+把你已经想清楚、但对方还没看明白的判断，做成真正讲得明白的 PPT：不是把大纲塞进条目、卡片和模板，而是把机制、边界、取舍、路径与论证转化为观众更容易接住的视觉解释；从已有文章、报告、方案、讲稿或飞书文档出发，不补造结论，也不让原意在视觉化时走偏。
 
 [SimpleMkt](https://simplemkt.cc) · [X](https://x.com/AlchemistZhou) · [小红书](https://www.xiaohongshu.com/user/profile/65a0ecb4000000002201219c) · [抖音](https://www.douyin.com/user/MS4wLjABAAAArV0uXvsSYl6pD-p5nr-5OFlZED5cEUnb7r2K6j9u4tA)
 
