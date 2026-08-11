@@ -47,25 +47,13 @@
 
 ## 3. 安装与已验证 Agent
 
-面向 Codex 的公开安装方式：
+把下面这行直接发给你的 Agent：
 
 ```bash
-npx skills add Lone3m-tech/smkt-article-visual \
-  --skill smkt-article-visual \
-  --global \
-  --agent codex \
-  --copy
+请帮我安装这个 Skill：https://github.com/Lone3m-tech/smkt-article-visual
 ```
 
-也可以克隆到 Codex 全局 Skill 目录：
-
-```bash
-mkdir -p ~/.codex/skills
-git clone --depth 1 https://github.com/Lone3m-tech/smkt-article-visual.git \
-  ~/.codex/skills/smkt-article-visual
-```
-
-去掉 `--global` 可安装到单个项目。安装成功只说明文件已就位；完整工作流仍要求宿主能读写本地文件并调用等效的图像生成能力。
+安装成功只说明文件已就位；完整工作流仍要求宿主能读写本地文件并调用等效的图像生成能力。
 
 已完成实际运行的宿主：
 
