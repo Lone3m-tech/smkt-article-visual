@@ -53,29 +53,73 @@
 
 你得到的不是一堆单张配图，而是一套能顺着讲下去的视觉叙事：它保留你的判断，同时替听众降低理解负担。
 
-## 3. 13 种让复杂判断被看懂的方式
+## 3. 一套讲述，由四类页面组成
 
-图法不是模板库，也不是“选一个好看的版式”。它们是 13 种不同的理解动作：系统如何组成、事情如何流动、差异在哪里、边界如何划分、观点凭什么成立。
+封面、目录和结尾管理注意力；正文图法管理理解。它们不是一组可任意替换的模板，而是按讲述位置承担不同工作。
 
-封面、目录和结尾管理注意力；13 种正文图法管理理解。下面的 4 × 4 总览由 **封面 × 1、目录 × 1、图法 × 13、结尾 × 1** 组成；实际项目可从 4 种封面、4 种目录和 3 种结尾中选择合适的节奏。
+### 封面（4 种）
 
-| 封面：`text_left_carrier_right` | 目录：`centered_list` | 架构：`architecture` | 层级：`hierarchy` |
-| --- | --- | --- | --- |
-| ![封面：左侧标题与右侧抽象载体](examples/demo-cover/text-left-carrier-right.png) | ![目录：居中列表](examples/demo-agenda/centered-list.png) | ![架构：组件、分支与汇合](examples/visual-grammar/architecture.png) | ![层级：父子关系](examples/visual-grammar/hierarchy.png) |
+用抽象载体建立这场讲述的承诺，不承担正文解释。
 
-| 流动：`flow` | 循环：`loop` | 决策：`decision_tree` | 对比：`comparison` |
-| --- | --- | --- | --- |
-| ![流动：从输入到输出](examples/visual-grammar/flow.png) | ![循环：反馈迭代](examples/visual-grammar/loop.png) | ![决策：条件分叉](examples/visual-grammar/decision_tree.png) | ![对比：左右结构差异](examples/visual-grammar/comparison.png) |
+| `text_left_carrier_right` | `text_right_carrier_left` |
+| --- | --- |
+| ![封面：左侧标题与右侧抽象载体](examples/demo-cover/text-left-carrier-right.png) | ![封面：右侧标题与左侧抽象载体](examples/demo-cover/text-right-carrier-left.png) |
 
-| 矩阵：`matrix` | 交集：`overlap_map` | 边界：`boundary_map` | 论证：`argument_map` |
-| --- | --- | --- | --- |
-| ![矩阵：双维定位](examples/visual-grammar/matrix.png) | ![交集：共同与独有内容](examples/visual-grammar/overlap_map.png) | ![边界：范围内与范围外](examples/visual-grammar/boundary_map.png) | ![论证：依据、限制与结论](examples/visual-grammar/argument_map.png) |
+| `text_top_carrier_bottom` | `text_centered` |
+| --- | --- |
+| ![封面：上方标题与下方抽象载体](examples/demo-cover/text-top-carrier-bottom.png) | ![封面：居中标题与低密度边缘回声](examples/demo-cover/text-centered.png) |
 
-| 时间线：`timeline` | 连续谱：`continuum` | 层叠：`layer_stack` | 结尾：`editorial_signoff` |
-| --- | --- | --- | --- |
-| ![时间线：阶段推进](examples/visual-grammar/timeline.png) | ![连续谱：非时间的渐进位置](examples/visual-grammar/continuum.png) | ![层叠：系统层次](examples/visual-grammar/layer_stack.png) | ![结尾：编辑式落款](examples/demo-closing/editorial-signoff.png) |
+### 目录（4 种）
 
-完整的页面变体可在 [`examples/demo-cover/`](examples/demo-cover/)、[`examples/demo-agenda/`](examples/demo-agenda/) 与 [`examples/demo-closing/`](examples/demo-closing/) 查看。
+在一场包含多个讲述节奏的演示中，帮助听众定位接下来会被讲清楚什么。
+
+| `centered_list` | `split_list` |
+| --- | --- |
+| ![目录：居中列表](examples/demo-agenda/centered-list.png) | ![目录：分栏列表](examples/demo-agenda/split-list.png) |
+
+| `vertical_rail` | `stepped_list` |
+| --- | --- |
+| ![目录：垂直轨道](examples/demo-agenda/vertical-rail.png) | ![目录：阶梯列表](examples/demo-agenda/stepped-list.png) |
+
+### 正文：13 种让复杂判断被看懂的方式
+
+图法不是“选一个好看的版式”，而是 13 种不同的理解动作：系统如何组成、事情如何流动、差异在哪里、边界如何划分、观点凭什么成立。
+
+| 架构：`architecture` | 层级：`hierarchy` |
+| --- | --- |
+| ![架构：组件、分支与汇合](examples/visual-grammar/architecture.png) | ![层级：父子关系](examples/visual-grammar/hierarchy.png) |
+
+| 流动：`flow` | 循环：`loop` |
+| --- | --- |
+| ![流动：从输入到输出](examples/visual-grammar/flow.png) | ![循环：反馈迭代](examples/visual-grammar/loop.png) |
+
+| 决策：`decision_tree` | 对比：`comparison` |
+| --- | --- |
+| ![决策：条件分叉](examples/visual-grammar/decision_tree.png) | ![对比：左右结构差异](examples/visual-grammar/comparison.png) |
+
+| 矩阵：`matrix` | 交集：`overlap_map` |
+| --- | --- |
+| ![矩阵：双维定位](examples/visual-grammar/matrix.png) | ![交集：共同与独有内容](examples/visual-grammar/overlap_map.png) |
+
+| 边界：`boundary_map` | 论证：`argument_map` |
+| --- | --- |
+| ![边界：范围内与范围外](examples/visual-grammar/boundary_map.png) | ![论证：依据、限制与结论](examples/visual-grammar/argument_map.png) |
+
+| 时间线：`timeline` | 连续谱：`continuum` |
+| --- | --- |
+| ![时间线：阶段推进](examples/visual-grammar/timeline.png) | ![连续谱：非时间的渐进位置](examples/visual-grammar/continuum.png) |
+
+| 层叠：`layer_stack` |  |
+| --- | --- |
+| ![层叠：系统层次](examples/visual-grammar/layer_stack.png) |  |
+
+### 结尾（3 种）
+
+在最后一页收束讲述，不补充新的结论或行动号召。
+
+| `editorial_signoff` | `baseline_signoff` | `echo_signoff` |
+| --- | --- | --- |
+| ![结尾：编辑式落款](examples/demo-closing/editorial-signoff.png) | ![结尾：基线式落款](examples/demo-closing/baseline-signoff.png) | ![结尾：回声式落款](examples/demo-closing/echo-signoff.png) |
 
 ## 4. 它怎样把你的判断做成页面
 
